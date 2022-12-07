@@ -24,8 +24,10 @@ And of course a list
 * items
 * and one **VERY important** item
 
+This is weird
+
     export default defineConfig({
-      site: "https://yoursite.co/",
+      site: "https://yoursitename.co/",
       integrations: [
         tailwind({
           config: {
