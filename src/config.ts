@@ -1,8 +1,8 @@
 import type { SocialObjects } from "./types";
 
 export const SITE = {
-  website: "https://mellowtown.co/",
-  author: "Tomas Meleg & Dominika Stvrtecka",
+  website: "https://m311ow.github.io/",
+  author: "Tomas Meleg",
   desc: "Random notes, mostly about programming.",
   title: "MellowTown",
   ogImage: "astropaper-og.jpg",
