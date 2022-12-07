@@ -47,6 +47,11 @@
     --color-card: 234, 206, 219;
     --color-card-muted: 241, 186, 212;
     --color-border: 227, 169, 198;
+
+    /* with same color as in illustration */
+    --color-accent: 255, 86, 120;
+    --color-border: 255, 86, 120;
+
     /* with lobster bg: */
     /* --color-fill: 246, 238, 225; */
   }
