@@ -22,7 +22,7 @@ And of course a list
 * with
 * some
 * items
-* and one **very important** item
+* and one **VERY important** item
 
     export default defineConfig({
       site: "https://yoursite.co/",
