@@ -4,13 +4,16 @@ hide_body: false
 fields:
 - type: text
   name: author
-  label: author
+  label: Tomas Meleg
 - type: datetime
   name: datetime
   label: datetime
+  default: now
 - type: text
   name: title
   label: title
+  config:
+    required: true
 - type: text
   name: slug
   label: slug
@@ -29,3 +32,5 @@ fields:
 - type: text
   name: description
   label: description
+  config:
+    required: true
