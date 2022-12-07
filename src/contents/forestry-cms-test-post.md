@@ -1,16 +1,16 @@
 ---
 datetime: 2022-12-07T00:12:01Z
-author: ''
+author: ""
 title: Forestry CMS test post
 slug: forestry-test
 featured: true
 draft: false
 tags:
-- 'test '
-ogImage: ''
+  - "test "
+ogImage: ""
 description: test description
-
 ---
+
 # **This is just a test**
 
 ## With cool headings and all that
@@ -19,13 +19,14 @@ description: test description
 
 And of course a list
 
-* with
-* some
-* items
-* and one **VERY important** item
+- with
+- some
+- items
+- and one **VERY important** item
 
 This is weird
 
+````js
     export default defineConfig({
       site: "https://yoursitename.co/",
       integrations: [
@@ -54,3 +55,5 @@ This is weird
         extendDefaultPlugins: true,
       },
     });
+    ```
+````
