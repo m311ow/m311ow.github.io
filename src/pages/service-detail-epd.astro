@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
 import { Image } from 'astro:assets'
+import EPDpreviewIMG from '../images/services_hero_2_cropped_small.webp'
 import BenefitsBG from '../images/benefits_background.jpg'
 import HeaderIMG from '../images/epd_header_img.jpg'
 ---
@@ -49,13 +50,13 @@ import HeaderIMG from '../images/epd_header_img.jpg'
         >
           <h1 class='mb-5px alt-font text-white'>
             <span class='opacity-6'
-              >Sustainability based on quantified environmental data</span
+              >Third party verified environmental data</span
             >
           </h1>
           <h2
             class='mb-0 text-white alt-font ls-minus-2px text-shadow-double-large fw-500'
           >
-            Life Cycle Assessment
+            Environmental Product Declaration
           </h2>
         </div>
         <div
@@ -81,11 +82,8 @@ import HeaderIMG from '../images/epd_header_img.jpg'
             class='position-relative m-0 border-radius-5px overflow-hidden'
             data-anime='{ "effect": "slide", "direction": "lr", "color": "#dd6531", "duration": 1000, "delay": 0 }'
           >
-            <img
-              src='https://via.placeholder.com/600x590'
-              alt=''
-              class='w-100'
-            />
+            <Image src={EPDpreviewIMG} alt='Preview of an EPD' class='w-100' />
+
             <figcaption
               class='position-absolute bottom-25px left-25px w-250px border-radius-4px bg-white d-flex align-items-center pt-20px pb-20px ps-25px pe-25px'
               data-anime='{ "translateY": [50, 0], "opacity": [0,1], "duration": 800, "delay": 1200, "staggervalue": 100, "easing": "easeOutQuad" }'
@@ -106,12 +104,21 @@ import HeaderIMG from '../images/epd_header_img.jpg'
           data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'
         >
           <h2 class='fw-600 text-dark-gray ls-minus-2px'>
-            Life Cycle Assessment: What does it look like?
+            How is an EPD different from LCA?
           </h2>
           <p class='w-90 lg-w-100 md-mx-auto mb-35px'>
-            LCA focuses on the environmental impacts of a product or system,
-            including greenhouse gas emissions, energy consumption, water usage,
-            waste generation, and other environmental impacts.
+            An Environmental Product Declaration (EPD) is an LCA study but with
+            additional requirements for third party verification. An EPD is a
+            standardized and transparent method for assessing and reporting the
+            environmental impacts associated with the production of a product.
+            It encompasses all relevant mandatory and/or optional stages of a
+            product's life cycle, from raw material extraction to disposal.
+          </p>
+          <p class='w-90 lg-w-100 md-mx-auto mb-35px'>
+            Type III EPDs which comply with EN 15804:2012+A2:2019 and EN ISO
+            14025 standards meet the requirements of green building
+            certification systems such as LEED v4, BREEAM International NC 2016,
+            and BREEAM v6 and others.
           </p>
           <div
             class='row row-cols-1 justify-content-center'
@@ -128,11 +135,11 @@ import HeaderIMG from '../images/epd_header_img.jpg'
                 <div class='feature-box-content'>
                   <span
                     class='fs-20 md-fs-19 fw-600 text-dark-gray d-block mb-5px'
-                    >Analyze your environmental impacts</span
+                    >Comply with international standards</span
                   >
                   <p>
-                    Quantify the impacts of your product through 19 impact
-                    environmental indicators.
+                    EPD Clarity develops EPDs which comply with international
+                    standards EN 15804:2012+A2:2019 and EN ISO 14025.
                   </p>
                 </div>
               </div>
@@ -149,12 +156,10 @@ import HeaderIMG from '../images/epd_header_img.jpg'
                 <div class='feature-box-content'>
                   <span
                     class='fs-20 md-fs-19 fw-600 text-dark-gray d-block mb-5px'
-                    >Assess your product's sustainability</span
+                    >Third party verification and publishing</span
                   >
                   <p>
-                    Analyze factors such as the materials employed, supply chain
-                    dynamics, manufacturing processes, application methods, and
-                    disposal strategies.
+                    We provide support through verification and EPD publication.
                   </p>
                 </div>
               </div>
@@ -171,11 +176,12 @@ import HeaderIMG from '../images/epd_header_img.jpg'
                 <div class='feature-box-content'>
                   <span
                     class='fs-20 md-fs-19 fw-600 text-dark-gray d-block mb-5px'
-                    >Show off to your customers</span
+                    >Meeting green building requirements</span
                   >
                   <p>
-                    By assessing the environmental performance of your product,
-                    you can help your buyers make well-informed decisions.
+                    Type III EPDs meet the requirements of green building
+                    certification systems such as LEED v4, BREEAM International
+                    NC 2016, and BREEAM v6 and others.
                   </p>
                 </div>
               </div>
@@ -460,16 +466,20 @@ import HeaderIMG from '../images/epd_header_img.jpg'
             Benefits of our services
           </h2>
           <p class='w-65 xl-w-85 lg-w-100 mb-30px'>
-            By demonstrating a lower environmental impact compared to
-            competitors, you can gain a competitive advantage in the market and
-            appeal to environmentally conscious consumers.
+            EPDs can help companies ensure compliance with regulatory
+            requirements and demonstrate adherence to relevant environmental
+            standards, facilitating market access and reducing regulatory risks.
           </p>
           <p class='w-65 xl-w-85 lg-w-100 mb-30px'>
-            LCA will also help you to identify areas of the product life cycle
-            with the highest environmental impacts. Use this information to
-            prioritize initiatives aimed at reducing environmental footprints,
-            optimizing resource use, and enhancing overall sustainability
-            performance.
+            EPD results can be incorporated into sustainability reports and
+            other communications with stakeholders, including investors,
+            customers, employees, and regulators.
+          </p>
+          <p class='w-65 xl-w-85 lg-w-100 mb-30px'>
+            Use EPDs results to raise awareness about the environmental
+            implications of different products or purchasing decisions and
+            empower consumers to make informed choices that align with their
+            values and preferences.
           </p>
           <!-- start features box item -->
           <div class='icon-with-text-style-08 mb-15px'>
@@ -481,7 +491,7 @@ import HeaderIMG from '../images/epd_header_img.jpg'
               </div>
               <div class='feature-box-content'>
                 <span class='fs-18 lh-28 fw-500 d-block text-white'
-                  >Competitive Advantage</span
+                  >Market Access and Compliance</span
                 >
               </div>
             </div>
@@ -497,7 +507,7 @@ import HeaderIMG from '../images/epd_header_img.jpg'
               </div>
               <div class='feature-box-content'>
                 <span class='fs-18 lh-28 fw-500 d-block text-white'
-                  >Transparency and Credibility</span
+                  >Stakeholder Communication and Reporting</span
                 >
               </div>
             </div>
@@ -513,7 +523,7 @@ import HeaderIMG from '../images/epd_header_img.jpg'
               </div>
               <div class='feature-box-content'>
                 <span class='fs-18 lh-28 fw-500 d-block text-white'
-                  >Product Innovation and Improvement</span
+                  >Decrease your environmental impact</span
                 >
               </div>
             </div>
@@ -532,176 +542,176 @@ import HeaderIMG from '../images/epd_header_img.jpg'
           class='col-xl-5 col-lg-6 md-mb-40px'
           data-anime='{ "el": "childs", "translateY": [0, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'
         >
-        <div
-        class='accordion accordion-style-02'
-        id='accordion-style-02'
-        data-active-icon='fa-angle-down'
-        data-inactive-icon='fa-angle-right'
-      >
-        <!-- start accordion item -->
-        <div class='accordion-item active-accordion'>
           <div
-            class='accordion-header border-bottom border-color-extra-medium-gray'
+            class='accordion accordion-style-02'
+            id='accordion-style-02'
+            data-active-icon='fa-angle-down'
+            data-inactive-icon='fa-angle-right'
           >
-            <a
-              href='#'
-              data-bs-toggle='collapse'
-              data-bs-target='#accordion-style-02-01'
-              aria-expanded='true'
-              data-bs-parent='#accordion-style-02'
-            >
+            <!-- start accordion item -->
+            <div class='accordion-item active-accordion'>
               <div
-                class='accordion-title mb-0 position-relative text-dark-gray'
+                class='accordion-header border-bottom border-color-extra-medium-gray'
               >
-                <i class='fa-solid fa-angle-down icon-small'></i><span
-                  class='fs-20 fw-600'
-                  >How is data collection performed?</span
+                <a
+                  href='#'
+                  data-bs-toggle='collapse'
+                  data-bs-target='#accordion-style-02-01'
+                  aria-expanded='true'
+                  data-bs-parent='#accordion-style-02'
                 >
+                  <div
+                    class='accordion-title mb-0 position-relative text-dark-gray'
+                  >
+                    <i class='fa-solid fa-angle-down icon-small'></i><span
+                      class='fs-20 fw-600'
+                      >How is data collection performed?</span
+                    >
+                  </div>
+                </a>
               </div>
-            </a>
-          </div>
-          <div
-            id='accordion-style-02-01'
-            class='accordion-collapse collapse show'
-            data-bs-parent='#accordion-style-02'
-          >
-            <div
-              class='accordion-body last-paragraph-no-margin border-bottom border-color-light-medium-gray'
-            >
-              <p>
-                Data collection is made by you, via our proprietary template
-                designed to be easy and user friendly.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- end accordion item -->
-        <!-- start accordion item -->
-        <div class='accordion-item'>
-          <div
-            class='accordion-header border-bottom border-color-extra-medium-gray'
-          >
-            <a
-              href='#'
-              data-bs-toggle='collapse'
-              data-bs-target='#accordion-style-02-02'
-              aria-expanded='false'
-              data-bs-parent='#accordion-style-02'
-            >
               <div
-                class='accordion-title mb-0 position-relative text-dark-gray'
+                id='accordion-style-02-01'
+                class='accordion-collapse collapse show'
+                data-bs-parent='#accordion-style-02'
               >
-                <i class='fa-solid fa-angle-right icon-small'></i><span
-                  class='fs-20 fw-600'
-                  >How is sensitive data protected?</span
+                <div
+                  class='accordion-body last-paragraph-no-margin border-bottom border-color-light-medium-gray'
                 >
+                  <p>
+                    Data collection is made by you, via our proprietary template
+                    designed to be easy and user friendly.
+                  </p>
+                </div>
               </div>
-            </a>
-          </div>
-          <div
-            id='accordion-style-02-02'
-            class='accordion-collapse collapse'
-            data-bs-parent='#accordion-style-02'
-          >
-            <div
-              class='accordion-body last-paragraph-no-margin border-bottom border-color-light-medium-gray'
-            >
-              <p>
-                We understand the sensitive and confidential nature of
-                production data and we are ready to sign non-disclosure
-                agreements provided by our clients.
-              </p>
             </div>
-          </div>
-        </div>
-        <!-- end accordion item -->
-        <!-- start accordion item -->
-        <div class='accordion-item'>
-          <div
-            class='accordion-header border-bottom border-color-transparent'
-          >
-            <a
-              href='#'
-              data-bs-toggle='collapse'
-              data-bs-target='#accordion-style-02-03'
-              aria-expanded='false'
-              data-bs-parent='#accordion-style-02'
-            >
+            <!-- end accordion item -->
+            <!-- start accordion item -->
+            <div class='accordion-item'>
               <div
-                class='accordion-title mb-0 position-relative text-dark-gray'
+                class='accordion-header border-bottom border-color-extra-medium-gray'
               >
-                <i class='fa-solid fa-angle-right icon-small'></i><span
-                  class='fs-20 fw-600'
-                  >What is the expected delivery time?</span
+                <a
+                  href='#'
+                  data-bs-toggle='collapse'
+                  data-bs-target='#accordion-style-02-02'
+                  aria-expanded='false'
+                  data-bs-parent='#accordion-style-02'
                 >
+                  <div
+                    class='accordion-title mb-0 position-relative text-dark-gray'
+                  >
+                    <i class='fa-solid fa-angle-right icon-small'></i><span
+                      class='fs-20 fw-600'
+                      >How is sensitive data protected?</span
+                    >
+                  </div>
+                </a>
               </div>
-            </a>
-          </div>
-          <div
-            id='accordion-style-02-03'
-            class='accordion-collapse collapse'
-            data-bs-parent='#accordion-style-02'
-          >
-            <div
-              class='accordion-body last-paragraph-no-margin border-bottom border-color-transparent'
-            >
-              <p>
-                Each LCA project is unique and has different timelines.
-                However we've noticed a range of 4-6 weeks for LCA modelling
-                based on previous experience.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- end accordion item -->
-        <!-- start accordion item -->
-        <div class='accordion-item'>
-          <div
-            class='accordion-header border-bottom border-color-transparent'
-          >
-            <a
-              href='#'
-              data-bs-toggle='collapse'
-              data-bs-target='#accordion-style-02-04'
-              aria-expanded='false'
-              data-bs-parent='#accordion-style-02'
-            >
               <div
-                class='accordion-title mb-0 position-relative text-dark-gray'
+                id='accordion-style-02-02'
+                class='accordion-collapse collapse'
+                data-bs-parent='#accordion-style-02'
               >
-                <i class='fa-solid fa-angle-right icon-small'></i><span
-                  class='fs-20 fw-600'
-                  >Will I receive support in interpreting the LCA results?</span
+                <div
+                  class='accordion-body last-paragraph-no-margin border-bottom border-color-light-medium-gray'
                 >
+                  <p>
+                    We understand the sensitive and confidential nature of
+                    production data and we are ready to sign non-disclosure
+                    agreements provided by our clients.
+                  </p>
+                </div>
               </div>
-            </a>
-          </div>
-          <div
-            id='accordion-style-02-04'
-            class='accordion-collapse collapse'
-            data-bs-parent='#accordion-style-02'
-          >
-            <div
-              class='accordion-body last-paragraph-no-margin border-bottom border-color-transparent'
-            >
-              <p>
-                Our consultants are ready to support you through
-                interpretation of your LCA findings and guide you.
-              </p>
             </div>
+            <!-- end accordion item -->
+            <!-- start accordion item -->
+            <div class='accordion-item'>
+              <div
+                class='accordion-header border-bottom border-color-transparent'
+              >
+                <a
+                  href='#'
+                  data-bs-toggle='collapse'
+                  data-bs-target='#accordion-style-02-03'
+                  aria-expanded='false'
+                  data-bs-parent='#accordion-style-02'
+                >
+                  <div
+                    class='accordion-title mb-0 position-relative text-dark-gray'
+                  >
+                    <i class='fa-solid fa-angle-right icon-small'></i><span
+                      class='fs-20 fw-600'
+                      >What is the expected delivery time?</span
+                    >
+                  </div>
+                </a>
+              </div>
+              <div
+                id='accordion-style-02-03'
+                class='accordion-collapse collapse'
+                data-bs-parent='#accordion-style-02'
+              >
+                <div
+                  class='accordion-body last-paragraph-no-margin border-bottom border-color-transparent'
+                >
+                  <p>
+                    Each EPD project is unique and has different timelines.
+                    However we've noticed a range of 8-12 weeks from EPD
+                    development to third party verification and registration.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- end accordion item -->
+            <!-- start accordion item -->
+            <div class='accordion-item'>
+              <div
+                class='accordion-header border-bottom border-color-transparent'
+              >
+                <a
+                  href='#'
+                  data-bs-toggle='collapse'
+                  data-bs-target='#accordion-style-02-04'
+                  aria-expanded='false'
+                  data-bs-parent='#accordion-style-02'
+                >
+                  <div
+                    class='accordion-title mb-0 position-relative text-dark-gray'
+                  >
+                    <i class='fa-solid fa-angle-right icon-small'></i><span
+                      class='fs-20 fw-600'
+                      >Do I need to find a verifier and handle registration?</span
+                    >
+                  </div>
+                </a>
+              </div>
+              <div
+                id='accordion-style-02-04'
+                class='accordion-collapse collapse'
+                data-bs-parent='#accordion-style-02'
+              >
+                <div
+                  class='accordion-body last-paragraph-no-margin border-bottom border-color-transparent'
+                >
+                  <p>
+                    Our consultants will guide you through finding the right
+                    verifier based on your project specifications and support
+                    you through registration.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- end accordion item -->
           </div>
-        </div>
-        <!-- end accordion item -->
-      </div>
         </div>
         <div
           class='col-lg-6 offset-xl-1 position-relative z-index-1'
           data-anime='{ "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 300, "easing": "easeOutQuad" }'
         >
-        <h2 class='text-dark-gray fw-600 ls-minus-2px mb-15px'>
+          <h2 class='text-dark-gray fw-600 ls-minus-2px mb-15px'>
             Immediatly increase value of your product
           </h2>
-
           <!-- <div class='atropos' data-atropos data-atropos-perspective='2450'>
             <div class='atropos-scale'>
               <div class='atropos-rotate'>
