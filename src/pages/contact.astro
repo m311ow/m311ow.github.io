@@ -5,6 +5,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 <BaseLayout title='Contact' description='Page with contact form'>
   <!-- start page title -->
   <!-- for bg image, add style=`background-image: url(${HeaderIMG.src})` -->
+  <script is:inline src='https://unpkg.com/@botpoison/browser' />
   <section
     class='page-title-big-typography ipad-top-space-margin xs-py-0'
     data-parallax-background-ratio='0.5'
@@ -160,6 +161,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
             action='https://submit-form.com/TQwkKnMpR'
             method='post'
             class='row contact-form-style-02'
+            data-botpoison-public-key='pk_bb4de19a-4531-403a-ac03-27ae93273f52'
           >
             <div class='col-md-6 mb-30px'>
               <input
