@@ -8,7 +8,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
   <section
     class='page-title-big-typography ipad-top-space-margin xs-py-0'
     data-parallax-background-ratio='0.5'
-    
+
   >
     <div class='opacity-light'></div>
     <div class='container'>
@@ -42,6 +42,12 @@ import BaseLayout from '../layouts/BaseLayout.astro'
   <!-- end page title -->
   <!-- start section -->
   <section id='down-section'>
+      <div
+      id='particles-01'
+      data-particle='true'
+      data-particle-options='{"particles": {"number": {"value": 6,"density": {"enable": true,"value_area": 1000}},"color":{"value":["#b7b9be", "#dd6531"]},"shape": {"type": "circle","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 0.5,"random": false,"anim": {"enable": false,"speed": 1,"sync": false}},"size": {"value": 8,"random": true,"anim": {"enable": false,"sync": true}},"move": {"enable": true,"speed":2,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}'
+      class='position-absolute h-100 top-0 left-0 z-index-minus-1'
+  ></div>
     <div class='container'>
       <div
         class='row row-cols-1 row-cols-md-3 row-cols-sm-2 justify-content-center'
@@ -140,7 +146,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
             >Feel free to get in touch!</span
           >
           <h2 class='alt-font text-dark-gray fw-600 ls-minus-2px'>
-            How we can help you?
+            How can we help you?
           </h2>
         </div>
       </div>
@@ -151,7 +157,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
         <div class='col-xl-9 col-lg-11'>
           <!-- start contact form -->
           <form
-            action='email-templates/contact-form.php'
+            action='https://submit-form.com/TQwkKnMpR'
             method='post'
             class='row contact-form-style-02'
           >
@@ -160,7 +166,8 @@ import BaseLayout from '../layouts/BaseLayout.astro'
                 class='box-shadow-quadruple-large input-name form-control required'
                 type='text'
                 name='name'
-                placeholder='Your name*'
+                placeholder='Your name'
+                required
               />
             </div>
             <div class='col-md-6 mb-30px'>
@@ -168,23 +175,17 @@ import BaseLayout from '../layouts/BaseLayout.astro'
                 class='box-shadow-quadruple-large form-control required'
                 type='email'
                 name='email'
-                placeholder='Your email address*'
+                placeholder='Your email address'
+                required
               />
             </div>
-            <div class='col-md-6 mb-30px'>
+            <div class='col-md-12 mb-30px'>
               <input
                 class='box-shadow-quadruple-large form-control'
                 type='text'
                 name='company'
                 placeholder='Your company website'
-              />
-            </div>
-            <div class='col-md-6 mb-30px'>
-              <input
-                class='box-shadow-quadruple-large form-control'
-                type='text'
-                name='subject'
-                placeholder='Your subject'
+                required
               />
             </div>
             <div class='col-md-12 mb-30px'>
@@ -192,8 +193,9 @@ import BaseLayout from '../layouts/BaseLayout.astro'
                 class='box-shadow-quadruple-large form-control'
                 cols='40'
                 rows='4'
-                name='comment'
-                placeholder='Your message'></textarea>
+                name='message'
+                placeholder='Your message'
+                required ></textarea>
             </div>
             <div class='col-md-7 last-paragraph-no-margin'>
               <p class='text-center text-md-start fs-16'>
@@ -205,7 +207,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
               <input type='hidden' name='redirect' value='' />
               <button
                 class='btn btn-medium btn-dark-gray btn-box-shadow btn-round-edge submit'
-                type='submit'>send message</button
+                type='submit'>Send message</button
               >
             </div>
             <div class='col-12'>

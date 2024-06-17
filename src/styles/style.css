@@ -855,6 +855,15 @@ b, strong {
 /* ===================================
     05. General
 ====================================== */
+/* Cursor */
+.cursor-default {
+  cursor: default;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
 /* Separator line */
 .separator-line-1px {
   height: 1px;
