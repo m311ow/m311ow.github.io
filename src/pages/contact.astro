@@ -5,7 +5,6 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 <BaseLayout title='Contact' description='Page with contact form'>
   <!-- start page title -->
   <!-- for bg image, add style=`background-image: url(${HeaderIMG.src})` -->
-  <script is:inline src='https://unpkg.com/@botpoison/browser' />
   <section
     class='page-title-big-typography ipad-top-space-margin xs-py-0'
     data-parallax-background-ratio='0.5'
@@ -156,19 +155,23 @@ import BaseLayout from '../layouts/BaseLayout.astro'
         data-anime='{ "translateY": [100, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'
       >
         <div class='col-xl-9 col-lg-11'>
+
           <!-- start contact form -->
           <form
-            action='https://submit-form.com/TQwkKnMpR'
+            action='https://submit-form.com/ySMjBf7T5'
             class='row contact-form-style-02'
             data-botpoison-public-key='pk_bb4de19a-4531-403a-ac03-27ae93273f52'
           >
+
+            <input type='hidden' name='_feedback.whitelabel' value='true' />
+
             <div class='col-md-6 mb-30px'>
               <input
                 class='box-shadow-quadruple-large input-name form-control required'
                 type='text'
                 name='name'
                 placeholder='Your name'
-                required=''
+                required
               />
             </div>
             <div class='col-md-6 mb-30px'>
@@ -177,7 +180,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
                 type='email'
                 name='email'
                 placeholder='Your email address'
-                required=''
+                required
               />
             </div>
             <div class='col-md-12 mb-30px'>
@@ -186,7 +189,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
                 type='text'
                 name='company'
                 placeholder='Your company website'
-                required=''
+                required
               />
             </div>
             <div class='col-md-12 mb-30px'>
@@ -196,7 +199,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
                 rows='4'
                 name='message'
                 placeholder='Your message'
-                required='' ></textarea>
+                required ></textarea>
             </div>
             <div class='col-md-7 last-paragraph-no-margin'>
               <p class='text-center text-md-start fs-16'>
@@ -206,7 +209,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
             </div>
             <div class='col-md-5 text-center text-md-end sm-mt-20px'>
               <button
-                class='btn btn-medium btn-dark-gray btn-box-shadow btn-round-edge submit'
+                class='btn btn-medium btn-dark-gray btn-box-shadow btn-round-edge'
                 type='submit'>Send message</button
               >
             </div>
