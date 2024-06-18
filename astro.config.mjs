@@ -16,8 +16,7 @@ if (isBuild) {
 }
 
 // https://astro.build/config
-// export default defineConfig({
-//   server: { port: SERVER_PORT },
-//   site: BASE_URL
-// });
-export default defineConfig({});
+export default defineConfig({
+  server: { port: SERVER_PORT },
+  site: BASE_URL
+});
