@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig, passthroughImageService } from 'astro/config';
 
 // localhost server port
 const SERVER_PORT = 3000;
@@ -18,5 +18,8 @@ if (isBuild) {
 // https://astro.build/config
 export default defineConfig({
   server: { port: SERVER_PORT },
-  site: BASE_URL
+  site: BASE_URL,
+  image: {
+    service: passthroughImageService()
+  }
 });
