@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 import { Image } from 'astro:assets'
 import BenefitsBG from '../images/benefits_background.jpg'
 import HeaderIMG from '../images/epd_header_img.jpg'
+import LCAserviceIMG from '../images/stock/homa-appliances-pWUyHVJgLhg-unsplash.jpg'
 ---
 
 <BaseLayout
@@ -81,11 +82,12 @@ import HeaderIMG from '../images/epd_header_img.jpg'
             class='position-relative m-0 border-radius-5px overflow-hidden'
             data-anime='{ "effect": "slide", "direction": "lr", "color": "#dd6531", "duration": 1000, "delay": 0 }'
           >
-            <img
+            <!-- <img
               src='https://via.placeholder.com/600x590'
               alt=''
               class='w-100'
-            />
+            /> -->
+            <Image src={LCAserviceIMG} alt='Image of a manufacturing line' class='w-100' />
             <!-- <figcaption
               class='position-absolute bottom-25px left-25px w-250px border-radius-4px bg-white d-flex align-items-center pt-20px pb-20px ps-25px pe-25px'
               data-anime='{ "translateY": [50, 0], "opacity": [0,1], "duration": 800, "delay": 1200, "staggervalue": 100, "easing": "easeOutQuad" }'
