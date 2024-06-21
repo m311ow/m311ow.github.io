@@ -1,7 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
-
 import HeaderIMG from '../images/epd_header_img.jpg'
+import { Image } from 'astro:assets'
+import ServicesMainIMG from '../images/stock/sven-qBmV-laUfdI-unsplash.jpg'
+
 
 ---
 
@@ -340,11 +342,12 @@ import HeaderIMG from '../images/epd_header_img.jpg'
             class='position-relative md-ps-40px border-radius-5px'
             data-anime='{ "effect": "slide", "color": "#292d36", "direction":"lr", "easing": "easeOutQuad", "delay":0}'
           >
-            <img
+            <!-- <img
               src='https://via.placeholder.com/570x561'
               alt=''
               class='border-radius-5px w-100'
-            />
+            /> -->
+            <Image src={ServicesMainIMG} alt="Image of a forest road" class='border-radius-5px w-100'/>
             <figcaption
               class='position-absolute bottom-minus-20px xs-bottom-minus-60px left-minus-50px lg-left-minus-20px xs-left-minus-0px text-white text-center last-paragraph-no-margin w-60 lg-w-70 md-w-60 xs-w-280px atropos'
               data-atropos
@@ -361,11 +364,11 @@ import HeaderIMG from '../images/epd_header_img.jpg'
                       <i class='line-icon-Money-Bag icon-double-large mb-25px'
                       ></i>
                       <span class='fs-22 sm-fs-20 mb-5px d-block'
-                        >Helping you to promote your product</span
+                        >Increase value of your product</span
                       >
-                      <p class='opacity-7 fw-300'>
+                      <!-- <p class='opacity-7 fw-300'>
                         Lorem ipsum simply dummy print typesetting industry.
-                      </p>
+                      </p> -->
                     </div>
                   </div>
                 </div>
