@@ -86,7 +86,7 @@ import HeaderIMG from '../images/epd_header_img.jpg'
               alt=''
               class='w-100'
             />
-            <figcaption
+            <!-- <figcaption
               class='position-absolute bottom-25px left-25px w-250px border-radius-4px bg-white d-flex align-items-center pt-20px pb-20px ps-25px pe-25px'
               data-anime='{ "translateY": [50, 0], "opacity": [0,1], "duration": 800, "delay": 1200, "staggervalue": 100, "easing": "easeOutQuad" }'
             >
@@ -98,7 +98,7 @@ import HeaderIMG from '../images/epd_header_img.jpg'
               <span class='text-dark-gray lh-22 fw-500 d-inline-block'
                 >Projects completed</span
               >
-            </figcaption>
+            </figcaption> -->
           </figure>
         </div>
         <div
@@ -682,10 +682,7 @@ import HeaderIMG from '../images/epd_header_img.jpg'
   <!-- end section -->
 
   <!-- start section -->
-  <section
-    class='bg-very-light-gray background-position-right-top background-no-repeat'
-    style="background-image: url('https://via.placeholder.com/551x369')"
-  >
+  <section>
     <div class='container'>
       <div class='row align-items-center justify-content-center'>
         <div
@@ -699,7 +696,9 @@ import HeaderIMG from '../images/epd_header_img.jpg'
               Get a free quote?
             </h3>
             <!-- start contact form -->
-            <form action='email-templates/contact-form.php' method='post'>
+            <form action='https://submit-form.com/ySMjBf7T5' data-botpoison-public-key='pk_bb4de19a-4531-403a-ac03-27ae93273f52'>
+              <input type='hidden' name='_feedback.whitelabel' value='true' />
+
               <div class='position-relative form-group mb-20px'>
                 <span class='form-icon'
                   ><i class='bi bi-person icon-extra-medium'></i></span
@@ -708,7 +707,8 @@ import HeaderIMG from '../images/epd_header_img.jpg'
                   class='ps-0 border-radius-0px fs-17 bg-transparent border-color-transparent-white-light placeholder-medium-gray form-control required'
                   type='text'
                   name='name'
-                  placeholder='Enter your name*'
+                  placeholder='Your name'
+                  required
                 />
               </div>
               <div class='position-relative form-group mb-20px'>
@@ -719,7 +719,20 @@ import HeaderIMG from '../images/epd_header_img.jpg'
                   class='ps-0 border-radius-0px fs-17 bg-transparent border-color-transparent-white-light placeholder-medium-gray form-control required'
                   type='email'
                   name='email'
-                  placeholder='Enter your email address*'
+                  placeholder='Your email address'
+                  required
+                />
+              </div>
+              <div class='position-relative form-group mb-20px'>
+                <span class='form-icon'
+                  ><i class='bi bi-building icon-extra-medium'></i></span
+                >
+                <input
+                  class='ps-0 border-radius-0px fs-17 bg-transparent border-color-transparent-white-light placeholder-medium-gray form-control required'
+                  type='text'
+                  name='company_name'
+                  placeholder='Your company name'
+                  required
                 />
               </div>
               <div
@@ -727,16 +740,16 @@ import HeaderIMG from '../images/epd_header_img.jpg'
               >
                 <textarea
                   class='ps-0 border-radius-0px fs-17 bg-transparent border-color-transparent-white-light placeholder-medium-gray form-control'
-                  name='comment'
-                  placeholder='Enter your message'
-                  rows='3'></textarea>
+                  name='message'
+                  placeholder='Your message'
+                  rows='3'
+                  required></textarea>
                 <span class='form-icon'
                   ><i class='bi bi-chat-square-dots icon-extra-medium'
                   ></i></span
                 >
-                <input type='hidden' name='redirect' value='' />
                 <button
-                  class='btn btn-medium btn-base-color mt-30px submit w-100 btn-round-edge btn-box-shadow'
+                  class='btn btn-medium btn-base-color mt-30px w-100 btn-round-edge btn-box-shadow'
                   type='submit'>Submit now</button
                 >
                 <div class='form-results mt-20px d-none'></div>
@@ -767,20 +780,17 @@ import HeaderIMG from '../images/epd_header_img.jpg'
               <!-- start text slider item -->
               <div class='swiper-slide review-style-08'>
                 <p class='fs-18'>
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which don't look
-                  even slightly believable.
+                  I was very satisfied with the professional approach, communication and speed of processing by EPD Clarity. Based on my own experience with EPDs, I have recommended EPD Clarity to other Saint-Gobain divisions.
                 </p>
                 <div class='mt-20px'>
-                  <img
+                  <!-- <img
                     class='rounded-circle w-95px h-95px me-15px'
                     src='https://via.placeholder.com/148x148'
                     alt=''
-                  />
+                  /> -->
                   <div class='d-inline-block align-middle text-start'>
                     <div class='text-dark-gray fs-20 fw-600 ls-minus-05px'>
-                      Alexander harvard
+                      Ing. Vladimir Balent, Saint-Gobain Construction Products
                     </div>
                     <div class='review-star-icon fs-18'>
                       <i class='bi bi-star-fill'></i><i class='bi bi-star-fill'
@@ -795,20 +805,17 @@ import HeaderIMG from '../images/epd_header_img.jpg'
               <!-- start text slider item -->
               <div class='swiper-slide review-style-08'>
                 <p class='fs-18'>
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which don't look
-                  even slightly believable.
+                  I highly appreciate the professional cooperation with Professor Vilcekova. We recommend EPD Clarity as a reliable partner in solving EPD challenges.
                 </p>
                 <div class='mt-20px'>
-                  <img
+                  <!-- <img
                     class='rounded-circle w-95px h-95px me-15px'
                     src='https://via.placeholder.com/148x148'
                     alt=''
-                  />
+                  /> -->
                   <div class='d-inline-block align-middle text-start'>
                     <div class='text-dark-gray fs-20 fw-600 ls-minus-05px'>
-                      Shoko mugikura
+                      Jan Kovacik, GreenCon International
                     </div>
                     <div class='review-star-icon fs-18'>
                       <i class='bi bi-star-fill'></i><i class='bi bi-star-fill'
@@ -823,20 +830,17 @@ import HeaderIMG from '../images/epd_header_img.jpg'
               <!-- start text slider item -->
               <div class='swiper-slide review-style-08'>
                 <p class='fs-18'>
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which don't look
-                  even slightly believable.
+                  Cooperation with EPD Clarity was very good and smooth in every respect.
                 </p>
                 <div class='mt-20px'>
-                  <img
+                  <!-- <img
                     class='rounded-circle w-95px h-95px me-15px'
                     src='https://via.placeholder.com/200x200'
                     alt=''
-                  />
+                  /> -->
                   <div class='d-inline-block align-middle text-start'>
                     <div class='text-dark-gray fs-20 fw-600 ls-minus-05px'>
-                      Leonel mooney
+                      Ing. Gabriel Szollosi, Wienerbrger
                     </div>
                     <div class='review-star-icon fs-18'>
                       <i class='bi bi-star-fill'></i><i class='bi bi-star-fill'

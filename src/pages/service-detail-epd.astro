@@ -4,6 +4,7 @@ import { Image } from 'astro:assets'
 import EPDpreviewIMG from '../images/services_hero_2_cropped_small.webp'
 import BenefitsBG from '../images/benefits_background.jpg'
 import HeaderIMG from '../images/epd_header_img.jpg'
+import EPDmockupIMG from '../images/epd-mockup.png'
 ---
 
 <BaseLayout
@@ -76,13 +77,13 @@ import HeaderIMG from '../images/epd_header_img.jpg'
   <!-- start section -->
   <section id='down-section'>
     <div class='container'>
-      <div class='row align-items-center justify-content-center'>
+      <div class='row align-items-start justify-content-center'>
         <div class='col-lg-6 col-md-9 md-mb-50px'>
           <figure
             class='position-relative m-0 border-radius-5px overflow-hidden'
             data-anime='{ "effect": "slide", "direction": "lr", "color": "#dd6531", "duration": 1000, "delay": 0 }'
           >
-            <Image src={EPDpreviewIMG} alt='Preview of an EPD' class='w-100' />
+            <Image src={EPDmockupIMG} alt='Preview of an EPD' class='w-100' />
 
             <figcaption
               class='position-absolute bottom-25px left-25px w-250px border-radius-4px bg-white d-flex align-items-center pt-20px pb-20px ps-25px pe-25px'
@@ -90,7 +91,7 @@ import HeaderIMG from '../images/epd_header_img.jpg'
             >
               <h2
                 class='text-dark-gray fw-700 ls-minus-3px sm-ls-minus-2px vertical-counter d-inline-flex mb-0 text-nowrap border-end border-1 border-color-extra-medium-gray pe-20px me-20px'
-                data-to='85'
+                data-to='50'
               >
               </h2>
               <span class='text-dark-gray lh-22 fw-500 d-inline-block'
@@ -114,12 +115,12 @@ import HeaderIMG from '../images/epd_header_img.jpg'
             It encompasses all relevant mandatory and/or optional stages of a
             product's life cycle, from raw material extraction to disposal.
           </p>
-          <p class='w-90 lg-w-100 md-mx-auto mb-35px'>
+          <!-- <p class='w-90 lg-w-100 md-mx-auto mb-35px'>
             Type III EPDs which comply with EN 15804:2012+A2:2019 and EN ISO
             14025 standards meet the requirements of green building
             certification systems such as LEED v4, BREEAM International NC 2016,
             and BREEAM v6 and others.
-          </p>
+          </p> -->
           <div
             class='row row-cols-1 justify-content-center'
             data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'
@@ -199,13 +200,13 @@ import HeaderIMG from '../images/epd_header_img.jpg'
     data-anime='{ "el": "childs", "translateY": [0, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'
   >
     <div class='container'>
-      <div class='row mb-45px md-mb-30px'>
+      <!-- <div class='row mb-45px md-mb-30px'>
         <div class='col-12 text-center'>
           <span class='fs-26 fw-500 ls-minus-1px text-dark-gray'
             >Trusted by the world's fastest growing companies</span
           >
         </div>
-      </div>
+      </div> -->
       <div class='row position-relative clients-style-08'>
         <div
           class='col swiper text-center feather-shadow'
@@ -727,10 +728,7 @@ import HeaderIMG from '../images/epd_header_img.jpg'
 
 
   <!-- start section -->
-  <section
-    class='bg-very-light-gray background-position-right-top background-no-repeat'
-    style="background-image: url('https://via.placeholder.com/551x369')"
-  >
+  <section>
     <div class='container'>
       <div class='row align-items-center justify-content-center'>
         <div
@@ -744,7 +742,9 @@ import HeaderIMG from '../images/epd_header_img.jpg'
               Get a free quote?
             </h3>
             <!-- start contact form -->
-            <form action='email-templates/contact-form.php' method='post'>
+            <form action='https://submit-form.com/ySMjBf7T5' data-botpoison-public-key='pk_bb4de19a-4531-403a-ac03-27ae93273f52'>
+              <input type='hidden' name='_feedback.whitelabel' value='true' />
+
               <div class='position-relative form-group mb-20px'>
                 <span class='form-icon'
                   ><i class='bi bi-person icon-extra-medium'></i></span
@@ -753,7 +753,8 @@ import HeaderIMG from '../images/epd_header_img.jpg'
                   class='ps-0 border-radius-0px fs-17 bg-transparent border-color-transparent-white-light placeholder-medium-gray form-control required'
                   type='text'
                   name='name'
-                  placeholder='Enter your name*'
+                  placeholder='Your name'
+                  required
                 />
               </div>
               <div class='position-relative form-group mb-20px'>
@@ -764,7 +765,20 @@ import HeaderIMG from '../images/epd_header_img.jpg'
                   class='ps-0 border-radius-0px fs-17 bg-transparent border-color-transparent-white-light placeholder-medium-gray form-control required'
                   type='email'
                   name='email'
-                  placeholder='Enter your email address*'
+                  placeholder='Your email address'
+                  required
+                />
+              </div>
+              <div class='position-relative form-group mb-20px'>
+                <span class='form-icon'
+                  ><i class='bi bi-building icon-extra-medium'></i></span
+                >
+                <input
+                  class='ps-0 border-radius-0px fs-17 bg-transparent border-color-transparent-white-light placeholder-medium-gray form-control required'
+                  type='text'
+                  name='company_name'
+                  placeholder='Your company name'
+                  required
                 />
               </div>
               <div
@@ -772,16 +786,16 @@ import HeaderIMG from '../images/epd_header_img.jpg'
               >
                 <textarea
                   class='ps-0 border-radius-0px fs-17 bg-transparent border-color-transparent-white-light placeholder-medium-gray form-control'
-                  name='comment'
-                  placeholder='Enter your message'
-                  rows='3'></textarea>
+                  name='message'
+                  placeholder='Your message'
+                  rows='3'
+                  required></textarea>
                 <span class='form-icon'
                   ><i class='bi bi-chat-square-dots icon-extra-medium'
                   ></i></span
                 >
-                <input type='hidden' name='redirect' value='' />
                 <button
-                  class='btn btn-medium btn-base-color mt-30px submit w-100 btn-round-edge btn-box-shadow'
+                  class='btn btn-medium btn-base-color mt-30px w-100 btn-round-edge btn-box-shadow'
                   type='submit'>Submit now</button
                 >
                 <div class='form-results mt-20px d-none'></div>
@@ -804,7 +818,7 @@ import HeaderIMG from '../images/epd_header_img.jpg'
           <h2 class='fw-600 text-dark-gray ls-minus-2px mb-35px'>
             Here is what our clients have to say.
           </h2>
-          <div
+         <div
             class='swiper position-relative magic-cursor'
             data-slider-options='{ "autoHeight": true, "loop": true, "allowTouchMove": true, "autoplay": { "delay": 4000, "disableOnInteraction": false }, "navigation": { "nextEl": ".swiper-button-next", "prevEl": ".swiper-button-prev" }, "effect": "fade" }'
           >
@@ -812,20 +826,17 @@ import HeaderIMG from '../images/epd_header_img.jpg'
               <!-- start text slider item -->
               <div class='swiper-slide review-style-08'>
                 <p class='fs-18'>
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which don't look
-                  even slightly believable.
+                  I was very satisfied with the professional approach, communication and speed of processing by EPD Clarity. Based on my own experience with EPDs, I have recommended EPD Clarity to other Saint-Gobain divisions.
                 </p>
                 <div class='mt-20px'>
-                  <img
+                  <!-- <img
                     class='rounded-circle w-95px h-95px me-15px'
                     src='https://via.placeholder.com/148x148'
                     alt=''
-                  />
+                  /> -->
                   <div class='d-inline-block align-middle text-start'>
                     <div class='text-dark-gray fs-20 fw-600 ls-minus-05px'>
-                      Alexander harvard
+                      Ing. Vladimir Balent, Saint-Gobain Construction Products
                     </div>
                     <div class='review-star-icon fs-18'>
                       <i class='bi bi-star-fill'></i><i class='bi bi-star-fill'
@@ -840,20 +851,17 @@ import HeaderIMG from '../images/epd_header_img.jpg'
               <!-- start text slider item -->
               <div class='swiper-slide review-style-08'>
                 <p class='fs-18'>
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which don't look
-                  even slightly believable.
+                  I highly appreciate the professional cooperation with Professor Vilcekova. We recommend EPD Clarity as a reliable partner in solving EPD challenges.
                 </p>
                 <div class='mt-20px'>
-                  <img
+                  <!-- <img
                     class='rounded-circle w-95px h-95px me-15px'
                     src='https://via.placeholder.com/148x148'
                     alt=''
-                  />
+                  /> -->
                   <div class='d-inline-block align-middle text-start'>
                     <div class='text-dark-gray fs-20 fw-600 ls-minus-05px'>
-                      Shoko mugikura
+                      Jan Kovacik, GreenCon International
                     </div>
                     <div class='review-star-icon fs-18'>
                       <i class='bi bi-star-fill'></i><i class='bi bi-star-fill'
@@ -868,20 +876,17 @@ import HeaderIMG from '../images/epd_header_img.jpg'
               <!-- start text slider item -->
               <div class='swiper-slide review-style-08'>
                 <p class='fs-18'>
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which don't look
-                  even slightly believable.
+                  Cooperation with EPD Clarity was very good and smooth in every respect.
                 </p>
                 <div class='mt-20px'>
-                  <img
+                  <!-- <img
                     class='rounded-circle w-95px h-95px me-15px'
                     src='https://via.placeholder.com/200x200'
                     alt=''
-                  />
+                  /> -->
                   <div class='d-inline-block align-middle text-start'>
                     <div class='text-dark-gray fs-20 fw-600 ls-minus-05px'>
-                      Leonel mooney
+                      Ing. Gabriel Szollosi, Wienerbrger
                     </div>
                     <div class='review-star-icon fs-18'>
                       <i class='bi bi-star-fill'></i><i class='bi bi-star-fill'
