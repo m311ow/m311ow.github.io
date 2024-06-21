@@ -1,5 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
+import { Image } from 'astro:assets'
+import PostPreviewIMG from '../images/stock/javier-allegue-barros-C7B-ExXpOIE-unsplash.jpg'
+
 ---
 <BaseLayout title="News" description="Page with list of blog posts">
   <!-- start page title -->
@@ -56,7 +59,10 @@ import BaseLayout from '../layouts/BaseLayout.astro'
                         <li class="grid-item">
                             <div class="card border-0 border-radius-4px box-shadow-medium box-shadow-extra-large-hover">
                                 <div class="blog-image">
-                                    <a href="/news-post" class="d-block"><img src="https://via.placeholder.com/600x460" alt="" /></a>
+                                    <a href="/news-post" class="d-block">
+                                        <!-- <img src="https://via.placeholder.com/600x460" alt="" /> -->
+                                        <Image src={PostPreviewIMG} alt='Image of arrows pointing in different directions'/>
+                                    </a>
                                 </div>
                                 <div class="card-body p-13 md-p-11">
                                     <a href="/news-post" class="card-title mb-15px alt-font fw-600 fs-20 text-dark-gray d-inline-block">Choosing the right Programme Operator for you</a>

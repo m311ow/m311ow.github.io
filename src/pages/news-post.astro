@@ -1,9 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
+import { Image } from 'astro:assets'
+import PostBG from '../images/stock/javier-allegue-barros-C7B-ExXpOIE-unsplash.jpg'
+import PostIMG from '../images/stock/scott-graham-5fNmWej4tAA-unsplash.jpg'
 ---
 <BaseLayout title="Post title" description="Blog post">
         <!-- start section -->
-        <section class="one-fourth-screen sm-mb-50px bg-dark-gray"  data-parallax-background-ratio="0.5" style="background-image: url(https://via.placeholder.com/1920x1100)"></section>
+        <section class="one-fourth-screen sm-mb-50px bg-dark-gray"  data-parallax-background-ratio="0.5" style=`background-image: url(${PostBG.src})`></section>
         <!-- end section -->
         <!-- start section -->
         <section class="p-0">
@@ -53,7 +56,8 @@ import BaseLayout from '../layouts/BaseLayout.astro'
             <div class="container">
                 <div class="row justify-content-center" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
                     <div class="mb-6">
-                        <img src="https://via.placeholder.com/1190x750" alt="">
+                        <!-- <img src="https://via.placeholder.com/1190x750" alt=""> -->
+                        <Image src={PostIMG} alt="Image of people sitting behind table. One person is explaining something." />
                     </div>
                     <div class="col-lg-9 last-paragraph-no-margin mb-30px">
                         <h6 class="alt-font fw-500 text-dark-gray ls-minus-05px mb-15px">So, how do you choose the best PO for showcasing your product?</h6>
