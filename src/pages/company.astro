@@ -1,15 +1,12 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro'
-import { Image } from 'astro:assets'
-import PortraitSilvia from '../images/team/Business_portrait_Silvia.jpg'
-import NotebookIMG from '../images/notebook.jpg'
-import TalkingIMG from '../images/talking.jpg'
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import PortraitSilvia from '../images/team/Business_portrait_Silvia.jpg';
+import NotebookIMG from '../images/notebook.jpg';
+import TalkingIMG from '../images/talking.jpg';
 ---
 
-<BaseLayout
-  title='Company'
-  description='Page with informations about EPD Clarity company'
->
+<BaseLayout title='Company' description='Page with informations about EPD Clarity company'>
   <!-- start page title -->
   <!-- to add background, add style='background-image: url(https://via.placeholder.com/1925x1050)' -->
   <section
@@ -26,9 +23,7 @@ import TalkingIMG from '../images/talking.jpg'
           <h1 class='mb-5px alt-font text-dark-gray'>
             <span class='opacity-6'>Business profile</span>
           </h1>
-          <h2
-            class='mb-0 text-dark-gray alt-font ls-minus-2px text-shadow-double-large fw-500'
-          >
+          <h2 class='mb-0 text-dark-gray alt-font ls-minus-2px text-shadow-double-large fw-500'>
             About company
           </h2>
         </div>
@@ -70,14 +65,13 @@ import TalkingIMG from '../images/talking.jpg'
             class='w-90 sm-w-100 mx-auto mx-lg-0'
             data-anime='{ "el": "lines", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
           >
-            The process of LCA modelling demands robust methodological expertise
-            and technical adaptability. Nonetheless, the outcomes of LCA hold
-            advantages for various departments within your organization. Product
-            designers can integrate LCA findings into their development process
-            to create innovative and carbon neutral products. Sales teams can
-            utilize these results to substantiate the environmental merits of
-            products with science-based evidence. Marketing can support
-            environmentally-friendly claims with concrete data and statistics.
+            The process of LCA modelling demands robust methodological expertise and technical
+            adaptability. Nonetheless, the outcomes of LCA hold advantages for various departments
+            within your organization. Product designers can integrate LCA findings into their
+            development process to create innovative and carbon neutral products. Sales teams can
+            utilize these results to substantiate the environmental merits of products with
+            science-based evidence. Marketing can support environmentally-friendly claims with
+            concrete data and statistics.
           </p>
           <a
             href='/services'
@@ -105,9 +99,7 @@ import TalkingIMG from '../images/talking.jpg'
             <div
               class='col-7 col-xl-7 col-md-12 last-paragraph-no-margin text-md-end text-xl-start'
             >
-              <span class='fs-20 text-dark-gray fw-600 alt-font'
-                >Years of experience</span
-              >
+              <span class='fs-20 text-dark-gray fw-600 alt-font'>Years of experience</span>
               <p>as a pioneer in LCA field</p>
             </div>
           </div>
@@ -125,9 +117,7 @@ import TalkingIMG from '../images/talking.jpg'
             <div
               class='col-7 col-xl-7 col-md-12 last-paragraph-no-margin text-md-end text-xl-start'
             >
-              <span class='fs-20 text-dark-gray fw-600 alt-font'
-                >EPDs created</span
-              >
+              <span class='fs-20 text-dark-gray fw-600 alt-font'>EPDs created</span>
               <p>across different industries</p>
             </div>
           </div>
@@ -150,9 +140,7 @@ import TalkingIMG from '../images/talking.jpg'
         >
           <!-- start counter item -->
           <div class='row align-items-center mb-50px sm-mb-35px'>
-            <div
-              class='col-5 col-xl-5 col-md-12 text-end text-xl-end text-md-start'
-            >
+            <div class='col-5 col-xl-5 col-md-12 text-end text-xl-end text-md-start'>
               <h2
                 class='alt-font fw-600 text-dark-gray ls-minus-2px mb-0 counter'
                 data-speed='2000'
@@ -161,18 +149,14 @@ import TalkingIMG from '../images/talking.jpg'
               </h2>
             </div>
             <div class='col-7 col-xl-7 col-md-12 last-paragraph-no-margin'>
-              <span class='fs-20 text-dark-gray fw-600 alt-font'
-                >EPDs verified</span
-              >
+              <span class='fs-20 text-dark-gray fw-600 alt-font'>EPDs verified</span>
               <p>as third party verifier</p>
             </div>
           </div>
           <!-- end counter item -->
           <!-- start counter item -->
           <div class='row align-items-center'>
-            <div
-              class='col-5 col-xl-5 col-md-12 text-end text-xl-end text-md-start'
-            >
+            <div class='col-5 col-xl-5 col-md-12 text-end text-xl-end text-md-start'>
               <h2
                 class='alt-font fw-600 text-dark-gray ls-minus-2px mb-0 counter'
                 data-speed='2000'
@@ -181,13 +165,8 @@ import TalkingIMG from '../images/talking.jpg'
               </h2>
             </div>
             <div class='col-7 col-xl-7 col-md-12 last-paragraph-no-margin'>
-              <span class='fs-20 text-dark-gray fw-600 alt-font'
-                >Scientific publications</span
-              >
-              <p>
-                on topics of climate change, carbon footprint of products and
-                others
-              </p>
+              <span class='fs-20 text-dark-gray fw-600 alt-font'>Scientific publications</span>
+              <p>on topics of climate change, carbon footprint of products and others</p>
             </div>
           </div>
           <!-- end counter item -->
@@ -204,33 +183,25 @@ import TalkingIMG from '../images/talking.jpg'
           class='col-lg-6 md-h-550px xs-h-400px overflow-hidden'
           data-anime='{ "translateY": [0, 0], "opacity": [0,1], "duration": 1000, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
         >
-          <div
-            class='h-100 cover-background'
-            style=`background-image: url(${NotebookIMG.src})`
-          >
+          <div class='h-100 cover-background' style=`background-image: url(${NotebookIMG.src})`>
           </div>
         </div>
         <div
           class='col-lg-6 col-md-10 ps-8 pe-8 pt-7 pb-7'
           data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 200, "staggervalue": 100, "easing": "easeOutQuad" }'
         >
-          <h2 class='alt-font fw-500 text-white ls-minus-2px'>
-            Experience meets innovation
-          </h2>
+          <h2 class='alt-font fw-500 text-white ls-minus-2px'>Experience meets innovation</h2>
           <p class='w-80 lg-w-100 mb-30px'>
-            Our consultancy service is founded on the principle of partnership,
-            where we view the client-consultant relationship as a collaborative
-            journey towards achieving sustainability goals. We are committed to
-            realizing our clients' sustainability objectives, dedicating our
-            expertise and resources until those targets are met.
+            Our consultancy service is founded on the principle of partnership, where we view the
+            client-consultant relationship as a collaborative journey towards achieving
+            sustainability goals. We are committed to realizing our clients' sustainability
+            objectives, dedicating our expertise and resources until those targets are met.
           </p>
           <p class='w-80 lg-w-100 mb-30px'>
-            Our approach involves guiding clients through every step of the
-            process, offering not only consultancy hours but also our unwavering
-            support and dedication. We believe that our clients' success is a
-            testament to our own, and we are fully invested in empowering them
-            to leverage their sustainability achievements for long-term growth
-            and impact.
+            Our approach involves guiding clients through every step of the process, offering not
+            only consultancy hours but also our unwavering support and dedication. We believe that
+            our clients' success is a testament to our own, and we are fully invested in empowering
+            them to leverage their sustainability achievements for long-term growth and impact.
           </p>
           <!-- start features box item -->
           <div class='icon-with-text-style-08 mb-15px'>
@@ -241,9 +212,7 @@ import TalkingIMG from '../images/talking.jpg'
                 <i class='fa-solid fa-check icon-very-small text-white'></i>
               </div>
               <div class='feature-box-content'>
-                <span class='fs-18 alt-font d-block text-white'
-                  >Client oriented approach</span
-                >
+                <span class='fs-18 alt-font d-block text-white'>Client oriented approach</span>
               </div>
             </div>
           </div>
@@ -403,12 +372,8 @@ import TalkingIMG from '../images/talking.jpg'
               <div
                 class='bg-white border-radius-6px overflow-hidden box-shadow-double-large icon-with-text-style-05 transition-inner-all mb-30px'
               >
-                <div
-                  class='feature-box hover-box dark-hover last-paragraph-no-margin'
-                >
-                  <div
-                    class='content-scale pt-17 pb-17 ps-10 pe-10 sm-p-15'
-                  >
+                <div class='feature-box hover-box dark-hover last-paragraph-no-margin'>
+                  <div class='content-scale pt-17 pb-17 ps-10 pe-10 sm-p-15'>
                     <div class='feature-box-icon'>
                       <i
                         class='line-icon-Like icon-extra-large text-base-color mb-20px justify-content-center'
@@ -419,7 +384,6 @@ import TalkingIMG from '../images/talking.jpg'
                         class='cursor-default d-inline-block alt-font text-dark-gray fs-20 fw-600'
                         >Experienced</span
                       >
-
                     </div>
                   </div>
                   <div class='feature-box-overlay bg-base-color'></div>
@@ -430,12 +394,8 @@ import TalkingIMG from '../images/talking.jpg'
               <div
                 class='bg-white border-radius-6px overflow-hidden box-shadow-double-large icon-with-text-style-05 transition-inner-all xs-mb-30px'
               >
-                <div
-                  class='feature-box hover-box dark-hover last-paragraph-no-margin'
-                >
-                  <div
-                    class='content-scale pt-17 pb-17 ps-10 pe-10 sm-p-15'
-                  >
+                <div class='feature-box hover-box dark-hover last-paragraph-no-margin'>
+                  <div class='content-scale pt-17 pb-17 ps-10 pe-10 sm-p-15'>
                     <div class='feature-box-icon'>
                       <i
                         class='line-icon-Knight icon-extra-large text-base-color mb-20px justify-content-center'
@@ -446,7 +406,6 @@ import TalkingIMG from '../images/talking.jpg'
                         class='cursor-default d-inline-block alt-font text-dark-gray fs-20 fw-600'
                         >Dedicated</span
                       >
-
                     </div>
                   </div>
                   <div class='feature-box-overlay bg-base-color'></div>
@@ -464,12 +423,8 @@ import TalkingIMG from '../images/talking.jpg'
               <div
                 class='bg-white border-radius-6px overflow-hidden box-shadow-double-large icon-with-text-style-05 transition-inner-all mb-30px'
               >
-                <div
-                  class='feature-box hover-box dark-hover last-paragraph-no-margin'
-                >
-                  <div
-                    class='xs-w-100 content-scale pt-17 pb-17 ps-10 pe-10 sm-p-15'
-                  >
+                <div class='feature-box hover-box dark-hover last-paragraph-no-margin'>
+                  <div class='xs-w-100 content-scale pt-17 pb-17 ps-10 pe-10 sm-p-15'>
                     <div class='feature-box-icon'>
                       <i
                         class='line-icon-MaleFemale icon-extra-large text-base-color mb-20px justify-content-center'
@@ -480,7 +435,6 @@ import TalkingIMG from '../images/talking.jpg'
                         class='cursor-default d-inline-block alt-font text-dark-gray fs-20 fw-600'
                         >Supportive</span
                       >
-
                     </div>
                   </div>
                   <div class='feature-box-overlay bg-base-color'></div>
@@ -491,12 +445,8 @@ import TalkingIMG from '../images/talking.jpg'
               <div
                 class='bg-white border-radius-6px overflow-hidden box-shadow-double-large icon-with-text-style-05 transition-inner-all mt-30px'
               >
-                <div
-                  class='feature-box hover-box dark-hover last-paragraph-no-margin'
-                >
-                  <div
-                    class='content-scale pt-17 pb-17 ps-10 pe-10 sm-p-15'
-                  >
+                <div class='feature-box hover-box dark-hover last-paragraph-no-margin'>
+                  <div class='content-scale pt-17 pb-17 ps-10 pe-10 sm-p-15'>
                     <div class='feature-box-icon'>
                       <i
                         class='line-icon-Bar-Chart2 icon-extra-large text-base-color mb-20px justify-content-center'
@@ -507,7 +457,6 @@ import TalkingIMG from '../images/talking.jpg'
                         class='cursor-default d-inline-block alt-font text-dark-gray fs-20 fw-600'
                         >Efficient</span
                       >
-
                     </div>
                   </div>
                   <div class='feature-box-overlay bg-base-color'></div>
@@ -525,9 +474,9 @@ import TalkingIMG from '../images/talking.jpg'
             Why choose our company services?
           </h2>
           <p class='w-90 xs-w-100 mx-auto mx-lg-0'>
-            Our consultancy service is founded on the principle of partnership,
-            where we view the client-consultant relationship as a collaborative
-            journey towards achieving sustainability goals.
+            Our consultancy service is founded on the principle of partnership, where we view the
+            client-consultant relationship as a collaborative journey towards achieving
+            sustainability goals.
           </p>
           <a
             href='/contact'
@@ -570,5 +519,4 @@ import TalkingIMG from '../images/talking.jpg'
     </div>
   </section> -->
   <!-- end section -->
-
 </BaseLayout>
