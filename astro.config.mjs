@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 
 // localhost server port
 const SERVER_PORT = 3000;
@@ -18,5 +19,6 @@ if (isBuild) {
 // https://astro.build/config
 export default defineConfig({
   server: { port: SERVER_PORT },
-  site: BASE_URL
+  site: BASE_URL,
+  integrations: [sitemap()]
 });
