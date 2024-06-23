@@ -1,5 +1,5 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro'
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title='Contact' description='Page with contact form'>
@@ -19,9 +19,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
           <h1 class='mb-5px alt-font text-dark-gray fw-400'>
             <span class='opacity-6'>Love to hear from you</span>
           </h1>
-          <h2
-            class='mb-0 text-dark-gray alt-font ls-minus-2px text-shadow-double-large fw-500'
-          >
+          <h2 class='mb-0 text-dark-gray alt-font ls-minus-2px text-shadow-double-large fw-500'>
             Contact us
           </h2>
         </div>
@@ -41,12 +39,13 @@ import BaseLayout from '../layouts/BaseLayout.astro'
   <!-- end page title -->
   <!-- start section -->
   <section id='down-section'>
-      <div
+    <div
       id='particles-01'
       data-particle='true'
       data-particle-options='{"particles": {"number": {"value": 6,"density": {"enable": true,"value_area": 1000}},"color":{"value":["#b7b9be", "#dd6531"]},"shape": {"type": "circle","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 0.5,"random": false,"anim": {"enable": false,"speed": 1,"sync": false}},"size": {"value": 8,"random": true,"anim": {"enable": false,"sync": true}},"move": {"enable": true,"speed":2,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}'
       class='position-absolute h-100 top-0 left-0 z-index-minus-1'
-  ></div>
+    >
+    </div>
     <div class='container'>
       <div
         class='row row-cols-1 row-cols-md-3 row-cols-sm-2 justify-content-center'
@@ -56,13 +55,10 @@ import BaseLayout from '../layouts/BaseLayout.astro'
         <div class='col icon-with-text-style-04 sm-mb-40px'>
           <div class='feature-box last-paragraph-no-margin'>
             <div class='feature-box-icon'>
-              <i
-                class='line-icon-Geo2-Love icon-extra-large text-base-color mb-25px'
-              ></i>
+              <i class='line-icon-Geo2-Love icon-extra-large text-base-color mb-25px'></i>
             </div>
             <div class='feature-box-content last-paragraph-no-margin'>
-              <span
-                class='d-inline-block alt-font fw-600 text-dark-gray mb-5px fs-20'
+              <span class='d-inline-block alt-font fw-600 text-dark-gray mb-5px fs-20'
                 >EPD Clarity office</span
               >
               <p>Karadzicova 16, Bratislava 821 08<br /> Slovakia</p>
@@ -71,7 +67,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
         </div>
         <!-- end features box item -->
         <!-- start features box item -->
-        <div class='col icon-with-text-style-04 sm-mb-40px'>
+        <!-- <div class='col icon-with-text-style-04 sm-mb-40px'>
           <div class='feature-box last-paragraph-no-margin'>
             <div class='feature-box-icon'>
               <i
@@ -93,25 +89,20 @@ import BaseLayout from '../layouts/BaseLayout.astro'
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
         <!-- end features box item -->
         <!-- start features box item -->
         <div class='col icon-with-text-style-04'>
           <div class='feature-box last-paragraph-no-margin'>
             <div class='feature-box-icon'>
-              <i
-                class='line-icon-Mail-Read icon-extra-large text-base-color mb-25px'
-              ></i>
+              <i class='line-icon-Mail-Read icon-extra-large text-base-color mb-25px'></i>
             </div>
             <div class='feature-box-content last-paragraph-no-margin'>
-              <span
-                class='d-inline-block alt-font fw-600 text-dark-gray mb-5px fs-20'
+              <span class='d-inline-block alt-font fw-600 text-dark-gray mb-5px fs-20'
                 >E-mail us</span
               >
               <div class='w-100 d-block'>
-                <a href='mailto:info@epdclarity.com' class='d-block'
-                  >info@epdclarity.com</a
-                >
+                <a href='mailto:info@epdclarity.com' class='d-block'>info@epdclarity.com</a>
               </div>
             </div>
           </div>
@@ -144,9 +135,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
             class='fw-600 ls-1px fs-16 alt-font d-inline-block text-uppercase mb-5px text-base-color'
             >Feel free to get in touch!</span
           >
-          <h2 class='alt-font text-dark-gray fw-600 ls-minus-2px'>
-            How can we help you?
-          </h2>
+          <h2 class='alt-font text-dark-gray fw-600 ls-minus-2px'>How can we help you?</h2>
         </div>
       </div>
       <div
@@ -154,13 +143,15 @@ import BaseLayout from '../layouts/BaseLayout.astro'
         data-anime='{ "translateY": [100, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'
       >
         <div class='col-xl-9 col-lg-11'>
-
           <!-- start contact form -->
           <form
             action='https://submit-form.com/ySMjBf7T5'
             class='row contact-form-style-02'
             data-botpoison-public-key='pk_bb4de19a-4531-403a-ac03-27ae93273f52'
           >
+            <input type='hidden' name='_redirect' value='https://epdclarity.com/contact-success' />
+            <input type='hidden' name='_error' value='https://epdclarity.com/contact-fail' />
+            <input type='hidden' name='_append' value='false' />
 
             <input type='hidden' name='_feedback.whitelabel' value='true' />
 
@@ -198,12 +189,12 @@ import BaseLayout from '../layouts/BaseLayout.astro'
                 rows='4'
                 name='message'
                 placeholder='Your message'
-                required ></textarea>
+                required></textarea>
             </div>
             <div class='col-md-7 last-paragraph-no-margin'>
               <p class='text-center text-md-start fs-16'>
-                We are committed to protecting your privacy. We will never
-                collect information about you without your explicit consent.
+                We are committed to protecting your privacy. We will never collect information about
+                you without your explicit consent.
               </p>
             </div>
             <div class='col-md-5 text-center text-md-end sm-mt-20px'>

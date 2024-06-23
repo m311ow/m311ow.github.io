@@ -15,12 +15,8 @@ import EPDClarityLogo from '../images/logos/epdclarity.png';
     <div class='row justify-content-center pt-7 sm-pt-50px'>
       <!-- start footer column -->
       <div class='col-7 col-lg-3 col-md-12 col-sm-6 text-md-center text-lg-start md-mb-30px'>
-        <a href='/' class='footer-logo mb-15px md-mb-20px d-inline-block' aria-label="home page"
-          ><img
-            src='images/logos/epdclarity.png'
-            data-at2x='images/logos/epdclarity.png'
-            alt=''
-          />
+        <a href='/' class='footer-logo mb-15px md-mb-20px d-inline-block' aria-label='home page'
+          ><img src='images/logos/epdclarity.png' data-at2x='images/logos/epdclarity.png' alt='' />
         </a>
         <!-- <p class="mb-20px">Lorem ipsum dolor consectetur adipiscing eiusmod tempor.</p> -->
         <!-- <div class="elements-social social-icon-style-02">
@@ -76,23 +72,34 @@ import EPDClarityLogo from '../images/logos/epdclarity.png';
         <p class='sm-mb-20px'>Subscribe to our newsletter to get the latest news and updates</p>
         <div class='d-inline-block w-100 newsletter-style-02 position-relative'>
           <form
-            action="https://submit-form.com/0WLHD2KGt"
+            action='https://submit-form.com/0WLHD2KGt'
             class='position-relative w-100'
             data-botpoison-public-key='pk_bb4de19a-4531-403a-ac03-27ae93273f52'
           >
+            <input
+              type='hidden'
+              name='_redirect'
+              value='https://epdclarity.com/newsletter-subscription-success'
+            />
+            <input
+              type='hidden'
+              name='_error'
+              value='https://epdclarity.com/newsletter-subscription-fail'
+            />
+            <input type='hidden' name='_append' value='false' />
             <input type='hidden' name='_feedback.whitelabel' value='true' />
-              <input
-                type="hidden"
-                name="_feedback.success.title"
-                value="You have successfully subscribed to our newsletter!"
-              />
+            <input
+              type='hidden'
+              name='_feedback.success.title'
+              value='You have successfully subscribed to our newsletter!'
+            />
             <input
               class='bg-transparent border-color-extra-medium-gray w-100 form-control required'
               type='email'
               name='email'
               placeholder='Enter email address...'
             />
-            <button class='btn' type="submit" aria-label="submit button"
+            <button class='btn' type='submit' aria-label='submit button'
               ><i class='icon feather icon-feather-mail icon-small text-base-color'></i></button
             >
             <div
@@ -121,11 +128,11 @@ import EPDClarityLogo from '../images/logos/epdclarity.png';
       <div
         class='col-lg-6 pt-25px pb-25px md-pb-5px fs-16 order-1 order-lg-2 text-center text-lg-end'
       >
-        <ul class='footer-navbar md-lh-normal'>
+        <!-- <ul class='footer-navbar md-lh-normal'>
           <li class='nav-item'><a href='#' class='nav-link'>Privacy policy</a></li>
           <li class='nav-item'><a href='#' class='nav-link'>Terms and conditions</a></li>
           <li class='nav-item'><a href='#' class='nav-link'>Copyright</a></li>
-        </ul>
+        </ul> -->
       </div>
       <!-- end footer menu -->
     </div>
