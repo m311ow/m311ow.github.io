@@ -1108,9 +1108,11 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
               <div class='card border-0 border-radius-4px box-shadow-quadruple-large'>
                 <div class='blog-image'>
                   <a href='/news-post' class='d-block'>
-                    <!-- <img
-                                            src="https://via.placeholder.com/600x460" alt="" /> -->
-                    <Image src={PostPreviewIMG} alt='arrows pointing in different directions' />
+                    <Image
+                      src={PostPreviewIMG}
+                      alt='arrows pointing in different directions'
+                      loading='eager'
+                    />
                   </a>
                 </div>
                 <div class='card-body p-13 md-p-11'>

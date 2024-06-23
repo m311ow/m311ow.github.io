@@ -1,10 +1,10 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro'
-import { Image } from 'astro:assets'
-import PostPreviewIMG from '../images/stock/javier-allegue-barros-C7B-ExXpOIE-unsplash.jpg'
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import PostPreviewIMG from '../images/stock/javier-allegue-barros-C7B-ExXpOIE-unsplash.jpg';
 ---
-<BaseLayout title="News" description="Page with list of blog posts">
+
+<BaseLayout title='News' description='Page with list of blog posts'>
   <!-- start page title -->
   <!-- to add background, add style='background-image: url(https://via.placeholder.com/1925x1050)' -->
   <section
@@ -21,9 +21,7 @@ import PostPreviewIMG from '../images/stock/javier-allegue-barros-C7B-ExXpOIE-un
           <h1 class='mb-5px alt-font text-dark-gray'>
             <span class='opacity-6'>Business stories</span>
           </h1>
-          <h2
-            class='mb-0 text-dark-gray alt-font ls-minus-2px text-shadow-double-large fw-500'
-          >
+          <h2 class='mb-0 text-dark-gray alt-font ls-minus-2px text-shadow-double-large fw-500'>
             Latest news
           </h2>
         </div>
@@ -41,47 +39,72 @@ import PostPreviewIMG from '../images/stock/javier-allegue-barros-C7B-ExXpOIE-un
     </div>
   </section>
   <!-- end page title -->
-    <!-- start section -->
-    <section class="bg-very-light-gray" id="down-section">
-        <div
-            id='particles-01'
-            data-particle='true'
-            data-particle-options='{"particles": {"number": {"value": 6,"density": {"enable": true,"value_area": 1000}},"color":{"value":["#b7b9be", "#dd6531"]},"shape": {"type": "circle","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 0.5,"random": false,"anim": {"enable": false,"speed": 1,"sync": false}},"size": {"value": 8,"random": true,"anim": {"enable": false,"sync": true}},"move": {"enable": true,"speed":2,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}'
-            class='position-absolute h-100 top-0 left-0 z-index-minus-1'
-        >
+  <!-- start section -->
+  <section class='bg-very-light-gray' id='down-section'>
+    <div
+      id='particles-01'
+      data-particle='true'
+      data-particle-options='{"particles": {"number": {"value": 6,"density": {"enable": true,"value_area": 1000}},"color":{"value":["#b7b9be", "#dd6531"]},"shape": {"type": "circle","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 0.5,"random": false,"anim": {"enable": false,"speed": 1,"sync": false}},"size": {"value": 8,"random": true,"anim": {"enable": false,"sync": true}},"move": {"enable": true,"speed":2,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}'
+      class='position-absolute h-100 top-0 left-0 z-index-minus-1'
+    >
     </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-12 p-0">
-                    <ul class="blog-grid blog-wrapper grid-loading grid grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-double-extra-large" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
-                        <li class="grid-sizer"></li>
-                        <!-- start blog item -->
-                        <li class="grid-item">
-                            <div class="card border-0 border-radius-4px box-shadow-medium box-shadow-extra-large-hover">
-                                <div class="blog-image">
-                                    <a href="/news-post" class="d-block">
-                                        <!-- <img src="https://via.placeholder.com/600x460" alt="" /> -->
-                                        <Image src={PostPreviewIMG} alt='arrows pointing in different directions'/>
-                                    </a>
-                                </div>
-                                <div class="card-body p-13 md-p-11">
-                                    <a href="/news-post" class="card-title mb-15px alt-font fw-600 fs-20 text-dark-gray d-inline-block">Choosing the right Programme Operator for you</a>
-                                    <p>If you're a manufacturer trying to navigate the world of Environmental Product Declarations...</p>
-                                    <div class="author d-flex justify-content-center align-items-center position-relative overflow-hidden fs-16">
-                                        <div class="me-auto">
-                                            <span class="blog-date d-inline-block">18 June 2024</span>
-                                            <div class="d-inline-block author-name">By <a href="news" class="text-dark-gray text-decoration-line-bottom fw-600">Sarah Curpen</a></div>
-                                        </div>
-                                        <div class="like-count fs-15 fw-600">
-                                            <a href="/news-post"><i class="fa-regular fa-heart text-base-color"></i><span class="text-dark-gray align-middle">65</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- end blog item -->
-                        <!-- start blog item -->
-                        <!-- <li class="grid-item">
+    <div class='container'>
+      <div class='row'>
+        <div class='col-12 p-0'>
+          <ul
+            class='blog-grid blog-wrapper grid-loading grid grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-double-extra-large'
+            data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'
+          >
+            <li class='grid-sizer'></li>
+            <!-- start blog item -->
+            <li class='grid-item'>
+              <div
+                class='card border-0 border-radius-4px box-shadow-medium box-shadow-extra-large-hover'
+              >
+                <div class='blog-image'>
+                  <a href='/news-post' class='d-block'>
+                    <!-- <img src="https://via.placeholder.com/600x460" alt="" /> -->
+                    <Image
+                      src={PostPreviewIMG}
+                      alt='arrows pointing in different directions'
+                      loading='eager'
+                    />
+                  </a>
+                </div>
+                <div class='card-body p-13 md-p-11'>
+                  <a
+                    href='/news-post'
+                    class='card-title mb-15px alt-font fw-600 fs-20 text-dark-gray d-inline-block'
+                    >Choosing the right Programme Operator for you</a
+                  >
+                  <p>
+                    If you're a manufacturer trying to navigate the world of Environmental Product
+                    Declarations...
+                  </p>
+                  <div
+                    class='author d-flex justify-content-center align-items-center position-relative overflow-hidden fs-16'
+                  >
+                    <div class='me-auto'>
+                      <span class='blog-date d-inline-block'>18 June 2024</span>
+                      <div class='d-inline-block author-name'>
+                        By <a href='news' class='text-dark-gray text-decoration-line-bottom fw-600'
+                          >Sarah Curpen</a>
+                      </div>
+                    </div>
+                    <div class='like-count fs-15 fw-600'>
+                      <a href='/news-post'
+                        ><i class='fa-regular fa-heart text-base-color'></i><span
+                          class='text-dark-gray align-middle'>65</span
+                        ></a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- end blog item -->
+            <!-- start blog item -->
+            <!-- <li class="grid-item">
                             <div class="card border-0 border-radius-4px box-shadow-medium box-shadow-extra-large-hover">
                                 <div class="blog-image">
                                     <a href="/news-post" class="d-block"><img src="https://via.placeholder.com/600x460" alt="" /></a>
@@ -101,9 +124,9 @@ import PostPreviewIMG from '../images/stock/javier-allegue-barros-C7B-ExXpOIE-un
                                 </div>
                             </div>
                         </li> -->
-                        <!-- end blog item -->
-                        <!-- start blog item -->
-                        <!-- <li class="grid-item">
+            <!-- end blog item -->
+            <!-- start blog item -->
+            <!-- <li class="grid-item">
                             <div class="card border-0 border-radius-4px box-shadow-medium box-shadow-extra-large-hover">
                                 <div class="blog-image">
                                     <a href="/news-post" class="d-block"><img src="https://via.placeholder.com/600x460" alt="" /></a>
@@ -123,9 +146,9 @@ import PostPreviewIMG from '../images/stock/javier-allegue-barros-C7B-ExXpOIE-un
                                 </div>
                             </div>
                         </li> -->
-                        <!-- end blog item -->
-                        <!-- start blog item -->
-                        <!-- <li class="grid-item">
+            <!-- end blog item -->
+            <!-- start blog item -->
+            <!-- <li class="grid-item">
                             <div class="card border-0 border-radius-4px box-shadow-medium box-shadow-extra-large-hover">
                                 <div class="blog-image">
                                     <a href="/news-post" class="d-block"><img src="https://via.placeholder.com/600x450" alt="" /></a>
@@ -145,9 +168,9 @@ import PostPreviewIMG from '../images/stock/javier-allegue-barros-C7B-ExXpOIE-un
                                 </div>
                             </div>
                         </li> -->
-                        <!-- end blog item -->
-                        <!-- start blog item -->
-                        <!-- <li class="grid-item">
+            <!-- end blog item -->
+            <!-- start blog item -->
+            <!-- <li class="grid-item">
                             <div class="card border-0 border-radius-4px box-shadow-medium box-shadow-extra-large-hover">
                                 <div class="blog-image">
                                     <a href="/news-post" class="d-block"><img src="https://via.placeholder.com/600x450" alt="" /></a>
@@ -167,9 +190,9 @@ import PostPreviewIMG from '../images/stock/javier-allegue-barros-C7B-ExXpOIE-un
                                 </div>
                             </div>
                         </li> -->
-                        <!-- end blog item -->
-                        <!-- start blog item -->
-                        <!-- <li class="grid-item">
+            <!-- end blog item -->
+            <!-- start blog item -->
+            <!-- <li class="grid-item">
                             <div class="card border-0 border-radius-4px box-shadow-medium box-shadow-extra-large-hover">
                                 <div class="blog-image">
                                     <a href="/news-post" class="d-block"><img src="https://via.placeholder.com/600x450" alt="" /></a>
@@ -189,14 +212,14 @@ import PostPreviewIMG from '../images/stock/javier-allegue-barros-C7B-ExXpOIE-un
                                 </div>
                             </div>
                         </li> -->
-                        <!-- end blog item -->
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 mt-5 d-flex justify-content-center">
-                    <!-- start pagination -->
-                    <!-- <ul class="pagination pagination-style-01 fs-13 fw-500 mb-0" data-anime='{ "translate": [0, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 150, "easing": "easeOutQuad" }'>
+            <!-- end blog item -->
+          </ul>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-12 mt-5 d-flex justify-content-center'>
+          <!-- start pagination -->
+          <!-- <ul class="pagination pagination-style-01 fs-13 fw-500 mb-0" data-anime='{ "translate": [0, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 150, "easing": "easeOutQuad" }'>
                         <li class="page-item"><a class="page-link" href="#"><i class="feather icon-feather-arrow-left fs-18 d-xs-none"></i></a></li>
                         <li class="page-item"><a class="page-link" href="#">01</a></li>
                         <li class="page-item active"><a class="page-link" href="#">02</a></li>
@@ -204,11 +227,10 @@ import PostPreviewIMG from '../images/stock/javier-allegue-barros-C7B-ExXpOIE-un
                         <li class="page-item"><a class="page-link" href="#">04</a></li>
                         <li class="page-item"><a class="page-link" href="#"><i class="feather icon-feather-arrow-right fs-18 d-xs-none"></i></a></li>
                     </ul> -->
-                    <!-- end pagination -->
-                </div>
-            </div>
+          <!-- end pagination -->
         </div>
-    </section>
-    <!-- end section -->
-
+      </div>
+    </div>
+  </section>
+  <!-- end section -->
 </BaseLayout>

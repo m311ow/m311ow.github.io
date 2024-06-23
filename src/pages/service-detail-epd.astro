@@ -78,7 +78,7 @@ const { site } = Astro;
             class='position-relative m-0 border-radius-5px overflow-hidden'
             data-anime='{ "effect": "slide", "direction": "lr", "color": "#dd6531", "duration": 1000, "delay": 0 }'
           >
-            <Image src={EPDmockupIMG} alt='Preview of an EPD' class='w-100' />
+            <Image src={EPDmockupIMG} alt='Preview of an EPD' class='w-100' loading='eager' />
 
             <figcaption
               class='position-absolute bottom-25px left-25px w-250px border-radius-4px bg-white d-flex align-items-center pt-20px pb-20px ps-25px pe-25px'
@@ -684,6 +684,7 @@ const { site } = Astro;
               alt=' a happy person'
               class='h-100 object-fit-cover'
               data-anime='{ "translateX": [-30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'
+              loading='eager'
             />
           </div>
           <div
