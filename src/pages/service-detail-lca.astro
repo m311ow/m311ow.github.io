@@ -1,15 +1,14 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro'
-import { Image } from 'astro:assets'
-import BenefitsBG from '../images/benefits_background.jpg'
-import HeaderIMG from '../images/epd_header_img.jpg'
-import LCAserviceIMG from '../images/stock/homa-appliances-pWUyHVJgLhg-unsplash.jpg'
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import BenefitsBG from '../images/benefits_background.jpg';
+import HeaderIMG from '../images/epd_header_img.jpg';
+import LCAserviceIMG from '../images/stock/homa-appliances-pWUyHVJgLhg-unsplash.jpg';
+
+const { site } = Astro;
 ---
 
-<BaseLayout
-  title='Service detail'
-  description='Detailed information about the service'
->
+<BaseLayout title='Service detail' description='Detailed information about the service'>
   <!-- start page title -->
   <!-- for bg image, add style=`background-image: url(${HeaderIMG.src})` -->
   <section
@@ -49,13 +48,9 @@ import LCAserviceIMG from '../images/stock/homa-appliances-pWUyHVJgLhg-unsplash.
           data-anime='{ "el": "childs", "rotateX": [90, 0], "opacity": [0,1], "staggervalue": 150, "easing": "easeOutQuad" }'
         >
           <h1 class='mb-5px alt-font text-white'>
-            <span class='opacity-6'
-              >Sustainability based on quantified environmental data</span
-            >
+            <span class='opacity-6'>Sustainability based on quantified environmental data</span>
           </h1>
-          <h2
-            class='mb-0 text-white alt-font ls-minus-2px text-shadow-double-large fw-500'
-          >
+          <h2 class='mb-0 text-white alt-font ls-minus-2px text-shadow-double-large fw-500'>
             Life Cycle Assessment
           </h2>
         </div>
@@ -111,11 +106,10 @@ import LCAserviceIMG from '../images/stock/homa-appliances-pWUyHVJgLhg-unsplash.
             Life Cycle Assessment: What does it look like?
           </h2>
           <p class='w-90 lg-w-100 md-mx-auto mb-35px'>
-            LCA focuses on the environmental impacts of a product or system,
-            including greenhouse gas emissions, energy consumption, water usage,
-            waste generation, and other environmental impacts.
+            LCA focuses on the environmental impacts of a product or system, including greenhouse
+            gas emissions, energy consumption, water usage, waste generation, and other
+            environmental impacts.
           </p>
-
 
           <!-- <div
             class='row row-cols-1 justify-content-center'
@@ -180,380 +174,424 @@ import LCAserviceIMG from '../images/stock/homa-appliances-pWUyHVJgLhg-unsplash.
               </div>
             </div>
           </div> -->
-
-
-
         </div>
       </div>
     </div>
   </section>
   <!-- end section -->
 
-
-    <!-- start section -->
-    <section class="position-relative overflow-hidden">
-        <div id="particles-01" data-particle="true"
-            data-particle-options='{"particles": {"number": {"value": 5,"density": {"enable": true,"value_area": 1000}},"color":{"value":["#b7b9be", "#dd6531"]},"shape": {"type": "circle","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 0.5,"random": false,"anim": {"enable": false,"speed": 1,"sync": false}},"size": {"value": 8,"random": true,"anim": {"enable": false,"sync": true}},"move": {"enable": true,"speed":2,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}'
-            class="position-absolute h-100 top-0 left-0 z-index-minus-1"></div>
-        <div class="container">
-            <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 justify-content-center"
-                data-anime='{ "el": "childs", "rotateZ": [5, 0], "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
-                <!-- start features box item -->
-                <div class="col icon-with-text-style-01 mb-50px sm-mb-40px">
-                    <div class="feature-box feature-box-left-icon last-paragraph-no-margin">
-                        <div class="feature-box-icon">
-                            <i class='line-icon-Basket-Coins icon-extra-large text-base-color'></i>
-                        </div>
-                        <div class="feature-box-content">
-                            <span class="d-inline-block alt-font text-dark-gray fw-600 mb-5px fs-20">Analyze your environmental impacts</span>
-                            <p class="w-90 md-w-100">Quantify the impacts of your product through 19 impact environmental indicators.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- end features box item -->
-                <!-- start features box item -->
-                <div class="col icon-with-text-style-01 mb-50px sm-mb-40px">
-                    <div class="feature-box feature-box-left-icon last-paragraph-no-margin">
-                        <div class="feature-box-icon">
-                            <i class='line-icon-Cursor-Click2 icon-extra-large text-base-color'></i>
-                        </div>
-                        <div class="feature-box-content">
-                            <span class="d-inline-block alt-font text-dark-gray fw-600 mb-5px fs-20">Assess your product's sustainability</span>
-                            <p class="w-90 md-w-100">Analyze factors such as the materials employed, supply chain dynamics, manufacturing processes, application methods, and disposal strategies.
-</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- end features box item -->
-                <!-- start features box item -->
-                <div class="col icon-with-text-style-01 mb-50px sm-mb-40px">
-                    <div class="feature-box feature-box-left-icon last-paragraph-no-margin">
-                        <div class="feature-box-icon">
-                            <i class='line-icon-Bar-Chart2 icon-extra-large text-base-color'></i>
-                        </div>
-                        <div class="feature-box-content">
-                            <span class="d-inline-block alt-font text-dark-gray fw-600 mb-5px fs-20">Show off to your customers</span>
-                            <p class="w-90 md-w-100">By assessing the environmental performance of your product, you can help your buyers make well-informed decisions.
-                        </div>
-                    </div>
-                </div>
-                <!-- end features box item -->
+  <!-- start section -->
+  <section class='position-relative overflow-hidden'>
+    <div
+      id='particles-01'
+      data-particle='true'
+      data-particle-options='{"particles": {"number": {"value": 5,"density": {"enable": true,"value_area": 1000}},"color":{"value":["#b7b9be", "#dd6531"]},"shape": {"type": "circle","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 0.5,"random": false,"anim": {"enable": false,"speed": 1,"sync": false}},"size": {"value": 8,"random": true,"anim": {"enable": false,"sync": true}},"move": {"enable": true,"speed":2,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}'
+      class='position-absolute h-100 top-0 left-0 z-index-minus-1'
+    >
+    </div>
+    <div class='container'>
+      <div
+        class='row row-cols-1 row-cols-lg-3 row-cols-md-2 justify-content-center'
+        data-anime='{ "el": "childs", "rotateZ": [5, 0], "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'
+      >
+        <!-- start features box item -->
+        <div class='col icon-with-text-style-01 mb-50px sm-mb-40px'>
+          <div class='feature-box feature-box-left-icon last-paragraph-no-margin'>
+            <div class='feature-box-icon'>
+              <i class='line-icon-Basket-Coins icon-extra-large text-base-color'></i>
             </div>
+            <div class='feature-box-content'>
+              <span class='d-inline-block alt-font text-dark-gray fw-600 mb-5px fs-20'
+                >Analyze your environmental impacts</span
+              >
+              <p class='w-90 md-w-100'>
+                Quantify the impacts of your product through 19 impact environmental indicators.
+              </p>
+            </div>
+          </div>
         </div>
-    </section>
+        <!-- end features box item -->
+        <!-- start features box item -->
+        <div class='col icon-with-text-style-01 mb-50px sm-mb-40px'>
+          <div class='feature-box feature-box-left-icon last-paragraph-no-margin'>
+            <div class='feature-box-icon'>
+              <i class='line-icon-Cursor-Click2 icon-extra-large text-base-color'></i>
+            </div>
+            <div class='feature-box-content'>
+              <span class='d-inline-block alt-font text-dark-gray fw-600 mb-5px fs-20'
+                >Assess your product's sustainability</span
+              >
+              <p class='w-90 md-w-100'>
+                Analyze factors such as the materials employed, supply chain dynamics, manufacturing
+                processes, application methods, and disposal strategies.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- end features box item -->
+        <!-- start features box item -->
+        <div class='col icon-with-text-style-01 mb-50px sm-mb-40px'>
+          <div class='feature-box feature-box-left-icon last-paragraph-no-margin'>
+            <div class='feature-box-icon'>
+              <i class='line-icon-Bar-Chart2 icon-extra-large text-base-color'></i>
+            </div>
+            <div class='feature-box-content'>
+              <span class='d-inline-block alt-font text-dark-gray fw-600 mb-5px fs-20'
+                >Show off to your customers</span
+              >
+              <p class='w-90 md-w-100'>
+                By assessing the environmental performance of your product, you can help your buyers
+                make well-informed decisions.
+              </p>
+            </div>
+          </div>
+          <!-- end features box item -->
+        </div>
+      </div>
+    </div>
     <!-- end section -->
 
-
-  <!-- start section -->
-  <section
-    class='pt-0 border-bottom border-color-transparent-dark-very-light'
-    data-anime='{ "el": "childs", "translateY": [0, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'
-  >
-    <div class='container'>
-      <!-- <div class='row mb-45px md-mb-30px'>
+    <!-- start section -->
+    <section
+      class='pt-0 border-bottom border-color-transparent-dark-very-light'
+      data-anime='{ "el": "childs", "translateY": [0, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'
+    >
+      <div class='container'>
+        <!-- <div class='row mb-45px md-mb-30px'>
         <div class='col-12 text-center'>
           <span class='fs-26 fw-500 ls-minus-1px text-dark-gray'
             >Trusted by the world's fastest growing companies</span
           >
         </div>
       </div> -->
-      <div class='row position-relative clients-style-08'>
-        <div
-          class='col swiper text-center feather-shadow'
-          data-slider-options='{ "slidesPerView": 2, "spaceBetween":0, "speed": 4000, "loop": true, "pagination": { "el": ".slider-four-slide-pagination-2", "clickable": false }, "allowTouchMove": false, "autoplay": { "delay":0, "disableOnInteraction": false }, "navigation": { "nextEl": ".slider-four-slide-next-2", "prevEl": ".slider-four-slide-prev-2" }, "keyboard": { "enabled": true, "onlyInViewport": true }, "breakpoints": { "1200": { "slidesPerView": 4 }, "992": { "slidesPerView": 3 }, "768": { "slidesPerView": 2 } }, "effect": "slide" }'
-        >
-          <div class="swiper-wrapper marquee-slide">
+        <div class='row position-relative clients-style-08'>
+          <div
+            class='col swiper text-center feather-shadow'
+            data-slider-options='{ "slidesPerView": 2, "spaceBetween":0, "speed": 4000, "loop": true, "pagination": { "el": ".slider-four-slide-pagination-2", "clickable": false }, "allowTouchMove": false, "autoplay": { "delay":0, "disableOnInteraction": false }, "navigation": { "nextEl": ".slider-four-slide-next-2", "prevEl": ".slider-four-slide-prev-2" }, "keyboard": { "enabled": true, "onlyInViewport": true }, "breakpoints": { "1200": { "slidesPerView": 4 }, "992": { "slidesPerView": 3 }, "768": { "slidesPerView": 2 } }, "effect": "slide" }'
+          >
+            <div class='swiper-wrapper marquee-slide'>
               <!-- start client item -->
-              <div class="swiper-slide">
-                  <img src="/images/logos/crh_logo.png" class="h-48px xs-h-36px filter-grayscale-100" alt="" />
+              <div class='swiper-slide'>
+                <img
+                  src='/images/logos/crh_logo.png'
+                  class='h-48px xs-h-36px filter-grayscale-100'
+                  alt=''
+                />
               </div>
               <!-- end client item -->
               <!-- start client item -->
-              <div class="swiper-slide">
-                  <img src="/images/logos/greencon_logo.png" class="h-48px xs-h-36px filter-grayscale-100" alt="" />
+              <div class='swiper-slide'>
+                <img
+                  src='/images/logos/greencon_logo.png'
+                  class='h-48px xs-h-36px filter-grayscale-100'
+                  alt=''
+                />
               </div>
               <!-- end client item -->
               <!-- start client item -->
-              <div class="swiper-slide">
-                  <img src="/images/logos/rehau_logo.png" class="h-48px xs-h-36px filter-grayscale-100" alt="" />
+              <div class='swiper-slide'>
+                <img
+                  src='/images/logos/rehau_logo.png'
+                  class='h-48px xs-h-36px filter-grayscale-100'
+                  alt=''
+                />
               </div>
               <!-- end client item -->
               <!-- start client item -->
-              <div class="swiper-slide">
-                  <img src="/images/logos/saint_gobain_logo.png" class="h-48px xs-h-36px filter-grayscale-100" alt="" />
+              <div class='swiper-slide'>
+                <img
+                  src='/images/logos/saint_gobain_logo.png'
+                  class='h-48px xs-h-36px filter-grayscale-100'
+                  alt=''
+                />
               </div>
               <!-- end client item -->
               <!-- start client item -->
-              <div class="swiper-slide">
-                  <img src="/images/logos/semmelrock_logo.png" class="h-48px xs-h-36px filter-grayscale-100" alt="" />
+              <div class='swiper-slide'>
+                <img
+                  src='/images/logos/semmelrock_logo.png'
+                  class='h-48px xs-h-36px filter-grayscale-100'
+                  alt=''
+                />
               </div>
               <!-- end client item -->
               <!-- start client item -->
-              <div class="swiper-slide">
-                  <img src="/images/logos/soprema_logo.png" class="h-48px xs-h-36px filter-grayscale-100" alt="" />
+              <div class='swiper-slide'>
+                <img
+                  src='/images/logos/soprema_logo.png'
+                  class='h-48px xs-h-36px filter-grayscale-100'
+                  alt=''
+                />
               </div>
               <!-- end client item -->
               <!-- start client item -->
-              <div class="swiper-slide">
-                  <img src="/images/logos/wienerberger_logo.png" class="h-48px xs-h-36px filter-grayscale-100" alt="" />
+              <div class='swiper-slide'>
+                <img
+                  src='/images/logos/wienerberger_logo.png'
+                  class='h-48px xs-h-36px filter-grayscale-100'
+                  alt=''
+                />
               </div>
               <!-- end client item -->
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- end section -->
-
-    <!-- start section -->
-    <section class="pt-0 overflow-hidden">
-        <div class="container">
-            <div class="bg-dark-gray border-radius-6px p-8 md-p-6 sm-p-10 position-relative overflow-hidden">
-                <div class="row justify-content-center mb-5">
-                    <div class="col-lg-8 text-center appear anime-child anime-complete"
-                        data-anime="{ &quot;el&quot;: &quot;childs&quot;, &quot;translateY&quot;: [30, 0], &quot;opacity&quot;: [0,1], &quot;duration&quot;: 600, &quot;delay&quot;: 0, &quot;staggervalue&quot;: 300, &quot;easing&quot;: &quot;easeOutQuad&quot; }">
-                        <h2 class="text-white fw-600 ls-minus-1px z-index-1 position-relative">Completely remote process
-                        </h2>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-md-3 justify-content-center appear anime-child anime-complete"
-                    data-anime="{ &quot;el&quot;: &quot;childs&quot;, &quot;translateX&quot;: [-30, 0], &quot;opacity&quot;: [0,1], &quot;duration&quot;: 600, &quot;delay&quot;: 0, &quot;staggervalue&quot;: 300, &quot;easing&quot;: &quot;easeOutQuad&quot; }">
-
-                    <div class="col text-center last-paragraph-no-margin hover-box process-step-style-01 sm-mb-40px">
-                        <div class="process-step-icon-box position-relative mb-25px">
-                            <span class="progress-step-separator bg-white w-60 separator-line-1px opacity-2"></span>
-                            <div
-                                class="process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-80px w-80px fs-20 bg-white box-shadow-large text-dark-gray fw-500">
-                                <span class="fw-600 number position-relative z-index-1">01</span>
-                                <div class="box-overlay bg-base-color rounded-circle"></div>
-                            </div>
-                        </div>
-                        <span class="d-inline-block fs-17 fw-500 text-white mb-5px">LCA Data Collection</span>
-                        <p class="w-80 md-w-90 d-inline-block">You will identify and quantify inputs (e.g., raw materials, energy, water) and outputs associated with each stage of the product life cycle. Using our proprietary template, data collection is made easy and intuitive.
-                        </p>
-                    </div>
-
-
-                    <div class="col text-center last-paragraph-no-margin hover-box process-step-style-01 sm-mb-40px">
-                        <div class="process-step-icon-box position-relative mb-25px">
-                            <span class="progress-step-separator bg-white w-60 separator-line-1px opacity-2"></span>
-                            <div
-                                class="process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-80px w-80px fs-20 bg-white box-shadow-large text-dark-gray fw-500">
-                                <span class="fw-600 number position-relative z-index-1">02</span>
-                                <div class="box-overlay bg-base-color rounded-circle"></div>
-                            </div>
-                        </div>
-                        <span class="d-inline-block fs-17 fw-500 text-white mb-5px">LCA Modelling</span>
-                        <p class="w-80 md-w-90 d-inline-block">Once the data collection step is finished, we will perform LCA modelling. It involves application of impact assessment methods based on international standards ISO 14040 and ISO 14044.
-                        </p>
-                    </div>
-
-
-                    <div class="col text-center last-paragraph-no-margin hover-box process-step-style-01">
-                        <div class="process-step-icon-box position-relative mb-25px">
-                            <span
-                                class="progress-step-separator bg-white w-60 separator-line-1px opacity-2 d-md-none"></span>
-                            <div
-                                class="process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-80px w-80px fs-20 bg-white box-shadow-large text-dark-gray fw-500">
-                                <span class="fw-600 number position-relative z-index-1">03</span>
-                                <div class="box-overlay bg-base-color rounded-circle"></div>
-                            </div>
-                        </div>
-                        <span class="d-inline-block fs-17 fw-500 text-white mb-5px">LCA Interpretation</span>
-                        <p class="w-80 md-w-90 d-inline-block">Interpretation involves identifying hotspots (stages with the highest environmental impacts), comparing alternative scenarios, and exploring opportunities for improvement.
-                        </p>
-                    </div>
-                </div>
-                <div class="position-absolute top-5px ls-minus-6px left-0px w-100 text-center skrollable skrollable-between"
-                    data-bottom-top="transform: translate3d(380px, 0px, 0px);"
-                    data-top-bottom="transform: translate3d(-380px, 0px, 0px);"
-                    style="transform: translate3d(-75.078px, 0px, 0px);">
-                    <div class="fs-200 md-fs-170 xs-fs-110 fw-700 opacity-1">process</div>
-                </div>
-            </div>
-        </div>
     </section>
     <!-- end section -->
 
-  <!-- start section -->
-  <section class="pt-0">
-    <div class='container'>
-      <div class='row mb-6'>
+    <!-- start section -->
+    <section class='pt-0 overflow-hidden'>
+      <div class='container'>
         <div
-          class='col-xl-5 col-lg-6 md-mb-40px'
-          data-anime='{ "el": "childs", "translateY": [0, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'
+          class='bg-dark-gray border-radius-6px p-8 md-p-6 sm-p-10 position-relative overflow-hidden'
         >
-        <div
-        class='accordion accordion-style-02'
-        id='accordion-style-02'
-        data-active-icon='fa-angle-down'
-        data-inactive-icon='fa-angle-right'
-      >
-        <!-- start accordion item -->
-        <div class='accordion-item active-accordion'>
-          <div
-            class='accordion-header border-bottom border-color-extra-medium-gray'
-          >
-            <a
-              href='#'
-              data-bs-toggle='collapse'
-              data-bs-target='#accordion-style-02-01'
-              aria-expanded='true'
-              data-bs-parent='#accordion-style-02'
-            >
-              <div
-                class='accordion-title mb-0 position-relative text-dark-gray'
-              >
-                <i class='fa-solid fa-angle-down icon-small'></i><span
-                  class='fs-20 fw-600'
-                  >How is data collection performed?</span
-                >
-              </div>
-            </a>
-          </div>
-          <div
-            id='accordion-style-02-01'
-            class='accordion-collapse collapse show'
-            data-bs-parent='#accordion-style-02'
-          >
+          <div class='row justify-content-center mb-5'>
             <div
-              class='accordion-body last-paragraph-no-margin border-bottom border-color-light-medium-gray'
+              class='col-lg-8 text-center appear anime-child anime-complete'
+              data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
             >
-              <p>
-                Data collection is made by you, via our proprietary template
-                designed to be easy and user friendly.
-              </p>
+              <h2 class='text-white fw-600 ls-minus-1px z-index-1 position-relative'>
+                Completely remote process
+              </h2>
             </div>
           </div>
-        </div>
-        <!-- end accordion item -->
-        <!-- start accordion item -->
-        <div class='accordion-item'>
           <div
-            class='accordion-header border-bottom border-color-extra-medium-gray'
-          >
-            <a
-              href='#'
-              data-bs-toggle='collapse'
-              data-bs-target='#accordion-style-02-02'
-              aria-expanded='false'
-              data-bs-parent='#accordion-style-02'
-            >
-              <div
-                class='accordion-title mb-0 position-relative text-dark-gray'
-              >
-                <i class='fa-solid fa-angle-right icon-small'></i><span
-                  class='fs-20 fw-600'
-                  >How is sensitive data protected?</span
-                >
-              </div>
-            </a>
-          </div>
-          <div
-            id='accordion-style-02-02'
-            class='accordion-collapse collapse'
-            data-bs-parent='#accordion-style-02'
+            class='row row-cols-1 row-cols-md-3 justify-content-center appear anime-child anime-complete'
+            data-anime='{ "el": "childs", "translateX": [-30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
           >
             <div
-              class='accordion-body last-paragraph-no-margin border-bottom border-color-light-medium-gray'
+              class='col text-center last-paragraph-no-margin hover-box process-step-style-01 sm-mb-40px'
             >
-              <p>
-                We understand the sensitive and confidential nature of
-                production data and we are ready to sign non-disclosure
-                agreements provided by our clients.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- end accordion item -->
-        <!-- start accordion item -->
-        <div class='accordion-item'>
-          <div
-            class='accordion-header border-bottom border-color-transparent'
-          >
-            <a
-              href='#'
-              data-bs-toggle='collapse'
-              data-bs-target='#accordion-style-02-03'
-              aria-expanded='false'
-              data-bs-parent='#accordion-style-02'
-            >
-              <div
-                class='accordion-title mb-0 position-relative text-dark-gray'
-              >
-                <i class='fa-solid fa-angle-right icon-small'></i><span
-                  class='fs-20 fw-600'
-                  >What is the expected delivery time?</span
+              <div class='process-step-icon-box position-relative mb-25px'>
+                <span class='progress-step-separator bg-white w-60 separator-line-1px opacity-2'
+                ></span>
+                <div
+                  class='process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-80px w-80px fs-20 bg-white box-shadow-large text-dark-gray fw-500'
                 >
+                  <span class='fw-600 number position-relative z-index-1'>01</span>
+                  <div class='box-overlay bg-base-color rounded-circle'></div>
+                </div>
               </div>
-            </a>
-          </div>
-          <div
-            id='accordion-style-02-03'
-            class='accordion-collapse collapse'
-            data-bs-parent='#accordion-style-02'
-          >
-            <div
-              class='accordion-body last-paragraph-no-margin border-bottom border-color-transparent'
-            >
-              <p>
-                Each LCA project is unique and has different timelines.
-                However we've noticed a range of 4-6 weeks for LCA modelling
-                based on previous experience.
+              <span class='d-inline-block fs-17 fw-500 text-white mb-5px'>LCA Data Collection</span>
+              <p class='w-80 md-w-90 d-inline-block'>
+                You will identify and quantify inputs (e.g., raw materials, energy, water) and
+                outputs associated with each stage of the product life cycle. Using our proprietary
+                template, data collection is made easy and intuitive.
               </p>
             </div>
-          </div>
-        </div>
-        <!-- end accordion item -->
-        <!-- start accordion item -->
-        <div class='accordion-item'>
-          <div
-            class='accordion-header border-bottom border-color-transparent'
-          >
-            <a
-              href='#'
-              data-bs-toggle='collapse'
-              data-bs-target='#accordion-style-02-04'
-              aria-expanded='false'
-              data-bs-parent='#accordion-style-02'
-            >
-              <div
-                class='accordion-title mb-0 position-relative text-dark-gray'
-              >
-                <i class='fa-solid fa-angle-right icon-small'></i><span
-                  class='fs-20 fw-600'
-                  >Will I receive support in interpreting the LCA results?</span
-                >
-              </div>
-            </a>
-          </div>
-          <div
-            id='accordion-style-02-04'
-            class='accordion-collapse collapse'
-            data-bs-parent='#accordion-style-02'
-          >
-            <div
-              class='accordion-body last-paragraph-no-margin border-bottom border-color-transparent'
-            >
-              <p>
-                Our consultants are ready to support you through
-                interpretation of your LCA findings and guide you.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- end accordion item -->
-      </div>
-        </div>
-        <div
-          class='col-lg-6 offset-xl-1 position-relative z-index-1'
-          data-anime='{ "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 300, "easing": "easeOutQuad" }'
-        >
-        <h2 class='text-dark-gray fw-600 ls-minus-2px mb-15px'>
-            Immediatly increase value of your product
-          </h2>
 
-          <!-- <div class='atropos' data-atropos data-atropos-perspective='2450'>
+            <div
+              class='col text-center last-paragraph-no-margin hover-box process-step-style-01 sm-mb-40px'
+            >
+              <div class='process-step-icon-box position-relative mb-25px'>
+                <span class='progress-step-separator bg-white w-60 separator-line-1px opacity-2'
+                ></span>
+                <div
+                  class='process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-80px w-80px fs-20 bg-white box-shadow-large text-dark-gray fw-500'
+                >
+                  <span class='fw-600 number position-relative z-index-1'>02</span>
+                  <div class='box-overlay bg-base-color rounded-circle'></div>
+                </div>
+              </div>
+              <span class='d-inline-block fs-17 fw-500 text-white mb-5px'>LCA Modelling</span>
+              <p class='w-80 md-w-90 d-inline-block'>
+                Once the data collection step is finished, we will perform LCA modelling. It
+                involves application of impact assessment methods based on international standards
+                ISO 14040 and ISO 14044.
+              </p>
+            </div>
+
+            <div class='col text-center last-paragraph-no-margin hover-box process-step-style-01'>
+              <div class='process-step-icon-box position-relative mb-25px'>
+                <span
+                  class='progress-step-separator bg-white w-60 separator-line-1px opacity-2 d-md-none'
+                ></span>
+                <div
+                  class='process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-80px w-80px fs-20 bg-white box-shadow-large text-dark-gray fw-500'
+                >
+                  <span class='fw-600 number position-relative z-index-1'>03</span>
+                  <div class='box-overlay bg-base-color rounded-circle'></div>
+                </div>
+              </div>
+              <span class='d-inline-block fs-17 fw-500 text-white mb-5px'>LCA Interpretation</span>
+              <p class='w-80 md-w-90 d-inline-block'>
+                Interpretation involves identifying hotspots (stages with the highest environmental
+                impacts), comparing alternative scenarios, and exploring opportunities for
+                improvement.
+              </p>
+            </div>
+          </div>
+          <div
+            class='position-absolute top-5px ls-minus-6px left-0px w-100 text-center skrollable skrollable-between'
+            data-bottom-top='transform: translate3d(380px, 0px, 0px);'
+            data-top-bottom='transform: translate3d(-380px, 0px, 0px);'
+            style='transform: translate3d(-75.078px, 0px, 0px);'
+          >
+            <div class='fs-200 md-fs-170 xs-fs-110 fw-700 opacity-1'>process</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end section -->
+
+    <!-- start section -->
+    <section class='pt-0'>
+      <div class='container'>
+        <div class='row mb-6'>
+          <div
+            class='col-xl-5 col-lg-6 md-mb-40px'
+            data-anime='{ "el": "childs", "translateY": [0, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'
+          >
+            <div
+              class='accordion accordion-style-02'
+              id='accordion-style-02'
+              data-active-icon='fa-angle-down'
+              data-inactive-icon='fa-angle-right'
+            >
+              <!-- start accordion item -->
+              <div class='accordion-item active-accordion'>
+                <div class='accordion-header border-bottom border-color-extra-medium-gray'>
+                  <a
+                    href='#'
+                    data-bs-toggle='collapse'
+                    data-bs-target='#accordion-style-02-01'
+                    aria-expanded='true'
+                    data-bs-parent='#accordion-style-02'
+                  >
+                    <div class='accordion-title mb-0 position-relative text-dark-gray'>
+                      <i class='fa-solid fa-angle-down icon-small'></i><span class='fs-20 fw-600'
+                        >How is data collection performed?</span
+                      >
+                    </div>
+                  </a>
+                </div>
+                <div
+                  id='accordion-style-02-01'
+                  class='accordion-collapse collapse show'
+                  data-bs-parent='#accordion-style-02'
+                >
+                  <div
+                    class='accordion-body last-paragraph-no-margin border-bottom border-color-light-medium-gray'
+                  >
+                    <p>
+                      Data collection is made by you, via our proprietary template designed to be
+                      easy and user friendly.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- end accordion item -->
+              <!-- start accordion item -->
+              <div class='accordion-item'>
+                <div class='accordion-header border-bottom border-color-extra-medium-gray'>
+                  <a
+                    href='#'
+                    data-bs-toggle='collapse'
+                    data-bs-target='#accordion-style-02-02'
+                    aria-expanded='false'
+                    data-bs-parent='#accordion-style-02'
+                  >
+                    <div class='accordion-title mb-0 position-relative text-dark-gray'>
+                      <i class='fa-solid fa-angle-right icon-small'></i><span class='fs-20 fw-600'
+                        >How is sensitive data protected?</span
+                      >
+                    </div>
+                  </a>
+                </div>
+                <div
+                  id='accordion-style-02-02'
+                  class='accordion-collapse collapse'
+                  data-bs-parent='#accordion-style-02'
+                >
+                  <div
+                    class='accordion-body last-paragraph-no-margin border-bottom border-color-light-medium-gray'
+                  >
+                    <p>
+                      We understand the sensitive and confidential nature of production data and we
+                      are ready to sign non-disclosure agreements provided by our clients.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- end accordion item -->
+              <!-- start accordion item -->
+              <div class='accordion-item'>
+                <div class='accordion-header border-bottom border-color-transparent'>
+                  <a
+                    href='#'
+                    data-bs-toggle='collapse'
+                    data-bs-target='#accordion-style-02-03'
+                    aria-expanded='false'
+                    data-bs-parent='#accordion-style-02'
+                  >
+                    <div class='accordion-title mb-0 position-relative text-dark-gray'>
+                      <i class='fa-solid fa-angle-right icon-small'></i><span class='fs-20 fw-600'
+                        >What is the expected delivery time?</span
+                      >
+                    </div>
+                  </a>
+                </div>
+                <div
+                  id='accordion-style-02-03'
+                  class='accordion-collapse collapse'
+                  data-bs-parent='#accordion-style-02'
+                >
+                  <div
+                    class='accordion-body last-paragraph-no-margin border-bottom border-color-transparent'
+                  >
+                    <p>
+                      Each LCA project is unique and has different timelines. However we've noticed
+                      a range of 4-6 weeks for LCA modelling based on previous experience.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- end accordion item -->
+              <!-- start accordion item -->
+              <div class='accordion-item'>
+                <div class='accordion-header border-bottom border-color-transparent'>
+                  <a
+                    href='#'
+                    data-bs-toggle='collapse'
+                    data-bs-target='#accordion-style-02-04'
+                    aria-expanded='false'
+                    data-bs-parent='#accordion-style-02'
+                  >
+                    <div class='accordion-title mb-0 position-relative text-dark-gray'>
+                      <i class='fa-solid fa-angle-right icon-small'></i><span class='fs-20 fw-600'
+                        >Will I receive support in interpreting the LCA results?</span
+                      >
+                    </div>
+                  </a>
+                </div>
+                <div
+                  id='accordion-style-02-04'
+                  class='accordion-collapse collapse'
+                  data-bs-parent='#accordion-style-02'
+                >
+                  <div
+                    class='accordion-body last-paragraph-no-margin border-bottom border-color-transparent'
+                  >
+                    <p>
+                      Our consultants are ready to support you through interpretation of your LCA
+                      findings and guide you.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- end accordion item -->
+            </div>
+          </div>
+          <div
+            class='col-lg-6 offset-xl-1 position-relative z-index-1'
+            data-anime='{ "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 300, "easing": "easeOutQuad" }'
+          >
+            <h2 class='text-dark-gray fw-600 ls-minus-2px mb-15px'>
+              Immediatly increase value of your product
+            </h2>
+
+            <!-- <div class='atropos' data-atropos data-atropos-perspective='2450'>
             <div class='atropos-scale'>
               <div class='atropos-rotate'>
                 <div class='atropos-inner'>
@@ -573,308 +611,294 @@ import LCAserviceIMG from '../images/stock/homa-appliances-pWUyHVJgLhg-unsplash.
               ><i class='fa-brands fa-youtube icon-small'></i>How it works</a
             >
           </div> -->
+          </div>
         </div>
-      </div>
-      <div
-        class='row justify-content-center'
-        data-anime='{ "el": "childs", "translateY": [0, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'
-      >
         <div
-          class='col-12 fs-22 fw-500 ls-minus-1px text-dark-gray text-center'
+          class='row justify-content-center'
+          data-anime='{ "el": "childs", "translateY": [0, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'
         >
-          Save your precious time and effort. <a
-            class='text-dark-gray text-decoration-line-bottom d-inline-block'
-            href='contact'>Contact us now</a
-          >
+          <div class='col-12 fs-22 fw-500 ls-minus-1px text-dark-gray text-center'>
+            Save your precious time and effort. <a
+              class='text-dark-gray text-decoration-line-bottom d-inline-block'
+              href='contact'>Contact us now</a
+            >
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- end section -->
+    </section>
+    <!-- end section -->
 
-  <!-- start section -->
-  <section class='p-0 bg-dark-gray'>
-    <div class='container-fluid p-0'>
-      <div class='row justify-content-center g-0'>
-        <div class='col-lg-6 md-h-550px sm-h-400px'>
-          <!-- <div
+    <!-- start section -->
+    <section class='p-0 bg-dark-gray'>
+      <div class='container-fluid p-0'>
+        <div class='row justify-content-center g-0'>
+          <div class='col-lg-6 md-h-550px sm-h-400px'>
+            <!-- <div
             class='h-100 cover-background'
             style='background-image: url(https://via.placeholder.com/960x678)'
             data-anime='{ "translateX": [-30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'
           >
           </div> -->
-          <Image
-            src={BenefitsBG}
-            alt=' a happy person'
-            class='h-100 object-fit-cover'
-            data-anime='{ "translateX": [-30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'
-          />
-        </div>
-        <div
-          class='col-lg-6 ps-8 pe-7 pt-6 pb-6 lg-p-6 sm-p-10'
-          data-anime='{ "translateY": [0, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 100, "easing": "easeOutQuad" }'
-        >
-          <h2
-            class='alt-font fw-500 text-white ls-minus-2px w-80 xl-w-100 mb-25px'
+            <Image
+              src={BenefitsBG}
+              alt=' a happy person'
+              class='h-100 object-fit-cover'
+              data-anime='{ "translateX": [-30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'
+            />
+          </div>
+          <div
+            class='col-lg-6 ps-8 pe-7 pt-6 pb-6 lg-p-6 sm-p-10'
+            data-anime='{ "translateY": [0, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 100, "easing": "easeOutQuad" }'
           >
-            Benefits of our services
-          </h2>
-          <p class='w-65 xl-w-85 lg-w-100 mb-30px'>
-            By demonstrating a lower environmental impact compared to
-            competitors, you can gain a competitive advantage in the market and
-            appeal to environmentally conscious consumers.
-          </p>
-          <p class='w-65 xl-w-85 lg-w-100 mb-30px'>
-            LCA will also help you to identify areas of the product life cycle
-            with the highest environmental impacts. Use this information to
-            prioritize initiatives aimed at reducing environmental footprints,
-            optimizing resource use, and enhancing overall sustainability
-            performance.
-          </p>
-          <!-- start features box item -->
-          <div class='icon-with-text-style-08 mb-15px'>
-            <div class='feature-box feature-box-left-icon-middle'>
-              <div
-                class='feature-box-icon feature-box-icon-rounded w-45px h-45px rounded-circle border border-2 border-color-transparent-white-light box-shadow-large me-15px'
-              >
-                <i class='fa-solid fa-check icon-very-small text-white'></i>
-              </div>
-              <div class='feature-box-content'>
-                <span class='fs-18 lh-28 fw-500 d-block text-white'
-                  >Competitive Advantage</span
+            <h2 class='alt-font fw-500 text-white ls-minus-2px w-80 xl-w-100 mb-25px'>
+              Benefits of our services
+            </h2>
+            <p class='w-65 xl-w-85 lg-w-100 mb-30px'>
+              By demonstrating a lower environmental impact compared to competitors, you can gain a
+              competitive advantage in the market and appeal to environmentally conscious consumers.
+            </p>
+            <p class='w-65 xl-w-85 lg-w-100 mb-30px'>
+              LCA will also help you to identify areas of the product life cycle with the highest
+              environmental impacts. Use this information to prioritize initiatives aimed at
+              reducing environmental footprints, optimizing resource use, and enhancing overall
+              sustainability performance.
+            </p>
+            <!-- start features box item -->
+            <div class='icon-with-text-style-08 mb-15px'>
+              <div class='feature-box feature-box-left-icon-middle'>
+                <div
+                  class='feature-box-icon feature-box-icon-rounded w-45px h-45px rounded-circle border border-2 border-color-transparent-white-light box-shadow-large me-15px'
                 >
+                  <i class='fa-solid fa-check icon-very-small text-white'></i>
+                </div>
+                <div class='feature-box-content'>
+                  <span class='fs-18 lh-28 fw-500 d-block text-white'>Competitive Advantage</span>
+                </div>
               </div>
             </div>
-          </div>
-          <!-- start features box item -->
-          <!-- end features box item -->
-          <div class='icon-with-text-style-08 mb-15px'>
-            <div class='feature-box feature-box-left-icon-middle'>
-              <div
-                class='feature-box-icon feature-box-icon-rounded w-45px h-45px rounded-circle border border-2 border-color-transparent-white-light box-shadow-large me-15px'
-              >
-                <i class='fa-solid fa-check icon-very-small text-white'></i>
-              </div>
-              <div class='feature-box-content'>
-                <span class='fs-18 lh-28 fw-500 d-block text-white'
-                  >Transparency and Credibility</span
+            <!-- start features box item -->
+            <!-- end features box item -->
+            <div class='icon-with-text-style-08 mb-15px'>
+              <div class='feature-box feature-box-left-icon-middle'>
+                <div
+                  class='feature-box-icon feature-box-icon-rounded w-45px h-45px rounded-circle border border-2 border-color-transparent-white-light box-shadow-large me-15px'
                 >
+                  <i class='fa-solid fa-check icon-very-small text-white'></i>
+                </div>
+                <div class='feature-box-content'>
+                  <span class='fs-18 lh-28 fw-500 d-block text-white'
+                    >Transparency and Credibility</span
+                  >
+                </div>
               </div>
             </div>
-          </div>
-          <!-- start features box item -->
-          <!-- end features box item -->
-          <div class='icon-with-text-style-08'>
-            <div class='feature-box feature-box-left-icon-middle'>
-              <div
-                class='feature-box-icon feature-box-icon-rounded w-45px h-45px rounded-circle border border-2 border-color-transparent-white-light box-shadow-large me-15px'
-              >
-                <i class='fa-solid fa-check icon-very-small text-white'></i>
-              </div>
-              <div class='feature-box-content'>
-                <span class='fs-18 lh-28 fw-500 d-block text-white'
-                  >Product Innovation and Improvement</span
+            <!-- start features box item -->
+            <!-- end features box item -->
+            <div class='icon-with-text-style-08'>
+              <div class='feature-box feature-box-left-icon-middle'>
+                <div
+                  class='feature-box-icon feature-box-icon-rounded w-45px h-45px rounded-circle border border-2 border-color-transparent-white-light box-shadow-large me-15px'
                 >
+                  <i class='fa-solid fa-check icon-very-small text-white'></i>
+                </div>
+                <div class='feature-box-content'>
+                  <span class='fs-18 lh-28 fw-500 d-block text-white'
+                    >Product Innovation and Improvement</span
+                  >
+                </div>
               </div>
             </div>
+            <!-- start features box item -->
           </div>
-          <!-- start features box item -->
         </div>
       </div>
-    </div>
-  </section>
-  <!-- end section -->
+    </section>
+    <!-- end section -->
 
-  <!-- start section -->
-  <section>
-    <div class='container'>
-      <div class='row align-items-center justify-content-center'>
-        <div
-          class='col-lg-6 col-md-10 contact-form-style-03 md-mb-50px sm-mb-30px'
-          data-anime='{ "el": "childs", "translateX": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'
-        >
-          <div class='p-14 lg-p-11 border-radius-6px bg-dark-gray h-100'>
-            <h3
-              class='fw-500 alt-font text-white mb-30px md-mb-15px ls-minus-1px'
-            >
-              Get a free quote?
-            </h3>
-            <!-- start contact form -->
-            <form action='https://submit-form.com/ySMjBf7T5' data-botpoison-public-key='pk_bb4de19a-4531-403a-ac03-27ae93273f52'>
-              <input type='hidden' name='_feedback.whitelabel' value='true' />
-
-              <div class='position-relative form-group mb-20px'>
-                <span class='form-icon'
-                  ><i class='bi bi-person icon-extra-medium'></i></span
-                >
-                <input
-                  class='ps-0 border-radius-0px fs-17 bg-transparent border-color-transparent-white-light placeholder-medium-gray form-control required'
-                  type='text'
-                  name='name'
-                  placeholder='Your name'
-                  required
-                />
-              </div>
-              <div class='position-relative form-group mb-20px'>
-                <span class='form-icon'
-                  ><i class='bi bi-envelope icon-extra-medium'></i></span
-                >
-                <input
-                  class='ps-0 border-radius-0px fs-17 bg-transparent border-color-transparent-white-light placeholder-medium-gray form-control required'
-                  type='email'
-                  name='email'
-                  placeholder='Your email address'
-                  required
-                />
-              </div>
-              <div class='position-relative form-group mb-20px'>
-                <span class='form-icon'
-                  ><i class='bi bi-building icon-extra-medium'></i></span
-                >
-                <input
-                  class='ps-0 border-radius-0px fs-17 bg-transparent border-color-transparent-white-light placeholder-medium-gray form-control required'
-                  type='text'
-                  name='company_name'
-                  placeholder='Your company name'
-                  required
-                />
-              </div>
-              <div
-                class='position-relative form-group form-textarea mt-15px mb-25px'
-              >
-                <textarea
-                  class='ps-0 border-radius-0px fs-17 bg-transparent border-color-transparent-white-light placeholder-medium-gray form-control'
-                  name='message'
-                  placeholder='Your message'
-                  rows='3'
-                  required></textarea>
-                <span class='form-icon'
-                  ><i class='bi bi-chat-square-dots icon-extra-medium'
-                  ></i></span
-                >
-                <button
-                  class='btn btn-medium btn-base-color mt-30px w-100 btn-round-edge btn-box-shadow'
-                  type='submit'>Submit now</button
-                >
-                <div class='form-results mt-20px d-none'></div>
-              </div>
-              <span class='fs-15 lh-24 text-medium-gray opacity-8 d-block'
-                >I understand that my data will be hold securely in accordance
-                with the privacy policy.</span
-              >
-            </form>
-            <!-- end contact form -->
-          </div>
-        </div>
-        <div
-          class='col-lg-5 offset-lg-1 col-md-10 text-center text-lg-start'
-          data-anime='{ "el": "childs", "translateY": [0, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 100, "easing": "easeOutQuad" }'
-        >
-          <span class='fs-20 fw-500 text-base-color d-block mb-20px'
-            >A few good reasons</span
-          >
-          <h2 class='fw-600 text-dark-gray ls-minus-2px mb-35px'>
-            Here is what our clients have to say.
-          </h2>
+    <!-- start section -->
+    <section>
+      <div class='container'>
+        <div class='row align-items-center justify-content-center'>
           <div
-            class='swiper position-relative magic-cursor'
-            data-slider-options='{ "autoHeight": true, "loop": true, "allowTouchMove": true, "autoplay": { "delay": 4000, "disableOnInteraction": false }, "navigation": { "nextEl": ".swiper-button-next", "prevEl": ".swiper-button-prev" }, "effect": "fade" }'
+            class='col-lg-6 col-md-10 contact-form-style-03 md-mb-50px sm-mb-30px'
+            data-anime='{ "el": "childs", "translateX": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'
           >
-            <div class='swiper-wrapper mb-50px lg-mb-35px'>
-              <!-- start text slider item -->
-              <div class='swiper-slide review-style-08'>
-                <p class='fs-18'>
-                  I was very satisfied with the professional approach, communication and speed of processing by EPD Clarity. Based on my own experience with EPDs, I have recommended EPD Clarity to other Saint-Gobain divisions.
-                </p>
-                <div class='mt-20px'>
-                  <!-- <img
+            <div class='p-14 lg-p-11 border-radius-6px bg-dark-gray h-100'>
+              <h3 class='fw-500 alt-font text-white mb-30px md-mb-15px ls-minus-1px'>
+                Get a free quote?
+              </h3>
+              <!-- start contact form -->
+              <form
+                action='https://submit-form.com/ySMjBf7T5'
+                data-botpoison-public-key='pk_bb4de19a-4531-403a-ac03-27ae93273f52'
+              >
+                <input type='hidden' name='_redirect' value=`${site}contact-success` />
+                <input type='hidden' name='_error' value=`${site}contact-fail` />
+                <input type='hidden' name='_append' value='false' />
+                <input type='hidden' name='_feedback.whitelabel' value='true' />
+
+                <div class='position-relative form-group mb-20px'>
+                  <span class='form-icon'><i class='bi bi-person icon-extra-medium'></i></span>
+                  <input
+                    class='ps-0 border-radius-0px fs-17 bg-transparent border-color-transparent-white-light placeholder-medium-gray form-control required'
+                    type='text'
+                    name='name'
+                    placeholder='Your name'
+                    required
+                  />
+                </div>
+                <div class='position-relative form-group mb-20px'>
+                  <span class='form-icon'><i class='bi bi-envelope icon-extra-medium'></i></span>
+                  <input
+                    class='ps-0 border-radius-0px fs-17 bg-transparent border-color-transparent-white-light placeholder-medium-gray form-control required'
+                    type='email'
+                    name='email'
+                    placeholder='Your email address'
+                    required
+                  />
+                </div>
+                <div class='position-relative form-group mb-20px'>
+                  <span class='form-icon'><i class='bi bi-building icon-extra-medium'></i></span>
+                  <input
+                    class='ps-0 border-radius-0px fs-17 bg-transparent border-color-transparent-white-light placeholder-medium-gray form-control required'
+                    type='text'
+                    name='company_name'
+                    placeholder='Your company name'
+                    required
+                  />
+                </div>
+                <div class='position-relative form-group form-textarea mt-15px mb-25px'>
+                  <textarea
+                    class='ps-0 border-radius-0px fs-17 bg-transparent border-color-transparent-white-light placeholder-medium-gray form-control'
+                    name='message'
+                    placeholder='Your message'
+                    rows='3'
+                    required></textarea>
+                  <span class='form-icon'
+                    ><i class='bi bi-chat-square-dots icon-extra-medium'></i></span
+                  >
+                  <button
+                    class='btn btn-medium btn-base-color mt-30px w-100 btn-round-edge btn-box-shadow'
+                    type='submit'>Submit now</button
+                  >
+                  <div class='form-results mt-20px d-none'></div>
+                </div>
+                <span class='fs-15 lh-24 text-medium-gray opacity-8 d-block'
+                  >I understand that my data will be hold securely in accordance with the privacy
+                  policy.</span
+                >
+              </form>
+              <!-- end contact form -->
+            </div>
+          </div>
+          <div
+            class='col-lg-5 offset-lg-1 col-md-10 text-center text-lg-start'
+            data-anime='{ "el": "childs", "translateY": [0, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 100, "easing": "easeOutQuad" }'
+          >
+            <span class='fs-20 fw-500 text-base-color d-block mb-20px'>A few good reasons</span>
+            <h2 class='fw-600 text-dark-gray ls-minus-2px mb-35px'>
+              Here is what our clients have to say.
+            </h2>
+            <div
+              class='swiper position-relative magic-cursor'
+              data-slider-options='{ "autoHeight": true, "loop": true, "allowTouchMove": true, "autoplay": { "delay": 4000, "disableOnInteraction": false }, "navigation": { "nextEl": ".swiper-button-next", "prevEl": ".swiper-button-prev" }, "effect": "fade" }'
+            >
+              <div class='swiper-wrapper mb-50px lg-mb-35px'>
+                <!-- start text slider item -->
+                <div class='swiper-slide review-style-08'>
+                  <p class='fs-18'>
+                    I was very satisfied with the professional approach, communication and speed of
+                    processing by EPD Clarity. Based on my own experience with EPDs, I have
+                    recommended EPD Clarity to other Saint-Gobain divisions.
+                  </p>
+                  <div class='mt-20px'>
+                    <!-- <img
                     class='rounded-circle w-95px h-95px me-15px'
                     src='https://via.placeholder.com/148x148'
                     alt=''
                   /> -->
-                  <div class='d-inline-block align-middle text-start'>
-                    <div class='text-dark-gray fs-20 fw-600 ls-minus-05px'>
-                      Ing. Vladimir Balent, Saint-Gobain Construction Products
-                    </div>
-                    <div class='review-star-icon fs-18'>
-                      <i class='bi bi-star-fill'></i><i class='bi bi-star-fill'
-                      ></i><i class='bi bi-star-fill'></i><i
-                        class='bi bi-star-fill'></i><i class='bi bi-star-fill'
-                      ></i>
+                    <div class='d-inline-block align-middle text-start'>
+                      <div class='text-dark-gray fs-20 fw-600 ls-minus-05px'>
+                        Ing. Vladimir Balent, Saint-Gobain Construction Products
+                      </div>
+                      <div class='review-star-icon fs-18'>
+                        <i class='bi bi-star-fill'></i><i class='bi bi-star-fill'></i><i
+                          class='bi bi-star-fill'></i><i class='bi bi-star-fill'></i><i
+                          class='bi bi-star-fill'></i>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <!-- end text slider item -->
-              <!-- start text slider item -->
-              <div class='swiper-slide review-style-08'>
-                <p class='fs-18'>
-                  I highly appreciate the professional cooperation with Professor Vilcekova. We recommend EPD Clarity as a reliable partner in solving EPD challenges.
-                </p>
-                <div class='mt-20px'>
-                  <!-- <img
+                <!-- end text slider item -->
+                <!-- start text slider item -->
+                <div class='swiper-slide review-style-08'>
+                  <p class='fs-18'>
+                    I highly appreciate the professional cooperation with Professor Vilcekova. We
+                    recommend EPD Clarity as a reliable partner in solving EPD challenges.
+                  </p>
+                  <div class='mt-20px'>
+                    <!-- <img
                     class='rounded-circle w-95px h-95px me-15px'
                     src='https://via.placeholder.com/148x148'
                     alt=''
                   /> -->
-                  <div class='d-inline-block align-middle text-start'>
-                    <div class='text-dark-gray fs-20 fw-600 ls-minus-05px'>
-                      Jan Kovacik, GreenCon International
-                    </div>
-                    <div class='review-star-icon fs-18'>
-                      <i class='bi bi-star-fill'></i><i class='bi bi-star-fill'
-                      ></i><i class='bi bi-star-fill'></i><i
-                        class='bi bi-star-fill'></i><i class='bi bi-star-fill'
-                      ></i>
+                    <div class='d-inline-block align-middle text-start'>
+                      <div class='text-dark-gray fs-20 fw-600 ls-minus-05px'>
+                        Jan Kovacik, GreenCon International
+                      </div>
+                      <div class='review-star-icon fs-18'>
+                        <i class='bi bi-star-fill'></i><i class='bi bi-star-fill'></i><i
+                          class='bi bi-star-fill'></i><i class='bi bi-star-fill'></i><i
+                          class='bi bi-star-fill'></i>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <!-- end text slider item -->
-              <!-- start text slider item -->
-              <div class='swiper-slide review-style-08'>
-                <p class='fs-18'>
-                  Cooperation with EPD Clarity was very good and smooth in every respect.
-                </p>
-                <div class='mt-20px'>
-                  <!-- <img
+                <!-- end text slider item -->
+                <!-- start text slider item -->
+                <div class='swiper-slide review-style-08'>
+                  <p class='fs-18'>
+                    Cooperation with EPD Clarity was very good and smooth in every respect.
+                  </p>
+                  <div class='mt-20px'>
+                    <!-- <img
                     class='rounded-circle w-95px h-95px me-15px'
                     src='https://via.placeholder.com/200x200'
                     alt=''
                   /> -->
-                  <div class='d-inline-block align-middle text-start'>
-                    <div class='text-dark-gray fs-20 fw-600 ls-minus-05px'>
-                      Ing. Gabriel Szollosi, Wienerbrger
-                    </div>
-                    <div class='review-star-icon fs-18'>
-                      <i class='bi bi-star-fill'></i><i class='bi bi-star-fill'
-                      ></i><i class='bi bi-star-fill'></i><i
-                        class='bi bi-star-fill'></i><i class='bi bi-star-fill'
-                      ></i>
+                    <div class='d-inline-block align-middle text-start'>
+                      <div class='text-dark-gray fs-20 fw-600 ls-minus-05px'>
+                        Ing. Gabriel Szollosi, Wienerbrger
+                      </div>
+                      <div class='review-star-icon fs-18'>
+                        <i class='bi bi-star-fill'></i><i class='bi bi-star-fill'></i><i
+                          class='bi bi-star-fill'></i><i class='bi bi-star-fill'></i><i
+                          class='bi bi-star-fill'></i>
+                      </div>
                     </div>
                   </div>
                 </div>
+                <!-- end text slider item -->
               </div>
-              <!-- end text slider item -->
             </div>
-          </div>
-          <div class='d-flex justify-content-center justify-content-lg-start'>
-            <!-- start slider navigation -->
-            <div
-              class='slider-one-slide-prev-1 swiper-button-prev slider-navigation-style-04 bg-white text-dark-gray box-shadow-medium'
-            >
-              <i class='fa-solid fa-arrow-left icon-small text-dark-gray'></i>
+            <div class='d-flex justify-content-center justify-content-lg-start'>
+              <!-- start slider navigation -->
+              <div
+                class='slider-one-slide-prev-1 swiper-button-prev slider-navigation-style-04 bg-white text-dark-gray box-shadow-medium'
+              >
+                <i class='fa-solid fa-arrow-left icon-small text-dark-gray'></i>
+              </div>
+              <div
+                class='slider-one-slide-next-1 swiper-button-next slider-navigation-style-04 bg-white text-dark-gray box-shadow-medium'
+              >
+                <i class='fa-solid fa-arrow-right icon-small text-dark-gray'></i>
+              </div>
+              <!-- end slider navigation -->
             </div>
-            <div
-              class='slider-one-slide-next-1 swiper-button-next slider-navigation-style-04 bg-white text-dark-gray box-shadow-medium'
-            >
-              <i class='fa-solid fa-arrow-right icon-small text-dark-gray'></i>
-            </div>
-            <!-- end slider navigation -->
           </div>
         </div>
       </div>
-    </div>
+    </section>
+    <!-- end section -->
   </section>
-  <!-- end section -->
 </BaseLayout>
