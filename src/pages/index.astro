@@ -13,13 +13,12 @@ import PCFserviceIMG from '../images/stock/melanfolia-HSr_FUzDH2w-unsplash.jpg';
 import LCAserviceIMG from '../images/stock/homa-appliances-pWUyHVJgLhg-unsplash.jpg';
 import EPDserviceIMG from '../images/stock/christophe-dion-3KA1M16PuoE-unsplash.jpg';
 import PostPreviewIMG from '../images/stock/javier-allegue-barros-C7B-ExXpOIE-unsplash.jpg';
-import TitleIMG from '../images/stock/sven-qBmV-laUfdI-unsplash_smaller.jpg'
-import FlareBG from '../images/bg/how-it-works-bg-01.jpg'
-import Bubble1 from '../images/bg/bubble-bg-01.png'
-import Bubble2 from '../images/bg/bubble-bg-02.png'
-const OptimizedTitleIMG = await getImage({ src: TitleIMG })
-const OptimizedFlareBG = await getImage({ src: FlareBG })
-
+import TitleIMG from '../images/stock/sven-qBmV-laUfdI-unsplash_smaller.jpg';
+import FlareBG from '../images/bg/how-it-works-bg-01.jpg';
+import Bubble1 from '../images/bg/bubble-bg-01.png';
+import Bubble2 from '../images/bg/bubble-bg-02.png';
+const OptimizedTitleIMG = await getImage({ src: TitleIMG });
+const OptimizedFlareBG = await getImage({ src: FlareBG });
 ---
 
 <BaseLayout title='Home' description='Landing page'>
@@ -41,18 +40,27 @@ const OptimizedFlareBG = await getImage({ src: FlareBG })
   </section> -->
   <!-- end page title -->
 
-
   <!-- start section -->
   <section
     class='p-0 border-radius-6px full-screen md-h-600px sm-h-450px ipad-top-space-margin position-relative overflow-hidden'
   >
     <div class='absolute-bottom-center left-50px z-index-1'>
-      <Image src={Bubble1} alt='orange bubble' class='animation-float lg-w-250px sm-w-150px' loading="eager" />
+      <Image
+        src={Bubble1}
+        alt='orange bubble'
+        class='animation-float lg-w-250px sm-w-150px'
+        loading='eager'
+      />
     </div>
     <div
       class='absolute-middle-right right-100px lg-right-0px top-150px sm-top-0px mt-70px z-index-1'
     >
-      <Image src={Bubble2} alt='orange bubble' class='animation-float lg-w-250px sm-w-150px' loading="eager" />
+      <Image
+        src={Bubble2}
+        alt='orange bubble'
+        class='animation-float lg-w-250px sm-w-150px'
+        loading='eager'
+      />
     </div>
     <div
       id='particles-style-01'
@@ -72,7 +80,7 @@ const OptimizedFlareBG = await getImage({ src: FlareBG })
             EPD and PCF for a greener prodcut portfolio
           </div> -->
           <div class='fs-120 lh-120 sm-fs-75 md-fs-100 text-dark-gray fw-600 ls-minus-4px'>
-            EPD and PCF <br> for a greener <br> product portfolio
+            EPD and PCF <br /> for a greener <br /> product portfolio
           </div>
         </div>
       </div>
@@ -250,11 +258,7 @@ const OptimizedFlareBG = await getImage({ src: FlareBG })
             data-anime='{ "effect": "slide", "direction": "rl", "color": "#292d36", "duration": 1000, "delay": 500 }'
           >
             <!-- <img class="w-100" src="https://via.placeholder.com/352x452" alt=""> -->
-            <Image
-              src={EPDmockupIMG}
-              alt='Environmental Product Declaration'
-              class='w-100'
-            />
+            <Image src={EPDmockupIMG} alt='Environmental Product Declaration' class='w-100' />
           </div>
         </div>
         <div
@@ -274,8 +278,7 @@ const OptimizedFlareBG = await getImage({ src: FlareBG })
           <div class='d-inline-block'>
             <a
               href='/services'
-              class='btn btn-medium btn-dark-gray btn-box-shadow me-25px btn-round-edge'
-              >Services</a
+              class='btn btn-medium btn-dark-gray btn-box-shadow me-25px btn-round-edge'>Services</a
             >
             <a href='/company' class='btn btn-link btn-large text-dark-gray xs-mt-15px xs-mb-15px'
               >About us</a
@@ -284,10 +287,10 @@ const OptimizedFlareBG = await getImage({ src: FlareBG })
         </div>
       </div>
     </div>
-    </section>
-    <!-- end section -->
-    <!-- start section -->
-    <!-- <section class="pt-0 overflow-hidden">
+  </section>
+  <!-- end section -->
+  <!-- start section -->
+  <!-- <section class="pt-0 overflow-hidden">
         <div class="container">
             <div class="bg-dark-slate-blue border-radius-6px p-8 md-p-6 sm-p-10 position-relative overflow-hidden">
                 <div class="row justify-content-center mb-5">
@@ -384,10 +387,10 @@ const OptimizedFlareBG = await getImage({ src: FlareBG })
             </div>
         </div>
     </section> -->
-    <!-- end section -->
+  <!-- end section -->
 
-    <!-- start section -->
-    <!-- <section class='overflow-hidden'>
+  <!-- start section -->
+  <!-- <section class='overflow-hidden'>
     <div class='container'>
       <div class='row mb-7 justify-content-center'>
         <div
@@ -498,179 +501,174 @@ const OptimizedFlareBG = await getImage({ src: FlareBG })
       </div>
     </div>
   </section> -->
-    <!-- end section -->
+  <!-- end section -->
 
-    <!-- start section -->
-    <section
-      class='bg-gradient-very-light-gray position-relative z-index-0 border-radius-6px lg-border-radius-0px overflow-hidden'
-    >
-      <div class='container'>
-        <div class='row justify-content-center mb-3'>
-          <div
-            class='col-lg-7 text-center'
-            data-anime='{  "opacity": [0,1], "duration": 800, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
-          >
-            <span
-              class='fw-600 ls-1px fs-16 alt-font mb-5px d-inline-block text-uppercase text-base-color'
-              >Your satisfaction is our success</span
-            >
-            <h2 class='alt-font text-dark-gray fw-600 ls-minus-2px'>Services</h2>
-          </div>
-        </div>
+  <!-- start section -->
+  <section
+    class='bg-gradient-very-light-gray position-relative z-index-0 border-radius-6px lg-border-radius-0px overflow-hidden'
+  >
+    <div class='container'>
+      <div class='row justify-content-center mb-3'>
         <div
-          class='row row-cols-1 row-cols-xl-3 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 justify-content-center transition-inner-all appear anime-child anime-complete'
-          data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'
+          class='col-lg-7 text-center'
+          data-anime='{  "opacity": [0,1], "duration": 800, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
         >
-          <div class='col interactive-banner-style-02 hover-box dark-hover md-mb-30px'>
-            <div
-              class='h-100 text-center position-relative border-radius-6px box-shadow-quadruple-large overflow-hidden'
-            >
-              <figure class='m-0' style='padding-bottom: 215.75px;'>
-                <a href='/service-detail-lca' class='position-relative d-block'>
-                  <!-- <img src="https://via.placeholder.com/600x400" alt="" data-no-retina=""> -->
-                  <Image
-                    src={LCAserviceIMG}
-                    alt='manufacturing line'
-                    class='w-100'
-                    height='400'
-                  />
-                  <div
-                    class='label position-absolute right-20px top-20px bg-base-color fw-600 text-white text-uppercase border-radius-30px ps-15px pe-15px fs-11 ls-05px'
-                  >
-                    LCA
-                  </div>
-                </a>
-                <figcaption class='w-100 position-absolute bottom-0px bg-white'>
-                  <div
-                    class='position-relative z-index-2 p-25px pt-25px pb-15px border-bottom border-dark-opacity'
-                  >
-                    <!-- <i class="features-icon line-icon-Archery-2 d-block icon-extra-large"></i> -->
-                    <a
-                      href='/service-detail-lca'
-                      class='fw-600 d-inline-block mb-5px text-dark-gray fs-18'
-                      >Product Life Cycle Assesment</a
-                    >
-                    <!-- <p class="w-80 lg-w-100 fs-16 mx-auto mb-15px lg-mb-10px text-light-opacity">Life Cycle Assessment (LCA) is a systematic method for evaluating the environmental impacts of a product, process, or activity throughout its entire life cycle, from the extraction of raw materials to production, use, and disposal. It is a comprehensive tool used to quantify the potential environmental burdens associated with a product or service according to 19 environmental impact categories. LCAs are increasingly demanded for Green Deal proposals.</p> -->
-                  </div>
+          <span
+            class='fw-600 ls-1px fs-16 alt-font mb-5px d-inline-block text-uppercase text-base-color'
+            >Your satisfaction is our success</span
+          >
+          <h2 class='alt-font text-dark-gray fw-600 ls-minus-2px'>Services</h2>
+        </div>
+      </div>
+      <div
+        class='row row-cols-1 row-cols-xl-3 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 justify-content-center transition-inner-all appear anime-child anime-complete'
+        data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'
+      >
+        <div class='col interactive-banner-style-02 hover-box dark-hover md-mb-30px'>
+          <div
+            class='h-100 text-center position-relative border-radius-6px box-shadow-quadruple-large overflow-hidden'
+          >
+            <figure class='m-0' style='padding-bottom: 215.75px;'>
+              <a href='/service-detail-lca' class='position-relative d-block'>
+                <Image
+                  src={LCAserviceIMG}
+                  alt='manufacturing line'
+                  class='w-100'
+                  height='400'
+                  loading='eager'
+                />
+                <div
+                  class='label position-absolute right-20px top-20px bg-base-color fw-600 text-white text-uppercase border-radius-30px ps-15px pe-15px fs-11 ls-05px'
+                >
+                  LCA
+                </div>
+              </a>
+              <figcaption class='w-100 position-absolute bottom-0px bg-white'>
+                <div
+                  class='position-relative z-index-2 p-25px pt-25px pb-15px border-bottom border-dark-opacity'
+                >
                   <a
                     href='/service-detail-lca'
-                    class='btn btn-link btn-hover-animation-switch btn-medium fw-700 text-dark-gray text-uppercase p-20px z-index-1'
+                    class='fw-600 d-inline-block mb-5px text-dark-gray fs-18'
+                    >Product Life Cycle Assesment</a
                   >
-                    <span>
-                      <span class='btn-text'>Explore services</span>
-                      <span class='btn-icon'><i class='fa-solid fa-arrow-right'></i></span>
-                      <span class='btn-icon'><i class='fa-solid fa-arrow-right'></i></span>
-                    </span>
-                  </a>
-                  <div class='box-overlay bg-base-color'></div>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-
-          <div class='col interactive-banner-style-02 hover-box dark-hover md-mb-30px'>
-            <div
-              class='h-100 text-center position-relative border-radius-6px box-shadow-quadruple-large overflow-hidden'
-            >
-              <figure class='m-0' style='padding-bottom: 215.75px;'>
-                <a href='/service-detail-epd' class='position-relative d-block'>
-                  <!-- <img src="https://via.placeholder.com/600x400" alt="" data-no-retina=""> -->
-                  <Image
-                    src={EPDserviceIMG}
-                    alt='steel pipes'
-                    class='w-100'
-                    height='400'
-                  />
-                  <div
-                    class='label position-absolute right-20px top-20px bg-base-color fw-600 text-white text-uppercase border-radius-30px ps-15px pe-15px fs-11 ls-05px'
-                  >
-                    EPD
-                  </div>
+                </div>
+                <a
+                  href='/service-detail-lca'
+                  class='btn btn-link btn-hover-animation-switch btn-medium fw-700 text-dark-gray text-uppercase p-20px z-index-1'
+                >
+                  <span>
+                    <span class='btn-text'>Explore services</span>
+                    <span class='btn-icon'><i class='fa-solid fa-arrow-right'></i></span>
+                    <span class='btn-icon'><i class='fa-solid fa-arrow-right'></i></span>
+                  </span>
                 </a>
-                <figcaption class='w-100 position-absolute bottom-0px bg-white'>
-                  <div
-                    class='position-relative z-index-2 p-25px pt-25px pb-15px border-bottom border-dark-opacity'
-                  >
-                    <!-- <i class="features-icon line-icon-Coins d-block icon-extra-large"></i> -->
-                    <a
-                      href='/service-detail'
-                      class='fw-600 d-inline-block mb-5px text-dark-gray fs-18'
-                      >Environmental Product Declaration</a
-                    >
-                    <!-- <p class="w-80 lg-w-100 fs-16 mx-auto mb-15px lg-mb-10px text-light-opacity">An Environmental Product Declaration (EPD) is a standardized and verified document that provides transparent  information about the environmental impacts of a product throughout its life cycle in a standard format. EPDs are based on the results of Life Cycle Assessment (LCA) and are developed according to  ISO 14025 and EN 15804 standards. EPDs demonstrate your commitment to sustainability.</p> -->
-                  </div>
-                  <a
-                    href='/service-detail-epd'
-                    class='btn btn-link btn-hover-animation-switch btn-medium fw-700 text-dark-gray text-uppercase p-20px z-index-1'
-                  >
-                    <span>
-                      <span class='btn-text'>Explore services</span>
-                      <span class='btn-icon'><i class='fa-solid fa-arrow-right'></i></span>
-                      <span class='btn-icon'><i class='fa-solid fa-arrow-right'></i></span>
-                    </span>
-                  </a>
-                  <div class='box-overlay bg-base-color'></div>
-                </figcaption>
-              </figure>
-            </div>
+                <div class='box-overlay bg-base-color'></div>
+              </figcaption>
+            </figure>
           </div>
+        </div>
 
-          <div class='col interactive-banner-style-02 hover-box dark-hover'>
-            <div
-              class='h-100 text-center position-relative border-radius-6px box-shadow-quadruple-large overflow-hidden'
-            >
-              <figure class='m-0' style='padding-bottom: 215.75px;'>
-                <a href='/service-detail-pcf' class='position-relative d-block'>
-                  <!-- <img src="https://via.placeholder.com/600x400" alt="" data-no-retina=""> -->
-                  <Image src={PCFserviceIMG} alt='leaf' class='w-100' height='400' />
-                  <div
-                    class='label position-absolute right-20px top-20px bg-base-color fw-600 text-white text-uppercase border-radius-30px ps-15px pe-15px fs-11 ls-05px'
-                  >
-                    PCF
-                  </div>
-                </a>
-                <figcaption class='w-100 position-absolute bottom-0px bg-white'>
-                  <div
-                    class='position-relative z-index-2 p-25px pt-25px pb-15px border-bottom border-dark-opacity'
-                  >
-                    <!-- <i class="features-icon line-icon-Bar-Chart3 d-block icon-extra-large"></i> -->
-                    <a
-                      href='/service-detail'
-                      class='fw-600 d-inline-block mb-5px text-dark-gray fs-18'
-                      >Product Carbon Footprint</a
-                    >
-                    <!-- <p class="w-80 lg-w-100 fs-16 mx-auto mb-15px lg-mb-10px text-light-opacity">The carbon footprint of a product refers to the total amount of greenhouse gas emissions (usually expressed in carbon dioxide equivalent, CO2e) generated throughout its life cycle, from raw material extraction and production to use, disposal, and sometimes recycling or end-of-life management. It is a measure of the product's contribution to climate change.  Calculating the carbon footprint of a product involves conducting a Life Cycle Assessment (LCA) to quantify the greenhouse gas emissions associated with each stage of the product's life cycle.</p> -->
-                  </div>
+        <div class='col interactive-banner-style-02 hover-box dark-hover md-mb-30px'>
+          <div
+            class='h-100 text-center position-relative border-radius-6px box-shadow-quadruple-large overflow-hidden'
+          >
+            <figure class='m-0' style='padding-bottom: 215.75px;'>
+              <a href='/service-detail-epd' class='position-relative d-block'>
+                <Image
+                  src={EPDserviceIMG}
+                  alt='steel pipes'
+                  class='w-100'
+                  height='400'
+                  loading='eager'
+                />
+                <div
+                  class='label position-absolute right-20px top-20px bg-base-color fw-600 text-white text-uppercase border-radius-30px ps-15px pe-15px fs-11 ls-05px'
+                >
+                  EPD
+                </div>
+              </a>
+              <figcaption class='w-100 position-absolute bottom-0px bg-white'>
+                <div
+                  class='position-relative z-index-2 p-25px pt-25px pb-15px border-bottom border-dark-opacity'
+                >
                   <a
-                    href='/service-detail-pcf'
-                    class='btn btn-link btn-hover-animation-switch btn-medium fw-700 text-dark-gray text-uppercase p-20px z-index-1'
+                    href='/service-detail'
+                    class='fw-600 d-inline-block mb-5px text-dark-gray fs-18'
+                    >Environmental Product Declaration</a
                   >
-                    <span>
-                      <span class='btn-text'>Explore services</span>
-                      <span class='btn-icon'><i class='fa-solid fa-arrow-right'></i></span>
-                      <span class='btn-icon'><i class='fa-solid fa-arrow-right'></i></span>
-                    </span>
-                  </a>
-                  <div class='box-overlay bg-base-color'></div>
-                </figcaption>
-              </figure>
-            </div>
+                </div>
+                <a
+                  href='/service-detail-epd'
+                  class='btn btn-link btn-hover-animation-switch btn-medium fw-700 text-dark-gray text-uppercase p-20px z-index-1'
+                >
+                  <span>
+                    <span class='btn-text'>Explore services</span>
+                    <span class='btn-icon'><i class='fa-solid fa-arrow-right'></i></span>
+                    <span class='btn-icon'><i class='fa-solid fa-arrow-right'></i></span>
+                  </span>
+                </a>
+                <div class='box-overlay bg-base-color'></div>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class='col interactive-banner-style-02 hover-box dark-hover'>
+          <div
+            class='h-100 text-center position-relative border-radius-6px box-shadow-quadruple-large overflow-hidden'
+          >
+            <figure class='m-0' style='padding-bottom: 215.75px;'>
+              <a href='/service-detail-pcf' class='position-relative d-block'>
+                <Image src={PCFserviceIMG} alt='leaf' class='w-100' height='400' loading='eager' />
+                <div
+                  class='label position-absolute right-20px top-20px bg-base-color fw-600 text-white text-uppercase border-radius-30px ps-15px pe-15px fs-11 ls-05px'
+                >
+                  PCF
+                </div>
+              </a>
+              <figcaption class='w-100 position-absolute bottom-0px bg-white'>
+                <div
+                  class='position-relative z-index-2 p-25px pt-25px pb-15px border-bottom border-dark-opacity'
+                >
+                  <!-- <i class="features-icon line-icon-Bar-Chart3 d-block icon-extra-large"></i> -->
+                  <a
+                    href='/service-detail'
+                    class='fw-600 d-inline-block mb-5px text-dark-gray fs-18'
+                    >Product Carbon Footprint</a
+                  >
+                  <!-- <p class="w-80 lg-w-100 fs-16 mx-auto mb-15px lg-mb-10px text-light-opacity">The carbon footprint of a product refers to the total amount of greenhouse gas emissions (usually expressed in carbon dioxide equivalent, CO2e) generated throughout its life cycle, from raw material extraction and production to use, disposal, and sometimes recycling or end-of-life management. It is a measure of the product's contribution to climate change.  Calculating the carbon footprint of a product involves conducting a Life Cycle Assessment (LCA) to quantify the greenhouse gas emissions associated with each stage of the product's life cycle.</p> -->
+                </div>
+                <a
+                  href='/service-detail-pcf'
+                  class='btn btn-link btn-hover-animation-switch btn-medium fw-700 text-dark-gray text-uppercase p-20px z-index-1'
+                >
+                  <span>
+                    <span class='btn-text'>Explore services</span>
+                    <span class='btn-icon'><i class='fa-solid fa-arrow-right'></i></span>
+                    <span class='btn-icon'><i class='fa-solid fa-arrow-right'></i></span>
+                  </span>
+                </a>
+                <div class='box-overlay bg-base-color'></div>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </div>
-    </section>
-    <!-- end section -->
-    <!-- start section -->
-    <section class='pt-0 position-relative'>
-      <div
-        id='particles-02'
-        data-particle='true'
-        data-particle-options='{"particles": {"number": {"value": 5,"density": {"enable": true,"value_area": 1000}},"color":{"value":["#b7b9be", "#dd6531"]},"shape": {"type": "circle","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 0.5,"random": false,"anim": {"enable": false,"speed": 1,"sync": false}},"size": {"value": 8,"random": true,"anim": {"enable": false,"sync": true}},"move": {"enable": true,"speed":2,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}'
-        class='position-absolute h-100 top-0 left-0 z-index-minus-1'
-      >
-      </div>
-      <div class='container'>
-        <!-- <div class="row row-cols-1 row-cols-xl-4 row-cols-md-3 row-cols-sm-2 justify-content-center align-items-center mb-10"
+    </div>
+  </section>
+  <!-- end section -->
+  <!-- start section -->
+  <section class='pt-0 position-relative'>
+    <div
+      id='particles-02'
+      data-particle='true'
+      data-particle-options='{"particles": {"number": {"value": 5,"density": {"enable": true,"value_area": 1000}},"color":{"value":["#b7b9be", "#dd6531"]},"shape": {"type": "circle","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 0.5,"random": false,"anim": {"enable": false,"speed": 1,"sync": false}},"size": {"value": 8,"random": true,"anim": {"enable": false,"sync": true}},"move": {"enable": true,"speed":2,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}'
+      class='position-absolute h-100 top-0 left-0 z-index-minus-1'
+    >
+    </div>
+    <div class='container'>
+      <!-- <div class="row row-cols-1 row-cols-xl-4 row-cols-md-3 row-cols-sm-2 justify-content-center align-items-center mb-10"
                 data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
 
                 <div class="col icon-with-text-style-08 sm-mb-25px text-center text-sm-start">
@@ -706,98 +704,98 @@ const OptimizedFlareBG = await getImage({ src: FlareBG })
                     </div>
                 </div>
             </div> -->
-        <div class='row mb-7'>
-          <div class='col-lg-5 md-mb-50px sm-mb-30px'>
-            <h2 class='alt-font fw-600 text-dark-gray ls-minus-2px'>
-              How to choose the right service?
-            </h2>
-            <p class='w-80 lg-w-100 mb-30px sm-mb-25px'>
-              It's important to recognize that LCA, EPD, and PCF are not mutually exclusive. In
-              fact, they can complement each other in providing a more comprehensive understanding
-              of environmental impacts. For example, an EPD may include PCF data as part of its
-              disclosure, and PCF results can be derived from an LCA analysis.
-            </p>
-            <!-- <p class="w-80 lg-w-100 mb-30px sm-mb-25px">It's important to recognize that LCA, EPD, and PCF are not mutually exclusive. In fact, they can complement each other in providing a more comprehensive understanding of environmental impacts. For example, an EPD may include PCF data as part of its disclosure, and PCF results can be derived from an LCA analysis.</p> -->
-            <a href='/contact' class='btn btn-small btn-dark-gray btn-box-shadow btn-round-edge'
-              >Contact us</a
-            >
-          </div>
-          <div
-            class='col-xl-5 col-lg-6 offset-xl-2 offset-lg-1'
-            data-anime='{"opacity": [0,1], "duration": 600, "delay":200, "staggervalue": 200, "easing": "easeOutQuad" }'
+      <div class='row mb-7'>
+        <div class='col-lg-5 md-mb-50px sm-mb-30px'>
+          <h2 class='alt-font fw-600 text-dark-gray ls-minus-2px'>
+            How to choose the right service?
+          </h2>
+          <p class='w-80 lg-w-100 mb-30px sm-mb-25px'>
+            It's important to recognize that LCA, EPD, and PCF are not mutually exclusive. In fact,
+            they can complement each other in providing a more comprehensive understanding of
+            environmental impacts. For example, an EPD may include PCF data as part of its
+            disclosure, and PCF results can be derived from an LCA analysis.
+          </p>
+          <!-- <p class="w-80 lg-w-100 mb-30px sm-mb-25px">It's important to recognize that LCA, EPD, and PCF are not mutually exclusive. In fact, they can complement each other in providing a more comprehensive understanding of environmental impacts. For example, an EPD may include PCF data as part of its disclosure, and PCF results can be derived from an LCA analysis.</p> -->
+          <a href='/contact' class='btn btn-small btn-dark-gray btn-box-shadow btn-round-edge'
+            >Contact us</a
           >
-            <div
-              class='accordion accordion-style-02'
-              id='accordion-style-02'
-              data-active-icon='icon-feather-minus'
-              data-inactive-icon='icon-feather-plus'
-            >
-              <!-- start accordion item -->
-              <div class='accordion-item active-accordion'>
-                <div class='accordion-header border-bottom border-color-extra-medium-gray'>
-                  <a
-                    href='#'
-                    data-bs-toggle='collapse'
-                    data-bs-target='#accordion-style-02-01'
-                    aria-expanded='true'
-                    data-bs-parent='#accordion-style-02'
-                  >
-                    <div class='accordion-title mb-0 position-relative text-dark-gray'>
-                      <i class='feather icon-feather-minus'></i><span class='fw-600 fs-20'
-                        >Single product</span
-                      >
-                    </div>
-                  </a>
-                </div>
-                <div
-                  id='accordion-style-02-01'
-                  class='accordion-collapse collapse show'
+        </div>
+        <div
+          class='col-xl-5 col-lg-6 offset-xl-2 offset-lg-1'
+          data-anime='{"opacity": [0,1], "duration": 600, "delay":200, "staggervalue": 200, "easing": "easeOutQuad" }'
+        >
+          <div
+            class='accordion accordion-style-02'
+            id='accordion-style-02'
+            data-active-icon='icon-feather-minus'
+            data-inactive-icon='icon-feather-plus'
+          >
+            <!-- start accordion item -->
+            <div class='accordion-item active-accordion'>
+              <div class='accordion-header border-bottom border-color-extra-medium-gray'>
+                <a
+                  href='#'
+                  data-bs-toggle='collapse'
+                  data-bs-target='#accordion-style-02-01'
+                  aria-expanded='true'
                   data-bs-parent='#accordion-style-02'
                 >
-                  <div
-                    class='accordion-body last-paragraph-no-margin border-bottom border-color-light-medium-gray'
-                  >
-                    <p>Get product specific EPDs for unique products</p>
+                  <div class='accordion-title mb-0 position-relative text-dark-gray'>
+                    <i class='feather icon-feather-minus'></i><span class='fw-600 fs-20'
+                      >Single product</span
+                    >
                   </div>
+                </a>
+              </div>
+              <div
+                id='accordion-style-02-01'
+                class='accordion-collapse collapse show'
+                data-bs-parent='#accordion-style-02'
+              >
+                <div
+                  class='accordion-body last-paragraph-no-margin border-bottom border-color-light-medium-gray'
+                >
+                  <p>Get product specific EPDs for unique products</p>
                 </div>
               </div>
-              <!-- end accordion item -->
-              <!-- start accordion item -->
-              <div class='accordion-item'>
-                <div class='accordion-header border-bottom border-color-extra-medium-gray'>
-                  <a
-                    href='#'
-                    data-bs-toggle='collapse'
-                    data-bs-target='#accordion-style-02-02'
-                    aria-expanded='false'
-                    data-bs-parent='#accordion-style-02'
-                  >
-                    <div class='accordion-title mb-0 position-relative text-dark-gray'>
-                      <i class='feather icon-feather-plus'></i><span class='fw-600 fs-20'
-                        >Multiple products</span
-                      >
-                    </div>
-                  </a>
-                </div>
-                <div
-                  id='accordion-style-02-02'
-                  class='accordion-collapse collapse'
+            </div>
+            <!-- end accordion item -->
+            <!-- start accordion item -->
+            <div class='accordion-item'>
+              <div class='accordion-header border-bottom border-color-extra-medium-gray'>
+                <a
+                  href='#'
+                  data-bs-toggle='collapse'
+                  data-bs-target='#accordion-style-02-02'
+                  aria-expanded='false'
                   data-bs-parent='#accordion-style-02'
                 >
-                  <div
-                    class='accordion-body last-paragraph-no-margin border-bottom border-color-light-medium-gray'
-                  >
-                    <p>
-                      Your portfolio has multiple similar products? Take advantage of these
-                      similarities to get an LCA/EPD for all your similar products at once and enjoy
-                      our bulk pricing.
-                    </p>
+                  <div class='accordion-title mb-0 position-relative text-dark-gray'>
+                    <i class='feather icon-feather-plus'></i><span class='fw-600 fs-20'
+                      >Multiple products</span
+                    >
                   </div>
+                </a>
+              </div>
+              <div
+                id='accordion-style-02-02'
+                class='accordion-collapse collapse'
+                data-bs-parent='#accordion-style-02'
+              >
+                <div
+                  class='accordion-body last-paragraph-no-margin border-bottom border-color-light-medium-gray'
+                >
+                  <p>
+                    Your portfolio has multiple similar products? Take advantage of these
+                    similarities to get an LCA/EPD for all your similar products at once and enjoy
+                    our bulk pricing.
+                  </p>
                 </div>
               </div>
-              <!-- end accordion item -->
-              <!-- start accordion item -->
-              <!-- <div class="accordion-item">
+            </div>
+            <!-- end accordion item -->
+            <!-- start accordion item -->
+            <!-- <div class="accordion-item">
                             <div class="accordion-header border-bottom border-color-transparent">
                                 <a href="#" data-bs-toggle="collapse" data-bs-target="#accordion-style-02-03"
                                     aria-expanded="false" data-bs-parent="#accordion-style-02">
@@ -816,330 +814,340 @@ const OptimizedFlareBG = await getImage({ src: FlareBG })
                                 </div>
                             </div>
                         </div> -->
-              <!-- end accordion item -->
-            </div>
+            <!-- end accordion item -->
           </div>
         </div>
+      </div>
 
-        <div
-          class='row'
-          data-anime='{ "el": "childs", "translateY": [0, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'
-        >
-          <div class='col-12 fs-22 fw-500 ls-minus-1px text-dark-gray text-center'>
-            For any queries on EPD advisory services, write us at <a
-              class='text-dark-gray text-decoration-line-bottom'
-              href='mailto:info@yourdomain.com'>info@epdclarity.com</a
-            > or use contact form on this website.
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- end section -->
-    <!-- start section -->
-    <section class='position-relative'>
       <div
-        id='particles-02'
-        data-particle='true'
-        data-particle-options='{"particles": {"number": {"value": 5,"density": {"enable": true,"value_area": 1000}},"color":{"value":["#b7b9be", "#dd6531"]},"shape": {"type": "circle","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 0.5,"random": false,"anim": {"enable": false,"speed": 1,"sync": false}},"size": {"value": 8,"random": true,"anim": {"enable": false,"sync": true}},"move": {"enable": true,"speed":2,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}'
-        class='position-absolute h-100 top-0 left-0 z-index-minus-1'
+        class='row'
+        data-anime='{ "el": "childs", "translateY": [0, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'
       >
-      </div>
-      <div class='container'>
-        <div class='row justify-content-center mb-2'>
-          <div
-            class='col-lg-7 text-center'
-            data-anime='{ "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
-          >
-            <span
-              class='fw-600 ls-1px fs-16 alt-font d-inline-block text-uppercase mb-5px text-base-color'
-              >Few good reasons</span
-            >
-            <h2 class='alt-font text-dark-gray fw-600 ls-minus-2px'>Client testimonials</h2>
-          </div>
+        <div class='col-12 fs-22 fw-500 ls-minus-1px text-dark-gray text-center'>
+          For any queries on EPD advisory services, write us at <a
+            class='text-dark-gray text-decoration-line-bottom'
+            href='mailto:info@yourdomain.com'>info@epdclarity.com</a
+          > or use contact form on this website.
         </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section -->
+  <!-- start section -->
+  <section class='position-relative'>
+    <div
+      id='particles-02'
+      data-particle='true'
+      data-particle-options='{"particles": {"number": {"value": 5,"density": {"enable": true,"value_area": 1000}},"color":{"value":["#b7b9be", "#dd6531"]},"shape": {"type": "circle","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 0.5,"random": false,"anim": {"enable": false,"speed": 1,"sync": false}},"size": {"value": 8,"random": true,"anim": {"enable": false,"sync": true}},"move": {"enable": true,"speed":2,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}'
+      class='position-absolute h-100 top-0 left-0 z-index-minus-1'
+    >
+    </div>
+    <div class='container'>
+      <div class='row justify-content-center mb-2'>
         <div
-          class='row row-cols-1 row-cols-lg-3 row-cols-md-2 justify-content-center'
-          data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
+          class='col-lg-7 text-center'
+          data-anime='{ "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
         >
-          <!-- start testimonial item -->
-          <div class='col md-mb-30px'>
-            <div
-              class='testimonials testimonials-style-05 last-paragraph-no-margin d-flex flex-column h-100'
-            >
-              <div
-                class='testimonials-bubble border-radius-5px border border-color-extra-medium-gray bg-white pt-30px pb-30px ps-40px pe-40px lg-p-25px mb-35px h-100'
-              >
-                <p>
-                  I was very satisfied with the professional approach, communication and speed of
-                  processing by EPD Clarity. Based on my own experience with EPDs, I have
-                  recommended EPD Clarity to other Saint-Gobain divisions.
-                </p>
-              </div>
-              <div class='author ps-20px pe-20px'>
-                <!-- <img
-                    class='rounded-circle w-85px me-15px'
-                    src='https://via.placeholder.com/148x148'
-                    alt=''
-                /> -->
-                <div class='d-inline-block align-middle lh-20'>
-                  <span class='fw-600 fs-18 text-dark-gray d-block mb-5px'
-                    >Ing. Vladimir Balent</span
-                  >
-                  <div class='fs-15'>Saint-Gobain Construction Products</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- end testimonial item -->
-          <!-- start testimonial item -->
-          <div class='col md-mb-30px'>
-            <div
-              class='testimonials testimonials-style-05 last-paragraph-no-margin d-flex flex-column h-100'
-            >
-              <div
-                class='testimonials-bubble border-radius-5px border border-color-extra-medium-gray bg-white pt-30px pb-30px ps-40px pe-40px lg-p-25px mb-35px h-100'
-              >
-                <p>
-                  I highly appreciate the professional cooperation with Professor Vilcekova. We
-                  recommend EPD Clarity as a reliable partner in solving EPD challenges.
-                </p>
-              </div>
-              <div class='author ps-20px pe-20px'>
-                <!-- <img
-                    class='rounded-circle w-85px me-15px'
-                    src='https://via.placeholder.com/148x148'
-                    alt=''
-                /> -->
-                <div class='d-inline-block align-middle lh-20'>
-                  <span class='fw-600 fs-18 text-dark-gray d-block mb-5px'>Jan Kovacik</span>
-                  <div class='fs-15'>GreenCon International</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- end testimonial item -->
-          <!-- start testimonial item -->
-          <div class='col'>
-            <div
-              class='testimonials testimonials-style-05 last-paragraph-no-margin d-flex flex-column h-100'
-            >
-              <div
-                class='testimonials-bubble border-radius-5px border border-color-extra-medium-gray bg-white pt-30px pb-30px ps-40px pe-40px lg-p-25px mb-35px h-100'
-              >
-                <p>Cooperation with EPD Clarity was very good and smooth in every respect.</p>
-              </div>
-              <div class='author ps-20px pe-20px'>
-                <!-- <img
-                    class='rounded-circle w-85px me-15px'
-                    src='https://via.placeholder.com/148x148'
-                    alt=''
-                /> -->
-                <div class='d-inline-block align-middle lh-20'>
-                  <span class='fw-600 fs-18 text-dark-gray d-block mb-5px'
-                    >Ing. Gabriel Szollosi
-                  </span>
-                  <div class='fs-15'>Wienerbrger</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- end testimonial item -->
+          <span
+            class='fw-600 ls-1px fs-16 alt-font d-inline-block text-uppercase mb-5px text-base-color'
+            >Few good reasons</span
+          >
+          <h2 class='alt-font text-dark-gray fw-600 ls-minus-2px'>Client testimonials</h2>
         </div>
       </div>
-    </section>
-    <!-- end section -->
-    <!-- start section -->
-    <section class='position-relative'>
       <div
-        id='particles-03'
-        data-particle='true'
-        data-particle-options='{"particles": {"number": {"value": 5,"density": {"enable": true,"value_area": 1000}},"color":{"value":["#b7b9be", "#dd6531"]},"shape": {"type": "circle","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 0.5,"random": false,"anim": {"enable": false,"speed": 1,"sync": false}},"size": {"value": 8,"random": true,"anim": {"enable": false,"sync": true}},"move": {"enable": true,"speed":2,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}'
-        class='position-absolute h-100 top-0 left-0 z-index-minus-1'
+        class='row row-cols-1 row-cols-lg-3 row-cols-md-2 justify-content-center'
+        data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
       >
-      </div>
-      <div class='container'>
-        <div class='row justify-content-center mb-3'>
+        <!-- start testimonial item -->
+        <div class='col md-mb-30px'>
           <div
-            class='col-lg-7 text-center'
-            data-anime='{  "opacity": [0,1], "duration": 800, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
+            class='testimonials testimonials-style-05 last-paragraph-no-margin d-flex flex-column h-100'
           >
-            <span
-              class='fw-600 ls-1px fs-16 alt-font mb-5px d-inline-block text-uppercase text-base-color'
-              >Meet our people</span
+            <div
+              class='testimonials-bubble border-radius-5px border border-color-extra-medium-gray bg-white pt-30px pb-30px ps-40px pe-40px lg-p-25px mb-35px h-100'
             >
-            <h2 class='alt-font text-dark-gray fw-600 ls-minus-2px'>Leading experts</h2>
+              <p>
+                I was very satisfied with the professional approach, communication and speed of
+                processing by EPD Clarity. Based on my own experience with EPDs, I have recommended
+                EPD Clarity to other Saint-Gobain divisions.
+              </p>
+            </div>
+            <div class='author ps-20px pe-20px'>
+              <!-- <img
+                    class='rounded-circle w-85px me-15px'
+                    src='https://via.placeholder.com/148x148'
+                    alt=''
+                /> -->
+              <div class='d-inline-block align-middle lh-20'>
+                <span class='fw-600 fs-18 text-dark-gray d-block mb-5px'>Ing. Vladimir Balent</span>
+                <div class='fs-15'>Saint-Gobain Construction Products</div>
+              </div>
+            </div>
           </div>
         </div>
+        <!-- end testimonial item -->
+        <!-- start testimonial item -->
+        <div class='col md-mb-30px'>
+          <div
+            class='testimonials testimonials-style-05 last-paragraph-no-margin d-flex flex-column h-100'
+          >
+            <div
+              class='testimonials-bubble border-radius-5px border border-color-extra-medium-gray bg-white pt-30px pb-30px ps-40px pe-40px lg-p-25px mb-35px h-100'
+            >
+              <p>
+                I highly appreciate the professional cooperation with Professor Vilcekova. We
+                recommend EPD Clarity as a reliable partner in solving EPD challenges.
+              </p>
+            </div>
+            <div class='author ps-20px pe-20px'>
+              <!-- <img
+                    class='rounded-circle w-85px me-15px'
+                    src='https://via.placeholder.com/148x148'
+                    alt=''
+                /> -->
+              <div class='d-inline-block align-middle lh-20'>
+                <span class='fw-600 fs-18 text-dark-gray d-block mb-5px'>Jan Kovacik</span>
+                <div class='fs-15'>GreenCon International</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end testimonial item -->
+        <!-- start testimonial item -->
+        <div class='col'>
+          <div
+            class='testimonials testimonials-style-05 last-paragraph-no-margin d-flex flex-column h-100'
+          >
+            <div
+              class='testimonials-bubble border-radius-5px border border-color-extra-medium-gray bg-white pt-30px pb-30px ps-40px pe-40px lg-p-25px mb-35px h-100'
+            >
+              <p>Cooperation with EPD Clarity was very good and smooth in every respect.</p>
+            </div>
+            <div class='author ps-20px pe-20px'>
+              <!-- <img
+                    class='rounded-circle w-85px me-15px'
+                    src='https://via.placeholder.com/148x148'
+                    alt=''
+                /> -->
+              <div class='d-inline-block align-middle lh-20'>
+                <span class='fw-600 fs-18 text-dark-gray d-block mb-5px'
+                  >Ing. Gabriel Szollosi
+                </span>
+                <div class='fs-15'>Wienerbrger</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end testimonial item -->
+      </div>
+    </div>
+  </section>
+  <!-- end section -->
+  <!-- start section -->
+  <section class='position-relative'>
+    <div
+      id='particles-03'
+      data-particle='true'
+      data-particle-options='{"particles": {"number": {"value": 5,"density": {"enable": true,"value_area": 1000}},"color":{"value":["#b7b9be", "#dd6531"]},"shape": {"type": "circle","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 0.5,"random": false,"anim": {"enable": false,"speed": 1,"sync": false}},"size": {"value": 8,"random": true,"anim": {"enable": false,"sync": true}},"move": {"enable": true,"speed":2,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}'
+      class='position-absolute h-100 top-0 left-0 z-index-minus-1'
+    >
+    </div>
+    <div class='container'>
+      <div class='row justify-content-center mb-3'>
         <div
-          class='row row-cols-1 row-cols-lg-4 row-cols-sm-2 justify-content-center'
-          data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 800, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'
+          class='col-lg-7 text-center'
+          data-anime='{  "opacity": [0,1], "duration": 800, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
         >
-          <!-- start team member item -->
-          <div class='col text-center team-style-05 md-mb-40px'>
-            <div
-              class='position-relative border-radius-4px overflow-hidden mb-30px last-paragraph-no-margin'
-            >
-              <!-- <img src="https://via.placeholder.com/600x756" alt="" /> -->
-              <Image src={PortraitSilvia} alt='Business portrait of Silvia Vilcekova' loading="eager" />
-              <div
-                class='w-100 h-100 d-flex flex-column justify-content-center align-items-center p-40px lg-p-30px team-content bg-gradient-dark-orange-transparent'
-              >
-                <div class='social-icon fs-20'>
-                  <a
-                    href='https://www.linkedin.com/in/doc-ing-silvia-vil%C4%8Dekov%C3%A1-phd-b28ba142/'
-                    target='_blank'
-                    class='text-white' aria-label="LinkedIn profile of LCA team leader, doc. ing. Silvia Vilcekova"><i class='fa-brands fa-linkedin'></i></a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class='alt-font fw-600 text-dark-gray lh-22 fs-18'>Silvia Vilcekova</div>
-            <span>Co-founder and LCA team lead</span>
-          </div>
-          <!-- end team member item -->
-          <!-- start team member item -->
-          <div class='col text-center team-style-05 md-mb-40px'>
-            <div
-              class='position-relative border-radius-4px overflow-hidden mb-30px last-paragraph-no-margin'
-            >
-              <!-- <img src="https://via.placeholder.com/600x756" alt="" /> -->
-              <Image src={PortraitSamuel} alt='Business portrait of Samuel Sura' loading="eager" />
-              <div
-                class='w-100 h-100 d-flex flex-column justify-content-center align-items-center p-40px team-content bg-gradient-dark-orange-transparent'
-              >
-                <div class='social-icon fs-20'>
-                  <a
-                    href='https://www.linkedin.com/in/samuel-sura-a2507a31/'
-                    target='_blank'
-                    class='text-white' aria-label="LinkedIn profile of Samuel Sura, CEO"><i class='fa-brands fa-linkedin'></i></a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class='alt-font fw-600 text-dark-gray lh-22 fs-18'>Samuel Sura</div>
-            <span>Co-founder & sales</span>
-          </div>
-          <!-- end team member item -->
-          <!-- start team member item -->
-          <div class='col text-center team-style-05 xs-mb-40px'>
-            <div
-              class='position-relative border-radius-4px overflow-hidden mb-30px last-paragraph-no-margin'
-            >
-              <!-- <img src="https://via.placeholder.com/600x756" alt="" /> -->
-              <Image src={PortraitLudmila} alt='Business portrait of Ludmila Meciarova' loading="eager"/>
-              <div
-                class='w-100 h-100 d-flex flex-column justify-content-center align-items-center p-40px team-content bg-gradient-dark-orange-transparent'
-              >
-                <div class='social-icon fs-20'>
-                  <a
-                    href='https://www.linkedin.com/in/ludmila-meciarova-6437a412a'
-                    target='_blank'
-                    class='text-white' aria-label="LinkedIn profile of LCA engineer, Ludmila Meciarova"><i class='fa-brands fa-linkedin'></i></a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class='alt-font fw-600 text-dark-gray lh-22 fs-18'>Ludmila Meciarova</div>
-            <span>LCA consultant</span>
-          </div>
-          <!-- end team member item -->
-          <!-- start team member item -->
-          <div class='col text-center team-style-05'>
-            <div
-              class='position-relative border-radius-4px overflow-hidden mb-30px last-paragraph-no-margin'
-            >
-              <!-- <img src="https://via.placeholder.com/600x756" alt="" /> -->
-              <Image src={PortraitSarah} alt='Business portrait of Sarah Curpen' loading="eager"/>
-              <div
-                class='w-100 h-100 d-flex flex-column justify-content-center align-items-center p-40px team-content bg-gradient-dark-orange-transparent'
-              >
-                <div class='social-icon fs-20'>
-                  <a
-                    href='https://www.linkedin.com/in/sarah-curpen-196179231'
-                    target='_blank'
-                    class='text-white' aria-label="LinkedIn profile of LCA enigneer, Sarah Curpen"><i class='fa-brands fa-linkedin'></i></a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class='alt-font fw-600 text-dark-gray lh-22 fs-18'>Sarah Curpen</div>
-            <span>LCA consultant & sales</span>
-          </div>
-          <!-- end team member item -->
+          <span
+            class='fw-600 ls-1px fs-16 alt-font mb-5px d-inline-block text-uppercase text-base-color'
+            >Meet our people</span
+          >
+          <h2 class='alt-font text-dark-gray fw-600 ls-minus-2px'>Leading experts</h2>
         </div>
       </div>
-    </section>
-    <!-- end section -->
-    <!-- start section -->
-    <section class='bg-very-light-gray'>
-      <div class='container'>
-        <div class='row justify-content-center mb-2'>
+      <div
+        class='row row-cols-1 row-cols-lg-4 row-cols-sm-2 justify-content-center'
+        data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 800, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'
+      >
+        <!-- start team member item -->
+        <div class='col text-center team-style-05 md-mb-40px'>
           <div
-            class='col-lg-7 text-center'
-            data-anime='{ "opacity": [0,1], "duration": 800, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
+            class='position-relative border-radius-4px overflow-hidden mb-30px last-paragraph-no-margin'
           >
-            <span class='fw-600 ls-1px fs-16 alt-font d-inline-block text-uppercase text-base-color'
-              >Business news</span
+            <!-- <img src="https://via.placeholder.com/600x756" alt="" /> -->
+            <Image
+              src={PortraitSilvia}
+              alt='Business portrait of Silvia Vilcekova'
+              loading='eager'
+            />
+            <div
+              class='w-100 h-100 d-flex flex-column justify-content-center align-items-center p-40px lg-p-30px team-content bg-gradient-dark-orange-transparent'
             >
-            <h2 class='alt-font text-dark-gray fw-600 ls-minus-2px'>Latest news</h2>
+              <div class='social-icon fs-20'>
+                <a
+                  href='https://www.linkedin.com/in/doc-ing-silvia-vil%C4%8Dekov%C3%A1-phd-b28ba142/'
+                  target='_blank'
+                  class='text-white'
+                  aria-label='LinkedIn profile of LCA team leader, doc. ing. Silvia Vilcekova'
+                  ><i class='fa-brands fa-linkedin'></i></a
+                >
+              </div>
+            </div>
           </div>
+          <div class='alt-font fw-600 text-dark-gray lh-22 fs-18'>Silvia Vilcekova</div>
+          <span>Co-founder and LCA team lead</span>
         </div>
-        <div class='row'>
-          <div class='col-12 p-md-0'>
-            <ul
-              class='blog-grid blog-wrapper grid-loading grid grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large'
-              data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay":100, "staggervalue": 300, "easing": "easeOutQuad" }'
+        <!-- end team member item -->
+        <!-- start team member item -->
+        <div class='col text-center team-style-05 md-mb-40px'>
+          <div
+            class='position-relative border-radius-4px overflow-hidden mb-30px last-paragraph-no-margin'
+          >
+            <!-- <img src="https://via.placeholder.com/600x756" alt="" /> -->
+            <Image src={PortraitSamuel} alt='Business portrait of Samuel Sura' loading='eager' />
+            <div
+              class='w-100 h-100 d-flex flex-column justify-content-center align-items-center p-40px team-content bg-gradient-dark-orange-transparent'
             >
-              <li class='grid-sizer'></li>
-              <!-- start blog item -->
-              <li class='grid-item'>
-                <div class='card border-0 border-radius-4px box-shadow-quadruple-large'>
-                  <div class='blog-image'>
-                    <a href='/news-post' class='d-block'>
-                      <!-- <img
+              <div class='social-icon fs-20'>
+                <a
+                  href='https://www.linkedin.com/in/samuel-sura-a2507a31/'
+                  target='_blank'
+                  class='text-white'
+                  aria-label='LinkedIn profile of Samuel Sura, CEO'
+                  ><i class='fa-brands fa-linkedin'></i></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class='alt-font fw-600 text-dark-gray lh-22 fs-18'>Samuel Sura</div>
+          <span>Co-founder & sales</span>
+        </div>
+        <!-- end team member item -->
+        <!-- start team member item -->
+        <div class='col text-center team-style-05 xs-mb-40px'>
+          <div
+            class='position-relative border-radius-4px overflow-hidden mb-30px last-paragraph-no-margin'
+          >
+            <!-- <img src="https://via.placeholder.com/600x756" alt="" /> -->
+            <Image
+              src={PortraitLudmila}
+              alt='Business portrait of Ludmila Meciarova'
+              loading='eager'
+            />
+            <div
+              class='w-100 h-100 d-flex flex-column justify-content-center align-items-center p-40px team-content bg-gradient-dark-orange-transparent'
+            >
+              <div class='social-icon fs-20'>
+                <a
+                  href='https://www.linkedin.com/in/ludmila-meciarova-6437a412a'
+                  target='_blank'
+                  class='text-white'
+                  aria-label='LinkedIn profile of LCA engineer, Ludmila Meciarova'
+                  ><i class='fa-brands fa-linkedin'></i></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class='alt-font fw-600 text-dark-gray lh-22 fs-18'>Ludmila Meciarova</div>
+          <span>LCA consultant</span>
+        </div>
+        <!-- end team member item -->
+        <!-- start team member item -->
+        <div class='col text-center team-style-05'>
+          <div
+            class='position-relative border-radius-4px overflow-hidden mb-30px last-paragraph-no-margin'
+          >
+            <!-- <img src="https://via.placeholder.com/600x756" alt="" /> -->
+            <Image src={PortraitSarah} alt='Business portrait of Sarah Curpen' loading='eager' />
+            <div
+              class='w-100 h-100 d-flex flex-column justify-content-center align-items-center p-40px team-content bg-gradient-dark-orange-transparent'
+            >
+              <div class='social-icon fs-20'>
+                <a
+                  href='https://www.linkedin.com/in/sarah-curpen-196179231'
+                  target='_blank'
+                  class='text-white'
+                  aria-label='LinkedIn profile of LCA enigneer, Sarah Curpen'
+                  ><i class='fa-brands fa-linkedin'></i></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class='alt-font fw-600 text-dark-gray lh-22 fs-18'>Sarah Curpen</div>
+          <span>LCA consultant & sales</span>
+        </div>
+        <!-- end team member item -->
+      </div>
+    </div>
+  </section>
+  <!-- end section -->
+  <!-- start section -->
+  <section class='bg-very-light-gray'>
+    <div class='container'>
+      <div class='row justify-content-center mb-2'>
+        <div
+          class='col-lg-7 text-center'
+          data-anime='{ "opacity": [0,1], "duration": 800, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
+        >
+          <span class='fw-600 ls-1px fs-16 alt-font d-inline-block text-uppercase text-base-color'
+            >Business news</span
+          >
+          <h2 class='alt-font text-dark-gray fw-600 ls-minus-2px'>Latest news</h2>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-12 p-md-0'>
+          <ul
+            class='blog-grid blog-wrapper grid-loading grid grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large'
+            data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay":100, "staggervalue": 300, "easing": "easeOutQuad" }'
+          >
+            <li class='grid-sizer'></li>
+            <!-- start blog item -->
+            <li class='grid-item'>
+              <div class='card border-0 border-radius-4px box-shadow-quadruple-large'>
+                <div class='blog-image'>
+                  <a href='/news-post' class='d-block'>
+                    <!-- <img
                                             src="https://via.placeholder.com/600x460" alt="" /> -->
-                      <Image
-                        src={PostPreviewIMG}
-                        alt='arrows pointing in different directions'
-                      />
-                    </a>
-                  </div>
-                  <div class='card-body p-13 md-p-11'>
-                    <a
-                      href='/news-post'
-                      class='card-title mb-15px alt-font fw-600 fs-20 text-dark-gray d-inline-block'
-                      >Choosing the right Programme Operator for you</a
-                    >
-                    <p>
-                      If you're a manufacturer trying to navigate the world of Environmental Product
-                      Declarations...
-                    </p>
-                    <div
-                      class='author d-flex justify-content-center align-items-center position-relative overflow-hidden fs-16'
-                    >
-                      <div class='me-auto'>
-                        <span class='blog-date d-inline-block'>18 June 2024</span>
-                        <div class='d-inline-block author-name'>
-                          By <a
-                            href='/news'
-                            class='text-dark-gray text-decoration-line-bottom fw-600'
-                            >Sarah Curpen</a>
-                        </div>
-                      </div>
-                      <div class='like-count fs-15 fw-600'>
-                        <a href='/news-post'
-                          ><i class='fa-regular fa-heart text-base-color'></i><span
-                            class='text-dark-gray align-middle'>65</span
-                          ></a
+                    <Image src={PostPreviewIMG} alt='arrows pointing in different directions' />
+                  </a>
+                </div>
+                <div class='card-body p-13 md-p-11'>
+                  <a
+                    href='/news-post'
+                    class='card-title mb-15px alt-font fw-600 fs-20 text-dark-gray d-inline-block'
+                    >Choosing the right Programme Operator for you</a
+                  >
+                  <p>
+                    If you're a manufacturer trying to navigate the world of Environmental Product
+                    Declarations...
+                  </p>
+                  <div
+                    class='author d-flex justify-content-center align-items-center position-relative overflow-hidden fs-16'
+                  >
+                    <div class='me-auto'>
+                      <span class='blog-date d-inline-block'>18 June 2024</span>
+                      <div class='d-inline-block author-name'>
+                        By <a href='/news' class='text-dark-gray text-decoration-line-bottom fw-600'
+                          >Sarah Curpen</a
                         >
                       </div>
                     </div>
+                    <div class='like-count fs-15 fw-600'>
+                      <a href='/news-post'
+                        ><i class='fa-regular fa-heart text-base-color'></i><span
+                          class='text-dark-gray align-middle'>65</span
+                        ></a
+                      >
+                    </div>
                   </div>
                 </div>
-              </li>
-              <!-- end blog item -->
-              <!-- start blog item -->
-              <!-- <li class="grid-item">
+              </div>
+            </li>
+            <!-- end blog item -->
+            <!-- start blog item -->
+            <!-- <li class="grid-item">
                             <div class="card border-0 border-radius-4px box-shadow-quadruple-large">
                                 <div class="blog-image">
                                     <a href="/news-post" class="d-block"><img
@@ -1168,9 +1176,9 @@ const OptimizedFlareBG = await getImage({ src: FlareBG })
                                 </div>
                             </div>
                         </li> -->
-              <!-- end blog item -->
-              <!-- start blog item -->
-              <!-- <li class="grid-item">
+            <!-- end blog item -->
+            <!-- start blog item -->
+            <!-- <li class="grid-item">
                             <div class="card border-0 border-radius-4px box-shadow-quadruple-large">
                                 <div class="blog-image">
                                     <a href="/news-post" class="d-block"><img
@@ -1199,53 +1207,52 @@ const OptimizedFlareBG = await getImage({ src: FlareBG })
                                 </div>
                             </div>
                         </li> -->
-              <!-- end blog item -->
-            </ul>
-          </div>
+            <!-- end blog item -->
+          </ul>
         </div>
       </div>
-    </section>
-    <!-- end section -->
-    <!-- start section -->
-    <section
-      class='pt-4 pb-4 cover-background'
-      style=`background-image:url(${OptimizedFlareBG.src});`
-    >
-      <div class='opacity-extra-medium bg-gradient-black-dark-orange'></div>
-      <div class='container position-relative'>
-        <div
-          class='row align-items-center justify-content-center text-start text-sm-center text-lg-start'
-        >
-          <div class='col-xl-5 col-lg-6 col-md-7 md-mb-25px'>
-            <h2
-              class='alt-font text-white fw-500 mb-0 cd-headline zoom fancy-text-style-4 text-shadow-double-large ls-minus-1px'
+    </div>
+  </section>
+  <!-- end section -->
+  <!-- start section -->
+  <section
+    class='pt-4 pb-4 cover-background'
+    style=`background-image:url(${OptimizedFlareBG.src});`
+  >
+    <div class='opacity-extra-medium bg-gradient-black-dark-orange'></div>
+    <div class='container position-relative'>
+      <div
+        class='row align-items-center justify-content-center text-start text-sm-center text-lg-start'
+      >
+        <div class='col-xl-5 col-lg-6 col-md-7 md-mb-25px'>
+          <h2
+            class='alt-font text-white fw-500 mb-0 cd-headline zoom fancy-text-style-4 text-shadow-double-large ls-minus-1px'
+          >
+            Let's discuss your
+            <span
+              data-fancy-text='{ "effect": "rotate", "string": ["new opportunity!", "new partnership!", "sustainability!"] }'
+            ></span>
+          </h2>
+        </div>
+        <div class='col-xl-5 col-lg-6 col-md-8 col-sm-10 offset-xl-1 icon-with-text-style-08'>
+          <div class='feature-box feature-box-left-icon-middle text-start'>
+            <div
+              class='feature-box-icon feature-box-icon-rounded w-110px h-110px xs-w-80px xs-h-80px rounded-circle bg-base-color me-20px xs-me-15px'
             >
-              Let's discuss your
-              <span
-                data-fancy-text='{ "effect": "rotate", "string": ["new opportunity!", "new partnership!", "sustainability!"] }'
-              ></span>
-            </h2>
-          </div>
-          <div class='col-xl-5 col-lg-6 col-md-8 col-sm-10 offset-xl-1 icon-with-text-style-08'>
-            <div class='feature-box feature-box-left-icon-middle text-start'>
-              <div
-                class='feature-box-icon feature-box-icon-rounded w-110px h-110px xs-w-80px xs-h-80px rounded-circle bg-base-color me-20px xs-me-15px'
+              <i class='line-icon-Handshake icon-extra-large text-white lh-100'></i>
+            </div>
+            <div class='feature-box-content last-paragraph-no-margin xs-mt-15px xs-mb-15px'>
+              <span class='fs-24 lh-32 xs-fs-22 xs-lh-32 text-white'
+                >Get in touch with us: <a
+                  href='mailto:info@epdclarity.com'
+                  class='text-decoration-line-bottom text-white fw-500'>info@epdclarity.com</a
+                ></span
               >
-                <i class='line-icon-Handshake icon-extra-large text-white lh-100'></i>
-              </div>
-              <div class='feature-box-content last-paragraph-no-margin xs-mt-15px xs-mb-15px'>
-                <span class='fs-24 lh-32 xs-fs-22 xs-lh-32 text-white'
-                  >Get in touch with us: <a
-                    href='mailto:info@epdclarity.com'
-                    class='text-decoration-line-bottom text-white fw-500'>info@epdclarity.com</a
-                  ></span
-                >
-              </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- end section -->
+    </div>
   </section>
+  <!-- end section -->
 </BaseLayout>
