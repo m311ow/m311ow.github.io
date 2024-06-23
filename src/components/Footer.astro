@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import EPDClarityLogo from '../images/logos/epdclarity.png';
+const { site } = Astro;
 ---
 
 <footer class='footer-light p-0 position-relative'>
@@ -76,15 +77,8 @@ import EPDClarityLogo from '../images/logos/epdclarity.png';
             class='position-relative w-100'
             data-botpoison-public-key='pk_bb4de19a-4531-403a-ac03-27ae93273f52'
           >
-            <input
-              type='hidden'
-              name='_redirect'
-              value='https://epdclarity.com/newsletter-subscription-success'
-            />
-            <input
-              type='hidden'
-              name='_error'
-              value='https://epdclarity.com/newsletter-subscription-fail'
+            <input type='hidden' name='_redirect' value=`${site}newsletter-subscription-success` />
+            <input type='hidden' name='_error' value=`${site}newsletter-subscription-fail` />
             />
             <input type='hidden' name='_append' value='false' />
             <input type='hidden' name='_feedback.whitelabel' value='true' />
