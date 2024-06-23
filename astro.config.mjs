@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import purgecss from 'astro-purgecss';
 
 // localhost server port
 const SERVER_PORT = 3000;
@@ -20,5 +21,5 @@ if (isBuild) {
 export default defineConfig({
   server: { port: SERVER_PORT },
   site: BASE_URL,
-  integrations: [sitemap()]
+  integrations: [sitemap(), purgecss()]
 });
