@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.epdclarity.com [NC]
+RewriteRule ^(.*)$ https://epdclarity.com/$1 [L,R=301]
+ErrorDocument 404 /404.html
