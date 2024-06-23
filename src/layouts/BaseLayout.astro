@@ -17,12 +17,12 @@ import faviconSvgSrc from '../images/favicon.svg'
 const { title, description } = Astro.props;
 
 // https://kremalicious.com/favicon-generation-with-astro/
-const appleTouchIcon = await getImage({
-  src: faviconSrc,
-  width: 180,
-  height: 180,
-  format: 'png'
-})
+// const appleTouchIcon = await getImage({
+//   src: faviconSrc,
+//   width: 180,
+//   height: 180,
+//   format: 'png'
+// })
 const faviconSvg = await getImage({ src: faviconSvgSrc, format: 'svg' })
 ---
 <html lang="en">
@@ -33,13 +33,13 @@ const faviconSvg = await getImage({ src: faviconSvgSrc, format: 'svg' })
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="author" content="EPD Clarity">
 
-    <!-- <link rel="apple-touch-icon" href="/images/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png"> -->
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
 
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
     <link rel="icon" href={faviconSvg.src} type="image/svg+xml" />
-    <link rel="apple-touch-icon" href={appleTouchIcon.src} />
+    <!-- <link rel="apple-touch-icon" href={appleTouchIcon.src} /> -->
     <link rel="manifest" href="/manifest.json" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
