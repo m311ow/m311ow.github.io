@@ -17,14 +17,10 @@ import EPDClarityLogo from '../images/logos/epdclarity.png';
       <div class='col-7 col-lg-3 col-md-12 col-sm-6 text-md-center text-lg-start md-mb-30px'>
         <a href='/' class='footer-logo mb-15px md-mb-20px d-inline-block'
           ><img
-            src='images/demo-consulting-logo-black.png'
-            data-at2x='images/demo-consulting-logo-black.png'
+            src='images/logos/epdclarity.png'
+            data-at2x='images/logos/epdclarity.png'
             alt=''
           />
-          <!-- <Image
-                    src={EPDClarityLogo}
-                    alt='EPD Clarity logo'
-                /> -->
         </a>
         <!-- <p class="mb-20px">Lorem ipsum dolor consectetur adipiscing eiusmod tempor.</p> -->
         <!-- <div class="elements-social social-icon-style-02">
@@ -80,18 +76,23 @@ import EPDClarityLogo from '../images/logos/epdclarity.png';
         <p class='sm-mb-20px'>Subscribe to our newsletter to get the latest news and updates</p>
         <div class='d-inline-block w-100 newsletter-style-02 position-relative'>
           <form
-            action='email-templates/subscribe-newsletter.php'
-            method='post'
+            action="https://submit-form.com/0WLHD2KGt"
             class='position-relative w-100'
+            data-botpoison-public-key='pk_bb4de19a-4531-403a-ac03-27ae93273f52'
           >
+            <input type='hidden' name='_feedback.whitelabel' value='true' />
+              <input
+                type="hidden"
+                name="_feedback.success.title"
+                value="You have successfully subscribed to our newsletter!"
+              />
             <input
               class='bg-transparent border-color-extra-medium-gray w-100 form-control required'
               type='email'
               name='email'
               placeholder='Enter email address...'
             />
-            <input type='hidden' name='redirect' value='' />
-            <button class='btn submit' aria-label='submit'
+            <button class='btn' type="submit"
               ><i class='icon feather icon-feather-mail icon-small text-base-color'></i></button
             >
             <div
