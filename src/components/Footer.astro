@@ -16,7 +16,11 @@ const { site } = Astro;
     <div class='row justify-content-center pt-7 sm-pt-50px'>
       <!-- start footer column -->
       <div class='col-7 col-lg-3 col-md-12 col-sm-6 text-md-center text-lg-start md-mb-30px'>
-        <a href='/' class='footer-logo mb-15px md-mb-20px d-inline-block' aria-label='home page'
+        <a
+          href='/'
+          class='footer-logo mb-15px md-mb-20px d-inline-block'
+          aria-label='home page'
+          data-astro-prefetch
           ><img src='images/logos/epdclarity.png' data-at2x='images/logos/epdclarity.png' alt='' />
         </a>
         <!-- <p class="mb-20px">Lorem ipsum dolor consectetur adipiscing eiusmod tempor.</p> -->
@@ -38,10 +42,10 @@ const { site } = Astro;
       <div class='col-5 col-lg-2 offset-xl-1 col-md-3 col-sm-6 md-mb-30px'>
         <span class='alt-font d-block text-dark-gray fw-600 mb-10px fs-19'>Links</span>
         <ul>
-          <li><a href='/company'>Company</a></li>
-          <li><a href='/services'>Services</a></li>
-          <li><a href='/news'>News</a></li>
-          <li><a href='/contact'>Contact</a></li>
+          <li><a href='/company' data-astro-prefetch>Company</a></li>
+          <li><a href='/services' data-astro-prefetch>Services</a></li>
+          <li><a href='/news' data-astro-prefetch>News</a></li>
+          <li><a href='/contact' data-astro-prefetch>Contact</a></li>
         </ul>
       </div>
       <!-- end footer column -->
