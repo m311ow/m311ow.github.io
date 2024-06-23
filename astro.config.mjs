@@ -21,5 +21,6 @@ if (isBuild) {
 export default defineConfig({
   server: { port: SERVER_PORT },
   site: BASE_URL,
-  integrations: [sitemap(), purgecss()]
+  integrations: [sitemap(), purgecss()],
+  prefetch: true
 });
