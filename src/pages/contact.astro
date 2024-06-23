@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+const { site } = Astro;
 ---
 
 <BaseLayout title='Contact' description='Page with contact form'>
@@ -149,8 +150,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             class='row contact-form-style-02'
             data-botpoison-public-key='pk_bb4de19a-4531-403a-ac03-27ae93273f52'
           >
-            <input type='hidden' name='_redirect' value='https://epdclarity.com/contact-success' />
-            <input type='hidden' name='_error' value='https://epdclarity.com/contact-fail' />
+            <input type='hidden' name='_redirect' value=`${site}contact-success` />
+            <input type='hidden' name='_error' value=`${site}contact-fail` />
             <input type='hidden' name='_append' value='false' />
 
             <input type='hidden' name='_feedback.whitelabel' value='true' />
