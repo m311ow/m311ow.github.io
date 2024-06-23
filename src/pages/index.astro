@@ -13,7 +13,7 @@ import PCFserviceIMG from '../images/stock/melanfolia-HSr_FUzDH2w-unsplash.jpg';
 import LCAserviceIMG from '../images/stock/homa-appliances-pWUyHVJgLhg-unsplash.jpg';
 import EPDserviceIMG from '../images/stock/christophe-dion-3KA1M16PuoE-unsplash.jpg';
 import PostPreviewIMG from '../images/stock/javier-allegue-barros-C7B-ExXpOIE-unsplash.jpg';
-import TitleIMG from '../images/stock/sven-qBmV-laUfdI-unsplash.jpg'
+import TitleIMG from '../images/stock/sven-qBmV-laUfdI-unsplash_smaller.jpg'
 import FlareBG from '../images/bg/how-it-works-bg-01.jpg'
 import Bubble1 from '../images/bg/bubble-bg-01.png'
 import Bubble2 from '../images/bg/bubble-bg-02.png'
@@ -250,7 +250,7 @@ const OptimizedFlareBG = await getImage({ src: FlareBG })
             data-anime='{ "effect": "slide", "direction": "lr", "color": "#dd6531", "duration": 1000, "delay": 0 }'
           >
             <!-- <img class="w-100" src="https://via.placeholder.com/430x553" alt=""> -->
-            <Image src={NatureIMG} alt='green leaves' class='w-100' />
+            <Image src={NatureIMG} alt='green leaves' class='w-100' loading='eager' />
           </div>
           <div
             class='border-radius-4px position-absolute right-minus-15px md-right-15px bottom-minus-50px w-80 overflow-hidden'
