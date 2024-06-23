@@ -1,12 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
-import { Image } from 'astro:assets'
+import { Image, getImage } from 'astro:assets'
 import PostBG from '../images/stock/javier-allegue-barros-C7B-ExXpOIE-unsplash.jpg'
 import PostIMG from '../images/stock/scott-graham-5fNmWej4tAA-unsplash.jpg'
+
+const OptimizedPostBG = await getImage({ src: PostBG })
 ---
 <BaseLayout title="Post title" description="Blog post">
         <!-- start section -->
-        <section class="one-fourth-screen sm-mb-50px bg-dark-gray"  data-parallax-background-ratio="0.5" style=`background-image: url(${PostBG.src})`></section>
+        <section class="one-fourth-screen sm-mb-50px bg-dark-gray"  data-parallax-background-ratio="0.5" style=`background-image: url(${OptimizedPostBG.src})`></section>
         <!-- end section -->
         <!-- start section -->
         <section class="p-0">

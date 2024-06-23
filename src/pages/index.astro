@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { Image } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';
 import PortraitSamuel from '../images/team/Business_portrait_Samuel.jpg';
 import PortraitSilvia from '../images/team/Business_portrait_Silvia.jpg';
 import PortraitLudmila from '../images/team/Business_portrait_Ludmila.jpg';
@@ -14,11 +14,17 @@ import LCAserviceIMG from '../images/stock/homa-appliances-pWUyHVJgLhg-unsplash.
 import EPDserviceIMG from '../images/stock/christophe-dion-3KA1M16PuoE-unsplash.jpg';
 import PostPreviewIMG from '../images/stock/javier-allegue-barros-C7B-ExXpOIE-unsplash.jpg';
 import TitleIMG from '../images/stock/sven-qBmV-laUfdI-unsplash.jpg'
+import FlareBG from '../images/bg/how-it-works-bg-01.jpg'
+import Bubble1 from '../images/bg/bubble-bg-01.png'
+import Bubble2 from '../images/bg/bubble-bg-02.png'
+const OptimizedTitleIMG = await getImage({ src: TitleIMG })
+const OptimizedFlareBG = await getImage({ src: FlareBG })
+
 ---
 
 <BaseLayout title='Home' description='Landing page'>
   <!-- start page title -->
-  <section class="page-title-parallax-background half-section ipad-top-space-margin" data-parallax-background-ratio="0.5" style=`background-image: url(${TitleIMG.src})`>
+  <!-- <section class="page-title-parallax-background half-section ipad-top-space-margin" data-parallax-background-ratio="0.5" style=`background-image: url(${OptimizedTitleIMG.src})`>
       <div class="opacity-extra-medium bg-gradient-dark-gray-brown"></div>
       <div class="container">
           <div class="row align-items-center justify-content-center">
@@ -32,31 +38,21 @@ import TitleIMG from '../images/stock/sven-qBmV-laUfdI-unsplash.jpg'
               </div>
           </div>
       </div>
-  </section>
+  </section> -->
   <!-- end page title -->
 
 
   <!-- start section -->
-  <!-- <section
+  <section
     class='p-0 border-radius-6px full-screen md-h-600px sm-h-450px ipad-top-space-margin position-relative overflow-hidden'
   >
     <div class='absolute-bottom-center left-50px z-index-1'>
-      <img
-        class='animation-float lg-w-250px sm-w-150px'
-        src='/images/bg/bubble-bg-01.png'
-        alt='orange buble'
-        data-no-retina=''
-      />
+      <Image src={Bubble1} alt='orange bubble' class='animation-float lg-w-250px sm-w-150px' />
     </div>
     <div
       class='absolute-middle-right right-100px lg-right-0px top-150px sm-top-0px mt-70px z-index-1'
     >
-      <img
-        class='animation-float sm-w-150px'
-        src='/images/bg/bubble-bg-02.png'
-        alt='orange buble'
-        data-no-retina=''
-      />
+      <Image src={Bubble2} alt='orange bubble' class='animation-float lg-w-250px sm-w-150px' />
     </div>
     <div
       id='particles-style-01'
@@ -90,7 +86,7 @@ import TitleIMG from '../images/stock/sven-qBmV-laUfdI-unsplash.jpg'
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
   <!-- end section -->
 
   <!-- start section -->
@@ -1222,7 +1218,7 @@ import TitleIMG from '../images/stock/sven-qBmV-laUfdI-unsplash.jpg'
     <!-- start section -->
     <section
       class='pt-4 pb-4 cover-background'
-      style="background-image:url('/images/bg/how-it-works-bg-01.jpg');"
+      style=`background-image:url(${OptimizedFlareBG.src});`
     >
       <div class='opacity-extra-medium bg-gradient-black-dark-orange'></div>
       <div class='container position-relative'>

@@ -1,9 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { Image } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';
 import PortraitSilvia from '../images/team/Business_portrait_Silvia.jpg';
 import NotebookIMG from '../images/notebook.jpg';
 import TalkingIMG from '../images/talking.jpg';
+const OptimizedNotebookIMG = await getImage({ src: NotebookIMG })
 ---
 
 <BaseLayout title='Company' description='Page with informations about EPD Clarity company'>
@@ -183,7 +184,7 @@ import TalkingIMG from '../images/talking.jpg';
           class='col-lg-6 md-h-550px xs-h-400px overflow-hidden'
           data-anime='{ "translateY": [0, 0], "opacity": [0,1], "duration": 1000, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
         >
-          <div class='h-100 cover-background' style=`background-image: url(${NotebookIMG.src})`>
+          <div class='h-100 cover-background' style=`background-image: url(${OptimizedNotebookIMG.src})`>
           </div>
         </div>
         <div
