@@ -9,7 +9,6 @@ const { site } = Astro;
 
 <BaseLayout title='Service detail' description='Detailed information about the service'>
   <!-- start page title -->
-  <!-- for bg image, add style=`background-image: url(${HeaderIMG.src})` -->
   <section
     class='page-title-big-typography bg-dark-gray ipad-top-space-margin xs-py-0'
     data-parallax-background-ratio='0.5'
@@ -76,25 +75,7 @@ const { site } = Astro;
             class='position-relative m-0 border-radius-5px overflow-hidden'
             data-anime='{ "effect": "slide", "direction": "lr", "color": "#dd6531", "duration": 1000, "delay": 0 }'
           >
-            <!-- <img
-              src='https://via.placeholder.com/600x590'
-              alt=''
-              class='w-100'
-            /> -->
             <Image src={LCAserviceIMG} alt=' a manufacturing line' class='w-100' loading='eager' />
-            <!-- <figcaption
-              class='position-absolute bottom-25px left-25px w-250px border-radius-4px bg-white d-flex align-items-center pt-20px pb-20px ps-25px pe-25px'
-              data-anime='{ "translateY": [50, 0], "opacity": [0,1], "duration": 800, "delay": 1200, "staggervalue": 100, "easing": "easeOutQuad" }'
-            >
-              <h2
-                class='text-dark-gray fw-700 ls-minus-3px sm-ls-minus-2px vertical-counter d-inline-flex mb-0 text-nowrap border-end border-1 border-color-extra-medium-gray pe-20px me-20px'
-                data-to='85'
-              >
-              </h2>
-              <span class='text-dark-gray lh-22 fw-500 d-inline-block'
-                >Projects completed</span
-              >
-            </figcaption> -->
           </figure>
         </div>
         <div
@@ -109,70 +90,6 @@ const { site } = Astro;
             gas emissions, energy consumption, water usage, waste generation, and other
             environmental impacts.
           </p>
-
-          <!-- <div
-            class='row row-cols-1 justify-content-center'
-            data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'
-          >
-            <div class='col icon-with-text-style-01 mb-7'>
-              <div
-                class='feature-box feature-box-left-icon-middle last-paragraph-no-margin'
-              >
-                <div class='feature-box-icon'>
-                  <img src='https://via.placeholder.com/64x64' alt='' />
-                </div>
-                <div class='feature-box-content'>
-                  <span
-                    class='fs-20 md-fs-19 fw-600 text-dark-gray d-block mb-5px'
-                    >Analyze your environmental impacts</span
-                  >
-                  <p>
-                    Quantify the impacts of your product through 19 impact
-                    environmental indicators.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class='col icon-with-text-style-01 mb-7'>
-              <div
-                class='feature-box feature-box-left-icon-middle last-paragraph-no-margin'
-              >
-                <div class='feature-box-icon'>
-                  <img src='https://via.placeholder.com/64x64' alt='' />
-                </div>
-                <div class='feature-box-content'>
-                  <span
-                    class='fs-20 md-fs-19 fw-600 text-dark-gray d-block mb-5px'
-                    >Assess your product's sustainability</span
-                  >
-                  <p>
-                    Analyze factors such as the materials employed, supply chain
-                    dynamics, manufacturing processes, application methods, and
-                    disposal strategies.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class='col icon-with-text-style-01'>
-              <div
-                class='feature-box feature-box-left-icon-middle last-paragraph-no-margin'
-              >
-                <div class='feature-box-icon'>
-                  <img src='https://via.placeholder.com/64x64' alt='' />
-                </div>
-                <div class='feature-box-content'>
-                  <span
-                    class='fs-20 md-fs-19 fw-600 text-dark-gray d-block mb-5px'
-                    >Show off to your customers</span
-                  >
-                  <p>
-                    By assessing the environmental performance of your product,
-                    you can help your buyers make well-informed decisions.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div> -->
         </div>
       </div>
     </div>
@@ -589,27 +506,6 @@ const { site } = Astro;
             <h2 class='text-dark-gray fw-600 ls-minus-2px mb-15px'>
               Immediatly increase value of your product
             </h2>
-
-            <!-- <div class='atropos' data-atropos data-atropos-perspective='2450'>
-            <div class='atropos-scale'>
-              <div class='atropos-rotate'>
-                <div class='atropos-inner'>
-                  <img
-                    src='https://via.placeholder.com/960x762'
-                    alt=''
-                    class='w-100 border-radius-6px'
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class='absolute-middle-center text-white-space-nowrap z-index-9'>
-            <a
-              href='https://www.youtube.com/watch?v=cfXHhfNy7tU'
-              class='btn btn-extra-large btn-white left-icon btn-box-shadow fw-600 btn-rounded popup-youtube ls-minus-05px'
-              ><i class='fa-brands fa-youtube icon-small'></i>How it works</a
-            >
-          </div> -->
           </div>
         </div>
         <div
@@ -632,12 +528,6 @@ const { site } = Astro;
       <div class='container-fluid p-0'>
         <div class='row justify-content-center g-0'>
           <div class='col-lg-6 md-h-550px sm-h-400px'>
-            <!-- <div
-            class='h-100 cover-background'
-            style='background-image: url(https://via.placeholder.com/960x678)'
-            data-anime='{ "translateX": [-30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'
-          >
-          </div> -->
             <Image
               src={BenefitsBG}
               alt=' a happy person'

@@ -20,24 +20,6 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
 ---
 
 <BaseLayout title='Home' description='Landing page'>
-  <!-- start page title -->
-  <!-- <section class="page-title-parallax-background half-section ipad-top-space-margin" data-parallax-background-ratio="0.5" style=`background-image: url(${OptimizedTitleIMG.src})`>
-      <div class="opacity-extra-medium bg-gradient-dark-gray-brown"></div>
-      <div class="container">
-          <div class="row align-items-center justify-content-center">
-              <div class="col-xl-6 col-lg-7 text-center position-relative page-title-extra-large">
-                  <div class="d-flex flex-column small-screen">
-                      <div class="mt-auto">
-                          <h2 class="mb-10px text-white opacity-7 d-block fw-400 ls-0px">We combine thinking and technical</h2>
-                          <h1 class="text-white fw-500 ls-minus-1px mb-0">Parallax background</h1>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section> -->
-  <!-- end page title -->
-
   <!-- start section -->
   <section
     class='p-0 border-radius-6px full-screen md-h-600px sm-h-450px ipad-top-space-margin position-relative overflow-hidden'
@@ -186,7 +168,6 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
         <div class='col icon-with-text-style-01 mb-50px sm-mb-40px'>
           <div class='feature-box feature-box-left-icon last-paragraph-no-margin'>
             <div class='feature-box-icon'>
-              <!-- <img src="https://via.placeholder.com/64x64" alt="" /> -->
               <i class='line-icon-Basket-Coins icon-extra-large text-base-color'></i>
             </div>
             <div class='feature-box-content'>
@@ -205,7 +186,6 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
         <div class='col icon-with-text-style-01 mb-50px sm-mb-40px'>
           <div class='feature-box feature-box-left-icon last-paragraph-no-margin'>
             <div class='feature-box-icon'>
-              <!-- <img src="https://via.placeholder.com/64x64" alt="" /> -->
               <i class='line-icon-Cursor-Click2 icon-extra-large text-base-color'></i>
             </div>
             <div class='feature-box-content'>
@@ -224,7 +204,6 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
         <div class='col icon-with-text-style-01 mb-50px sm-mb-40px'>
           <div class='feature-box feature-box-left-icon last-paragraph-no-margin'>
             <div class='feature-box-icon'>
-              <!-- <img src="https://via.placeholder.com/64x64" alt="" /> -->
               <i class='line-icon-Bar-Chart2 icon-extra-large text-base-color'></i>
             </div>
             <div class='feature-box-content'>
@@ -246,7 +225,6 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
             class='xs-w-100 w-75 overflow-hidden position-relative xs-w-80 border-radius-4px'
             data-anime='{ "effect": "slide", "direction": "lr", "color": "#dd6531", "duration": 1000, "delay": 0 }'
           >
-            <!-- <img class="w-100" src="https://via.placeholder.com/430x553" alt=""> -->
             <Image src={NatureIMG} alt='green leaves' class='w-100' loading='eager' />
           </div>
           <div
@@ -255,7 +233,6 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
             data-top-bottom='transform: translateY(-50px)'
             data-anime='{ "effect": "slide", "direction": "rl", "color": "#292d36", "duration": 1000, "delay": 500 }'
           >
-            <!-- <img class="w-100" src="https://via.placeholder.com/352x452" alt=""> -->
             <Image src={EPDmockupIMG} alt='Environmental Product Declaration' class='w-100' />
           </div>
         </div>
@@ -290,220 +267,6 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
     </div>
   </section>
   <!-- end section -->
-  <!-- start section -->
-  <!-- <section class="pt-0 overflow-hidden">
-        <div class="container">
-            <div class="bg-dark-slate-blue border-radius-6px p-8 md-p-6 sm-p-10 position-relative overflow-hidden">
-                <div class="row justify-content-center mb-5">
-                    <div class="col-lg-8 text-center appear anime-child anime-complete"
-                        data-anime="{ &quot;el&quot;: &quot;childs&quot;, &quot;translateY&quot;: [30, 0], &quot;opacity&quot;: [0,1], &quot;duration&quot;: 600, &quot;delay&quot;: 0, &quot;staggervalue&quot;: 300, &quot;easing&quot;: &quot;easeOutQuad&quot; }">
-                        <h2 class="text-white fw-600 ls-minus-1px z-index-1 position-relative">Completely remote process
-                        </h2>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-md-3 justify-content-center appear anime-child anime-complete"
-                    data-anime="{ &quot;el&quot;: &quot;childs&quot;, &quot;translateX&quot;: [-30, 0], &quot;opacity&quot;: [0,1], &quot;duration&quot;: 600, &quot;delay&quot;: 0, &quot;staggervalue&quot;: 300, &quot;easing&quot;: &quot;easeOutQuad&quot; }">
-
-                    <div class="col text-center last-paragraph-no-margin hover-box process-step-style-01 sm-mb-40px">
-                        <div class="process-step-icon-box position-relative mb-25px">
-                            <span class="progress-step-separator bg-white w-60 separator-line-1px opacity-2"></span>
-                            <div
-                                class="process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-80px w-80px fs-20 bg-white box-shadow-large text-dark-gray fw-500">
-                                <span class="fw-600 number position-relative z-index-1">01</span>
-                                <div class="box-overlay bg-base-color rounded-circle"></div>
-                            </div>
-                        </div>
-                        <span class="d-inline-block fs-17 fw-500 text-white mb-5px">Get in touch</span>
-                        <p class="w-80 md-w-90 d-inline-block">We thoroughly review your portfolio and guide you through the different EPD types options.
-                        </p>
-                    </div>
-
-
-                    <div class="col text-center last-paragraph-no-margin hover-box process-step-style-01 sm-mb-40px">
-                        <div class="process-step-icon-box position-relative mb-25px">
-                            <span class="progress-step-separator bg-white w-60 separator-line-1px opacity-2"></span>
-                            <div
-                                class="process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-80px w-80px fs-20 bg-white box-shadow-large text-dark-gray fw-500">
-                                <span class="fw-600 number position-relative z-index-1">02</span>
-                                <div class="box-overlay bg-base-color rounded-circle"></div>
-                            </div>
-                        </div>
-                        <span class="d-inline-block fs-17 fw-500 text-white mb-5px">Provide us with data</span>
-                        <p class="w-80 md-w-90 d-inline-block">Data collection has never been easier using our proprietary template. You will receive support and consultancy time throughout the data collection phase.
-                        </p>
-                    </div>
-
-
-                    <div class="col text-center last-paragraph-no-margin hover-box process-step-style-01">
-                        <div class="process-step-icon-box position-relative mb-25px">
-                            <span
-                                class="progress-step-separator bg-white w-60 separator-line-1px opacity-2 d-md-none"></span>
-                            <div
-                                class="process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-80px w-80px fs-20 bg-white box-shadow-large text-dark-gray fw-500">
-                                <span class="fw-600 number position-relative z-index-1">03</span>
-                                <div class="box-overlay bg-base-color rounded-circle"></div>
-                            </div>
-                        </div>
-                        <span class="d-inline-block fs-17 fw-500 text-white mb-5px">Modelling</span>
-                        <p class="w-80 md-w-90 d-inline-block">During this phase, we will create a detailed life cycle assessment study and make sure your EPD is formatted for third party verification.
-                        </p>
-                    </div>
-
-                    <div class="col text-center last-paragraph-no-margin hover-box process-step-style-01">
-                        <div class="process-step-icon-box position-relative mb-25px">
-                            <span class="progress-step-separator bg-white w-60 separator-line-1px opacity-2"></span>
-                            <div
-                                class="process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-80px w-80px fs-20 bg-white box-shadow-large text-dark-gray fw-500">
-                                <span class="fw-600 number position-relative z-index-1">04</span>
-                                <div class="box-overlay bg-base-color rounded-circle"></div>
-                            </div>
-                        </div>
-                        <span class="d-inline-block fs-17 fw-500 text-white mb-5px">Receive Results</span>
-                        <p class="w-80 md-w-90 d-inline-block">The LCA results are presented and discussed. They are detailed in the LCA background report and EPD.
-                        </p>
-                    </div>
-
-                    <div class="col text-center last-paragraph-no-margin hover-box process-step-style-01">
-                        <div class="process-step-icon-box position-relative mb-25px">
-                            <span
-                                class="progress-step-separator bg-white w-60 separator-line-1px opacity-2 d-md-none"></span>
-                            <div
-                                class="process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-80px w-80px fs-20 bg-white box-shadow-large text-dark-gray fw-500">
-                                <span class="fw-600 number position-relative z-index-1">05</span>
-                                <div class="box-overlay bg-base-color rounded-circle"></div>
-                            </div>
-                        </div>
-                        <span class="d-inline-block fs-17 fw-500 text-white mb-5px">Third Party verification and Publication</span>
-                        <p class="w-80 md-w-90 d-inline-block">The EPD is verified by an independent approved verifier before registration in an EPD database.
-                        </p>
-                    </div>
-
-                </div>
-                <div class="position-absolute top-5px ls-minus-6px left-0px w-100 text-center skrollable skrollable-between"
-                    data-bottom-top="transform: translate3d(380px, 0px, 0px);"
-                    data-top-bottom="transform: translate3d(-380px, 0px, 0px);"
-                    style="transform: translate3d(-75.078px, 0px, 0px);">
-                    <div class="fs-200 md-fs-170 xs-fs-110 fw-700 opacity-1">process</div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-  <!-- end section -->
-
-  <!-- start section -->
-  <!-- <section class='overflow-hidden'>
-    <div class='container'>
-      <div class='row mb-7 justify-content-center'>
-        <div
-          class='col-lg-4 md-mb-60px sm-mb-45px text-center text-lg-start'
-          data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'
-        >
-          <h3 class='text-dark-gray fw-600 ls-minus-2px w-80 xl-w-100 mb-15px'>
-            What is included in the service?
-          </h3>
-          <p class='w-80 xl-w-100'>
-            Lorem ipsum dolor amet consectetur adipiscing dolore magna tempor.
-          </p>
-          <a
-            href='/contact'
-            class='btn btn-medium btn-dark-gray btn-box-shadow btn-round-edge'
-            >Get started now!</a
-          >
-        </div>
-        <div class='col-lg-8'>
-          <div
-            class='row row-cols-1 row-cols-md-2 justify-content-center'
-            data-anime='{ "el": "childs", "translateX": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'
-          >
-            <div class='col icon-with-text-style-01 mb-6 xs-mb-30px'>
-              <div
-                class='feature-box feature-box-left-icon last-paragraph-no-margin'
-              >
-                <div class='feature-box-icon'>
-                  <i
-                    class='line-icon-Bar-Chart2 icon-extra-large text-base-color'
-                  ></i>
-                </div>
-                <div class='feature-box-content'>
-                  <span class='fs-20 fw-600 text-dark-gray d-block mb-5px'
-                    >1. LCA Data collection</span
-                  >
-                  <p>
-                    You will identify and quantify inputs (e.g., raw materials,
-                    energy, water) and outputs associated with each stage of the
-                    product life cycle. Using our proprietary template, data
-                    collection is made easy and intuitive.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class='col icon-with-text-style-01 mb-6 xs-mb-30px'>
-              <div
-                class='feature-box feature-box-left-icon last-paragraph-no-margin'
-              >
-                <div class='feature-box-icon'>
-                  <i
-                    class='line-icon-Basket-Coins icon-extra-large text-base-color'
-                  ></i>
-                </div>
-                <div class='feature-box-content'>
-                  <span class='fs-20 fw-600 text-dark-gray d-block mb-5px'
-                    >2. LCA modelling</span
-                  >
-                  <p>
-                    Once the data collection step is finished, we will perform
-                    LCA modelling. It involves application of impact assessment
-                    methods based on international standards ISO 14040 and ISO
-                    14044.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class='col icon-with-text-style-01 sm-mb-6 xs-mb-30px'>
-              <div
-                class='feature-box feature-box-left-icon last-paragraph-no-margin'
-              >
-                <div class='feature-box-icon'>
-                  <i
-                    class='line-icon-Cursor-Click2 icon-extra-large text-base-color'
-                  ></i>
-                </div>
-                <div class='feature-box-content'>
-                  <span class='fs-20 fw-600 text-dark-gray d-block mb-5px'
-                    >3. Results interpretation</span
-                  >
-                  <p>
-                    In the final step we will interpret the results of the
-                    analysis to draw conclusions and make informed decisions
-                    regarding the environmental performance of the product,
-                    process, or service being assessed. This also involves
-                    identifying hotspots (stages with the highest environmental
-                    impacts), comparing alternative scenarios, and exploring
-                    opportunities for improvement.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class='row'
-        data-anime='{ "el": "childs", "translateY": [0, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'
-      >
-        <div
-          class='col-12 fs-22 fw-500 ls-minus-1px text-dark-gray text-center'
-        >
-          For any queries on EPD advisory services, write us at <a
-            class='text-dark-gray text-decoration-line-bottom'
-            href='mailto:info@yourdomain.com'>info@epdclarity.com</a
-          > or use contact form on this website.
-        </div>
-      </div>
-    </div>
-  </section> -->
-  <!-- end section -->
-
   <!-- start section -->
   <section
     class='bg-gradient-very-light-gray position-relative z-index-0 border-radius-6px lg-border-radius-0px overflow-hidden'
@@ -638,7 +401,6 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
                     class='fw-600 d-inline-block mb-5px text-dark-gray fs-18'
                     >Product Carbon Footprint</a
                   >
-                  <!-- <p class="w-80 lg-w-100 fs-16 mx-auto mb-15px lg-mb-10px text-light-opacity">The carbon footprint of a product refers to the total amount of greenhouse gas emissions (usually expressed in carbon dioxide equivalent, CO2e) generated throughout its life cycle, from raw material extraction and production to use, disposal, and sometimes recycling or end-of-life management. It is a measure of the product's contribution to climate change.  Calculating the carbon footprint of a product involves conducting a Life Cycle Assessment (LCA) to quantify the greenhouse gas emissions associated with each stage of the product's life cycle.</p> -->
                 </div>
                 <a
                   href='/service-detail-pcf'
@@ -669,42 +431,6 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
     >
     </div>
     <div class='container'>
-      <!-- <div class="row row-cols-1 row-cols-xl-4 row-cols-md-3 row-cols-sm-2 justify-content-center align-items-center mb-10"
-                data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
-
-                <div class="col icon-with-text-style-08 sm-mb-25px text-center text-sm-start">
-                    <div class="feature-box feature-box-left-icon-middle d-inline-flex align-middle">
-                        <div class="feature-box-icon me-10px">
-                            <i class="bi bi-calendar-check fs-24"></i>
-                        </div>
-                        <div class="feature-box-content">
-                            <span class="alt-font fs-18 md-fs-16 fw-600 text-dark-gray">Fast response time</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col icon-with-text-style-08 sm-mb-25px text-center text-sm-start">
-                    <div class="feature-box feature-box-left-icon-middle d-inline-flex align-middle">
-                        <div class="feature-box-icon me-10px">
-                            <i class="bi bi-wallet2 fs-24"></i>
-                        </div>
-                        <div class="feature-box-content">
-                            <span class="alt-font fs-18 md-fs-16 fw-600 text-dark-gray">Competitive rates</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col icon-with-text-style-08 text-center text-sm-start">
-                    <div class="feature-box feature-box-left-icon-middle d-inline-flex align-middle">
-                        <div class="feature-box-icon me-10px">
-                            <i class="bi bi-clock fs-24"></i>
-                        </div>
-                        <div class="feature-box-content">
-                            <span class="alt-font fs-18 md-fs-16 fw-600 text-dark-gray">Smooth delivery</span>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
       <div class='row mb-7'>
         <div class='col-lg-5 md-mb-50px sm-mb-30px'>
           <h2 class='alt-font fw-600 text-dark-gray ls-minus-2px'>
@@ -716,7 +442,6 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
             environmental impacts. For example, an EPD may include PCF data as part of its
             disclosure, and PCF results can be derived from an LCA analysis.
           </p>
-          <!-- <p class="w-80 lg-w-100 mb-30px sm-mb-25px">It's important to recognize that LCA, EPD, and PCF are not mutually exclusive. In fact, they can complement each other in providing a more comprehensive understanding of environmental impacts. For example, an EPD may include PCF data as part of its disclosure, and PCF results can be derived from an LCA analysis.</p> -->
           <a href='/contact' class='btn btn-small btn-dark-gray btn-box-shadow btn-round-edge'
             >Contact us</a
           >
@@ -795,27 +520,6 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
               </div>
             </div>
             <!-- end accordion item -->
-            <!-- start accordion item -->
-            <!-- <div class="accordion-item">
-                            <div class="accordion-header border-bottom border-color-transparent">
-                                <a href="#" data-bs-toggle="collapse" data-bs-target="#accordion-style-02-03"
-                                    aria-expanded="false" data-bs-parent="#accordion-style-02">
-                                    <div class="accordion-title mb-0 position-relative text-dark-gray">
-                                        <i class="feather icon-feather-plus"></i><span class="fw-600 fs-20">Small
-                                            business</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div id="accordion-style-02-03" class="accordion-collapse collapse"
-                                data-bs-parent="#accordion-style-02">
-                                <div
-                                    class="accordion-body last-paragraph-no-margin border-bottom border-color-transparent">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor
-                                        incididunt.</p>
-                                </div>
-                            </div>
-                        </div> -->
-            <!-- end accordion item -->
           </div>
         </div>
       </div>
@@ -875,11 +579,6 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
               </p>
             </div>
             <div class='author ps-20px pe-20px'>
-              <!-- <img
-                    class='rounded-circle w-85px me-15px'
-                    src='https://via.placeholder.com/148x148'
-                    alt=''
-                /> -->
               <div class='d-inline-block align-middle lh-20'>
                 <span class='fw-600 fs-18 text-dark-gray d-block mb-5px'>Ing. Vladimir Balent</span>
                 <div class='fs-15'>Saint-Gobain Construction Products</div>
@@ -902,11 +601,6 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
               </p>
             </div>
             <div class='author ps-20px pe-20px'>
-              <!-- <img
-                    class='rounded-circle w-85px me-15px'
-                    src='https://via.placeholder.com/148x148'
-                    alt=''
-                /> -->
               <div class='d-inline-block align-middle lh-20'>
                 <span class='fw-600 fs-18 text-dark-gray d-block mb-5px'>Jan Kovacik</span>
                 <div class='fs-15'>GreenCon International</div>
@@ -926,11 +620,6 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
               <p>Cooperation with EPD Clarity was very good and smooth in every respect.</p>
             </div>
             <div class='author ps-20px pe-20px'>
-              <!-- <img
-                    class='rounded-circle w-85px me-15px'
-                    src='https://via.placeholder.com/148x148'
-                    alt=''
-                /> -->
               <div class='d-inline-block align-middle lh-20'>
                 <span class='fw-600 fs-18 text-dark-gray d-block mb-5px'
                   >Ing. Gabriel Szollosi
@@ -976,7 +665,6 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
           <div
             class='position-relative border-radius-4px overflow-hidden mb-30px last-paragraph-no-margin'
           >
-            <!-- <img src="https://via.placeholder.com/600x756" alt="" /> -->
             <Image
               src={PortraitSilvia}
               alt='Business portrait of Silvia Vilcekova'
@@ -1005,7 +693,6 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
           <div
             class='position-relative border-radius-4px overflow-hidden mb-30px last-paragraph-no-margin'
           >
-            <!-- <img src="https://via.placeholder.com/600x756" alt="" /> -->
             <Image src={PortraitSamuel} alt='Business portrait of Samuel Sura' loading='eager' />
             <div
               class='w-100 h-100 d-flex flex-column justify-content-center align-items-center p-40px team-content bg-gradient-dark-orange-transparent'
@@ -1030,7 +717,6 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
           <div
             class='position-relative border-radius-4px overflow-hidden mb-30px last-paragraph-no-margin'
           >
-            <!-- <img src="https://via.placeholder.com/600x756" alt="" /> -->
             <Image
               src={PortraitLudmila}
               alt='Business portrait of Ludmila Meciarova'
@@ -1059,7 +745,6 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
           <div
             class='position-relative border-radius-4px overflow-hidden mb-30px last-paragraph-no-margin'
           >
-            <!-- <img src="https://via.placeholder.com/600x756" alt="" /> -->
             <Image src={PortraitSarah} alt='Business portrait of Sarah Curpen' loading='eager' />
             <div
               class='w-100 h-100 d-flex flex-column justify-content-center align-items-center p-40px team-content bg-gradient-dark-orange-transparent'
@@ -1137,79 +822,10 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
                         >
                       </div>
                     </div>
-                    <!-- <div class='like-count fs-15 fw-600'>
-                      <a href='/news-post'
-                        ><i class='fa-regular fa-heart text-base-color'></i><span
-                          class='text-dark-gray align-middle'>65</span
-                        ></a
-                      >
-                    </div> -->
                   </div>
                 </div>
               </div>
             </li>
-            <!-- end blog item -->
-            <!-- start blog item -->
-            <!-- <li class="grid-item">
-                            <div class="card border-0 border-radius-4px box-shadow-quadruple-large">
-                                <div class="blog-image">
-                                    <a href="/news-post" class="d-block"><img
-                                            src="https://via.placeholder.com/600x460" alt="" /></a>
-                                </div>
-                                <div class="card-body p-13 md-p-11">
-                                    <a href="/news-post"
-                                        class="card-title mb-15px alt-font fw-600 fs-20 text-dark-gray d-inline-block">How
-                                        to bring the season into your great work</a>
-                                    <p>Lorem ipsum has been industry standard dummy text ever...</p>
-                                    <div
-                                        class="author d-flex justify-content-center align-items-center position-relative overflow-hidden fs-16">
-                                        <div class="me-auto">
-                                            <span class="blog-date d-inline-block">28 August 2021</span>
-                                            <div class="d-inline-block author-name">By <a
-                                                    href="/news"
-                                                    class="text-dark-gray text-decoration-line-bottom fw-600">Hugh
-                                                    macleod</a></div>
-                                        </div>
-                                        <div class="like-count fs-15 fw-600">
-                                            <a href="/news-post"><i
-                                                    class="fa-regular fa-heart text-base-color"></i><span
-                                                    class="text-dark-gray align-middle">25</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li> -->
-            <!-- end blog item -->
-            <!-- start blog item -->
-            <!-- <li class="grid-item">
-                            <div class="card border-0 border-radius-4px box-shadow-quadruple-large">
-                                <div class="blog-image">
-                                    <a href="/news-post" class="d-block"><img
-                                            src="https://via.placeholder.com/600x460" alt="" /></a>
-                                </div>
-                                <div class="card-body p-13 md-p-11">
-                                    <a href="/news-post"
-                                        class="card-title mb-15px alt-font fw-600 fs-20 text-dark-gray d-inline-block">Be
-                                        the strong willed one the public relationship</a>
-                                    <p>Lorem ipsum has been industry standard dummy text ever...</p>
-                                    <div
-                                        class="author d-flex justify-content-center align-items-center position-relative overflow-hidden fs-16">
-                                        <div class="me-auto">
-                                            <span class="blog-date d-inline-block">26 August 2021</span>
-                                            <div class="d-inline-block author-name">By <a
-                                                    href="/news"
-                                                    class="text-dark-gray text-decoration-line-bottom fw-600">Walton
-                                                    smith</a></div>
-                                        </div>
-                                        <div class="like-count fs-15 fw-600">
-                                            <a href="/news-post"><i
-                                                    class="fa-regular fa-heart text-base-color"></i><span
-                                                    class="text-dark-gray align-middle">30</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li> -->
             <!-- end blog item -->
           </ul>
         </div>
