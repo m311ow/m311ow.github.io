@@ -10,9 +10,9 @@ import '../styles/consulting.css';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-import { getImage } from 'astro:assets'
-import faviconSrc from '../images/favicon.png'
-import faviconSvgSrc from '../images/favicon.svg'
+import { getImage } from 'astro:assets';
+import faviconSrc from '../images/favicon.png';
+import faviconSvgSrc from '../images/favicon.svg';
 
 const { title, description } = Astro.props;
 
@@ -23,44 +23,47 @@ const { title, description } = Astro.props;
 //   height: 180,
 //   format: 'png'
 // })
-const faviconSvg = await getImage({ src: faviconSvgSrc, format: 'svg' })
+const faviconSvg = await getImage({ src: faviconSvgSrc, format: 'svg' });
 ---
-<html lang="en">
+
+<html lang='en'>
   <head>
-    <BaseHead title={title} description={description}/>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="author" content="EPD Clarity">
+    <BaseHead title={title} description={description} />
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='author' content='EPD Clarity' />
 
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
+    <link rel='apple-touch-icon' href='/images/apple-touch-icon-57x57.png' />
+    <link rel='apple-touch-icon' sizes='72x72' href='/images/apple-touch-icon-72x72.png' />
+    <link rel='apple-touch-icon' sizes='114x114' href='/images/apple-touch-icon-114x114.png' />
 
-    <link rel="icon" href="/favicon.ico" sizes="32x32" />
-    <link rel="icon" href={faviconSvg.src} type="image/svg+xml" />
+    <link rel='icon' href='/favicon.ico' sizes='32x32' />
+    <link rel='icon' href={faviconSvg.src} type='image/svg+xml' />
     <!-- <link rel="apple-touch-icon" href={appleTouchIcon.src} /> -->
-    <link rel="manifest" href="/manifest.json" />
+    <link rel='manifest' href='/manifest.json' />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel='preconnect' href='https://fonts.googleapis.com' crossorigin />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
     <script is:inline src='https://unpkg.com/@botpoison/browser' async></script>
+    <script is:inline data-domain='epdclarity.com' src='https://plausible.io/js/script.js'></script>
   </head>
-  <body data-mobile-nav-style="classic">
+  <body data-mobile-nav-style='classic'>
     <Header />
     <slot />
     <Footer />
     <!-- start scroll progress -->
-    <div class="scroll-progress d-none d-xxl-block">
-      <a href="#" class="scroll-top" aria-label="scroll">
-          <span class="scroll-text">Top</span><span class="scroll-line"><span class="scroll-point"></span></span>
+    <div class='scroll-progress d-none d-xxl-block'>
+      <a href='#' class='scroll-top' aria-label='scroll'>
+        <span class='scroll-text'>Top</span><span class='scroll-line'
+          ><span class='scroll-point'></span></span
+        >
       </a>
     </div>
     <!-- end scroll progress -->
     <!-- javascript libraries -->
-    <script is:inline type="text/javascript" src="/scripts/jquery.js"></script>
-    <script is:inline type="text/javascript" src="/scripts/vendors.min.js"></script>
-    <script is:inline type="text/javascript" src="/scripts/main.js"></script>
-
+    <script is:inline type='text/javascript' src='/scripts/jquery.js'></script>
+    <script is:inline type='text/javascript' src='/scripts/vendors.min.js'></script>
+    <script is:inline type='text/javascript' src='/scripts/main.js'></script>
   </body>
 </html>
