@@ -1,0 +1,275 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Image, getImage } from 'astro:assets';
+import PostBG from '../../images/stock/javier-allegue-barros-C7B-ExXpOIE-unsplash.jpg';
+import PostIMG from '../../images/stock/scott-graham-5fNmWej4tAA-unsplash.jpg';
+import AuthorIMG from '../../images/team/Business_portrait_Sarah_square.jpg';
+
+const OptimizedPostBG = await getImage({ src: PostBG });
+---
+
+<BaseLayout title='Post title' description='Blog post'>
+  <!-- start section -->
+  <section
+    class='one-fourth-screen sm-mb-50px bg-dark-gray'
+    data-parallax-background-ratio='0.5'
+    style=`background-image: url(${OptimizedPostBG.src})`
+  >
+  </section>
+  <!-- end section -->
+  <!-- start section -->
+  <section class='p-0'>
+    <div class='container'>
+      <div class='row justify-content-center'>
+        <div class='col-lg-10 overlap-section text-center'>
+          <div class='p-10 box-shadow-extra-large border-radius-4px bg-white text-center'>
+            <h3 class='alt-font text-dark-gray ls-minus-1px fw-600 mb-15px'>
+              Choosing the Right Programme Operator for You
+            </h3>
+            <div class='lg-mb-20px sm-mb-0'>
+              <span>By <span class='text-dark-gray'>Sarah Curpen</span></span> on <span
+                class='text-dark-gray'>18 June 2024</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section -->
+  <!-- start section -->
+  <section class='overlap-section text-center p-0 sm-pt-30px'>
+    <Image
+      src={AuthorIMG}
+      class='rounded-circle box-shadow-extra-large w-130px h-130px border border-8 border-color-white'
+      loading='eager'
+      alt='author of the article'
+    />
+  </section>
+  <!-- end section -->
+  <!-- start section -->
+  <section class='pb-0 pt-3'>
+    <div class='container'>
+      <div class='row justify-content-center'>
+        <div
+          class='col-lg-9 dropcap-style-01'
+          data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'
+        >
+          <p class='mb-6'>
+            <span class='alt-font first-letter text-dark-gray'>I</span>f you're a manufacturer
+            trying to navigate the world of Environmental Product Declarations (EPDs) and figure out
+            which Programme Operator (PO) to register with, you're not alone. We get this question a
+            lot, and it's a crucial one because the right choice can significantly impact your
+            product's market visibility and sustainability credentials.
+          </p>
+
+          <div class='row'>
+            <div class='col-xs-12 xl-mb-30px'>
+              <div
+                class='border-radius-5px border-1 border border-color-light-medium-gray h-100 pt-8 pb-8 ps-10 pe-10 last-paragraph-no-margin'
+              >
+                <p>
+                  There are about 100 POs worldwide, each with its own set of Product Category Rules
+                  (PCRs) for developing life cycle assessment analyses. This means EPDs from
+                  different POs are rarely comparable, adding another layer of complexity to your
+                  decision.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section -->
+
+  <!-- start section -->
+  <section class='half-section pb-0'>
+    <div class='container'>
+      <div
+        class='row justify-content-center'
+        data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'
+      >
+        <div class='mb-6'>
+          <Image
+            src={PostIMG}
+            alt=' people sitting behind table. One person is explaining something.'
+            loading='eager'
+          />
+        </div>
+        <div class='col-lg-9 last-paragraph-no-margin mb-30px'>
+          <h6 class='alt-font fw-500 text-dark-gray ls-minus-05px mb-15px'>
+            So, how do you choose the best PO for showcasing your product?
+          </h6>
+          <p>
+            Based on our experience, we've put together a handy list to help you decide. Choosing
+            the right PO is a strategic decision that requires considering regulations, costs, and
+            visibility.
+          </p>
+        </div>
+
+        <div class='col-lg-9 last-paragraph-no-margin mb-30px'>
+          <h6 class='alt-font fw-300 text-dark-gray ls-minus-05px mb-15px'>
+            1. Check for National Regulations
+          </h6>
+          <p>
+            First, see if your country has specific regulations. Some countries, like France,
+            Belgium, and The Netherlands, mandate that EPDs must be registered with a national PO.
+            If you're in one of these countries, your choice is pretty straightforward.
+          </p>
+        </div>
+
+        <div class='col-lg-9 last-paragraph-no-margin mb-30px'>
+          <h6 class='alt-font fw-300 text-dark-gray ls-minus-05px mb-15px'>
+            2. Consider Tender Requirements
+          </h6>
+          <p>
+            Even if there's no national regulation, certain projects might have specific PO
+            requirements. If you're aiming to participate in a tender, make sure to check the tender
+            documents for any EPD specifications.
+          </p>
+        </div>
+
+        <div class='col-lg-9 last-paragraph-no-margin mb-30px'>
+          <h6 class='alt-font fw-300 text-dark-gray ls-minus-05px mb-15px'>
+            3. Compare Programme Operators
+          </h6>
+          <p class='mb-15px'>
+            If you're not bound by specific regulations, you need to compare POs on various levels:
+          </p>
+          <ol style='list-style-type: none;'>
+            <li>
+              <div class='col-lg-9 last-paragraph-no-margin mb-30px'>
+                <div class='alt-font fw-500 text-dark-gray ls-minus-05px mb-15px'>
+                  Cost Considerations
+                </div>
+                <p>
+                  Cost is a major factor, especially if you need EPDs for a large number of similar
+                  products. Different POs have different definitions for product similarity,
+                  affecting the types of EPDs they offer. Here's a quick breakdown:
+                </p>
+
+                <ul class='mb-30px'>
+                  <li><b>Specific EPD:</b> One product, one location.</li>
+                  <li>
+                    <b>Average EPD:</b> Similar products grouped together with the condition that the
+                    production process is almost the same and less than 10% difference in global warming
+                    potential-fossil (GWP) results (compliance with ISO 21930) between similar products.
+                  </li>
+                </ul>
+                <p>
+                  Grouping multiple products under one EPD can lower registration fees compared to
+                  registering multiple product-specific EPDs. Don't forget to factor in additional
+                  costs like annual membership fees, third-party verification fees, and consultancy
+                  fees. Notably, EPD Square offers a single fee for both verification and
+                  registration, with no annual membership fee.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <div class='col-lg-9 last-paragraph-no-margin mb-30px'>
+                <div class='alt-font fw-500 text-dark-gray ls-minus-05px mb-15px'>
+                  Visibility and Reach
+                </div>
+                <p>
+                  EPDs are like brochures for your product's sustainability, so having them on a
+                  widely recognized platform is key. The largest EPD databases include INIES
+                  (France), the International EPD System (Global), EPD Norge (Norway), IBU
+                  (Germany), and UL (USA). These POs are well-regarded but often come with higher
+                  costs.
+                </p>
+                <p>
+                  For more budget-friendly yet reputable options, consider EPD Square (Global) and
+                  Smart EPD (USA). Also, look for POs that are members of the ECO Platform, which
+                  works on standardizing regulations and facilitating international trade by
+                  eliminating barriers.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <div class='col-lg-9 last-paragraph-no-margin mb-30px'>
+                <div class='alt-font fw-500 text-dark-gray ls-minus-05px mb-15px'>
+                  Mutual Recognition Agreements
+                </div>
+                <p>
+                  If you're still unsure and want to maximize your product's visibility across
+                  different POs while keeping costs down, look for mutual recognition agreements.
+                  These agreements allow your EPD to be published with multiple POs, which is
+                  particularly useful for businesses operating in international markets and aiming
+                  to win international agreements.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section -->
+  <!-- start section -->
+  <section class='py-0'>
+    <div class='container'>
+      <div class='row justify-content-center'>
+        <div
+          class='col-lg-9 last-paragraph-no-margin'
+          data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'
+        >
+          <p class='mb-5'>
+            By following this list, you can make an informed choice that best showcases your
+            product's sustainability credentials. If all fails, you can always rely on your LCA/EPD
+            consultant to help you make the right choice.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section -->
+
+  <!-- start section -->
+  <section class='half-section'>
+    <div class='container'>
+      <div class='row justify-content-center'>
+        <div
+          class='col-lg-9'
+          data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'
+        >
+          <div class='row'>
+            <div class='col-12 mb-6'>
+              <div
+                class='d-block d-md-flex w-100 box-shadow-extra-large align-items-center border-radius-4px p-7 sm-p-35px'
+              >
+                <div class='w-140px text-center me-50px sm-mx-auto'>
+                  <Image
+                    src={AuthorIMG}
+                    class='rounded-circle w-120px'
+                    loading='eager'
+                    alt='author of the article'
+                  />
+                  <a href='/news' class='text-dark-gray fw-500 mt-20px d-inline-block lh-20'
+                    >Sarah Curpen</a
+                  >
+                  <span class='fs-15 lh-20 d-block sm-mb-15px'>LCA Engineer</span>
+                </div>
+                <div class='w-75 sm-w-100 text-center text-md-start last-paragraph-no-margin'>
+                  <p>
+                    A Civil and Environmental Engineer. Her expertise lies in leveraging advanced
+                    data analysis techniques to conduct hot spot analysis and market research.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="row justify-content-center">
+              <div class="col-12 text-center elements-social social-icon-style-04">
+                  <ul class="medium-icon dark">
+                      <li><a class="linkedin" href="http://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i><span></span></a></li>
+                  </ul>
+              </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section -->
+</BaseLayout>

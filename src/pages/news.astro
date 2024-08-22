@@ -1,7 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
-import PostPreviewIMG from '../images/stock/javier-allegue-barros-C7B-ExXpOIE-unsplash.jpg';
+import PostPreviewIMG1 from '../images/stock/javier-allegue-barros-C7B-ExXpOIE-unsplash.jpg';
+import PostPreviewIMG2 from '../images/stock/jack-b-PFaVL64t-J8-unsplash.jpg';
+import PostPreviewIMG3 from '../images/stock/ash-amplifies-NQ6Lh81BTRs-unsplash.jpg';
 ---
 
 <BaseLayout title='News' description='Page with list of blog posts'>
@@ -61,9 +63,9 @@ import PostPreviewIMG from '../images/stock/javier-allegue-barros-C7B-ExXpOIE-un
                 class='card border-0 border-radius-4px box-shadow-medium box-shadow-extra-large-hover'
               >
                 <div class='blog-image'>
-                  <a href='/news-post' class='d-block'>
+                  <a href='/news/choosing-the-right-programme-operator-for-you' class='d-block'>
                     <Image
-                      src={PostPreviewIMG}
+                      src={PostPreviewIMG1}
                       alt='arrows pointing in different directions'
                       loading='eager'
                     />
@@ -71,7 +73,7 @@ import PostPreviewIMG from '../images/stock/javier-allegue-barros-C7B-ExXpOIE-un
                 </div>
                 <div class='card-body p-13 md-p-11'>
                   <a
-                    href='/news-post'
+                    href='/news/choosing-the-right-programme-operator-for-you'
                     class='card-title mb-15px alt-font fw-600 fs-20 text-dark-gray d-inline-block'
                     >Choosing the right Programme Operator for you</a
                   >
@@ -87,6 +89,88 @@ import PostPreviewIMG from '../images/stock/javier-allegue-barros-C7B-ExXpOIE-un
                       <div class='d-inline-block author-name'>
                         By <a href='news' class='text-dark-gray text-decoration-line-bottom fw-600'
                           >Sarah Curpen</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- end blog item -->
+
+            <!-- start blog item -->
+            <li class='grid-item'>
+              <div
+                class='card border-0 border-radius-4px box-shadow-medium box-shadow-extra-large-hover'
+              >
+                <div class='blog-image'>
+                  <a href='/news/lca-is-gaining-traction-in-construction-sector' class='d-block'>
+                    <Image
+                      src={PostPreviewIMG2}
+                      alt='arrows pointing in different directions'
+                      loading='eager'
+                    />
+                  </a>
+                </div>
+                <div class='card-body p-13 md-p-11'>
+                  <a
+                    href='/news/lca-is-gaining-traction-in-construction-sector'
+                    class='card-title mb-15px alt-font fw-600 fs-20 text-dark-gray d-inline-block'
+                    >LCA is Gaining Traction in Construction Sector</a
+                  >
+                  <p>
+                    The topic of product life cycle assessment (LCA) is gaining increasing
+                    attention, particularly in the construction sector...
+                  </p>
+                  <div
+                    class='author d-flex justify-content-center align-items-center position-relative overflow-hidden fs-16'
+                  >
+                    <div class='me-auto'>
+                      <span class='blog-date d-inline-block'>16 July 2024</span>
+                      <div class='d-inline-block author-name'>
+                        By <a href='news' class='text-dark-gray text-decoration-line-bottom fw-600'
+                          >Silvia Vilcekova</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- end blog item -->
+
+            <!-- start blog item -->
+            <li class='grid-item'>
+              <div
+                class='card border-0 border-radius-4px box-shadow-medium box-shadow-extra-large-hover'
+              >
+                <div class='blog-image'>
+                  <a href='/news/rising-demand-for-environmental-declarations' class='d-block'>
+                    <Image
+                      src={PostPreviewIMG3}
+                      alt='arrows pointing in different directions'
+                      loading='eager'
+                    />
+                  </a>
+                </div>
+                <div class='card-body p-13 md-p-11'>
+                  <a
+                    href='/news/rising-demand-for-environmental-declarations'
+                    class='card-title mb-15px alt-font fw-600 fs-20 text-dark-gray d-inline-block'
+                    >Rising Demand for Environmental Product Declarations
+                  </a>
+                  <p>
+                    In recent years, there has been a gradual increase in the demand for
+                    Environmental Product Declarations...
+                  </p>
+                  <div
+                    class='author d-flex justify-content-center align-items-center position-relative overflow-hidden fs-16'
+                  >
+                    <div class='me-auto'>
+                      <span class='blog-date d-inline-block'>22 August 2024</span>
+                      <div class='d-inline-block author-name'>
+                        By <a href='news' class='text-dark-gray text-decoration-line-bottom fw-600'
+                          >Silvia Vilcekova</a
                         >
                       </div>
                     </div>

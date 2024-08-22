@@ -1,0 +1,201 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Image, getImage } from 'astro:assets';
+import PostBG from '../../images/stock/ash-amplifies-NQ6Lh81BTRs-unsplash.jpg';
+import PostIMG from '../../images/epd-mockup.png';
+import AuthorIMG from '../../images/team/Business_portrait_Silvia_square.jpg';
+
+const OptimizedPostBG = await getImage({ src: PostBG });
+---
+
+<BaseLayout title='Post title' description='Blog post'>
+  <!-- start section -->
+  <section
+    class='one-fourth-screen sm-mb-50px bg-dark-gray'
+    data-parallax-background-ratio='0.5'
+    style=`background-image: url(${OptimizedPostBG.src})`
+  >
+  </section>
+  <!-- end section -->
+  <!-- start section -->
+  <section class='p-0'>
+    <div class='container'>
+      <div class='row justify-content-center'>
+        <div class='col-lg-10 overlap-section text-center'>
+          <div class='p-10 box-shadow-extra-large border-radius-4px bg-white text-center'>
+            <h3 class='alt-font text-dark-gray ls-minus-1px fw-600 mb-15px'>
+              Rising Demand for Environmental Product Declarations
+            </h3>
+            <div class='lg-mb-20px sm-mb-0'>
+              <span>By <span class='text-dark-gray'>Silvia Vilcekova</span></span> on <span
+                class='text-dark-gray'>22 August 2024</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section -->
+  <!-- start section -->
+  <section class='overlap-section text-center p-0 sm-pt-30px'>
+    <Image
+      src={AuthorIMG}
+      class='rounded-circle box-shadow-extra-large w-130px h-130px border border-8 border-color-white'
+      loading='eager'
+      alt='author of the article'
+    />
+  </section>
+  <!-- end section -->
+  <!-- start section -->
+  <section class='pb-0 pt-3'>
+    <div class='container'>
+      <div class='row justify-content-center'>
+        <div
+          class='col-lg-9 dropcap-style-01'
+          data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'
+        >
+          <p class='mb-6'>
+            <span class='alt-font first-letter text-dark-gray'>I</span>n recent years, there has
+            been a gradual increase in the demand for Environmental Product Declarations (EPDs) from
+            manufacturers, especially those in the construction sector. This surge is largely driven
+            by building certification systems such as LEED and BREEAM, which require materials and
+            products to have EPD certification. Other uses for EPDs include green public procurement
+            (GPP), business-to-business communication, and business-to-consumer communication.
+          </p>
+
+          <p class='mb-6'>
+            An EPD is defined as an independently verified and registered document aimed at
+            providing relevant and verified information about the environmental impact of products
+            throughout their life cycle, allowing for comparison of products and services based on
+            their environmental behavior.
+          </p>
+
+          <p class='mb-6'>
+            The principles, requirements, and guidelines for assessing the environmental properties
+            of products are defined in ISO standards 14040:2006 and 14044:2006. EPDs are based on
+            the principles of ISO standards 14020:2000 and 14025:2006, which set out the procedures
+            for Type III environmental declarations, making EPDs internationally accepted.
+          </p>
+
+          <p class='mb-6'>
+            Life cycle assessment (LCA) of construction products is conducted according to EN
+            15804:2012+A2:2019/AC:2021. The LCA method provides a comprehensive assessment of a
+            product’s environmental impact throughout its life cycle.
+          </p>
+
+          <!-- <div class='row'>
+            <div class='col-xs-12 xl-mb-30px'>
+              <div
+                class='border-radius-5px border-1 border border-color-light-medium-gray h-100 pt-8 pb-8 ps-10 pe-10 last-paragraph-no-margin'
+              >
+                <p>
+                  Life cycle assessment (LCA) is an internationally recognized method for evaluating
+                  the environmental impacts and resource usage associated with products, services,
+                  or processes. It provides a comprehensive understanding of the entire lifecycle,
+                  from raw material acquisition through transport, production, use, to waste
+                  recovery and disposal.
+                </p>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section -->
+
+  <!-- start section -->
+  <section class='half-section pb-0'>
+    <div class='container'>
+      <div
+        class='row justify-content-center'
+        data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'
+      >
+        <div class='mb-6'>
+          <Image
+            src={PostIMG}
+            alt=' people sitting behind table. One person is explaining something.'
+            loading='eager'
+          />
+        </div>
+        <div class='col-lg-9 last-paragraph-no-margin mb-30px'>
+          <p class='mb-6'>
+            Key life cycle stages assessed include modules A1-A3, C1-C4, and D, as per EN
+            15804+A2:2019. Exceptions are made for products that meet specific conditions regarding
+            their integration, transformation, and carbon content at the end of their life cycle.
+          </p>
+
+          <p class='mb-6'>
+            EPD content includes basic information, product details, life cycle phase information,
+            LCA calculation rules, LCA results, interpretation of results, and transparency
+            information. Independently verified EPDs can be registered and published in
+            international databases such as the International EPD System, IBU, EPD-Norway, EPD Hub,
+            EPD Italy, CENIA, EPD Ireland, epddanmark, and EPDSquare.
+          </p>
+
+          <p class='mb-6'>
+            EPDs are valid for five years, during which they can be revised if significant changes
+            occur in the manufacturing process. This promotes greater product transparency, enabling
+            comparison of products with similar functions and offering customers options with lower
+            environmental impacts. It also encourages manufacturers to reduce the environmental
+            impact of their production and supply chains.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section -->
+  <!-- start section -->
+  <section class='half-section'>
+    <div class='container'>
+      <div class='row justify-content-center'>
+        <div
+          class='col-lg-9'
+          data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'
+        >
+          <div class='row'>
+            <div class='col-12 mb-6'>
+              <div
+                class='d-block d-md-flex w-100 box-shadow-extra-large align-items-center border-radius-4px p-7 sm-p-35px'
+              >
+                <div class='w-140px text-center me-50px sm-mx-auto'>
+                  <Image
+                    src={AuthorIMG}
+                    class='rounded-circle w-120px'
+                    loading='eager'
+                    alt='author of the article'
+                  />
+                  <span class='text-dark-gray fw-500 mt-20px d-inline-block lh-20'
+                    >Silvia Vilcekova</span
+                  >
+                  <span class='fs-15 lh-20 d-block sm-mb-15px'>Co-founder and LCA team lead</span>
+                </div>
+                <div class='w-75 sm-w-100 text-center text-md-start last-paragraph-no-margin'>
+                  <p>
+                    Silvia has contributed to the field of Life Cycle Assessment (LCA) for over two
+                    decades, establishing herself as a renowned expert.
+                  </p>
+                  <p>
+                    She also holds the position of Director at the Institute of Sustainable and
+                    Circular Construction at the Technical University of Kosice. Additionally, she
+                    serves as the chairman of the Technical Committee TK112 for Sustainable
+                    Construction.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="row justify-content-center">
+              <div class="col-12 text-center elements-social social-icon-style-04">
+                  <ul class="medium-icon dark">
+                      <li><a class="linkedin" href="http://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i><span></span></a></li>
+                  </ul>
+              </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section -->
+</BaseLayout>

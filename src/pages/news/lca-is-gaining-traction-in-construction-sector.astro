@@ -1,0 +1,308 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Image, getImage } from 'astro:assets';
+import PostBG from '../../images/stock/jack-b-PFaVL64t-J8-unsplash.jpg';
+import PostIMG from '../../images/stock/jhon-jim-5BIbTwXbTWk-unsplash.jpg';
+import AuthorIMG from '../../images/team/Business_portrait_Silvia_square.jpg';
+
+const OptimizedPostBG = await getImage({ src: PostBG });
+---
+
+<BaseLayout title='Post title' description='Blog post'>
+  <!-- start section -->
+  <section
+    class='one-fourth-screen sm-mb-50px bg-dark-gray'
+    data-parallax-background-ratio='0.5'
+    style=`background-image: url(${OptimizedPostBG.src})`
+  >
+  </section>
+  <!-- end section -->
+  <!-- start section -->
+  <section class='p-0'>
+    <div class='container'>
+      <div class='row justify-content-center'>
+        <div class='col-lg-10 overlap-section text-center'>
+          <div class='p-10 box-shadow-extra-large border-radius-4px bg-white text-center'>
+            <h3 class='alt-font text-dark-gray ls-minus-1px fw-600 mb-15px'>
+              LCA is Gaining Traction in Construction Sector
+            </h3>
+            <div class='lg-mb-20px sm-mb-0'>
+              <span>By <span class='text-dark-gray'>Silvia Vilcekova</span></span> on <span
+                class='text-dark-gray'>16 July 2024</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section -->
+  <!-- start section -->
+  <section class='overlap-section text-center p-0 sm-pt-30px'>
+    <Image
+      src={AuthorIMG}
+      class='rounded-circle box-shadow-extra-large w-130px h-130px border border-8 border-color-white'
+      loading='eager'
+      alt='author of the article'
+    />
+  </section>
+  <!-- end section -->
+  <!-- start section -->
+  <section class='pb-0 pt-3'>
+    <div class='container'>
+      <div class='row justify-content-center'>
+        <div
+          class='col-lg-9 dropcap-style-01'
+          data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'
+        >
+          <p class='mb-6'>
+            <span class='alt-font first-letter text-dark-gray'>T</span>he topic of product life
+            cycle assessment (LCA) is gaining increasing attention, particularly in the construction
+            sector. This industry significantly contributes to the unsustainable depletion of
+            natural resources and various forms of environmental pollution.
+          </p>
+
+          <p class='mb-6'>
+            The construction industry, known for its long-lasting and complex product supply chains,
+            should implement aspects of the circular economy and harness its potential to reduce
+            both embedded and operational emissions. This can be achieved through the use of
+            natural, recycled, and alternative materials, as well as renewable energy sources.
+          </p>
+
+          <p class='mb-6'>
+            The goal of this article is to introduce the LCA method, its structure, and its
+            significance in determining the environmental impacts of products.
+          </p>
+
+          <div class='row'>
+            <div class='col-xs-12 xl-mb-30px'>
+              <div
+                class='border-radius-5px border-1 border border-color-light-medium-gray h-100 pt-8 pb-8 ps-10 pe-10 last-paragraph-no-margin'
+              >
+                <p>
+                  Life cycle assessment (LCA) is an internationally recognized method for evaluating
+                  the environmental impacts and resource usage associated with products, services,
+                  or processes. It provides a comprehensive understanding of the entire lifecycle,
+                  from raw material acquisition through transport, production, use, to waste
+                  recovery and disposal.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section -->
+
+  <!-- start section -->
+  <section class='half-section pb-0'>
+    <div class='container'>
+      <div
+        class='row justify-content-center'
+        data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'
+      >
+        <div class='mb-6'>
+          <Image
+            src={PostIMG}
+            alt=' people sitting behind table. One person is explaining something.'
+            loading='eager'
+          />
+        </div>
+        <div class='col-lg-9 last-paragraph-no-margin mb-30px'>
+          <h6 class='alt-font fw-500 text-dark-gray ls-minus-05px mb-15px'>Product Life Cycle</h6>
+          <p>
+            A product life cycle is defined as the successive and interconnected stages of a product
+            system, from the acquisition of raw materials or their creation from natural resources
+            to final disposal (EN ISO 14040:2006/A1:2020). It begins with the acquisition of raw
+            materials and energy sources from the environment. This phase also includes the
+            transport of raw materials to the place of further processing. During the production
+            stage, raw materials are transformed into usable materials through the use of fuels,
+            electricity, and other resources. The product manufacturing stage involves transforming
+            necessary materials into the final product, completing the product, and packaging it for
+            distribution to the consumer. Each of these stages involves energy and material inputs
+            and outputs, which consequently impact the environment. all life cycle phases.
+          </p>
+
+          <p class='mb-6'>
+            In the usage phase, the product fulfills its intended function, requiring energy and raw
+            materials for operation, maintenance, repair, or replacement. The end-of-life phase
+            involves energy and material demands for disposal, reuse, recycling, or energy recovery.
+            Recycling in the waste recovery stage can yield reusable materials or energy. Throughout
+            its life cycle, a product interacts with the environment at various stages, each posing
+            different potential environmental burdens. Comparing and evaluating the environmental
+            impact of products is possible by considering all life cycle phases.
+          </p>
+
+          <h6 class='alt-font fw-500 text-dark-gray ls-minus-05px mb-15px'>Product System</h6>
+          <p class='mb-6'>
+            All processes involved in individual life cycle phases form a product system, which
+            consists of processes and flows. Processes transform inputs into outputs, while flows
+            connect these processes, with one flow's output serving as the next process's input.
+            Material and energy flows must be described in terms of inputs, outputs, and their
+            positions relative to other processes, ensuring continuity and consistency. The typical
+            unit for material flows is mass (kilograms), while energy flows are measured in units
+            like MJ or kWh.
+          </p>
+
+          <h6 class='alt-font fw-500 text-dark-gray ls-minus-05px mb-15px'>
+            Processes and Elementary Flows
+          </h6>
+          <p>
+            Each phase of the product life cycle comprises various processes that convert material
+            and energy inputs into outputs. Complex processes may include internal subprocesses. The
+            product system interacts with the environment through pollutant emissions into air,
+            water, and soil. These interactions, termed elementary flows, cross the product system's
+            boundary, facilitating energy and matter exchange with the environment.
+          </p>
+          <p class='mb-6'>
+            The LCA method, an essential environmental management tool, evaluates and compares the
+            environmental impacts of products throughout their life cycle. It quantifies significant
+            emissions, resource consumption, related environmental and health impacts, and resource
+            depletion issues. The LCA approach assesses environmental impacts with respect to the
+            entire product life cycle.
+          </p>
+
+          <h6 class='alt-font fw-500 text-dark-gray ls-minus-05px mb-15px'>Structure of LCA</h6>
+          <p class='mb-6'>
+            The main structure of LCA consists of four mutually dependent phases, each influencing
+            the others:
+          </p>
+          <div class='col-lg-9 last-paragraph-no-margin mb-30px'>
+            <h6 class='alt-font fw-300 text-dark-gray ls-minus-05px mb-15px'>
+              1. Defining the Goal and Scope
+            </h6>
+            <p>
+              This first step involves clarifying the intended use of the LCA study, its reasons,
+              target audience, and whether the results will be used for comparative statements
+              intended for publication. Precise goal definition eliminates misunderstandings in
+              result interpretation. Key points to define include the product system functions,
+              functional unit, system boundary, allocation procedures, types of evaluated impacts,
+              evaluation methodology, data requirements, assumptions, limitations, data quality
+              requirements, type of critical assessment, and the format of the LCA study report.
+            </p>
+          </div>
+
+          <div class='col-lg-9 last-paragraph-no-margin mb-30px'>
+            <h6 class='alt-font fw-300 text-dark-gray ls-minus-05px mb-15px'>
+              2. Inventory Analysis (LCI)
+            </h6>
+            <p>
+              This most time-consuming part involves collecting and compiling data on elementary
+              flows from all processes within the analyzed product system. The output is a
+              comprehensive list of quantified elementary flows across all life stages, serving as
+              input for the subsequent life cycle impact assessment (LCIA) phase.
+            </p>
+          </div>
+
+          <div class='col-lg-9 last-paragraph-no-margin mb-30px'>
+            <h6 class='alt-font fw-300 text-dark-gray ls-minus-05px mb-15px'>
+              3. Life Cycle Impact Assessment (LCIA)
+            </h6>
+            <p>
+              This phase evaluates the significance of potential environmental impacts using LCI
+              results. It includes classifying inventory data into impact categories, characterizing
+              the rate of effects on specific areas, and calculating category indicator results.
+              Normalization and weighting may be performed to express the relative importance and
+              social significance of impacts.
+            </p>
+          </div>
+
+          <div class='col-lg-9 last-paragraph-no-margin mb-30px'>
+            <h6 class='alt-font fw-300 text-dark-gray ls-minus-05px mb-15px'>4. Interpretation</h6>
+            <p>
+              This final phase involves analyzing results, drawing conclusions, identifying study
+              boundaries and limitations, and providing recommendations based on previous phases'
+              results. The outcome is a comprehensive report on the life cycle interpretation,
+              offering insights for decision-making and recommendations to reduce environmental
+              impacts.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section -->
+  <!-- start section -->
+  <section class='py-0'>
+    <div class='container'>
+      <div class='row justify-content-center'>
+        <div
+          class='col-lg-9 last-paragraph-no-margin'
+          data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'
+        >
+          <p class='mb-6'>
+            The LCA method is not only useful for choosing environmentally suitable technologies but
+            also for determining operational procedures with minimal life cycle impacts. Its
+            holistic approach ensures complete monitoring of material and energy flows, identifying
+            all negative impacts associated with different life cycle phases and preventing the
+            shifting of problems between them.
+          </p>
+
+          <p class='mb-6'>
+            The method's results help in making informed recommendations and measures to reduce
+            environmental impacts directly or indirectly, influencing market behavior and promoting
+            sustainability, circularity, and decarbonization in the construction industry.
+            Disseminating LCA study results to stakeholders, including architects, builders,
+            developers, and other experts, is crucial for supporting the production of sustainable
+            building materials and environments.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section -->
+
+  <!-- start section -->
+  <section class='half-section'>
+    <div class='container'>
+      <div class='row justify-content-center'>
+        <div
+          class='col-lg-9'
+          data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'
+        >
+          <div class='row'>
+            <div class='col-12 mb-6'>
+              <div
+                class='d-block d-md-flex w-100 box-shadow-extra-large align-items-center border-radius-4px p-7 sm-p-35px'
+              >
+                <div class='w-140px text-center me-50px sm-mx-auto'>
+                  <Image
+                    src={AuthorIMG}
+                    class='rounded-circle w-120px'
+                    loading='eager'
+                    alt='author of the article'
+                  />
+                  <span class='text-dark-gray fw-500 mt-20px d-inline-block lh-20'
+                    >Silvia Vilcekova</span
+                  >
+                  <span class='fs-15 lh-20 d-block sm-mb-15px'>Co-founder and LCA team lead</span>
+                </div>
+                <div class='w-75 sm-w-100 text-center text-md-start last-paragraph-no-margin'>
+                  <p>
+                    Silvia has contributed to the field of Life Cycle Assessment (LCA) for over two
+                    decades, establishing herself as a renowned expert.
+                  </p>
+                  <p>
+                    She also holds the position of Director at the Institute of Sustainable and
+                    Circular Construction at the Technical University of Kosice. Additionally, she
+                    serves as the chairman of the Technical Committee TK112 for Sustainable
+                    Construction.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="row justify-content-center">
+              <div class="col-12 text-center elements-social social-icon-style-04">
+                  <ul class="medium-icon dark">
+                      <li><a class="linkedin" href="http://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i><span></span></a></li>
+                  </ul>
+              </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section -->
+</BaseLayout>
