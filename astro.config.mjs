@@ -3,7 +3,6 @@ import sitemap from '@astrojs/sitemap';
 import purgecss from 'astro-purgecss';
 
 // localhost server port
-import partytown from '@astrojs/partytown';
 const SERVER_PORT = 3000;
 // url for local development
 const LOCALHOST_URL = `http://localhost:${SERVER_PORT}`;
@@ -29,12 +28,6 @@ export default defineConfig({
       standard: ['html', 'body'],
       safelist: {
         greedy: [/swiper$/, /^swiper/]
-      }
-    }),
-    partytown({
-      config: {
-        // for Partytown to know to forward any dataLayer.push events to the worker
-        forward: ['dataLayer.push']
       }
     })
   ],
