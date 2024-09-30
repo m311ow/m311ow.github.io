@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title='Subscribed to newsletter' description='Page not found'>
+  <!-- start section -->
+  <section class='cover-background full-screen ipad-top-space-margin md-h-550px'>
+    <div class='container h-100'>
+      <div class='row align-items-center justify-content-center h-100'>
+        <div
+          class='col-12 col-xl-6 col-lg-7 col-md-9 text-center'
+          data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
+        >
+          <h4 class='text-dark-gray fw-600 sm-fs-22 mb-10px ls-minus-1px'>
+            You have successfully unsubscribed
+          </h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section -->
+</BaseLayout>
+<script>
+  const backButton = document.querySelector('#back-button');
+  backButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.history.back();
+  });
+</script>
