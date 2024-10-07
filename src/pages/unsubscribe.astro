@@ -11,9 +11,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <script>
-  const urlSearchParams = new URLSearchParams(window.location.search);
-  const { email } = Object.fromEntries(urlSearchParams.entries());
-  console.log('email ', email);
+  const url = window.location.href;
+  const email = url.split('=')[1];
   const emailInput = document.getElementById('email') as HTMLInputElement;
   emailInput.value = email;
 </script>
