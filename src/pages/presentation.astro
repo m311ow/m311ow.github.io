@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Image from 'astro/components/Image.astro';
+import Slide1 from '../images/presentation/presentation1.png';
+import Slide2 from '../images/presentation/presentation2.png';
+import Slide3 from '../images/presentation/presentation3.png';
+import Slide4 from '../images/presentation/presentation4.png';
+import Slide5 from '../images/presentation/presentation5.png';
+import Slide6 from '../images/presentation/presentation6.png';
+import Slide7 from '../images/presentation/presentation7.png';
+import Slide8 from '../images/presentation/presentation8.png';
+import Slide9 from '../images/presentation/presentation9.png';
+import Slide10 from '../images/presentation/presentation10.png';
+import Slide11 from '../images/presentation/presentation11.png';
+import Slide12 from '../images/presentation/presentation12.png';
+import Slide13 from '../images/presentation/presentation13.png';
+import Slide14 from '../images/presentation/presentation14.png';
+import Slide15 from '../images/presentation/presentation15.png';
+
+const slides = [
+  Slide1,
+  Slide2,
+  Slide3,
+  Slide4,
+  Slide5,
+  Slide6,
+  Slide7,
+  Slide8,
+  Slide9,
+  Slide10,
+  Slide11,
+  Slide12,
+  Slide13,
+  Slide14,
+  Slide15
+];
+---
+
+<BaseLayout title='Presentation' description='Page with promo presentation' noindex={true}>
+  <section
+    class='page-title-big-typography ipad-top-space-margin xs-py-0 pb-0 pt-8'
+    data-parallax-background-ratio='0.5'
+  >
+    <div class='opacity-light'></div>
+    <div class='container'>
+      <div class='row align-items-center justify-content-center h-200px'>
+        <div
+          class='col-lg-12 col-md-8 position-relative text-center page-title-extra-small'
+          data-anime='{ "el": "childs", "rotateX": [90, 0], "opacity": [0,1], "staggervalue": 150, "easing": "easeOutQuad" }'
+        >
+          <h1 class='mb-5px alt-font text-dark-gray fw-400'>
+            <span class='opacity-6'>Welcome</span>
+          </h1>
+          <h2 class='mb-0 text-dark-gray alt-font ls-minus-2px text-shadow-double-large fw-500'>
+            Scroll to learn more about EPDs
+          </h2>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- start section -->
+  <section id='down-section' class='pt-0'>
+    <div class='container'>
+      <div class='row row-cols-1 justify-content-center'>
+        {slides.map((slide, i) => <Image src={slide} alt={`Presentation slide #${i}`} />)}
+      </div>
+    </div>
+  </section>
+  <!-- end section -->
+</BaseLayout>
