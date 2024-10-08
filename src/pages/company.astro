@@ -2,6 +2,9 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { Image, getImage } from 'astro:assets';
 import PortraitSilvia from '../images/team/Business_portrait_Silvia.jpg';
+import PortraitSamuel from '../images/team/Business_portrait_Samuel.jpg';
+import PortraitLudmila from '../images/team/Business_portrait_Ludmila.jpg';
+import PortraitSarah from '../images/team/Business_portrait_Sarah.jpg';
 import NotebookIMG from '../images/notebook.jpg';
 const OptimizedNotebookIMG = await getImage({ src: NotebookIMG });
 ---
@@ -123,7 +126,7 @@ const OptimizedNotebookIMG = await getImage({ src: NotebookIMG });
           <!-- end counter item -->
         </div>
         <div
-          class='col-xl-4 col-lg-6 col-md-4 text-center animation-float sm-mb-65px'
+          class='col-xl-4 col-lg-6 col-md-4 text-center sm-mb-65px'
           data-anime='{ "el": "childs", "scale": [0, 1], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 100, "easing": "easeOutQuad" }'
         >
           <Image
@@ -174,6 +177,142 @@ const OptimizedNotebookIMG = await getImage({ src: NotebookIMG });
     </div>
   </section>
   <!-- end section -->
+
+  <!-- start section -->
+  <section class='position-relative'>
+    <div
+      id='particles-03'
+      data-particle='true'
+      data-particle-options='{"particles": {"number": {"value": 5,"density": {"enable": true,"value_area": 1000}},"color":{"value":["#b7b9be", "#dd6531"]},"shape": {"type": "circle","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 0.5,"random": false,"anim": {"enable": false,"speed": 1,"sync": false}},"size": {"value": 8,"random": true,"anim": {"enable": false,"sync": true}},"move": {"enable": true,"speed":2,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}'
+      class='position-absolute h-100 top-0 left-0 z-index-minus-1'
+    >
+    </div>
+    <div class='container'>
+      <div class='row justify-content-center mb-3'>
+        <div
+          class='col-lg-7 text-center'
+          data-anime='{  "opacity": [0,1], "duration": 800, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
+        >
+          <span
+            class='fw-600 ls-1px fs-16 alt-font mb-5px d-inline-block text-uppercase text-base-color'
+            >Meet our people</span
+          >
+          <h2 class='alt-font text-dark-gray fw-600 ls-minus-2px'>Leading experts</h2>
+        </div>
+      </div>
+      <div
+        class='row row-cols-1 row-cols-lg-4 row-cols-sm-2 justify-content-center'
+        data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 800, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'
+      >
+        <!-- start team member item -->
+        <div class='col text-center team-style-05 md-mb-40px'>
+          <div
+            class='position-relative border-radius-4px overflow-hidden mb-30px last-paragraph-no-margin'
+          >
+            <Image
+              src={PortraitSilvia}
+              alt='Business portrait of Silvia Vilcekova'
+              loading='eager'
+            />
+            <div
+              class='w-100 h-100 d-flex flex-column justify-content-center align-items-center p-40px lg-p-30px team-content bg-gradient-dark-orange-transparent'
+            >
+              <div class='social-icon fs-20'>
+                <a
+                  href='https://www.linkedin.com/in/doc-ing-silvia-vil%C4%8Dekov%C3%A1-phd-b28ba142/'
+                  target='_blank'
+                  class='text-white'
+                  aria-label='LinkedIn profile of LCA team leader, doc. ing. Silvia Vilcekova'
+                  ><i class='fa-brands fa-linkedin'></i></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class='alt-font fw-600 text-dark-gray lh-22 fs-18'>Silvia Vilcekova</div>
+          <span>Co-founder and LCA team lead</span>
+        </div>
+        <!-- end team member item -->
+        <!-- start team member item -->
+        <div class='col text-center team-style-05 md-mb-40px'>
+          <div
+            class='position-relative border-radius-4px overflow-hidden mb-30px last-paragraph-no-margin'
+          >
+            <Image src={PortraitSamuel} alt='Business portrait of Samuel Sura' loading='eager' />
+            <div
+              class='w-100 h-100 d-flex flex-column justify-content-center align-items-center p-40px team-content bg-gradient-dark-orange-transparent'
+            >
+              <div class='social-icon fs-20'>
+                <a
+                  href='https://www.linkedin.com/in/samuel-sura-a2507a31/'
+                  target='_blank'
+                  class='text-white'
+                  aria-label='LinkedIn profile of Samuel Sura, CEO'
+                  ><i class='fa-brands fa-linkedin'></i></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class='alt-font fw-600 text-dark-gray lh-22 fs-18'>Samuel Sura</div>
+          <span>Co-founder & sales</span>
+        </div>
+        <!-- end team member item -->
+        <!-- start team member item -->
+        <div class='col text-center team-style-05 xs-mb-40px'>
+          <div
+            class='position-relative border-radius-4px overflow-hidden mb-30px last-paragraph-no-margin'
+          >
+            <Image
+              src={PortraitLudmila}
+              alt='Business portrait of Ludmila Vaculova Meciarova'
+              loading='eager'
+            />
+            <div
+              class='w-100 h-100 d-flex flex-column justify-content-center align-items-center p-40px team-content bg-gradient-dark-orange-transparent'
+            >
+              <div class='social-icon fs-20'>
+                <a
+                  href='https://www.linkedin.com/in/ludmila-meciarova-6437a412a'
+                  target='_blank'
+                  class='text-white'
+                  aria-label='LinkedIn profile of LCA engineer, Ludmila Vaculova Meciarova'
+                  ><i class='fa-brands fa-linkedin'></i></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class='alt-font fw-600 text-dark-gray lh-22 fs-18'>Ludmila Vaculova Meciarova</div>
+          <span>LCA consultant</span>
+        </div>
+        <!-- end team member item -->
+        <!-- start team member item -->
+        <div class='col text-center team-style-05'>
+          <div
+            class='position-relative border-radius-4px overflow-hidden mb-30px last-paragraph-no-margin'
+          >
+            <Image src={PortraitSarah} alt='Business portrait of Sarah Curpen' loading='eager' />
+            <div
+              class='w-100 h-100 d-flex flex-column justify-content-center align-items-center p-40px team-content bg-gradient-dark-orange-transparent'
+            >
+              <div class='social-icon fs-20'>
+                <a
+                  href='https://www.linkedin.com/in/sarah-curpen-196179231'
+                  target='_blank'
+                  class='text-white'
+                  aria-label='LinkedIn profile of LCA enigneer, Sarah Curpen'
+                  ><i class='fa-brands fa-linkedin'></i></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class='alt-font fw-600 text-dark-gray lh-22 fs-18'>Sarah Curpen</div>
+          <span>LCA consultant & sales</span>
+        </div>
+        <!-- end team member item -->
+      </div>
+    </div>
+  </section>
+  <!-- end section -->
+
   <!-- start section -->
   <section class='p-0 bg-dark-gray overflow-hidden'>
     <div class='container-fluid p-0'>
@@ -376,7 +515,7 @@ const OptimizedNotebookIMG = await getImage({ src: NotebookIMG });
           <p class='w-90 xs-w-100 mx-auto mx-lg-0'>
             Our consultancy service is founded on the principle of partnership, where we view the
             client-consultant relationship as a collaborative journey towards achieving
-            sustainability goals.
+            sustainability goals
           </p>
           <a
             href='/contact'
@@ -384,6 +523,102 @@ const OptimizedNotebookIMG = await getImage({ src: NotebookIMG });
             >Get started now!</a
           >
         </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section -->
+  <!-- start section -->
+  <section class='position-relative'>
+    <div
+      id='particles-02'
+      data-particle='true'
+      data-particle-options='{"particles": {"number": {"value": 5,"density": {"enable": true,"value_area": 1000}},"color":{"value":["#b7b9be", "#dd6531"]},"shape": {"type": "circle","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 0.5,"random": false,"anim": {"enable": false,"speed": 1,"sync": false}},"size": {"value": 8,"random": true,"anim": {"enable": false,"sync": true}},"move": {"enable": true,"speed":2,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}'
+      class='position-absolute h-100 top-0 left-0 z-index-minus-1'
+    >
+    </div>
+    <div class='container'>
+      <div class='row justify-content-center mb-2'>
+        <div
+          class='col-lg-7 text-center'
+          data-anime='{ "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
+        >
+          <span
+            class='fw-600 ls-1px fs-16 alt-font d-inline-block text-uppercase mb-5px text-base-color'
+            >What Our Clients Say</span
+          >
+          <h2 class='alt-font text-dark-gray fw-600 ls-minus-2px'>Client testimonials</h2>
+        </div>
+      </div>
+      <div
+        class='row row-cols-1 row-cols-lg-3 row-cols-md-2 justify-content-center'
+        data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
+      >
+        <!-- start testimonial item -->
+        <div class='col md-mb-30px'>
+          <div
+            class='testimonials testimonials-style-05 last-paragraph-no-margin d-flex flex-column h-100'
+          >
+            <div
+              class='testimonials-bubble border-radius-5px border border-color-extra-medium-gray bg-white pt-30px pb-30px ps-40px pe-40px lg-p-25px mb-35px h-100'
+            >
+              <p>
+                I was very satisfied with the professional approach, communication and speed of
+                processing by EPD Clarity. Based on my own experience with EPDs, I have recommended
+                EPD Clarity to other Saint-Gobain divisions.
+              </p>
+            </div>
+            <div class='author ps-20px pe-20px'>
+              <div class='d-inline-block align-middle lh-20'>
+                <span class='fw-600 fs-18 text-dark-gray d-block mb-5px'>Ing. Vladimir Balent</span>
+                <div class='fs-15'>Saint-Gobain Construction Products</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end testimonial item -->
+        <!-- start testimonial item -->
+        <div class='col'>
+          <div
+            class='testimonials testimonials-style-05 last-paragraph-no-margin d-flex flex-column h-100'
+          >
+            <div
+              class='testimonials-bubble border-radius-5px border border-color-extra-medium-gray bg-white pt-30px pb-30px ps-40px pe-40px lg-p-25px mb-35px h-100'
+            >
+              <p>Cooperation with EPD Clarity was very good and smooth in every respect.</p>
+            </div>
+            <div class='author ps-20px pe-20px'>
+              <div class='d-inline-block align-middle lh-20'>
+                <span class='fw-600 fs-18 text-dark-gray d-block mb-5px'
+                  >Ing. Gabriel Szollosi
+                </span>
+                <div class='fs-15'>Wienerbrger</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end testimonial item -->
+        <!-- start testimonial item -->
+        <div class='col md-mb-30px'>
+          <div
+            class='testimonials testimonials-style-05 last-paragraph-no-margin d-flex flex-column h-100'
+          >
+            <div
+              class='testimonials-bubble border-radius-5px border border-color-extra-medium-gray bg-white pt-30px pb-30px ps-40px pe-40px lg-p-25px mb-35px h-100'
+            >
+              <p>
+                I highly appreciate the professional cooperation with Professor Vilcekova. We
+                recommend EPD Clarity as a reliable partner in solving EPD challenges.
+              </p>
+            </div>
+            <div class='author ps-20px pe-20px'>
+              <div class='d-inline-block align-middle lh-20'>
+                <span class='fw-600 fs-18 text-dark-gray d-block mb-5px'>Jan Kovacik</span>
+                <div class='fs-15'>GreenCon International</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end testimonial item -->
       </div>
     </div>
   </section>
