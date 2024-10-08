@@ -1,8 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { Image, getImage } from 'astro:assets';
-import PortraitSamuel from '../images/team/Business_portrait_Samuel.jpg';
 import PortraitSilvia from '../images/team/Business_portrait_Silvia.jpg';
+import PortraitSamuel from '../images/team/Business_portrait_Samuel.jpg';
 import PortraitLudmila from '../images/team/Business_portrait_Ludmila.jpg';
 import PortraitSarah from '../images/team/Business_portrait_Sarah.jpg';
 import NatureIMG from '../images/nature.jpg';
@@ -557,7 +557,7 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
         >
           <span
             class='fw-600 ls-1px fs-16 alt-font d-inline-block text-uppercase mb-5px text-base-color'
-            >Few good reasons</span
+            >What Our Clients Say</span
           >
           <h2 class='alt-font text-dark-gray fw-600 ls-minus-2px'>Client testimonials</h2>
         </div>
@@ -590,6 +590,27 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
         </div>
         <!-- end testimonial item -->
         <!-- start testimonial item -->
+        <div class='col'>
+          <div
+            class='testimonials testimonials-style-05 last-paragraph-no-margin d-flex flex-column h-100'
+          >
+            <div
+              class='testimonials-bubble border-radius-5px border border-color-extra-medium-gray bg-white pt-30px pb-30px ps-40px pe-40px lg-p-25px mb-35px h-100'
+            >
+              <p>Cooperation with EPD Clarity was very good and smooth in every respect.</p>
+            </div>
+            <div class='author ps-20px pe-20px'>
+              <div class='d-inline-block align-middle lh-20'>
+                <span class='fw-600 fs-18 text-dark-gray d-block mb-5px'
+                  >Ing. Gabriel Szollosi
+                </span>
+                <div class='fs-15'>Wienerbrger</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end testimonial item -->
+        <!-- start testimonial item -->
         <div class='col md-mb-30px'>
           <div
             class='testimonials testimonials-style-05 last-paragraph-no-margin d-flex flex-column h-100'
@@ -606,27 +627,6 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
               <div class='d-inline-block align-middle lh-20'>
                 <span class='fw-600 fs-18 text-dark-gray d-block mb-5px'>Jan Kovacik</span>
                 <div class='fs-15'>GreenCon International</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end testimonial item -->
-        <!-- start testimonial item -->
-        <div class='col'>
-          <div
-            class='testimonials testimonials-style-05 last-paragraph-no-margin d-flex flex-column h-100'
-          >
-            <div
-              class='testimonials-bubble border-radius-5px border border-color-extra-medium-gray bg-white pt-30px pb-30px ps-40px pe-40px lg-p-25px mb-35px h-100'
-            >
-              <p>Cooperation with EPD Clarity was very good and smooth in every respect.</p>
-            </div>
-            <div class='author ps-20px pe-20px'>
-              <div class='d-inline-block align-middle lh-20'>
-                <span class='fw-600 fs-18 text-dark-gray d-block mb-5px'
-                  >Ing. Gabriel Szollosi
-                </span>
-                <div class='fs-15'>Wienerbrger</div>
               </div>
             </div>
           </div>
