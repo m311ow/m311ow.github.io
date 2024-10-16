@@ -24,7 +24,7 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
 <BaseLayout title='Home' description='Landing page'>
   <!-- start section -->
   <section
-    class='p-0 border-radius-6px full-screen md-h-600px sm-h-450px ipad-top-space-margin position-relative overflow-hidden'
+    class='p-0 overflow-hidden border-radius-6px full-screen md-h-600px sm-h-450px ipad-top-space-margin position-relative'
   >
     <div class='absolute-bottom-center left-50px z-index-1'>
       <Image
@@ -46,7 +46,7 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
     </div>
     <div
       id='particles-style-01'
-      class='position-absolute h-100 top-0 left-0 w-100'
+      class='top-0 left-0 position-absolute h-100 w-100'
       data-particle='true'
       data-particle-options='{"particles":{"number":{"value":10,"density":{"enable":true,"value_area":800}},"color":{"value":["#000000", "#BEFF01"]},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":1,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":4,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":false,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":6,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":false,"mode":"repulse"},"onclick":{"enable":false,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true}'
     >
@@ -54,7 +54,7 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
     <div class='looping-wrapper md-h-100'></div>
     <div class='container h-100 position-relative'>
       <div class='row align-items-center justify-content-center h-100'>
-        <div class='col-12 text-center z-index-2'>
+        <div class='text-center col-12 z-index-2'>
           <!-- <div
             class='fs-120 lh-120 sm-fs-75 md-fs-100 text-dark-gray fw-600 ls-minus-4px'
             data-anime='{ "el": "lines", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 500, "staggervalue": 300, "easing": "easeOutQuad" }'
@@ -78,7 +78,7 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
         data-anime='{ "translateX": [0, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'
       >
         <div
-          class='col swiper text-center feather-shadow'
+          class='text-center col swiper feather-shadow'
           data-slider-options='{ "slidesPerView": 2, "spaceBetween":0, "speed": 6000, "loop": true, "pagination": { "el": ".slider-four-slide-pagination-2", "clickable": false }, "allowTouchMove": false, "autoplay": { "delay":0, "disableOnInteraction": false }, "navigation": { "nextEl": ".slider-four-slide-next-2", "prevEl": ".slider-four-slide-prev-2" }, "keyboard": { "enabled": true, "onlyInViewport": true }, "breakpoints": { "1200": { "slidesPerView": 6 }, "992": { "slidesPerView": 4 }, "768": { "slidesPerView": 3 } }, "effect": "slide" }'
         >
           <div class='swiper-wrapper marquee-slide'>
@@ -153,12 +153,12 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
   <!-- end section -->
 
   <!-- start section -->
-  <section class='position-relative overflow-hidden'>
+  <section class='overflow-hidden position-relative'>
     <div
       id='particles-01'
       data-particle='true'
       data-particle-options='{"particles": {"number": {"value": 5,"density": {"enable": true,"value_area": 1000}},"color":{"value":["#b7b9be", "#dd6531"]},"shape": {"type": "circle","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 0.5,"random": false,"anim": {"enable": false,"speed": 1,"sync": false}},"size": {"value": 8,"random": true,"anim": {"enable": false,"sync": true}},"move": {"enable": true,"speed":2,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}'
-      class='position-absolute h-100 top-0 left-0 z-index-minus-1'
+      class='top-0 left-0 position-absolute h-100 z-index-minus-1'
     >
     </div>
     <div class='container'>
@@ -221,16 +221,16 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
           <!-- end features box item -->
         </div>
       </div>
-      <div class='row align-items-center mt-4 lg-mt-2 mb-50px lg-mb-0'>
+      <div class='mt-4 row align-items-center lg-mt-2 mb-50px lg-mb-0'>
         <div class='col-lg-6 position-relative md-mb-70px'>
           <div
-            class='xs-w-100 w-75 overflow-hidden position-relative xs-w-80 border-radius-4px'
+            class='overflow-hidden xs-w-100 w-75 position-relative xs-w-80 border-radius-4px'
             data-anime='{ "effect": "slide", "direction": "lr", "color": "#dd6531", "duration": 1000, "delay": 0 }'
           >
             <Image src={NatureIMG} alt='green leaves' class='w-100' loading='eager' />
           </div>
           <div
-            class='border-radius-4px position-absolute right-minus-15px md-right-15px bottom-minus-50px xs-w-100 w-80 overflow-hidden'
+            class='overflow-hidden border-radius-4px position-absolute right-minus-15px md-right-15px bottom-minus-50px xs-w-100 w-80'
             data-bottom-top='transform: translateY(50px)'
             data-top-bottom='transform: translateY(-50px)'
             data-anime='{ "effect": "slide", "direction": "rl", "color": "#292d36", "duration": 1000, "delay": 500 }'
@@ -271,12 +271,12 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
   <!-- end section -->
   <!-- start section -->
   <section
-    class='bg-gradient-very-light-gray position-relative z-index-0 border-radius-6px lg-border-radius-0px overflow-hidden'
+    class='overflow-hidden bg-gradient-very-light-gray position-relative z-index-0 border-radius-6px lg-border-radius-0px'
   >
     <div class='container'>
-      <div class='row justify-content-center mb-3'>
+      <div class='mb-3 row justify-content-center'>
         <div
-          class='col-lg-7 text-center'
+          class='text-center col-lg-7'
           data-anime='{  "opacity": [0,1], "duration": 800, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
         >
           <span
@@ -292,7 +292,7 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
       >
         <div class='col interactive-banner-style-02 hover-box dark-hover md-mb-30px'>
           <div
-            class='h-100 text-center position-relative border-radius-6px box-shadow-quadruple-large overflow-hidden'
+            class='overflow-hidden text-center h-100 position-relative border-radius-6px box-shadow-quadruple-large'
           >
             <figure class='m-0' style='padding-bottom: 215.75px;'>
               <a href='/service-detail-lca' class='position-relative d-block'>
@@ -304,12 +304,12 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
                   loading='eager'
                 />
                 <div
-                  class='label position-absolute right-20px top-20px bg-base-color fw-600 text-white text-uppercase border-radius-30px ps-15px pe-15px fs-11 ls-05px'
+                  class='text-white label position-absolute right-20px top-20px bg-base-color fw-600 text-uppercase border-radius-30px ps-15px pe-15px fs-11 ls-05px'
                 >
                   LCA
                 </div>
               </a>
-              <figcaption class='w-100 position-absolute bottom-0px bg-white'>
+              <figcaption class='bg-white w-100 position-absolute bottom-0px'>
                 <div
                   class='position-relative z-index-2 p-25px pt-25px pb-15px border-bottom border-dark-opacity'
                 >
@@ -337,7 +337,7 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
 
         <div class='col interactive-banner-style-02 hover-box dark-hover md-mb-30px'>
           <div
-            class='h-100 text-center position-relative border-radius-6px box-shadow-quadruple-large overflow-hidden'
+            class='overflow-hidden text-center h-100 position-relative border-radius-6px box-shadow-quadruple-large'
           >
             <figure class='m-0' style='padding-bottom: 215.75px;'>
               <a href='/service-detail-epd' class='position-relative d-block' data-astro-prefetch>
@@ -349,12 +349,12 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
                   loading='eager'
                 />
                 <div
-                  class='label position-absolute right-20px top-20px bg-base-color fw-600 text-white text-uppercase border-radius-30px ps-15px pe-15px fs-11 ls-05px'
+                  class='text-white label position-absolute right-20px top-20px bg-base-color fw-600 text-uppercase border-radius-30px ps-15px pe-15px fs-11 ls-05px'
                 >
                   EPD
                 </div>
               </a>
-              <figcaption class='w-100 position-absolute bottom-0px bg-white'>
+              <figcaption class='bg-white w-100 position-absolute bottom-0px'>
                 <div
                   class='position-relative z-index-2 p-25px pt-25px pb-15px border-bottom border-dark-opacity'
                 >
@@ -382,18 +382,18 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
 
         <div class='col interactive-banner-style-02 hover-box dark-hover'>
           <div
-            class='h-100 text-center position-relative border-radius-6px box-shadow-quadruple-large overflow-hidden'
+            class='overflow-hidden text-center h-100 position-relative border-radius-6px box-shadow-quadruple-large'
           >
             <figure class='m-0' style='padding-bottom: 215.75px;'>
               <a href='/service-detail-cfp' class='position-relative d-block' data-astro-prefetch>
                 <Image src={CFPserviceIMG} alt='leaf' class='w-100' height='400' loading='eager' />
                 <div
-                  class='label position-absolute right-20px top-20px bg-base-color fw-600 text-white text-uppercase border-radius-30px ps-15px pe-15px fs-11 ls-05px'
+                  class='text-white label position-absolute right-20px top-20px bg-base-color fw-600 text-uppercase border-radius-30px ps-15px pe-15px fs-11 ls-05px'
                 >
                   CFP
                 </div>
               </a>
-              <figcaption class='w-100 position-absolute bottom-0px bg-white'>
+              <figcaption class='bg-white w-100 position-absolute bottom-0px'>
                 <div
                   class='position-relative z-index-2 p-25px pt-25px pb-15px border-bottom border-dark-opacity'
                 >
@@ -429,7 +429,7 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
       id='particles-02'
       data-particle='true'
       data-particle-options='{"particles": {"number": {"value": 5,"density": {"enable": true,"value_area": 1000}},"color":{"value":["#b7b9be", "#dd6531"]},"shape": {"type": "circle","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 0.5,"random": false,"anim": {"enable": false,"speed": 1,"sync": false}},"size": {"value": 8,"random": true,"anim": {"enable": false,"sync": true}},"move": {"enable": true,"speed":2,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}'
-      class='position-absolute h-100 top-0 left-0 z-index-minus-1'
+      class='top-0 left-0 position-absolute h-100 z-index-minus-1'
     >
     </div>
     <div class='container'>
@@ -468,7 +468,7 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
                   aria-expanded='true'
                   data-bs-parent='#accordion-style-02'
                 >
-                  <div class='accordion-title mb-0 position-relative text-dark-gray'>
+                  <div class='mb-0 accordion-title position-relative text-dark-gray'>
                     <i class='feather icon-feather-minus'></i><span class='fw-600 fs-20'
                       >Single product</span
                     >
@@ -498,7 +498,7 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
                   aria-expanded='false'
                   data-bs-parent='#accordion-style-02'
                 >
-                  <div class='accordion-title mb-0 position-relative text-dark-gray'>
+                  <div class='mb-0 accordion-title position-relative text-dark-gray'>
                     <i class='feather icon-feather-plus'></i><span class='fw-600 fs-20'
                       >Multiple products</span
                     >
@@ -530,7 +530,7 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
         class='row'
         data-anime='{ "el": "childs", "translateY": [0, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'
       >
-        <div class='col-12 fs-22 fw-500 ls-minus-1px text-dark-gray text-center'>
+        <div class='text-center col-12 fs-22 fw-500 ls-minus-1px text-dark-gray'>
           For any queries on EPD advisory services, write us at <a
             class='text-dark-gray text-decoration-line-bottom'
             href='mailto:info@yourdomain.com'>info@epdclarity.com</a
@@ -546,13 +546,13 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
       id='particles-02'
       data-particle='true'
       data-particle-options='{"particles": {"number": {"value": 5,"density": {"enable": true,"value_area": 1000}},"color":{"value":["#b7b9be", "#dd6531"]},"shape": {"type": "circle","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 0.5,"random": false,"anim": {"enable": false,"speed": 1,"sync": false}},"size": {"value": 8,"random": true,"anim": {"enable": false,"sync": true}},"move": {"enable": true,"speed":2,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}'
-      class='position-absolute h-100 top-0 left-0 z-index-minus-1'
+      class='top-0 left-0 position-absolute h-100 z-index-minus-1'
     >
     </div>
     <div class='container'>
-      <div class='row justify-content-center mb-2'>
+      <div class='mb-2 row justify-content-center'>
         <div
-          class='col-lg-7 text-center'
+          class='text-center col-lg-7'
           data-anime='{ "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
         >
           <span
@@ -572,7 +572,7 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
             class='testimonials testimonials-style-05 last-paragraph-no-margin d-flex flex-column h-100'
           >
             <div
-              class='testimonials-bubble border-radius-5px border border-color-extra-medium-gray bg-white pt-30px pb-30px ps-40px pe-40px lg-p-25px mb-35px h-100'
+              class='bg-white border testimonials-bubble border-radius-5px text-base-color border-color-base-color pt-30px pb-30px ps-40px pe-40px lg-p-25px mb-35px h-100'
             >
               <p>
                 I was very satisfied with the professional approach, communication and speed of
@@ -581,7 +581,7 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
               </p>
             </div>
             <div class='author ps-20px pe-20px'>
-              <div class='d-inline-block align-middle lh-20'>
+              <div class='align-middle d-inline-block lh-20'>
                 <span class='fw-600 fs-18 text-dark-gray d-block mb-5px'>Ing. Vladimir Balent</span>
                 <div class='fs-15'>Saint-Gobain Construction Products</div>
               </div>
@@ -595,12 +595,12 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
             class='testimonials testimonials-style-05 last-paragraph-no-margin d-flex flex-column h-100'
           >
             <div
-              class='testimonials-bubble border-radius-5px border border-color-extra-medium-gray bg-white pt-30px pb-30px ps-40px pe-40px lg-p-25px mb-35px h-100'
+              class='bg-white border testimonials-bubble border-radius-5px text-base-color border-color-base-color pt-30px pb-30px ps-40px pe-40px lg-p-25px mb-35px h-100'
             >
               <p>Cooperation with EPD Clarity was very good and smooth in every respect.</p>
             </div>
             <div class='author ps-20px pe-20px'>
-              <div class='d-inline-block align-middle lh-20'>
+              <div class='align-middle d-inline-block lh-20'>
                 <span class='fw-600 fs-18 text-dark-gray d-block mb-5px'
                   >Ing. Gabriel Szollosi
                 </span>
@@ -616,7 +616,7 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
             class='testimonials testimonials-style-05 last-paragraph-no-margin d-flex flex-column h-100'
           >
             <div
-              class='testimonials-bubble border-radius-5px border border-color-extra-medium-gray bg-white pt-30px pb-30px ps-40px pe-40px lg-p-25px mb-35px h-100'
+              class='bg-white border testimonials-bubble border-radius-5px text-base-color border-color-base-color pt-30px pb-30px ps-40px pe-40px lg-p-25px mb-35px h-100'
             >
               <p>
                 I highly appreciate the professional cooperation with Professor Vilcekova. We
@@ -624,7 +624,7 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
               </p>
             </div>
             <div class='author ps-20px pe-20px'>
-              <div class='d-inline-block align-middle lh-20'>
+              <div class='align-middle d-inline-block lh-20'>
                 <span class='fw-600 fs-18 text-dark-gray d-block mb-5px'>Jan Kovacik</span>
                 <div class='fs-15'>GreenCon International</div>
               </div>
@@ -642,13 +642,13 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
       id='particles-03'
       data-particle='true'
       data-particle-options='{"particles": {"number": {"value": 5,"density": {"enable": true,"value_area": 1000}},"color":{"value":["#b7b9be", "#dd6531"]},"shape": {"type": "circle","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 0.5,"random": false,"anim": {"enable": false,"speed": 1,"sync": false}},"size": {"value": 8,"random": true,"anim": {"enable": false,"sync": true}},"move": {"enable": true,"speed":2,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}'
-      class='position-absolute h-100 top-0 left-0 z-index-minus-1'
+      class='top-0 left-0 position-absolute h-100 z-index-minus-1'
     >
     </div>
     <div class='container'>
-      <div class='row justify-content-center mb-3'>
+      <div class='mb-3 row justify-content-center'>
         <div
-          class='col-lg-7 text-center'
+          class='text-center col-lg-7'
           data-anime='{  "opacity": [0,1], "duration": 800, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
         >
           <span
@@ -663,9 +663,9 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
         data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 800, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'
       >
         <!-- start team member item -->
-        <div class='col text-center team-style-05 md-mb-40px'>
+        <div class='text-center col team-style-05 md-mb-40px'>
           <div
-            class='position-relative border-radius-4px overflow-hidden mb-30px last-paragraph-no-margin'
+            class='overflow-hidden position-relative border-radius-4px mb-30px last-paragraph-no-margin'
           >
             <Image
               src={PortraitSilvia}
@@ -691,9 +691,9 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
         </div>
         <!-- end team member item -->
         <!-- start team member item -->
-        <div class='col text-center team-style-05 md-mb-40px'>
+        <div class='text-center col team-style-05 md-mb-40px'>
           <div
-            class='position-relative border-radius-4px overflow-hidden mb-30px last-paragraph-no-margin'
+            class='overflow-hidden position-relative border-radius-4px mb-30px last-paragraph-no-margin'
           >
             <Image src={PortraitSamuel} alt='Business portrait of Samuel Sura' loading='eager' />
             <div
@@ -715,9 +715,9 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
         </div>
         <!-- end team member item -->
         <!-- start team member item -->
-        <div class='col text-center team-style-05 xs-mb-40px'>
+        <div class='text-center col team-style-05 xs-mb-40px'>
           <div
-            class='position-relative border-radius-4px overflow-hidden mb-30px last-paragraph-no-margin'
+            class='overflow-hidden position-relative border-radius-4px mb-30px last-paragraph-no-margin'
           >
             <Image
               src={PortraitLudmila}
@@ -743,9 +743,9 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
         </div>
         <!-- end team member item -->
         <!-- start team member item -->
-        <div class='col text-center team-style-05'>
+        <div class='text-center col team-style-05'>
           <div
-            class='position-relative border-radius-4px overflow-hidden mb-30px last-paragraph-no-margin'
+            class='overflow-hidden position-relative border-radius-4px mb-30px last-paragraph-no-margin'
           >
             <Image src={PortraitSarah} alt='Business portrait of Sarah Curpen' loading='eager' />
             <div
@@ -773,9 +773,9 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
   <!-- start section -->
   <section class='bg-very-light-gray'>
     <div class='container'>
-      <div class='row justify-content-center mb-2'>
+      <div class='mb-2 row justify-content-center'>
         <div
-          class='col-lg-7 text-center'
+          class='text-center col-lg-7'
           data-anime='{ "opacity": [0,1], "duration": 800, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
         >
           <span class='fw-600 ls-1px fs-16 alt-font d-inline-block text-uppercase text-base-color'
@@ -787,14 +787,14 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
       <div class='row'>
         <div class='col-12 p-md-0'>
           <ul
-            class='blog-grid blog-wrapper grid-loading grid grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large'
+            class='grid blog-grid blog-wrapper grid-loading grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large'
             data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay":100, "staggervalue": 300, "easing": "easeOutQuad" }'
           >
             <li class='grid-sizer'></li>
 
             <!-- start blog item -->
             <li class='grid-item'>
-              <div class='card border-0 border-radius-4px box-shadow-quadruple-large'>
+              <div class='border-0 card border-radius-4px box-shadow-quadruple-large'>
                 <div class='blog-image'>
                   <a href='/news/rising-demand-for-environmental-declarations' class='d-block'>
                     <Image
@@ -815,7 +815,7 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
                     Environmental Product Declarations...
                   </p>
                   <div
-                    class='author d-flex justify-content-center align-items-center position-relative overflow-hidden fs-16'
+                    class='overflow-hidden author d-flex justify-content-center align-items-center position-relative fs-16'
                   >
                     <div class='me-auto'>
                       <span class='blog-date d-inline-block'>22 August 2024</span>
@@ -833,7 +833,7 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
 
             <!-- start blog item -->
             <li class='grid-item'>
-              <div class='card border-0 border-radius-4px box-shadow-quadruple-large'>
+              <div class='border-0 card border-radius-4px box-shadow-quadruple-large'>
                 <div class='blog-image'>
                   <a href='/news/lca-is-gaining-traction-in-construction-sector' class='d-block'>
                     <Image
@@ -854,7 +854,7 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
                     attention, particularly in the construction sector...
                   </p>
                   <div
-                    class='author d-flex justify-content-center align-items-center position-relative overflow-hidden fs-16'
+                    class='overflow-hidden author d-flex justify-content-center align-items-center position-relative fs-16'
                   >
                     <div class='me-auto'>
                       <span class='blog-date d-inline-block'>18 June 2024</span>
@@ -872,7 +872,7 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
 
             <!-- start blog item -->
             <li class='grid-item'>
-              <div class='card border-0 border-radius-4px box-shadow-quadruple-large'>
+              <div class='border-0 card border-radius-4px box-shadow-quadruple-large'>
                 <div class='blog-image'>
                   <a href='/news/choosing-the-right-programme-operator-for-you' class='d-block'>
                     <Image
@@ -893,7 +893,7 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
                     Declarations...
                   </p>
                   <div
-                    class='author d-flex justify-content-center align-items-center position-relative overflow-hidden fs-16'
+                    class='overflow-hidden author d-flex justify-content-center align-items-center position-relative fs-16'
                   >
                     <div class='me-auto'>
                       <span class='blog-date d-inline-block'>18 June 2024</span>
@@ -926,7 +926,7 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
       >
         <div class='col-xl-5 col-lg-6 col-md-7 md-mb-25px'>
           <h2
-            class='alt-font text-white fw-500 mb-0 cd-headline zoom fancy-text-style-4 text-shadow-double-large ls-minus-1px'
+            class='mb-0 text-white alt-font fw-500 cd-headline zoom fancy-text-style-4 text-shadow-double-large ls-minus-1px'
           >
             Let's discuss your
             <span
@@ -939,13 +939,13 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
             <div
               class='feature-box-icon feature-box-icon-rounded w-110px h-110px xs-w-80px xs-h-80px rounded-circle bg-base-color me-20px xs-me-15px'
             >
-              <i class='line-icon-Handshake icon-extra-large text-white lh-100'></i>
+              <i class='text-white line-icon-Handshake icon-extra-large lh-100'></i>
             </div>
             <div class='feature-box-content last-paragraph-no-margin xs-mt-15px xs-mb-15px'>
-              <span class='fs-24 lh-32 xs-fs-22 xs-lh-32 text-white'
+              <span class='text-white fs-24 lh-32 xs-fs-22 xs-lh-32'
                 >Get in touch with us: <a
                   href='mailto:info@epdclarity.com'
-                  class='text-decoration-line-bottom text-white fw-500'>info@epdclarity.com</a
+                  class='text-white text-decoration-line-bottom fw-500'>info@epdclarity.com</a
                 ></span
               >
             </div>
