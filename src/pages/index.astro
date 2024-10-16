@@ -23,46 +23,60 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
 
 <BaseLayout title='Home' description='Landing page'>
   <!-- start section -->
-  <section
-    class='p-0 overflow-hidden border-radius-6px full-screen md-h-600px sm-h-450px ipad-top-space-margin position-relative'
-  >
-    <div class='absolute-bottom-center left-50px z-index-1'>
-      <Image
-        src={Bubble1}
-        alt='orange bubble'
-        class='animation-float lg-w-250px sm-w-150px'
-        loading='eager'
-      />
-    </div>
+  <!-- BENEFITS -->
+  <section class='pb-0 overflow-hidden position-relative'>
     <div
-      class='absolute-middle-right right-100px lg-right-0px top-150px sm-top-0px mt-70px z-index-1'
-    >
-      <Image
-        src={Bubble2}
-        alt='orange bubble'
-        class='animation-float lg-w-250px sm-w-150px'
-        loading='eager'
-      />
-    </div>
-    <div
-      id='particles-style-01'
-      class='top-0 left-0 position-absolute h-100 w-100'
+      id='particles-01'
       data-particle='true'
-      data-particle-options='{"particles":{"number":{"value":10,"density":{"enable":true,"value_area":800}},"color":{"value":["#000000", "#BEFF01"]},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":1,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":4,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":false,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":6,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":false,"mode":"repulse"},"onclick":{"enable":false,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true}'
+      data-particle-options='{"particles": {"number": {"value": 5,"density": {"enable": true,"value_area": 1000}},"color":{"value":["#b7b9be", "#dd6531"]},"shape": {"type": "circle","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 0.5,"random": false,"anim": {"enable": false,"speed": 1,"sync": false}},"size": {"value": 8,"random": true,"anim": {"enable": false,"sync": true}},"move": {"enable": true,"speed":2,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}'
+      class='top-0 left-0 position-absolute w-100 z-index-minus-1'
     >
     </div>
-    <div class='looping-wrapper md-h-100'></div>
-    <div class='container h-100 position-relative'>
-      <div class='row align-items-center justify-content-center h-100'>
-        <div class='text-center col-12 z-index-2'>
-          <!-- <div
-            class='fs-120 lh-120 sm-fs-75 md-fs-100 text-dark-gray fw-600 ls-minus-4px'
-            data-anime='{ "el": "lines", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 500, "staggervalue": 300, "easing": "easeOutQuad" }'
+    <div class='container'>
+      <h2
+        class='mt-8 mb-8 text-center hero-title sm-mt-16 text-base-color alt-font fw-600 ls-minus-2px'
+      >
+        Experts in developing and registering EPDs
+      </h2>
+      <div class='mt-4 mb-4 row align-items-start lg-mt-2 lg-mb-0'>
+        <div class='col-lg-6 position-relative sm-mb-0'>
+          <div
+            class='overflow-hidden xs-w-100 w-100 position-relative xs-w-80 border-radius-4px'
+            data-anime='{ "effect": "slide", "direction": "lr", "color": "#dd6531", "duration": 1000, "delay": 0 }'
           >
-            EPD and CFP for a greener prodcut portfolio
-          </div> -->
-          <div class='fs-120 lh-120 sm-fs-75 md-fs-100 text-dark-gray fw-600 ls-minus-4px'>
-            EPD and CFP <br /> for a greener <br /> product portfolio
+            <Image src={EPDmockupIMG} alt='green leaves' class='w-100' loading='eager' />
+          </div>
+        </div>
+        <div
+          class='col-lg-6 md-text-center'
+          data-anime='{ "opacity": [0, 1], "duration": 600, "delay": 0, "staggervalue": 150, "easing": "easeOutCirc" }'
+        >
+          <ul class='mb-8 ps-0 fs-20'>
+            <li class='mb-6 alt-font text-dark-gray fw-600'>Our services are fully remote</li>
+            <li class='mb-6 alt-font text-dark-gray fw-600'>
+              Compliant with international standards <br />EN 15804:2012+A2:2019 and EN ISO 14025
+            </li>
+            <li class='mb-6 alt-font text-dark-gray fw-600'>
+              Third-party verification and publication
+            </li>
+            <li class='mb-6 alt-font text-dark-gray fw-600'>
+              Experienced with wide range of products
+            </li>
+            <li class='mb-6 alt-font text-dark-gray fw-600'>
+              We work with businesses of all sizes, <wbr /> from startups to large enterprises
+            </li>
+          </ul>
+          <div class='d-inline-block'>
+            <a
+              href='/services'
+              class='btn btn-medium btn-dark-gray btn-box-shadow me-25px btn-round-edge'
+              data-astro-prefetch>Services</a
+            >
+            <a
+              href='/company'
+              class='btn btn-link btn-large text-dark-gray xs-mt-15px xs-mb-15px'
+              data-astro-prefetch>About us</a
+            >
           </div>
         </div>
       </div>
@@ -71,12 +85,24 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
   <!-- end section -->
 
   <!-- start section -->
-  <section class='big-section'>
+  <!-- LOGOS -->
+  <section class='pt-0'>
     <div class='container-fluid'>
       <div
         class='row position-relative clients-style-08'
         data-anime='{ "translateX": [0, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'
       >
+        <div
+          class='text-center col-sm-12'
+          data-anime='{  "opacity": [0,1], "duration": 800, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
+        >
+          <div
+            class='mt-0 mb-2 sm-mt-12 sm-mb-12 md-mb-8 lg-mt-8 fw-600 ls-1px fs-16 alt-font d-block text-uppercase text-base-color'
+          >
+            Trusted by
+          </div>
+        </div>
+
         <div
           class='text-center col swiper feather-shadow'
           data-slider-options='{ "slidesPerView": 2, "spaceBetween":0, "speed": 6000, "loop": true, "pagination": { "el": ".slider-four-slide-pagination-2", "clickable": false }, "allowTouchMove": false, "autoplay": { "delay":0, "disableOnInteraction": false }, "navigation": { "nextEl": ".slider-four-slide-next-2", "prevEl": ".slider-four-slide-prev-2" }, "keyboard": { "enabled": true, "onlyInViewport": true }, "breakpoints": { "1200": { "slidesPerView": 6 }, "992": { "slidesPerView": 4 }, "768": { "slidesPerView": 3 } }, "effect": "slide" }'
@@ -153,6 +179,7 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
   <!-- end section -->
 
   <!-- start section -->
+  <!-- FEATURE BOXES -->
   <section class='overflow-hidden position-relative'>
     <div
       id='particles-01'
@@ -221,54 +248,10 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
           <!-- end features box item -->
         </div>
       </div>
-      <div class='mt-4 row align-items-center lg-mt-2 mb-50px lg-mb-0'>
-        <div class='col-lg-6 position-relative md-mb-70px'>
-          <div
-            class='overflow-hidden xs-w-100 w-75 position-relative xs-w-80 border-radius-4px'
-            data-anime='{ "effect": "slide", "direction": "lr", "color": "#dd6531", "duration": 1000, "delay": 0 }'
-          >
-            <Image src={NatureIMG} alt='green leaves' class='w-100' loading='eager' />
-          </div>
-          <div
-            class='overflow-hidden border-radius-4px position-absolute right-minus-15px md-right-15px bottom-minus-50px xs-w-100 w-80'
-            data-bottom-top='transform: translateY(50px)'
-            data-top-bottom='transform: translateY(-50px)'
-            data-anime='{ "effect": "slide", "direction": "rl", "color": "#292d36", "duration": 1000, "delay": 500 }'
-          >
-            <Image src={EPDmockupIMG} alt='Environmental Product Declaration' class='w-100' />
-          </div>
-        </div>
-        <div
-          class='col-lg-5 offset-lg-1 md-mt-30px'
-          data-anime='{ "opacity": [0, 1], "duration": 600, "delay": 0, "staggervalue": 150, "easing": "easeOutCirc" }'
-        >
-          <span class='fs-20 mb-15px text-dark-gray fw-600 d-inline-block'
-            >Why Choose EPD Clarity?</span
-          >
-          <h2 class='alt-font fw-600 text-dark-gray ls-minus-2px mb-25px'>
-            We are experts in developing and registering EPDs and CFPs for various product types and
-            programme operators
-          </h2>
-          <p class='w-80 lg-w-100 mb-35px sm-mb-25px'>
-            Turnkey EPD and CFP supplier for single product or entire portfolio
-          </p>
-          <div class='d-inline-block'>
-            <a
-              href='/services'
-              class='btn btn-medium btn-dark-gray btn-box-shadow me-25px btn-round-edge'
-              data-astro-prefetch>Services</a
-            >
-            <a
-              href='/company'
-              class='btn btn-link btn-large text-dark-gray xs-mt-15px xs-mb-15px'
-              data-astro-prefetch>About us</a
-            >
-          </div>
-        </div>
-      </div>
     </div>
   </section>
   <!-- end section -->
+
   <!-- start section -->
   <section
     class='overflow-hidden bg-gradient-very-light-gray position-relative z-index-0 border-radius-6px lg-border-radius-0px'

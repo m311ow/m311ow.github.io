@@ -19833,3 +19833,18 @@ footer .footer-navbar .nav-item:last-child a {
 .footer-demo img {
   max-height: 55px !important;
 }
+
+/* additions to vendors */
+.text-center {
+  text-align: center !important;
+}
+
+@media (max-width: 991px) {
+  .md-text-center {
+    text-align: center !important;
+  }
+}
+
+h2 {
+  line-height: 1.2;
+}
