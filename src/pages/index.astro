@@ -19,6 +19,8 @@ import Bubble1 from '../images/bg/bubble-bg-01.png';
 import Bubble2 from '../images/bg/bubble-bg-02.png';
 const OptimizedTitleIMG = await getImage({ src: TitleIMG });
 const OptimizedFlareBG = await getImage({ src: FlareBG });
+
+const { site } = Astro;
 ---
 
 <BaseLayout title='Home' description='Landing page'>
@@ -287,7 +289,7 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
                   loading='eager'
                 />
                 <div
-                  class='text-white label position-absolute right-20px top-20px bg-base-color fw-600 text-uppercase border-radius-30px ps-15px pe-15px fs-11 ls-05px'
+                  class='text-white label position-absolute right-20px top-20px bg-base-color fw-600 text-uppercase border-radius-30px ps-15px pe-15px fs-16 ls-05px'
                 >
                   LCA
                 </div>
@@ -332,7 +334,7 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
                   loading='eager'
                 />
                 <div
-                  class='text-white label position-absolute right-20px top-20px bg-base-color fw-600 text-uppercase border-radius-30px ps-15px pe-15px fs-11 ls-05px'
+                  class='text-white label position-absolute right-20px top-20px bg-base-color fw-600 text-uppercase border-radius-30px ps-15px pe-15px fs-16 ls-05px'
                 >
                   EPD
                 </div>
@@ -371,7 +373,7 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
               <a href='/service-detail-cfp' class='position-relative d-block' data-astro-prefetch>
                 <Image src={CFPserviceIMG} alt='leaf' class='w-100' height='400' loading='eager' />
                 <div
-                  class='text-white label position-absolute right-20px top-20px bg-base-color fw-600 text-uppercase border-radius-30px ps-15px pe-15px fs-11 ls-05px'
+                  class='text-white label position-absolute right-20px top-20px bg-base-color fw-600 text-uppercase border-radius-30px ps-15px pe-15px fs-16 ls-05px'
                 >
                   CFP
                 </div>
@@ -407,7 +409,7 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
   </section>
   <!-- end section -->
   <!-- start section -->
-  <section class='pt-0 position-relative'>
+  <!-- <section class='pt-0 position-relative'>
     <div
       id='particles-02'
       data-particle='true'
@@ -441,7 +443,6 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
             data-active-icon='icon-feather-minus'
             data-inactive-icon='icon-feather-plus'
           >
-            <!-- start accordion item -->
             <div class='accordion-item active-accordion'>
               <div class='accordion-header border-bottom border-color-extra-medium-gray'>
                 <a
@@ -470,8 +471,6 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
                 </div>
               </div>
             </div>
-            <!-- end accordion item -->
-            <!-- start accordion item -->
             <div class='accordion-item'>
               <div class='accordion-header border-bottom border-color-extra-medium-gray'>
                 <a
@@ -504,7 +503,6 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
                 </div>
               </div>
             </div>
-            <!-- end accordion item -->
           </div>
         </div>
       </div>
@@ -521,7 +519,7 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- end section -->
   <!-- start section -->
   <section class='position-relative'>
@@ -753,6 +751,130 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
     </div>
   </section>
   <!-- end section -->
+
+  <!-- start section -->
+  <section class='bg-very-light-gray'>
+    <div class='container'>
+      <div class='row justify-content-center'>
+        <div
+          class='mb-2 text-center col-lg-7'
+          data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'
+        >
+          <span
+            class='fw-600 ls-1px fs-16 alt-font d-inline-block text-uppercase mb-5px text-base-color'
+            >Feel free to get in touch!</span
+          >
+          <h2 class='alt-font text-dark-gray fw-600 ls-minus-2px'>How can we help you?</h2>
+        </div>
+      </div>
+      <div
+        class='row row-cols-md-1 justify-content-center'
+        data-anime='{ "translateY": [100, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'
+      >
+        <div class='col-xl-9 col-lg-11'>
+          <!-- start contact form -->
+          <form
+            action='https://submit-form.com/ySMjBf7T5'
+            class='row contact-form-style-02'
+            data-botpoison-public-key='pk_bb4de19a-4531-403a-ac03-27ae93273f52'
+          >
+            <input type='hidden' name='_redirect' value=`${site}contact-success` />
+            <input type='hidden' name='_error' value=`${site}contact-fail` />
+            <input type='hidden' name='_append' value='false' />
+
+            <input type='hidden' name='_feedback.whitelabel' value='true' />
+
+            <div class='col-md-6 mb-30px'>
+              <input
+                class='box-shadow-quadruple-large input-name form-control required'
+                type='text'
+                name='name'
+                placeholder='Your name'
+                required
+              />
+            </div>
+            <div class='col-md-6 mb-30px'>
+              <input
+                class='box-shadow-quadruple-large form-control required'
+                type='email'
+                name='email'
+                placeholder='Your email address'
+                required
+              />
+            </div>
+            <div class='col-md-6 mb-30px'>
+              <input
+                class='box-shadow-quadruple-large form-control required'
+                type='text'
+                name='company'
+                placeholder='Your company name'
+                required
+              />
+            </div>
+            <div class='col-md-6 mb-30px'>
+              <input
+                class='box-shadow-quadruple-large form-control required'
+                type='text'
+                name='product_type'
+                placeholder='Type of product'
+                required
+              />
+            </div>
+            <!-- <div class='col-md-12 mb-30px'>
+              <textarea
+                class='box-shadow-quadruple-large form-control required'
+                cols='40'
+                rows='4'
+                name='message'
+                placeholder='Your message'
+                required></textarea>
+            </div> -->
+            <div class='col-md-12 mb-30px'>
+              <span class='alt-font text-dark-gray fw-600'>I am interested in:</span>
+              <div class='pt-3 services-options'>
+                <div>
+                  <input type='checkbox' name='lca-interest' id='lca-checkbox' /><label
+                    class='alt-font text-dark-gray fw-600'
+                    for='lca-checkbox'>LCA services</label
+                  >
+                </div>
+                <div>
+                  <input type='checkbox' name='epd-interest' id='epd-checkbox' /><label
+                    class='alt-font text-dark-gray fw-600'
+                    for='epd-checkbox'>EPD services</label
+                  >
+                </div>
+                <div>
+                  <input type='checkbox' name='cfp-interest' id='cfp-checkbox' /><label
+                    class='alt-font text-dark-gray fw-600'
+                    for='cfp-checkbox'>CFP services</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class='col-md-7 last-paragraph-no-margin'>
+              <p class='text-center text-md-start fs-16'>
+                By submitting, you consent to us collecting your data to provide the requested
+                services
+              </p>
+            </div>
+            <div class='text-center col-md-5 text-md-end sm-mt-20px'>
+              <button
+                class='btn btn-medium btn-dark-gray btn-box-shadow btn-round-edge'
+                type='submit'>Send message</button
+              >
+            </div>
+            <div class='col-12'>
+              <div class='form-results mt-20px d-none'></div>
+            </div>
+          </form>
+          <!-- end contact form -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section -->
+
   <!-- start section -->
   <section class='bg-very-light-gray'>
     <div class='container'>
@@ -939,3 +1061,22 @@ const OptimizedFlareBG = await getImage({ src: FlareBG });
   </section>
   <!-- end section -->
 </BaseLayout>
+
+<style>
+  .services-options {
+    display: flex;
+    gap: 2rem;
+  }
+
+  input[type='checkbox'] {
+    width: 18px;
+    height: 18px;
+    background: white;
+    border-radius: 5px;
+    border: 2px solid #555;
+  }
+
+  label {
+    margin-left: 8px;
+  }
+</style>
