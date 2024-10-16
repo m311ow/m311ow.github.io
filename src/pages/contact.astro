@@ -6,14 +6,14 @@ const { site } = Astro;
 <BaseLayout title='Contact' description='Page with contact form'>
   <!-- start page title -->
   <section
-    class='page-title-big-typography ipad-top-space-margin xs-py-0 pb-0'
+    class='pb-0 page-title-big-typography ipad-top-space-margin xs-py-0'
     data-parallax-background-ratio='0.5'
   >
     <div class='opacity-light'></div>
     <div class='container'>
       <div class='row align-items-center justify-content-center small-screen'>
         <div
-          class='col-lg-6 col-md-8 position-relative text-center page-title-extra-small'
+          class='text-center col-lg-6 col-md-8 position-relative page-title-extra-small'
           data-anime='{ "el": "childs", "rotateX": [90, 0], "opacity": [0,1], "staggervalue": 150, "easing": "easeOutQuad" }'
         >
           <h1 class='mb-5px alt-font text-dark-gray fw-400'>
@@ -24,7 +24,7 @@ const { site } = Astro;
           </h2>
         </div>
         <!-- <div
-          class='down-section text-center'
+          class='text-center down-section'
           data-anime='{ "translateY": [100, 0], "opacity": [0,1], "easing": "easeOutQuad" }'
         >
           <a href='#down-section' class='section-link'>
@@ -42,7 +42,7 @@ const { site } = Astro;
     <div class='container'>
       <div class='row justify-content-center'>
         <!-- <div
-          class='col-lg-7 text-center mb-2'
+          class='mb-2 text-center col-lg-7'
           data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'
         >
           <span
@@ -116,7 +116,7 @@ const { site } = Astro;
             </div> -->
             <div class='col-md-12 mb-30px'>
               <span class='alt-font text-dark-gray fw-600'>I am interested in:</span>
-              <div class='services-options pt-3'>
+              <div class='pt-3 services-options'>
                 <div>
                   <input type='checkbox' name='lca-interest' id='lca-checkbox' /><label
                     class='alt-font text-dark-gray fw-600'
@@ -139,11 +139,11 @@ const { site } = Astro;
             </div>
             <div class='col-md-7 last-paragraph-no-margin'>
               <p class='text-center text-md-start fs-16'>
-                By submitting this form, you agree to your personal data being collected for the
-                purpose of providing you with the requested services and information
+                By submitting, you consent to us collecting your data to provide the requested
+                services
               </p>
             </div>
-            <div class='col-md-5 text-center text-md-end sm-mt-20px'>
+            <div class='text-center col-md-5 text-md-end sm-mt-20px'>
               <button
                 class='btn btn-medium btn-dark-gray btn-box-shadow btn-round-edge'
                 type='submit'>Send message</button
@@ -165,7 +165,7 @@ const { site } = Astro;
       id='particles-01'
       data-particle='true'
       data-particle-options='{"particles": {"number": {"value": 6,"density": {"enable": true,"value_area": 1000}},"color":{"value":["#b7b9be", "#dd6531"]},"shape": {"type": "circle","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 0.5,"random": false,"anim": {"enable": false,"speed": 1,"sync": false}},"size": {"value": 8,"random": true,"anim": {"enable": false,"sync": true}},"move": {"enable": true,"speed":2,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}'
-      class='position-absolute h-100 top-0 left-0 z-index-minus-1'
+      class='top-0 left-0 position-absolute h-100 z-index-minus-1'
     >
     </div>
     <div class='container'>
