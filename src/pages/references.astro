@@ -1,0 +1,279 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { references } from '../references';
+import type { Reference } from '../references';
+const { site } = Astro;
+---
+
+<BaseLayout title='References' description='Page showcasing our references'>
+  <!-- start page title -->
+  <section
+    class='pb-0 page-title-big-typography ipad-top-space-margin xs-py-0'
+    data-parallax-background-ratio='0.5'
+  >
+    <div class='opacity-light'></div>
+    <div class='container'>
+      <div class='row align-items-center justify-content-center small-screen'>
+        <div
+          class='text-center col-lg-6 col-md-8 position-relative page-title-extra-small'
+          data-anime='{ "el": "childs", "rotateX": [90, 0], "opacity": [0,1], "staggervalue": 150, "easing": "easeOutQuad" }'
+        >
+          <h1 class='mb-5px alt-font text-dark-gray fw-400'>
+            <span class='opacity-6'>Interested in our work?</span>
+          </h1>
+          <h2 class='mb-0 text-dark-gray alt-font ls-minus-2px text-shadow-double-large fw-500'>
+            References
+          </h2>
+        </div>
+        <!-- <div
+          class='text-center down-section'
+          data-anime='{ "translateY": [100, 0], "opacity": [0,1], "easing": "easeOutQuad" }'
+        >
+          <a href='#down-section' class='section-link'>
+            <div class='fs-30 sm-fs-32 text-dark-gray'>
+              <i class='bi bi-mouse'></i>
+            </div>
+          </a>
+        </div> -->
+      </div>
+    </div>
+  </section>
+  <!-- end page title -->
+  <!-- start section -->
+  <section class='bg-very-light-gray'>
+    <div class='container'>
+      <div class='row justify-content-center'>
+        <div
+          class='mb-2 text-center col-lg-7'
+          data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'
+        >
+          <span
+            class='fw-600 ls-1px fs-16 alt-font d-inline-block text-uppercase mb-5px text-base-color'
+            >Feel free to get in touch!</span
+          >
+          <h2 class='alt-font text-dark-gray fw-600 ls-minus-2px'>EPDs we produced</h2>
+        </div>
+
+        <!-- TODO: use 'list of cards' layout - include: Year Registered + Product Type + Company + Link  -->
+        <div class='references-wrapper'>
+          <div class='sort-controls'>
+            <label for='sort' class='sort-label'>Sort by:</label>
+            <select id='sort' class='sort-select'>
+              <option value='year-desc'>Year (Newest first)</option>
+              <option value='year-asc'>Year (Oldest first)</option>
+              <option value='company'>Company Name</option>
+              <option value='product'>Product Name</option>
+            </select>
+          </div>
+
+          <div class='references-container' id='references-list'>
+            {
+              references
+                .sort((a, b) => parseInt(b.YearRegistered) - parseInt(a.YearRegistered))
+                .map((ref) => (
+                  <div class='reference-card'>
+                    <div class='field'>
+                      <div class='label'>Year Registered</div>
+                      <div class='value'>{ref.YearRegistered}</div>
+                    </div>
+
+                    <div class='field'>
+                      <div class='label'>Company</div>
+                      <div class='value'>{ref.Company}</div>
+                    </div>
+
+                    <div class='field'>
+                      <div class='label'>Product</div>
+                      <div class='value'>{ref.Product}</div>
+                    </div>
+
+                    <div class='field'>
+                      <div class='label'>Database</div>
+                      <div class='value'>{ref.Database}</div>
+                    </div>
+
+                    <div class='field'>
+                      <div class='label'>Link</div>
+                      <a href={ref.Link} target='_blank' class='value link'>
+                        View Project
+                      </a>
+                    </div>
+                  </div>
+                ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end section -->
+  </section>
+
+  <style>
+    .references-wrapper {
+      padding: 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .sort-controls {
+      padding: 0 1rem 0 1rem;
+      margin-bottom: 2rem;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .sort-label {
+      font-size: 0.875rem;
+      color: #666;
+      font-weight: 500;
+    }
+
+    .sort-select {
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+      background-color: white;
+      color: #333;
+      font-size: 0.875rem;
+      cursor: pointer;
+      min-width: 200px;
+      width: initial;
+      margin-left: 0.25rem;
+    }
+
+    .sort-select:hover {
+      border-color: #bbb;
+    }
+
+    .sort-select:focus {
+      outline: none;
+      border-color: #2563eb;
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+    }
+
+    /* ---- */
+    .references-container {
+      padding: 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .reference-card {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+      /* transition: transform 0.2s ease-in-out; */
+      margin-bottom: 2rem;
+    }
+
+    /* .reference-card:hover {
+    transform: translateY(-2px);
+  } */
+
+    .field {
+      flex: 1;
+      min-width: 100px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      color: #666;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    .value {
+      font-size: 1rem;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .link {
+      color: var(--base-color);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .link:hover {
+      color: #1d4ed8;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .reference-card {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .field {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .label {
+        min-width: 100px;
+      }
+
+      .value {
+        text-align: right;
+      }
+    }
+  </style>
+
+  <script>
+    // Client-side sorting logic
+    const sortSelect = document.getElementById('sort');
+    const referencesList = document.getElementById('references-list');
+
+    function sortReferences(sortBy) {
+      const cards = Array.from(referencesList.children);
+
+      cards.sort((a, b) => {
+        const aValue = getValue(a, sortBy);
+        const bValue = getValue(b, sortBy);
+
+        switch (sortBy) {
+          case 'year-desc':
+            return parseInt(bValue) - parseInt(aValue);
+          case 'year-asc':
+            return parseInt(aValue) - parseInt(bValue);
+          default:
+            return aValue.localeCompare(bValue);
+        }
+      });
+
+      // Clear and re-append sorted cards
+      referencesList.innerHTML = '';
+      cards.forEach((card) => referencesList.appendChild(card));
+    }
+
+    function getValue(card, sortBy) {
+      switch (sortBy) {
+        case 'year-desc':
+        case 'year-asc':
+          return card.querySelector('.field:nth-child(1) .value').textContent;
+        case 'company':
+          return card.querySelector('.field:nth-child(2) .value').textContent;
+        case 'product':
+          return card.querySelector('.field:nth-child(3) .value').textContent;
+        default:
+          return '';
+      }
+    }
+
+    sortSelect?.addEventListener('change', (e) => {
+      sortReferences((e.target as HTMLSelectElement).value);
+    });
+  </script>
+</BaseLayout>
