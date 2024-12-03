@@ -4,6 +4,7 @@ import { Image } from 'astro:assets';
 import PostPreviewIMG1 from '../images/stock/javier-allegue-barros-C7B-ExXpOIE-unsplash.jpg';
 import PostPreviewIMG2 from '../images/stock/jack-b-PFaVL64t-J8-unsplash.jpg';
 import PostPreviewIMG3 from '../images/stock/ash-amplifies-NQ6Lh81BTRs-unsplash.jpg';
+import PostPreviewIMG4 from '../images/stock/aaron-burden-2IjiGDZw-q0-unsplash.jpg';
 ---
 
 <BaseLayout title='News' description='Page with list of blog posts'>
@@ -16,7 +17,7 @@ import PostPreviewIMG3 from '../images/stock/ash-amplifies-NQ6Lh81BTRs-unsplash.
     <div class='container'>
       <div class='row align-items-center justify-content-center small-screen'>
         <div
-          class='col-lg-6 col-md-8 position-relative text-center page-title-extra-small'
+          class='text-center col-lg-6 col-md-8 position-relative page-title-extra-small'
           data-anime='{ "el": "childs", "rotateX": [90, 0], "opacity": [0,1], "staggervalue": 150, "easing": "easeOutQuad" }'
         >
           <h1 class='mb-5px alt-font text-dark-gray'>
@@ -27,7 +28,7 @@ import PostPreviewIMG3 from '../images/stock/ash-amplifies-NQ6Lh81BTRs-unsplash.
           </h2>
         </div>
         <div
-          class='down-section text-center'
+          class='text-center down-section'
           data-anime='{ "translateY": [100, 0], "opacity": [0,1], "easing": "easeOutQuad" }'
         >
           <a href='#down-section' class='section-link'>
@@ -46,14 +47,14 @@ import PostPreviewIMG3 from '../images/stock/ash-amplifies-NQ6Lh81BTRs-unsplash.
       id='particles-01'
       data-particle='true'
       data-particle-options='{"particles": {"number": {"value": 6,"density": {"enable": true,"value_area": 1000}},"color":{"value":["#b7b9be", "#dd6531"]},"shape": {"type": "circle","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 0.5,"random": false,"anim": {"enable": false,"speed": 1,"sync": false}},"size": {"value": 8,"random": true,"anim": {"enable": false,"sync": true}},"move": {"enable": true,"speed":2,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}'
-      class='position-absolute h-100 top-0 left-0 z-index-minus-1'
+      class='top-0 left-0 position-absolute h-100 z-index-minus-1'
     >
     </div>
     <div class='container'>
       <div class='row'>
-        <div class='col-12 p-0'>
+        <div class='p-0 col-12'>
           <ul
-            class='blog-grid blog-wrapper grid-loading grid grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-double-extra-large'
+            class='grid blog-grid blog-wrapper grid-loading grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-double-extra-large'
             data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'
           >
             <li class='grid-sizer'></li>
@@ -61,7 +62,48 @@ import PostPreviewIMG3 from '../images/stock/ash-amplifies-NQ6Lh81BTRs-unsplash.
             <!-- start blog item -->
             <li class='grid-item'>
               <div
-                class='card border-0 border-radius-4px box-shadow-medium box-shadow-extra-large-hover'
+                class='border-0 card border-radius-4px box-shadow-medium box-shadow-extra-large-hover'
+              >
+                <div class='blog-image'>
+                  <a
+                    href='/news/key-eu-regulations-on-construction-and-environmental-product-declarations'
+                    class='d-block'
+                  >
+                    <Image
+                      src={PostPreviewIMG4}
+                      alt='arrows pointing in different directions'
+                      loading='eager'
+                    />
+                  </a>
+                </div>
+                <div class='card-body p-13 md-p-11'>
+                  <a
+                    href='/news/key-eu-regulations-on-construction-and-environmental-product-declarations'
+                    class='card-title mb-15px alt-font fw-600 fs-20 text-dark-gray d-inline-block'
+                    >Key EU Regulations on Construction and Environmental Product Declarations
+                  </a>
+                  <p>The European Union is on a transformative journey toward sustainability...</p>
+                  <div
+                    class='overflow-hidden author d-flex justify-content-center align-items-center position-relative fs-16'
+                  >
+                    <div class='me-auto'>
+                      <span class='blog-date d-inline-block'>3 December 2024</span>
+                      <div class='d-inline-block author-name'>
+                        By <a href='news' class='text-dark-gray text-decoration-line-bottom fw-600'
+                          >Sarah Curpen</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- end blog item -->
+
+            <!-- start blog item -->
+            <li class='grid-item'>
+              <div
+                class='border-0 card border-radius-4px box-shadow-medium box-shadow-extra-large-hover'
               >
                 <div class='blog-image'>
                   <a href='/news/rising-demand-for-environmental-declarations' class='d-block'>
@@ -83,7 +125,7 @@ import PostPreviewIMG3 from '../images/stock/ash-amplifies-NQ6Lh81BTRs-unsplash.
                     Environmental Product Declarations...
                   </p>
                   <div
-                    class='author d-flex justify-content-center align-items-center position-relative overflow-hidden fs-16'
+                    class='overflow-hidden author d-flex justify-content-center align-items-center position-relative fs-16'
                   >
                     <div class='me-auto'>
                       <span class='blog-date d-inline-block'>22 August 2024</span>
@@ -102,7 +144,7 @@ import PostPreviewIMG3 from '../images/stock/ash-amplifies-NQ6Lh81BTRs-unsplash.
             <!-- start blog item -->
             <li class='grid-item'>
               <div
-                class='card border-0 border-radius-4px box-shadow-medium box-shadow-extra-large-hover'
+                class='border-0 card border-radius-4px box-shadow-medium box-shadow-extra-large-hover'
               >
                 <div class='blog-image'>
                   <a href='/news/lca-is-gaining-traction-in-construction-sector' class='d-block'>
@@ -124,7 +166,7 @@ import PostPreviewIMG3 from '../images/stock/ash-amplifies-NQ6Lh81BTRs-unsplash.
                     attention, particularly in the construction sector...
                   </p>
                   <div
-                    class='author d-flex justify-content-center align-items-center position-relative overflow-hidden fs-16'
+                    class='overflow-hidden author d-flex justify-content-center align-items-center position-relative fs-16'
                   >
                     <div class='me-auto'>
                       <span class='blog-date d-inline-block'>16 July 2024</span>
@@ -143,7 +185,7 @@ import PostPreviewIMG3 from '../images/stock/ash-amplifies-NQ6Lh81BTRs-unsplash.
             <!-- start blog item -->
             <li class='grid-item'>
               <div
-                class='card border-0 border-radius-4px box-shadow-medium box-shadow-extra-large-hover'
+                class='border-0 card border-radius-4px box-shadow-medium box-shadow-extra-large-hover'
               >
                 <div class='blog-image'>
                   <a href='/news/choosing-the-right-programme-operator-for-you' class='d-block'>
@@ -165,7 +207,7 @@ import PostPreviewIMG3 from '../images/stock/ash-amplifies-NQ6Lh81BTRs-unsplash.
                     Declarations...
                   </p>
                   <div
-                    class='author d-flex justify-content-center align-items-center position-relative overflow-hidden fs-16'
+                    class='overflow-hidden author d-flex justify-content-center align-items-center position-relative fs-16'
                   >
                     <div class='me-auto'>
                       <span class='blog-date d-inline-block'>18 June 2024</span>
@@ -184,9 +226,9 @@ import PostPreviewIMG3 from '../images/stock/ash-amplifies-NQ6Lh81BTRs-unsplash.
         </div>
       </div>
       <div class='row'>
-        <div class='col-12 mt-5 d-flex justify-content-center'>
+        <div class='mt-5 col-12 d-flex justify-content-center'>
           <!-- start pagination -->
-          <!-- <ul class="pagination pagination-style-01 fs-13 fw-500 mb-0" data-anime='{ "translate": [0, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 150, "easing": "easeOutQuad" }'>
+          <!-- <ul class="mb-0 pagination pagination-style-01 fs-13 fw-500" data-anime='{ "translate": [0, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 150, "easing": "easeOutQuad" }'>
                         <li class="page-item"><a class="page-link" href="#"><i class="feather icon-feather-arrow-left fs-18 d-xs-none"></i></a></li>
                         <li class="page-item"><a class="page-link" href="#">01</a></li>
                         <li class="page-item active"><a class="page-link" href="#">02</a></li>

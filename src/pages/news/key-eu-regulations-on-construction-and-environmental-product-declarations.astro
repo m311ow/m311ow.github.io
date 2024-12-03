@@ -1,0 +1,352 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Image, getImage } from 'astro:assets';
+import PostBG from '../../images/stock/aaron-burden-2IjiGDZw-q0-unsplash.jpg';
+import PostIMG from '../../images/stock/jose-llamas-hj0Ms2f2Y1w-unsplash.jpg';
+import AuthorIMG from '../../images/team/Business_portrait_Sarah_square.jpg';
+
+const OptimizedPostBG = await getImage({ src: PostBG });
+---
+
+<BaseLayout title='Post title' description='Blog post'>
+  <!-- start section -->
+  <section
+    class='one-fourth-screen sm-mb-50px bg-dark-gray'
+    data-parallax-background-ratio='0.5'
+    style=`background-image: url(${OptimizedPostBG.src})`
+  >
+  </section>
+  <!-- end section -->
+  <!-- start section -->
+  <section class='p-0'>
+    <div class='container'>
+      <div class='row justify-content-center'>
+        <div class='text-center col-lg-10 overlap-section'>
+          <div class='p-10 text-center bg-white box-shadow-extra-large border-radius-4px'>
+            <h3 class='alt-font text-dark-gray ls-minus-1px fw-600 mb-15px'>
+              Navigating the future of Sustainability: Key EU Regulations on Construction and
+              Environmental Product Declarations (EPD)
+            </h3>
+            <div class='lg-mb-20px sm-mb-0'>
+              <span>By <span class='text-dark-gray'>Sarah Curpen</span></span> on <span
+                class='text-dark-gray'>3 December 2024</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section -->
+  <!-- start section -->
+  <section class='p-0 text-center overlap-section sm-pt-30px'>
+    <Image
+      src={AuthorIMG}
+      class='border-8 rounded-circle box-shadow-extra-large w-130px h-130px border-color-white'
+      loading='eager'
+      alt='author of the article'
+    />
+  </section>
+  <!-- end section -->
+  <!-- start section -->
+  <section class='pt-3 pb-0'>
+    <div class='container'>
+      <div class='row justify-content-center'>
+        <div
+          class='col-lg-9 dropcap-style-01'
+          data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'
+        >
+          <p class='mb-6'>
+            <span class='alt-font first-letter text-dark-gray'>T</span>he European Union is on a
+            transformative journey toward sustainability, significantly impacting the construction
+            industry through a series of key regulations. As these regulations evolve, Environmental
+            Product Declarations (EPDs) are becoming essential tools for manufacturers, providing
+            transparent means to demonstrate compliance and commitment to sustainability. Here’s how
+            each regulation reinforces the necessity of EPDs for construction manufacturers.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section -->
+
+  <!-- start section -->
+  <section class='pb-0 half-section'>
+    <div class='container'>
+      <div
+        class='row justify-content-center'
+        data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'
+      >
+        <div class='col-lg-9 last-paragraph-no-margin mb-30px'>
+          <h6 class='alt-font fw-300 text-dark-gray ls-minus-05px mb-15px'>
+            1. Construction Product Regulation (CPR) – Launching Around 2026
+          </h6>
+          <p class='mb-15px'>
+            In December 2023, the European Council and Parliament reached a provisional agreement on
+            revising the Construction Products Regulation (CPR). This initiative aims to improve
+            consistency and transparency in the construction sector by mandating the disclosure of
+            third-party-verified Global Warming Potential (GWP) data for all construction products.
+          </p>
+          <div class='mb-15px alt-font fw-500 text-dark-gray ls-minus-05px'>
+            How EPDs facilitate compliance:
+          </div>
+          <ul>
+            <li class='mb-15px'>
+              <strong>Mandatory GWP Disclosure:</strong> With the CPR requiring GWP data, manufacturers
+              will need to create EPDs that provide comprehensive environmental impact data. EPDs will
+              serve as a reliable resource, enabling manufacturers to fulfill this requirement effectively
+              and transparently.
+            </li>
+            <li class='mb-15px'>
+              <strong>Full Environmental Impact Reporting:</strong> By 2030, manufacturers must report
+              a comprehensive range of environmental impacts through EN 15804-based EPDs. This shift
+              emphasizes the importance of establishing robust EPDs that capture the full life cycle
+              of their products.
+            </li>
+            <li class='mb-15px'>
+              <strong>Digital Product Passports:</strong> The CPR introduces digital product passports,
+              wherein EPDs will play a critical role. These passports will include essential information
+              about product performance and environmental impact, facilitating informed decision-making
+              across the value chain.
+            </li>
+            <li>
+              <strong>Green Public Procurement:</strong> As the CPR establishes mandatory minimum environmental
+              requirements for public procurement, having EPDs will enable manufacturers to demonstrate
+              compliance and secure contracts for public projects, ensuring they remain competitive.
+            </li>
+          </ul>
+        </div>
+
+        <div class='col-lg-9 last-paragraph-no-margin mb-30px'>
+          <h6 class='alt-font fw-300 text-dark-gray ls-minus-05px mb-15px'>
+            2. Energy Performance of Buildings Directive (EPBD)
+          </h6>
+          <p class='mb-15px'>
+            On March 12, 2024, the EU parliament approved a revised Energy Performance of Buildings
+            Directive (EPBD). This directive marks a significant advancement in climate action by
+            mandating the assessment of carbon footprints in construction materials, thereby
+            impacting operational energy consumption in buildings.
+          </p>
+          <div class='mb-15px alt-font fw-500 text-dark-gray ls-minus-05px'>
+            How EPDs support compliance:
+          </div>
+          <ul>
+            <li class='mb-15px'>
+              <strong>Carbon Footprint Reporting:</strong> The EPBD mandates that buildings over 1,000
+              square meters calculate and report their carbon footprints starting in 2028. EPDs will
+              provide manufacturers with a standardized means to communicate the carbon impacts of their
+              products, simplifying compliance.
+            </li>
+            <li class='mb-15px'>
+              <strong>Zero-Emission Standards:</strong> With new buildings required to achieve zero on-site
+              fossil fuel emissions by 2028, EPDs will help manufacturers showcase their products’ environmental
+              benefits, aligning them with these critical standards.
+            </li>
+            <li class='mb-15px'>
+              <strong>Improved Energy Efficiency:</strong> As the EPBD calls for enhanced energy efficiency
+              in buildings, EPDs will enable manufacturers to provide clear data about how their products
+              contribute to meeting new energy performance requirements, thus promoting their sustainability
+              credentials.
+            </li>
+            <li>
+              <strong>Renovation Initiatives:</strong> With directives aimed at renovating the least
+              efficient buildings, EPDs will empower manufacturers to offer essential performance data,
+              assisting builders in selecting products that comply with updated energy standards.
+            </li>
+          </ul>
+        </div>
+
+        <div class='col-lg-9 last-paragraph-no-margin mb-30px'>
+          <h6 class='alt-font fw-300 text-dark-gray ls-minus-05px mb-15px'>
+            3. Corporate Sustainability Reporting Directive (CSRD)
+          </h6>
+          <p class='mb-15px'>
+            Effective January 5, 2023, the Corporate Sustainability Reporting Directive (CSRD)
+            requires large companies to disclose social and environmental risks and opportunities.
+            This regulation places a significant emphasis on transparency, directly impacting
+            manufacturers in the construction sector.
+          </p>
+          <div class='mb-15px alt-font fw-500 text-dark-gray ls-minus-05px'>
+            How EPDs enhance compliance:
+          </div>
+          <ul>
+            <li class='mb-15px'>
+              <strong>Comprehensive Environmental Reporting:</strong> The CSRD necessitates that manufacturers
+              provide detailed disclosures about the environmental impacts of their products throughout
+              their life cycles. EPDs will be crucial in fulfilling these disclosure requirements by
+              providing reliable data on various environmental impacts.
+            </li>
+            <li class='mb-15px'>
+              <strong>Alignment with EPD Standards:</strong> As manufacturers are expected to report
+              on multiple environmental aspects, EPDs will become the standardized method for conveying
+              this information, ensuring consistency and credibility in reporting.
+            </li>
+            <li class='mb-15px'>
+              <strong>Life Cycle Assessment (LCA):</strong> Utilizing EPDs based on LCA methodologies
+              will not only satisfy the reporting obligations under the CSRD but will also highlight
+              a manufacturer’s commitment to sustainability, appealing to environmentally-conscious stakeholders.
+            </li>
+          </ul>
+        </div>
+
+        <div class='col-lg-9 last-paragraph-no-margin mb-30px'>
+          <h6 class='alt-font fw-300 text-dark-gray ls-minus-05px mb-15px'>
+            4. Carbon Border Adjustment Mechanism (CBAM)
+          </h6>
+          <p class='mb-15px'>
+            The Carbon Border Adjustment Mechanism (CBAM) aims to prevent carbon-intensive imports
+            from flooding the EU market and is set for full implementation by January 1, 2026. This
+            regulation significantly impacts how manufacturers approach their environmental
+            practices.
+          </p>
+          <div class='mb-15px alt-font fw-500 text-dark-gray ls-minus-05px'>
+            How EPDs aid compliance:
+          </div>
+          <ul>
+            <li class='mb-15px'>
+              <strong>CBAM Certificates:</strong> Importers will be required to purchase CBAM certificates
+              that match the carbon footprint of imported goods. EPDs will enable manufacturers to quantify
+              and communicate the carbon emissions associated with their products, facilitating accurate
+              reporting and compliance.
+            </li>
+            <li class='mb-15px'>
+              <strong>Encouragement of Cleaner Production:</strong> The CBAM incentivizes manufacturers
+              to adopt cleaner production methods to minimize carbon footprints. EPDs will validate these
+              efforts, providing evidence of reduced environmental impacts and reinforcing a manufacturer’s
+              sustainability narrative.
+            </li>
+          </ul>
+        </div>
+
+        <div class='col-lg-9 last-paragraph-no-margin mb-30px'>
+          <h6 class='alt-font fw-300 text-dark-gray ls-minus-05px mb-15px'>5. EU Taxonomy</h6>
+          <p class='mb-15px'>
+            The EU Taxonomy Regulation is a key part of the European Union’s sustainability agenda,
+            designed to help the EU achieve its ambitious goals of reducing greenhouse gas emissions
+            by 55% by 2030 and reaching climate neutrality by 2050. This regulation provides a
+            classification system that defines which economic activities are considered
+            environmentally sustainable. It aims to guide investment towards activities that have a
+            substantial positive impact on the environment, thus supporting the transition to a
+            low-carbon economy.
+          </p>
+          <div class='mb-15px alt-font fw-500 text-dark-gray ls-minus-05px'>
+            How EPDs help compliance:
+          </div>
+          <p class='mb-15px'>
+            Environmental Product Declarations (EPDs) are essential tools that provide transparent,
+            third-party-verified data on the environmental performance of products throughout their
+            life cycle. For manufacturers in the construction sector, EPDs can facilitate compliance
+            with the EU Taxonomy Regulation in several ways:<p>
+              <ul>
+                <li class='mb-15px'>
+                  <strong>Demonstrating Environmental Impact: </strong> EPDs provide detailed information
+                  on key environmental indicators, such as global warming potential (GWP), resource use,
+                  and emissions. This data aligns with the criteria set by the EU Taxonomy to determine
+                  whether a product or process contributes to climate goals.
+                </li>
+                <li class='mb-15px'>
+                  <strong>Supporting Green Investments: </strong> The EU Taxonomy guides investors towards
+                  environmentally sustainable activities. EPDs offer manufacturers a credible way to
+                  show that their products meet the sustainability criteria required for taxonomy-aligned
+                  investments, attracting green financing.
+                </li>
+                <li class='mb-15px'>
+                  <strong>Facilitating Transparency: </strong> EPDs promote transparency in environmental
+                  reporting, enabling manufacturers to present reliable environmental data. This transparency
+                  is critical for demonstrating compliance with the EU Taxonomy, which requires businesses
+                  to report how their activities align with its sustainability objectives.
+                </li>
+                <li>
+                  <strong>Circular Economy and Resource Efficiency: </strong> EPDs document a product’s
+                  life cycle impacts, which include resource use and waste generation. This data can
+                  help manufacturers demonstrate that their activities support the circular economy principles
+                  outlined in the Taxonomy, particularly in terms of resource efficiency and recycling.
+                </li>
+              </ul>
+            </p>
+          </p>
+        </div>
+      </div>
+      <!-- end section -->
+      <!-- start section -->
+      <section class='py-0'>
+        <div class='container'>
+          <div class='row justify-content-center'>
+            <div
+              class='col-lg-9 last-paragraph-no-margin'
+              data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'
+            >
+              <div class='mb-6 text-center'>
+                <Image src={PostIMG} alt=' image of a country road' loading='eager' height='600' />
+              </div>
+
+              <h6 class='alt-font fw-300 text-dark-gray ls-minus-05px mb-15px'>A Path Forward</h6>
+              <p class='mb-15px'>
+                The EU's comprehensive regulatory framework underscores a strong commitment to
+                sustainability and climate action. As these regulations roll out, Environmental
+                Product Declarations (EPDs) are set to become indispensable for manufacturers in the
+                construction sector.
+              </p>
+              <p>
+                By embracing EPDs and adapting to these evolving requirements, manufacturers can
+                ensure compliance while positioning themselves as leaders in a rapidly evolving
+                market focused on sustainability and environmental responsibility. The future of
+                construction lies in transparency, and EPDs are essential in building trust and
+                credibility with stakeholders in this new landscape.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end section -->
+
+      <!-- start section -->
+      <section class='half-section'>
+        <div class='container'>
+          <div class='row justify-content-center'>
+            <div
+              class='col-lg-9'
+              data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'
+            >
+              <div class='row'>
+                <div class='mb-6 col-12'>
+                  <div
+                    class='d-block d-md-flex w-100 box-shadow-extra-large align-items-center border-radius-4px p-7 sm-p-35px'
+                  >
+                    <div class='text-center w-140px me-50px sm-mx-auto'>
+                      <Image
+                        src={AuthorIMG}
+                        class='rounded-circle w-120px'
+                        loading='eager'
+                        alt='author of the article'
+                      />
+                      <a href='/news' class='text-dark-gray fw-500 mt-20px d-inline-block lh-20'
+                        >Sarah Curpen</a
+                      >
+                      <span class='fs-15 lh-20 d-block sm-mb-15px'>LCA Engineer</span>
+                    </div>
+                    <div class='text-center w-75 sm-w-100 text-md-start last-paragraph-no-margin'>
+                      <p>
+                        A Civil and Environmental Engineer. Her expertise lies in leveraging
+                        advanced data analysis techniques to conduct hot spot analysis and market
+                        research.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="row justify-content-center">
+              <div class="text-center col-12 elements-social social-icon-style-04">
+                  <ul class="medium-icon dark">
+                      <li><a class="linkedin" href="http://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i><span></span></a></li>
+                  </ul>
+              </div>
+          </div> -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end section -->
+    </div>
+  </section></BaseLayout
+>
