@@ -1,0 +1,75 @@
+---
+import SidebarLayout from '../layouts/SidebarLayout.astro';
+import ServiceHero from '../components/ServiceHero.astro';
+import Benefits from '../components/Benefits.astro';
+import Contact from '../components/Contact.astro';
+import References from '../components/References.astro';
+import Accordion from '../components/Accordion.astro';
+import Testimonials from '../components/Testimonials.astro';
+import coverImg from '../images/breeam_logistics_cover-scaled-600x600.png';
+---
+
+<SidebarLayout>
+  <ServiceHero
+    title='BREEAM pre logistické haly'
+    descriptions={[
+      'V oblasti logistických hál máme skúsenosti z projektov so spoločnosťami <strong>VGP</strong>, <strong>Panattoni</strong> a <strong>Contera</strong>, pri ktorých sme sa naučili ako dosiahnuť vysoké hodnotenie s minimálnymi nákladmi.',
+      'Takýto výsledok dosiahneme vďaka tomu, že spracujeme všetky štúdie, simulácie a výpočty, za ktoré dosiahneme extra kredity bez navýšenia nákladov na strane klienta.'
+    ]}
+    flavorText='Sme hrdí na výnimočné služby, ktoré poskytujeme našim klientom. Našim cieľom je vždy dosiahnuť čo najvyššie BREEAM hodnotenie, s čo najnižšími nákladmi.'
+    image={{
+      src: coverImg,
+      alt: 'Ilustračný obrázok budovy'
+    }}
+  />
+  <Benefits
+    title='Výhody'
+    descriptions={['Registráciou budovy v BREEAM získavate prístup k najpokročilejšiemu know-how v oblasti udržateľnosti budov na svete. Poskytuje skvelý návod ako postaviť udržateľnú, zdravú a efektívnu budovu. So skúseným konzultantom Vašej budove prinesie skvelú hodnotu a prestíž.']}
+    items={['Zvýši dopyt zo strany investorov a ostatných stakeholderov', 'Zvýši efektivitu procesov súvisiacich so spotrebou energie a materiálov', 'Umožní robiť kvalitnejšie biznis rozhodnutia na základe skutočných dát', 'Zmierni riziko súvisiace s dopadmi klimatickej zmeny']}
+  />
+  <Accordion
+    title='Ponúkame'
+    items={[
+      {
+        title: 'Osobný prístup',
+        content:
+          'Vážime si našich klientov. Sme dostupní a rýchlo odpovedáme na ich otázky. Klientom poskytujeme reporty na pravidelných online meetingoch a radi sa stretneme aj osobne. Člen nášho tímu navštívi stavbu a pomôže so zberom údajov potrebných pre certifikáciu. Pri dohliadaní na to, aby bol projekt v súlade s BREEAM, zohľadňujeme spätnú väzbu klientov a snažíme sa im vyjsť v ústrety.'
+      },
+      {
+        title: 'Skvelé výsledky',
+        content:
+          'Vďaka pokročilým simuláciám a odborným službám pomáhame klientom dosahovať vysoké BREEAM hodnotenie, bez navyšovania nákladov na stavbu. Pri logistických halách máme dobré skúsenosti s dosahovaním úrovne BREEAM Excellent. Pri spracovaní hodnotenia a správy stavebného miesta spolupracujeme s ekológom.'
+      },
+      { title: 'Transparentnosť', content: 'Umožňujeme klientom nahliadnuť do projektovej dokumentácie vo všetkých fázach projektu. Radi odovzdáme klientom všetky podklady, ktoré odosielame do BRE na hodnotenie. Pomôžeme klientom uspokojiť požiadavky bánk na EU Taxonómiu.' }
+    ]}
+  />
+
+  <Testimonials
+    descriptions={['Na vzťahoch s našimi klientmi si mimoriadne zakladáme. Každý projekt je pre nás partnerstvom postaveným na dôvere, spolupráci a spoločnej vízii.']}
+    items={[
+      {
+        name: 'Ondřej Doupal',
+        position: 'Sustainability Manager — Eastern Europe, VGP',
+        content: `
+            „SALVIS jsme jako BREEAM asesora vybrali na základě dosavadní, krátké a pozitivní zkušenosti pro spoustu našich nadcházejících projektů. Původně dodavatel certifikace malého konstrukčního projektu na Slovensku se tak stal našim hlavním partnerem pro BREEAM nejen na Slovensku, ale i v České republice.<br><br>
+
+            Salvis bere klientský přístup velice vážně a je flexibilní klientským potřebám. Toto nám umožňuje aktualizovat certifikační postupy na základě potřeb z předchozích zkušeností a promítnout je zpět do standardů výstavby.<br><br>
+
+            Na základě dosavadní zkušenosti ze třinácti certifikovaných projektů mohu Salvis jen doporučit.“
+        `
+      },
+      {
+        name: 'Ondrej Barát',
+        position: 'Project manager, VGP',
+        content: `„SALVIS mi vždy rýchlo a presne odpovedá na otázky súvisiace s BREEAM. Vždy nájdu s projekčným tímom cestu ako splniť požiadavky a získať úroveň Excellent. Páči sa mi, že pravidelne navštevujú stavbu, poskytujú nám správu o stave certifikácie a majú celý proces pod kontrolou.“`
+      },
+      {
+        name: 'Tomáš Gürtler',
+        position: 'Project manager, Contera',
+        content: `„SALVIS nám dodáva službu BREEAM takým spôsobom akým si to predstavujeme. Odpovedajú rýchlo, komunikujú s projekčným tímom, chodia na stavbu. Vedia ako dosiahnuť úroveň Very Good s nízkymi nákladmi a plynule. So SALVIS sme 100% spokojní.“`
+      }
+    ]}
+  />
+  <Contact />
+  <References />
+</SidebarLayout>

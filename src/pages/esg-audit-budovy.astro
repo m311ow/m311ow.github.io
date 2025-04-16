@@ -1,0 +1,82 @@
+---
+import SidebarLayout from '../layouts/SidebarLayout.astro';
+import ServiceHero from '../components/ServiceHero.astro';
+import Benefits from '../components/Benefits.astro';
+import Contact from '../components/Contact.astro';
+import References from '../components/References.astro';
+import Accordion from '../components/Accordion.astro';
+import coverImg from '../images/esg_buildings_cover-scaled-600x600.jpg';
+---
+
+<SidebarLayout>
+  <ServiceHero
+    title='ESG audit budovy'
+    descriptions={[
+      'Ukážeme Vám, ako prevádzkovať a udržovať budovy v súlade s konceptom ESG tak, aby dosiahli svoj maximálny potenciál. Vaše budovy môžu byť zdravšie a so štastnejšími nájomníkmi, zatiaľ čo vy ušetríte na spotrebách energií.',
+      'V rámci auditu budovy identifikujeme silné a slabé miesta a nájdeme možnosti na zlepšenie. Medzi kľúčové ukazovatele stavu budovy v rámci konceptu ESG patria napríklad spotreba vody a energií, kvalita ovzdušia alebo tvorba odpadu.',
+      'Súčasťou našej služby „ESG audit budov“ je zároveň možnosť zisku certifikátu LEED O+M.'
+    ]}
+    flavorText='ESG rating je formou hodnotenia fungovania budovy vo vzťahu k životnému prostrediu, k jej sociálnym aspektom a k jej riadeniu.'
+    image={{
+      src: coverImg,
+      alt: 'Ilustračný obrázok budovy'
+    }}
+  />
+  <Benefits
+    title='Výhody'
+    descriptions={['Kvalitná ESG stratégia poukáže na oblasti, v ktorých budova môže zvýšiť svoju efektivitu a znížiť svoje náklady. Efektívnejšie riadenie týchto oblastí môže viesť k výrazným finančným úsporám.']}
+    items={[
+      'Zvýši dopyt zo strany investorov a ostatných stakeholderov',
+      'Zlepší energetickú účinnosť monitorovaním a overovaním údajov o spotrebách',
+      'Zvýši efektivitu procesov súvisiacich so spotrebou energie a materiálov',
+      'Umožní robiť kvalitnejšie biznis rozhodnutia na základe skutočných dát',
+      'Zmierni riziko súvisiace s dopadmi klimatickej zmeny'
+    ]}
+  />
+  <Accordion
+    title='Ponúkame'
+    descriptions={['Naša služba je prínosná pre klientov v každej fáze prípravy na ESG. ESG audit je zároveň možné použiť k získaniu LEED certifikátu, keďže odhalí stav udržateľnosti a pomôže určiť ďalší postup.']}
+    items={[
+      {
+        title: 'Úvod do ESG',
+        content: `<ul>
+              <li>Výpočet uhlíkovej stopy počas prevádzky</li>
+              <li>Analýza spotrebnej pitnej vody</li>
+              <li>Dopravná analýza</li>
+              <li>Audit VZT</li>
+              <li>Audit tvorby odpadov</li>
+              <li>Meranie kvality vnútorného prostredia</li>
+              <li>Energetický audit</li>
+              <li>Audit plánu prevádzky a údržby budovy</li>
+              <li>ESG audit budovy a zhodnotenie aktuálneho ESG skóre a možnosti získať LEED O+M certifikát</li>
+              <li>Úvodná certifikácia LEED O+M</li>
+            </ul>`
+      },
+      {
+        title: 'Spracovanie ESG stratégie',
+        content: `<ul>
+              <li>Výber vhodnej ESG schémy (GRESB, GRI alebo CDP)</li>
+              <li>Formulácia merateľných a realistických záväzkov a cieľov s použitím rámca Science Based Targets initiative (SBTi)</li>
+              <li>Analýza činností organizácie a dopadov, ktoré je potrebne merať</li>
+              <li>Výber vhodného nástroja pre zber relevantných dát</li>
+              <li>Zverejnenie záväzkov vo výročnej správe, na webovej stránke</li>
+              <li>Spracovanie akčného plánu</li>
+            </ul>`
+      },
+      {
+        title: 'Návrh optimalizácie a jej implementácia',
+        content: `<ul>
+              <li>Oslovenie bánk / financujúcich inštitúcií so žiadosťou o financovanie na základe analýzy opatrení</li>
+              <li>Implementácia opatrení tak, aby boli dosiahnuté ciele z bodu znižovania emisí CO2</li>
+              <li>Opätovný ESG audit po 3 rokoch a recertifikácia LEED O+M</li>
+              <li>Aktualizácia simulácií, analýza a prehodnotenie opatrení</li>
+              <li>Vyhodnotenie plnenia cieľov a záväzkov</li>
+              <li>Dosiahnutie LEED Gold / Platinum certifikovaného a uhlíkovo neutrálneho portfólia</li>
+            </ul>`
+      }
+    ]}
+  />
+
+  <Contact />
+  <References />
+</SidebarLayout>

@@ -1,0 +1,44 @@
+---
+import '../styles/bootstrap.scss';
+import Navbar from '../components/Navbar.astro';
+---
+
+<!doctype html>
+<html lang='en' data-bs-theme='light'>
+  <head>
+    <meta charset='utf-8' />
+    <link rel='icon' href='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🌿</text></svg>' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <meta name='generator' content={Astro.generator} />
+    <title>SALVIS</title>
+    <meta name='description' content='Official webpage of comapny SALVIS' />
+  </head>
+  <body>
+    <Navbar />
+    <main>
+      <div class='container'>
+        <slot />
+      </div>
+    </main>
+    <script>
+      // Import everything
+      // import 'bootstrap/dist/js/bootstrap';
+
+      //or
+
+      // Import only what you need
+      // import 'bootstrap/js/dist/alert';
+      import 'bootstrap/js/dist/button';
+      // import 'bootstrap/js/dist/carousel';
+      import 'bootstrap/js/dist/collapse';
+      import 'bootstrap/js/dist/dropdown';
+      // import 'bootstrap/js/dist/modal';
+      // import 'bootstrap/js/dist/offcanvas';
+      // import 'bootstrap/js/dist/popover';
+      // import 'bootstrap/js/dist/scrollspy';
+      // import 'bootstrap/js/dist/tab';
+      // import 'bootstrap/js/dist/toast';
+      // import 'bootstrap/js/dist/tooltip';
+    </script>
+  </body>
+</html>

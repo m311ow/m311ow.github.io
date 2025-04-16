@@ -1,0 +1,27 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  title: string;
+  descriptions: string[];
+  flavorText: string;
+  image: {
+    src: ImageMetadata;
+    alt: string;
+  };
+}
+
+const { title, descriptions, flavorText, image } = Astro.props;
+---
+
+<div class='row'>
+  <div class='col-md-6 d-flex flex-column'>
+    <h2 class='content-title fw-bold fs-1'>{title}</h2>
+
+    {descriptions.map((text) => <p class='lead' set:html={text}></p>)}
+  </div>
+  <div class='col-md-6'>
+    <Image src={image.src} alt={image.alt || 'Image'} class='img-fluid flex-grow-1 object-fit-cover w-100 mb-3' format='webp' sizes='(max-width: 768px) 100vw, 50vw' />
+    <p class='blockquote text-primary fst-italic fs-5'>{flavorText}</p>
+  </div>
+</div>

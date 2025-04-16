@@ -1,0 +1,105 @@
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1640px
+);
+
+$position-values: (
+  0: 0,
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%
+);
+
+// Required functions import
+@import 'bootstrap/scss/functions';
+
+// Optional variable overrides
+$primary: #289448;
+
+// Required imports
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/variables-dark';
+@import 'bootstrap/scss/maps';
+@import 'bootstrap/scss/mixins';
+@import 'bootstrap/scss/root';
+
+// Import everything
+@import 'bootstrap/scss/bootstrap';
+
+// or..
+
+// Optional components
+@import 'bootstrap/scss/utilities';
+@import 'bootstrap/scss/reboot';
+@import 'bootstrap/scss/type';
+@import 'bootstrap/scss/containers';
+@import 'bootstrap/scss/images';
+@import 'bootstrap/scss/nav';
+@import 'bootstrap/scss/accordion';
+// @import 'bootstrap/scss/alert';
+// @import 'bootstrap/scss/badge';
+// @import 'bootstrap/scss/breadcrumb';
+@import 'bootstrap/scss/button-group';
+@import 'bootstrap/scss/buttons';
+// @import 'bootstrap/scss/card';
+// @import 'bootstrap/scss/carousel';
+// @import 'bootstrap/scss/close';
+@import 'bootstrap/scss/dropdown';
+// @import 'bootstrap/scss/forms';
+@import 'bootstrap/scss/grid';
+// @import 'bootstrap/scss/list-group';
+// @import 'bootstrap/scss/modal';
+@import 'bootstrap/scss/navbar';
+// @import 'bootstrap/scss/offcanvas';
+// @import 'bootstrap/scss/pagination';
+// @import 'bootstrap/scss/placeholders';
+// @import 'bootstrap/scss/popover';
+// @import 'bootstrap/scss/progress';
+// @import 'bootstrap/scss/spinners';
+// @import 'bootstrap/scss/tables';
+// @import 'bootstrap/scss/toasts';
+// @import 'bootstrap/scss/tooltip';
+// @import 'bootstrap/scss/transitions';
+
+// Optional helpers
+@import 'bootstrap/scss/helpers';
+
+// Optional utilities
+@import 'bootstrap/scss/utilities/api';
+
+::selection {
+  color: var(--bs-primary); /* Text color */
+  background-color: rgba(var(--bs-primary-rgb), 0.25); /* Background with 25% opacity */
+}
+
+body {
+  padding-top: 120px;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.content-title,
+.content-subtitle {
+  text-align: left;
+}
+
+.content-title {
+  margin-bottom: 2rem;
+}
+
+.content-subtitle {
+  margin-bottom: 0.75rem;
+}
+
+.btn-outline-primary:hover {
+  color: #fff;
+}

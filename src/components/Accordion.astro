@@ -1,0 +1,63 @@
+---
+interface Props {
+  title: string;
+  descriptions?: string[];
+  items: {
+    title: string;
+    content: string; //Accepts HTML
+  }[];
+  accordionId?: string;
+  emphasis?: boolean;
+}
+
+const { title, descriptions, items, emphasis = true, accordionId = `accordion-${Math.random().toString(36).slice(2, 11)}` } = Astro.props;
+---
+
+<div class='row justify-content-md-center py-3 py-md-5 py-xl-8'>
+  <div class='col-lg-6'>
+    <h2>{title}</h2>
+    {descriptions && descriptions.map((text) => <p class='lead' set:html={text} />)}
+  </div>
+  <div class='col-lg-6'>
+    <div class='accordion accordion-flush' id={accordionId}>
+      {
+        items.map((item, index) => {
+          const id = `${accordionId}-collapse-${index}`;
+          const headingId = `${accordionId}-heading-${index}`;
+          const isFirst = index === 0;
+          return (
+            <div class='accordion-item'>
+              <div class='accordion-header' id={headingId}>
+                <button class={`accordion-button lead fs-5 ${emphasis ? 'fw-bolder' : ''} ${!isFirst ? 'collapsed' : ''}`} type='button' data-bs-toggle='collapse' data-bs-target={`#${id}`} aria-expanded={isFirst ? 'true' : 'false'} aria-controls={id}>
+                  {item.title}
+                </button>
+              </div>
+              <div id={id} class={`accordion-collapse collapse ${isFirst ? 'show' : ''}`} aria-labelledby={headingId} data-bs-parent={`#${accordionId}`}>
+                <div class='accordion-body' set:html={item.content} />
+              </div>
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+</div>
+
+<style>
+  .accordion-item,
+  .accordion-button {
+    border-radius: 0 !important;
+  }
+  .accordion {
+    --bs-accordion-active-bg: var(--bs-light);
+    --bs-accordion-btn-focus-box-shadow: none;
+  }
+
+  .accordion-flush:first-child {
+    border-top: 1px solid var(--bs-border-color);
+  }
+
+  .accordion-flush:last-child {
+    border-bottom: 1px solid var(--bs-border-color);
+  }
+</style>

@@ -1,0 +1,33 @@
+---
+interface Props {
+  title: string;
+  descriptions?: string[];
+  items: string[];
+}
+
+const { title = 'Výhody', descriptions, items } = Astro.props;
+---
+
+<div class='row justify-content-md-center py-3 py-md-5 py-xl-8'>
+  <div class='col-lg-6'>
+    <h2>{title}</h2>
+    {descriptions && descriptions.map((text) => <p class='lead' set:html={text} />)}
+
+    <p class='lead'></p>
+  </div>
+  <div class='col-lg-6'>
+    <ul class='list-group list-group-flush'>
+      {items.map((item) => <li class='fs-5 list-group-item p-4' set:html={item} />)}
+    </ul>
+  </div>
+</div>
+
+<style>
+  .list-group-flush:first-child {
+    border-top: 1px solid var(--bs-border-color);
+  }
+
+  .list-group-flush:last-child {
+    border-bottom: 1px solid var(--bs-border-color);
+  }
+</style>
