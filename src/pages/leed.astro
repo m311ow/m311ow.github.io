@@ -3,8 +3,8 @@ import SidebarLayout from '../layouts/SidebarLayout.astro';
 import ServiceHero from '../components/ServiceHero.astro';
 import Benefits from '../components/Benefits.astro';
 import Contact from '../components/Contact.astro';
-import References from '../components/References.astro';
-import ReferencesHighlights from '../components/ReferencesHighlights.astro';
+import References from '../components/Projects.astro';
+import ServiceProjectsHighlights from '../components/ServiceProjectsHighlights.astro';
 import Accordion from '../components/Accordion.astro';
 import Testimonials from '../components/Testimonials.astro';
 import coverImg from '../images/leed_cover-scaled-600x600.jpg';
@@ -20,15 +20,7 @@ import refHighlightImg4 from '../images/nove_apollo-1024x767.webp';
     descriptions={[
       'LEED je certifikačný systém kvality a udržateľnosti dokonale prispôsobený komerčným, najmä kancelárskym budovám. Všetky požiadavky LEED dávajú zmysel. Systém je prehľadný a jasný, so skvelými zákazníckymi službami.',
       'SALVIS poskytuje certifikáciu LEED, vrátane všetkých simulácií a doplnkových štúdií. Proces certifikácie riadime tak aby bol plynulý, aby bol certifikát získaný načas a v požadovanej úrovni.',
-      'LEED predcertifikát je možné získať už na začiatku tvorby projektovej dokumentácie. Použijete ho pri rokovaní o výhodnom financovaní projektu, pri PR komunikácii s médiami a rokovaniach s potenciálnymi nájomcami.',
-      '<strong>Certifikát LEED môže získať novostavba, existujúca budova, interiér (priestory firmy), mestská štvrť alebo celé mesto.</strong>',
-      `<strong>Poskytujeme nasledovné druhy LEED certifikácie:<br>
-      <ul class="lead">
-        <li>LEED BD+C (návrh a výstavba)</li>
-        <li>LEED EB:OM (prevádzka a údržba)</li>
-        <li>LEED ID+C (návrh a realizácia interiéru)</li>
-        <li>LEED ND (mestské štvrte)</li>
-      </ul></strong>`
+      'LEED predcertifikát je možné získať už na začiatku tvorby projektovej dokumentácie. Použijete ho pri rokovaní o výhodnom financovaní projektu, pri PR komunikácii s médiami a rokovaniach s potenciálnymi nájomcami.'
     ]}
     flavorText='V SALVIS sme držiteľmi akreditácií LEED AP BD+C a LEED Green Associate. SALVIS je členom Americkej Rady pre Zelené Budovy (USGBC – U.S. Green Building Council).'
     image={{
@@ -49,6 +41,16 @@ import refHighlightImg4 from '../images/nove_apollo-1024x767.webp';
   />
   <Accordion
     title='Ponúkame'
+    descriptions={[
+      'Certifikát LEED môže získať novostavba, existujúca budova, interiér (priestory firmy), mestská štvrť alebo celé mesto.',
+      `Poskytujeme nasledovné druhy LEED certifikácie:<br>
+      <ul class="">
+        <li>LEED BD+C (návrh a výstavba)</li>
+        <li>LEED EB:OM (prevádzka a údržba)</li>
+        <li>LEED ID+C (návrh a realizácia interiéru)</li>
+        <li>LEED ND (mestské štvrte)</li>
+      </ul>`
+    ]}
     items={[
       {
         title: 'Analýza a stratégia',
@@ -103,7 +105,7 @@ import refHighlightImg4 from '../images/nove_apollo-1024x767.webp';
       }
     ]}
   />
-  <ReferencesHighlights
+  <ServiceProjectsHighlights
     descriptions={['Kompletný zoznam projektov je k dispozícii v sekcii nižšie.']}
     items={[
       {
@@ -156,6 +158,7 @@ import refHighlightImg4 from '../images/nove_apollo-1024x767.webp';
   /> -->
   <Accordion
     title='Často kladené otázky'
+    descriptions={['Prehľad odpovedí na časté otázky o našej spoločnosti a ponúkaných službách']}
     emphasis={false}
     items={[
       {

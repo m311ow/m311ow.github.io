@@ -3,8 +3,9 @@ import SidebarLayout from '../layouts/SidebarLayout.astro';
 import ServiceHero from '../components/ServiceHero.astro';
 import Benefits from '../components/Benefits.astro';
 import Contact from '../components/Contact.astro';
-import References from '../components/References.astro';
-import ReferencesHighlights from '../components/ReferencesHighlights.astro';
+import References from '../components/Projects.astro';
+import ServiceProjectsHighlights from '../components/ServiceProjectsHighlights.astro';
+import ServiceProjects from '../components/ServiceProjects.astro';
 import Accordion from '../components/Accordion.astro';
 import Testimonials from '../components/Testimonials.astro';
 import coverImg from '../images/breeam_cover-scaled-600x600.jpg';
@@ -18,7 +19,8 @@ import refHighlightImg4 from '../images/nove_apollo-1024x767.webp';
   <ServiceHero
     title='Simulácie budov'
     descriptions={[
-      'Poskytujeme široké spektrum profesionálnych simulácií budov, ktoré slúžia na optimalizáciu energetickej efektívnosti, komfortu a udržateľnosti. Zameriavame sa na termodynamické simulácie vrátane analýz podľa normy ASHRAE 90.1, CFD simulácie pre tepelný komfort, prúdenie vzduchu, šírenie dymu či koncentráciu škodlivín.  ',
+      'Poskytujeme široké spektrum profesionálnych simulácií budov, ktoré slúžia na optimalizáciu energetickej efektívnosti, komfortu a udržateľnosti.',
+      'Pre klientov vypracúvame termodynamické simulácie vrátane analýz podľa normy ASHRAE 90.1, CFD simulácie pre tepelný komfort, prúdenie vzduchu, šírenie dymu či koncentráciu škodlivín.',
       'Ponúkame aj simulácie mikroklímy, denného osvetlenia, EML, ako aj analýzu potenciálu využitia obnoviteľných zdrojov, ako sú fotovoltické a termálne kolektory.',
       'Využívame špičkové nástroje ako ENVI-MET na hodnotenie urbánneho prostredia a jeho optimalizáciu z hľadiska klímy a kvality života.'
     ]}
@@ -36,6 +38,7 @@ import refHighlightImg4 from '../images/nove_apollo-1024x767.webp';
   />
   <Accordion
     title='Ponúkame'
+    descriptions={['Zabezpečujeme energetickú efektivitu, komfort a udržateľnosť prostredníctvom presných simulácií.']}
     items={[
       {
         title: 'Termodynamické simulácie budov',
@@ -85,7 +88,7 @@ import refHighlightImg4 from '../images/nove_apollo-1024x767.webp';
       }
     ]}
   />
-  <ReferencesHighlights
+  <ServiceProjectsHighlights
     descriptions={['Kompletný zoznam projektov je k dispozícii v sekcii nižšie.']}
     items={[
       {
@@ -138,6 +141,7 @@ import refHighlightImg4 from '../images/nove_apollo-1024x767.webp';
   />
   <Accordion
     title='Často kladené otázky'
+    descriptions={['Prehľad odpovedí na časté otázky o našej spoločnosti a ponúkaných službách']}
     emphasis={false}
     items={[
       {
@@ -245,5 +249,5 @@ import refHighlightImg4 from '../images/nove_apollo-1024x767.webp';
     ]}
   />
   <Contact />
-  <References />
+  <ServiceProjects />
 </SidebarLayout>

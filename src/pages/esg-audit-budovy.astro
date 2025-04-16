@@ -3,7 +3,8 @@ import SidebarLayout from '../layouts/SidebarLayout.astro';
 import ServiceHero from '../components/ServiceHero.astro';
 import Benefits from '../components/Benefits.astro';
 import Contact from '../components/Contact.astro';
-import References from '../components/References.astro';
+import References from '../components/Projects.astro';
+import ServiceProjects from '../components/ServiceProjects.astro';
 import Accordion from '../components/Accordion.astro';
 import coverImg from '../images/esg_buildings_cover-scaled-600x600.jpg';
 ---
@@ -12,9 +13,11 @@ import coverImg from '../images/esg_buildings_cover-scaled-600x600.jpg';
   <ServiceHero
     title='ESG audit budovy'
     descriptions={[
-      'Ukážeme Vám, ako prevádzkovať a udržovať budovy v súlade s konceptom ESG tak, aby dosiahli svoj maximálny potenciál. Vaše budovy môžu byť zdravšie a so štastnejšími nájomníkmi, zatiaľ čo vy ušetríte na spotrebách energií.',
-      'V rámci auditu budovy identifikujeme silné a slabé miesta a nájdeme možnosti na zlepšenie. Medzi kľúčové ukazovatele stavu budovy v rámci konceptu ESG patria napríklad spotreba vody a energií, kvalita ovzdušia alebo tvorba odpadu.',
-      'Súčasťou našej služby „ESG audit budov“ je zároveň možnosť zisku certifikátu LEED O+M.'
+      'Ukážeme Vám, ako prevádzkovať a udržovať budovy v súlade s konceptom ESG tak, aby dosiahli svoj maximálny potenciál. ',
+      'Medzi kľúčové ukazovatele stavu budovy v rámci konceptu ESG patria napríklad spotreba vody a energií, kvalita ovzdušia alebo tvorba odpadu.',
+      'V rámci auditu budovy identifikujeme silné a slabé miesta a nájdeme možnosti na zlepšenie.',
+      'Súčasťou našej služby „ESG audit budov“ je zároveň možnosť ziskáť certifikát LEED O+M.',
+      'Vaše budovy môžu byť zdravšie a so štastnejšími nájomníkmi, zatiaľ čo vy ušetríte na spotrebách energií.'
     ]}
     flavorText='ESG rating je formou hodnotenia fungovania budovy vo vzťahu k životnému prostrediu, k jej sociálnym aspektom a k jej riadeniu.'
     image={{
@@ -78,5 +81,6 @@ import coverImg from '../images/esg_buildings_cover-scaled-600x600.jpg';
   />
 
   <Contact />
+  <ServiceProjects />
   <References />
 </SidebarLayout>

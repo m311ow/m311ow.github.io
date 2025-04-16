@@ -3,8 +3,8 @@ import SidebarLayout from '../layouts/SidebarLayout.astro';
 import ServiceHero from '../components/ServiceHero.astro';
 import Benefits from '../components/Benefits.astro';
 import Contact from '../components/Contact.astro';
-import References from '../components/References.astro';
-import ReferencesHighlights from '../components/ReferencesHighlights.astro';
+import References from '../components/Projects.astro';
+import ServiceProjectsHighlights from '../components/ServiceProjectsHighlights.astro';
 import Accordion from '../components/Accordion.astro';
 import Testimonials from '../components/Testimonials.astro';
 import coverImg from '../images/breeam_cover-scaled-600x600.jpg';
@@ -20,15 +20,7 @@ import refHighlightImg4 from '../images/nove_apollo-1024x767.webp';
     descriptions={[
       'BREEAM vznikol v roku 1990 a je to najstarší a svetovo najrozšírenejší certifikačný systém v oblasti udržateľnosti budov. Registráciou Vašej budovy v BREEAM získavate prístup k najpokročilejšiemu know-how.',
       'SALVIS poskytuje certifikáciu BREEAM, vrátane všetkých simulácií a doplnkových štúdií.',
-      'Proces certifikácie riadime tak aby bol plynulý, aby bol certifikát získaný načas a v požadovanej úrovni.',
-      '<strong>Certifikát BREEAM môže získať novostavba, existujúca budova, interiér (priestory firmy), mestská štvrť alebo celé mesto.</strong>',
-      `<strong>Poskytujeme nasledovné druhy BREEAM certifikácie:<br>
-      <ul class="lead">
-      <li> BREEAM International NC 2016</li>
-      <li> BREEAM In-Use</li>
-      <li> BREEAM RFO</li>
-      <li> BREEAM Communities</li>
-      </ul></strong>`
+      'Proces certifikácie riadime tak aby bol plynulý, aby bol certifikát získaný načas a v požadovanej úrovni.'
     ]}
     flavorText='V SALVIS sme držiteľmi akreditácií BREEAM International Assessor, BREEAM AP a BREEAM In Use Assessor. SALVIS je tiež akreditovaným členom organizácie BRE (Building Research Establishment).'
     image={{
@@ -44,6 +36,16 @@ import refHighlightImg4 from '../images/nove_apollo-1024x767.webp';
   />
   <Accordion
     title='Ponúkame'
+    descriptions={[
+      'Certifikát BREEAM môže získať novostavba, existujúca budova, interiér (priestory firmy), mestská štvrť alebo celé mesto.',
+      `Poskytujeme nasledovné druhy BREEAM certifikácie:<br>
+      <ul class="">
+      <li> BREEAM International NC 2016</li>
+      <li> BREEAM In-Use</li>
+      <li> BREEAM RFO</li>
+      <li> BREEAM Communities</li>
+      </ul>`
+    ]}
     items={[
       {
         title: 'Analýza a stratégia',
@@ -97,7 +99,7 @@ import refHighlightImg4 from '../images/nove_apollo-1024x767.webp';
       }
     ]}
   />
-  <ReferencesHighlights
+  <ServiceProjectsHighlights
     descriptions={['Kompletný zoznam projektov je k dispozícii v sekcii nižšie.']}
     items={[
       {
@@ -150,6 +152,7 @@ import refHighlightImg4 from '../images/nove_apollo-1024x767.webp';
   />
   <Accordion
     title='Často kladené otázky'
+    descriptions={['Prehľad odpovedí na časté otázky o našej spoločnosti a ponúkaných službách']}
     emphasis={false}
     items={[
       {

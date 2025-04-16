@@ -4,22 +4,22 @@ const currentPath = pathname.slice(1); // remove the first "/"
 ---
 
 <ul class='nav nav-pills flex-column mb-auto sticky-top sidebar' id='sidebar'>
-  <li class='nav-item'>
+  <li class='nav-item border-bottom'>
     <a href='/breeam' class={`nav-link rounded-0 ${currentPath === 'breeam' ? 'active' : 'link-dark'}`}> BREEAM </a>
   </li>
-  <li class='nav-item'>
+  <li class='nav-item border-bottom'>
     <a href='/breeam-pre-logisticke-haly' class={`nav-link rounded-0 ${currentPath === 'breeam-pre-logisticke-haly' ? 'active' : 'link-dark'}`}> BREEAM pre logistické haly</a>
   </li>
-  <li class='nav-item'>
+  <li class='nav-item border-bottom'>
     <a href='/leed' class={`nav-link rounded-0 ${currentPath === 'leed' ? 'active' : 'link-dark'}`} aria-current='page'> LEED </a>
   </li>
-  <li class='nav-item'>
+  <li class='nav-item border-bottom'>
     <a href='/esg-audit-budovy' class={`nav-link rounded-0 ${currentPath === 'esg-audit-budovy' ? 'active' : 'link-dark'}`}> ESG audit budovy </a>
   </li>
-  <li class='nav-item'>
+  <li class='nav-item border-bottom'>
     <a href='/spracovanie-certifikatu-epd' class={`nav-link rounded-0 ${currentPath === 'spracovanie-certifikatu-epd' ? 'active' : 'link-dark'}`}> EPD </a>
   </li>
-  <li class='nav-item'>
+  <li class='nav-item border-bottom'>
     <a href='/eu-taxonomia' class={`nav-link rounded-0 ${currentPath === 'eu-taxonomia' ? 'active' : 'link-dark'}`}> EÚ Taxonómia </a>
   </li>
   <li class='nav-item'>
@@ -29,7 +29,17 @@ const currentPath = pathname.slice(1); // remove the first "/"
 
 <style>
   #sidebar {
-    top: 120px;
-    margin-left: -16px;
+    top: 6.9rem;
+  }
+  .nav-link {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .nav-item {
+    transition: background-color 0.25s ease;
+  }
+  .nav-item:hover {
+    background-color: var(--bs-light);
   }
 </style>
