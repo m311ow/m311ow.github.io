@@ -1,13 +1,36 @@
 ---
 import '../styles/bootstrap.scss';
 import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <!doctype html>
 <html lang='en' data-bs-theme='light'>
   <head>
+    <!-- TODO: EXTRACT REPEATED PARTS TO SEPARATE COMOPONENT -->
+
     <meta charset='utf-8' />
+    <!-- TODO: remove this once the page is ready -->
+    <meta name='robots' content='noindex' />
     <link rel='icon' href='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🌿</text></svg>' />
+
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+
+    <link href='https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap' rel='stylesheet' />
+
+    <link href='https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap' rel='stylesheet' />
+
+    <link href='https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap' rel='stylesheet' />
+
+    <link href='https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap' rel='stylesheet' />
+
+    <link href='https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap' rel='stylesheet' />
+
+    <link href='https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap' rel='stylesheet' />
+
+    <link href='https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap' rel='stylesheet' />
+
     <meta name='viewport' content='width=device-width, initial-scale=1' />
     <meta name='generator' content={Astro.generator} />
     <title>SALVIS</title>
@@ -20,6 +43,7 @@ import Navbar from '../components/Navbar.astro';
         <slot />
       </div>
     </main>
+    <Footer />
     <script>
       // Import everything
       // import 'bootstrap/dist/js/bootstrap';

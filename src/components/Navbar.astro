@@ -2,13 +2,13 @@
 
 ---
 
-<nav class='navbar navbar-expand-lg bg-light fixed-top'>
+<nav class='navbar navbar-expand-lg bg-white fixed-top'>
   <div class='container'>
     <!-- Logo -->
     <a class='navbar-brand fw-bold' href='/'>SALVIS</a>
 
     <!-- Hamburger for mobile -->
-    <button class='navbar-toggler border-0' type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
+    <button class='navbar-toggler border-0 rounded-0' type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
       <span class='navbar-toggler-icon'></span>
     </button>
 
@@ -20,7 +20,7 @@
           <ul class='dropdown-menu rounded-0'>
             <li><a class='dropdown-item' href='/breeam'>BREEAM</a></li>
             <li><a class='dropdown-item' href='/breeam-pre-logisticke-haly'>BREEAM pre logistické haly</a></li>
-            <li><a class='dropdown-item' href='/leed'>LEEAD</a></li>
+            <li><a class='dropdown-item' href='/leed'>LEED</a></li>
             <!-- <li><hr class='dropdown-divider' /></li> -->
             <li><a class='dropdown-item' href='/esg-audit-budovy'>ESG audit budovy</a></li>
             <li><a class='dropdown-item' href='#'>EPD</a></li>
@@ -29,15 +29,38 @@
           </ul>
         </li>
         <li class='nav-item'>
-          <a class='nav-link' href='#'>Projekty</a>
+          <a class='nav-link' href='/projects'>Projekty</a>
         </li>
         <li class='nav-item'>
-          <a class='nav-link' href='#'>Kariéra</a>
+          <a class='nav-link' href='/career'>Kariéra</a>
         </li>
         <li class='nav-item'>
-          <a class='nav-link' href='#'>Kontakt</a>
+          <a class='nav-link' href='/contact'>Kontakt</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+
+<style>
+  /* TODO: MAKE THE UNCOLLAPSED MENU MORE SEPARATED FROM MAIN CONTENT */
+  /* TODO: ADD ANIMATION TO HOVER EFFECT ON 'SLUZBY'LIST ITEMS */
+  /* TODO: ADD DIVIDERS BETWEEN THE DROPDOWN ITEMS TO MAKE IT LOOK SAME LIKE  LIST GROUP */
+  /* TODO: OPTIONALLY TRY TO FIX EMPTY SPACE AT THE START AND BOTTOM OF THE LIST VISIBLE WHEN HOVERING  */
+
+  .navbar-brand {
+    padding-left: 2px;
+  }
+
+  .navbar-toggler {
+    padding: 0;
+  }
+
+  .navbar-toggler-icon {
+    color: #000;
+  }
+
+  .nav-item:last-child .nav-link {
+    padding-right: 0;
+  }
+</style>

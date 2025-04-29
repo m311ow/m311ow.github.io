@@ -5,13 +5,32 @@
 <div class='row'>
   <div class='col-md-6 d-flex flex-column'>
     <!-- <span class='content-subtitle d-block'>Our services</span> -->
-    <h1 class='fw-bold display-5'>Poradenstvo a certifikácia BREEAM, LEED, ESG a EÚ&nbsp;Taxonómia</h1>
-    <h3 class='fw-light'>Zdravšie, udržateľnejšie a ziskovejšie stavby<br /><span class='text-primary fw-light'>Viac ako 10 rokov skúseností</span></h3>
+    <h1 class='fw-bold display-5'>Poradenstvo a certifikácia <br /> BREEAM, LEED, ESG a EÚ&nbsp;Taxonómia</h1>
+    <h3 class='text-primary fw-light'>Zdravšie, udržateľnejšie a ziskovejšie stavby<br /><span class='text-primary fw-light'>Viac ako 10 rokov skúseností</span></h3>
 
-    <div class='mt-4'>
-      <a href='#' class='btn btn-dark rounded-0 me-2'>Projekty</a>
+    <!-- <div class='mt-4'>
+      <a href='#' class='btn btn-dark rounded-0 me-1'>Projekty</a>
       <a href='#' class='btn btn-dark rounded-0'>Kontakt</a>
-    </div>
+    </div> -->
+
+    <ul class='list-group list-group-flush w-50 w-lg-25'>
+      <li class='list-group-item p-0 border-primary'>
+        <a href='/projekty' class='d-flex justify-content-between align-items-center text-decoration-none py-1 w-100 h-100'>
+          <span>Projekty</span>
+          <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-arrow-right' viewBox='0 0 16 16'>
+            <path fill-rule='evenodd' d='M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8'></path>
+          </svg>
+        </a>
+      </li>
+      <li class='list-group-item p-0'>
+        <a href='/kontakt' class='d-flex justify-content-between align-items-center text-decoration-none py-1 w-100 h-100'>
+          <span>Kontakt</span>
+          <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-arrow-right' viewBox='0 0 16 16'>
+            <path fill-rule='evenodd' d='M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8'></path>
+          </svg>
+        </a>
+      </li>
+    </ul>
   </div>
   <!-- <div class='col-md-6 col-lg-5 ps-lg-5 d-flex flex-column justify-content-end'>
       <div class='row'>
@@ -50,21 +69,21 @@
         </div>
       </div>
     </div> -->
-  <div class='col-md-6 text-end'>
+  <div class='col-md-6 text-end d-flex flex-column justify-content-between'>
     <!-- <span class='content-subtitle'>Our latest project</span> -->
     <!-- <img src='https://salvis.sk/wp-content/uploads/2024/04/VGP-Bratislava-2-3-600x600.png' class='img-fluid flex-grow-1 object-fit-cover h-100 mb-3' alt='placeholder image' /> -->
     <h3 class='text-end fw-light'>Akreditácie</h3>
-    <ul class='list-unstyled fst-italic text-secondary'>
-      <li>LEED AP BD+C</li>
-      <li>LEED Green Associate</li>
-      <li>BREEAM International Assessor</li>
-      <li>BREEAM AP</li>
-      <li>BREEAM In Use Assessor</li>
-      <li>WELL AP</li>
-      <li>DGNB Certified Consultant</li>
-      <li>Fitwel Ambassador</li>
-      <li>Certified Passive House Designer & Consultant</li>
-      <li>Autorizovaný stavebný inžinier – stavebná fyzika</li>
+    <ul class='list-unstyled fst-italic text-secondary pb-1'>
+      <li class='fw-light'>LEED AP BD+C</li>
+      <li class='fw-light'>LEED Green Associate</li>
+      <li class='fw-light'>BREEAM International Assessor</li>
+      <li class='fw-light'>BREEAM AP</li>
+      <li class='fw-light'>BREEAM In Use Assessor</li>
+      <li class='fw-light'>WELL AP</li>
+      <li class='fw-light'>DGNB Certified Consultant</li>
+      <li class='fw-light'>Fitwel Ambassador</li>
+      <li class='fw-light'>Certified Passive House Designer & Consultant</li>
+      <li class='fw-light'>Autorizovaný stavebný inžinier – stavebná fyzika</li>
     </ul>
   </div>
 </div>
@@ -73,5 +92,12 @@
   .services-item .services-icon svg {
     width: 2.5rem;
     height: 2.5rem;
+  }
+
+  .list-group-item {
+    transition: background-color 0.25s ease;
+  }
+  .list-group-item:hover {
+    background-color: var(--bs-light);
   }
 </style>

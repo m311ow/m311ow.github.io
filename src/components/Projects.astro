@@ -1,57 +1,92 @@
 ---
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
 
+const allProjects = await getCollection('projects');
 ---
 
-<!-- Service 9 - Bootstrap Brain Component -->
+<!-- Projects Grid Section -->
 <div class='row justify-content-md-center py-3 py-md-5 py-xl-8'>
   <div class='col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6'>
     <h2 class='mb-4 display-5 text-center'>Projekty</h2>
     <p class='text-secondary mb-3 text-center'>Naše projekty pokrývajú široké spektrum certifikovaných budov – od administratívnych centier až po logistické parky</p>
-    <hr class='w-50 mx-auto mb-3 mb-xl-9 border-light-subtle' />
   </div>
 </div>
 
-<div class='row gx-1 gy-1'>
+<!-- Responsive CSS Grid for Projects -->
+<div class='project-grid'>
   {
-    Array.from({ length: 20 }).map((_, i) => (
-      <div class='col-md-6 col-lg-3 mt-0 text-center'>
-        <figure class='figure mb-0'>
-          <img src='https://placehold.co/400x400' class='figure-img img-fluid mb-0 w-full' alt={`Image ${i + 1}`} />
-          <figcaption class='figure-caption'>A caption for project {i + 1}</figcaption>
-        </figure>
+    allProjects.map((project: any) => (
+      <div class='project-card-wrapper'>
+        <a href={`projects/${project.id}`}>
+          <figure class='project-card'>
+            <div class='image-wrapper'>
+              <Image src={project.data.image_cover ? project.data.image_cover : 'https://placehold.co/400x400'} width='400' height='400' class='figure-img' alt={`Cover image for project ${project.data.title}`} />
+            </div>
+            <figcaption class='figure-caption bg-dark text-light'>
+              <h5 class='mb-0'>{project.data.certificate}</h5>
+              <p class='text-light mb-2'>{project.data.title}</p>
+              <p class='text-light mb-0'>
+                {project.data.location_city} - {project.data.location_country}
+              </p>
+            </figcaption>
+          </figure>
+        </a>
       </div>
     ))
   }
 </div>
 
 <style>
-  .figure {
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 0.25rem;
+  }
+
+  .project-card-wrapper {
+    width: 100%;
+  }
+
+  .project-card {
     position: relative;
     overflow: hidden;
+    margin: 0;
+
+    transition: transform 0.2s ease;
+  }
+
+  .image-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .figure-img {
-    display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 0;
   }
 
+  /* TODO: CONSIDER MOBILE SCREENS - THE CAPTION WONT BE VISIBLE - THAT IS NOT ACCEPTABLE */
   .figure-caption {
-    display: none;
+    padding: 1rem;
+    /* background-color: #000;
+    color: #fff; */
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 0.5rem;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #fff;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-    text-align: center;
   }
 
-  .figure:hover .figure-caption {
+  .project-card:hover .figure-caption {
     opacity: 1;
-    display: block;
   }
 </style>

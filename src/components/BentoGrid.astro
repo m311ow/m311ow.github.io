@@ -1,0 +1,227 @@
+---
+
+---
+
+<div class='row justify-content-md-center py-3 py-md-5 py-xl-8'>
+  <div class='col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6'>
+    <h2 class='mb-4 display-5 text-center'>Služby</h2>
+    <!-- <h3 class='text-secondary text-center fw-light'>Poskytujeme komplexné služby v oblasti trvaj udržateľnosti pre nové aj existujúce budovy</h3> -->
+  </div>
+</div>
+<div class='bento-grid'>
+  <a href='/breeam-pre-logisticke-haly' class='bento-item bento-item-1 text-decoration-none'>
+    <div>
+      <h2>BREEAM</h2>
+      <p class='fs-5'>Logistické haly</p>
+    </div>
+  </a>
+
+  <a href='/breeam' class='bento-item bento-item-4 text-decoration-none'>
+    <div>
+      <h2>BREEAM</h2>
+      <p></p>
+    </div>
+  </a>
+  <a href='/leed' class='bento-item bento-item-7 text-decoration-none'>
+    <div>
+      <h2>LEED</h2>
+      <p></p>
+    </div>
+  </a>
+  <a href='/esg-audit-budov' class='bento-item bento-item-2 text-decoration-none'>
+    <div>
+      <h2>ESG Audit budov</h2>
+      <p></p>
+    </div>
+  </a>
+  <a href='/eu-taxonomia' class='bento-item bento-item-3 text-decoration-none'>
+    <div>
+      <h2>EU Taxonómia</h2>
+      <p></p>
+    </div>
+  </a>
+  <a href='/simulacie-budov' class='bento-item bento-item-5 text-decoration-none'>
+    <div>
+      <h2>Simulácie budov</h2>
+      <p></p>
+    </div>
+  </a>
+  <a href='/epd' class='bento-item bento-item-6 text-decoration-none'>
+    <div>
+      <h2>EPD</h2>
+      <p></p>
+    </div>
+  </a>
+</div>
+
+<style>
+  .bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 120px;
+    grid-gap: 0.2rem;
+  }
+
+  .bento-item {
+    background-color: #f8f9fa;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .bento-item:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .bento-item p {
+    margin-bottom: 0;
+  }
+  .bento-item h2 {
+    margin-bottom: 10px;
+  }
+  /* GRID */
+  /* BREEAM pre logisticke haly */
+  .bento-item-1 {
+    grid-column: span 2;
+    grid-row: span 4;
+  }
+  /* ESG Audit budov */
+  .bento-item-2 {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  /* EU Taxonómia */
+  .bento-item-3 {
+    grid-column: span 2;
+    grid-row: span 4;
+  }
+
+  /* BREEAM */
+  .bento-item-4 {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  /* Simulácie budov */
+  .bento-item-5 {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  /* EPD */
+  .bento-item-6 {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  /* LEED */
+  .bento-item-7 {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  /* IMAGES */
+  /* Base styling for all bento items with background images */
+  [class^='bento-item-'],
+  [class*=' bento-item-'] {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 2rem;
+    overflow: hidden;
+  }
+
+  /* Dark overlay for text contrast */
+  [class^='bento-item-']::before,
+  [class*=' bento-item-']::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* adjust opacity if needed */
+    transition: background-color 0.3s ease;
+    z-index: 0;
+  }
+
+  /* On hover: overlay becomes lighter (less dark) */
+  [class^='bento-item-']:hover::before,
+  [class*=' bento-item-']:hover::before {
+    background-color: rgba(0, 0, 0, 0.3); /* lighter overlay on hover */
+  }
+
+  /* Ensure text is above overlay */
+  [class^='bento-item-'] *,
+  [class*=' bento-item-'] * {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Optional: add text shadow for even better visibility */
+  [class^='bento-item-'] h1,
+  [class^='bento-item-'] h2,
+  [class^='bento-item-'] p {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  }
+
+  /* BREEAM pre logisticke haly */
+  .bento-item-1 {
+    background-image: url('https://salvis.sk/wp-content/uploads/2024/04/VGP-Bratislava-2-3-600x600.png');
+    background-size: cover;
+    background-position: center;
+  }
+  /* ESG Audit budov */
+  .bento-item-2 {
+    background-image: url('https://salvis.sk/wp-content/uploads/2022/01/esg_buildings_cover-scaled-600x600.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* EU Taxonomia */
+  .bento-item-3 {
+    background-image: url('https://salvis.sk/wp-content/uploads/2019/01/Blumental-Office_IKONICKA.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* BREEAM */
+  .bento-item-4 {
+    background-image: url('https://salvis.sk/wp-content/uploads/2019/01/Klingerka_2-600x600.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Simulacie budov */
+  .bento-item-5 {
+    background-image: url('https://salvis.sk/wp-content/uploads/2018/12/pexels-photo-496415-600x600.jpeg');
+    background-size: cover;
+    background-position: center;
+  }
+  /* EPD */
+  .bento-item-6 {
+    background-image: url('https://salvis.sk/wp-content/uploads/2022/01/solar_panels-scaled-600x600.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  /* LEED */
+  .bento-item-7 {
+    background-image: url('https://salvis.sk/wp-content/uploads/2020/04/POSTOVA-Offices-1-600x600.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  @media (max-width: 768px) {
+    .bento-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* .bento-item-1,
+    .bento-item-4,
+    .bento-item-7 {
+      grid-column: span 2;
+    } */
+  }
+</style>

@@ -1,5 +1,4 @@
 // Optional variable overrides
-
 $enable-negative-margins: true;
 
 $container-max-widths: (
@@ -23,11 +22,27 @@ $position-values: (
 // with 7.15:1 contrast ration this grey meets criteria  WCAG AAA standards even for both normal (14pt / 18.66px) and large (18pt / 24px) text
 $primary: #289448;
 $secondary: #51595d;
-$font-size-base: 1.1rem;
+$font-size-base: 1.2rem;
 $line-height-base: 1.5;
-
 // $font-size-base: 1.2rem;
 // $line-height-base: 1.5;
+
+// $font-family-sans-serif: 'Arial', system-ui, sans-serif;
+// $font-family-sans-serif: 'Verdana', system-ui, sans-serif;
+// $font-family-sans-serif: 'Calibri', system-ui, sans-serif;
+
+// $font-family-sans-serif: 'IBM Plex Sans', system-ui, sans-serif;
+// $font-family-sans-serif: 'Onest', system-ui, sans-serif;
+// $font-family-sans-serif: 'Source Sans 3', system-ui, sans-serif;
+
+// $font-family-sans-serif: 'Sofia Sans', system-ui, sans-serif;
+// $font-family-sans-serif: 'Nunito Sans', system-ui, sans-serif;
+
+// $font-family-sans-serif: 'Inter', system-ui, sans-serif;
+
+$font-family-sans-serif: 'Atkinson Hyperlegible Next', system-ui, sans-serif;
+
+$font-family-base: $font-family-sans-serif;
 
 $spacer: $line-height-base * 1rem;
 $spacers: (
@@ -50,7 +65,7 @@ $spacers: (
 @import 'bootstrap/scss/root';
 
 // Import everything
-@import 'bootstrap/scss/bootstrap';
+// @import 'bootstrap/scss/bootstrap';
 
 // or..
 
@@ -67,13 +82,13 @@ $spacers: (
 // @import 'bootstrap/scss/breadcrumb';
 @import 'bootstrap/scss/button-group';
 @import 'bootstrap/scss/buttons';
-// @import 'bootstrap/scss/card';
+@import 'bootstrap/scss/card';
 // @import 'bootstrap/scss/carousel';
-// @import 'bootstrap/scss/close';
+@import 'bootstrap/scss/close';
 @import 'bootstrap/scss/dropdown';
-// @import 'bootstrap/scss/forms';
+@import 'bootstrap/scss/forms';
 @import 'bootstrap/scss/grid';
-// @import 'bootstrap/scss/list-group';
+@import 'bootstrap/scss/list-group';
 // @import 'bootstrap/scss/modal';
 @import 'bootstrap/scss/navbar';
 // @import 'bootstrap/scss/offcanvas';
@@ -85,15 +100,122 @@ $spacers: (
 // @import 'bootstrap/scss/tables';
 // @import 'bootstrap/scss/toasts';
 // @import 'bootstrap/scss/tooltip';
-// @import 'bootstrap/scss/transitions';
+@import 'bootstrap/scss/transitions';
 
 // Optional helpers
 @import 'bootstrap/scss/helpers';
 
+// Custom Utilities
+$utilities: map-merge(
+  $utilities,
+  (
+    // Make an existing utility responsive
+    'width':
+      map-merge(
+        map-get($utilities, 'width'),
+        (
+          responsive: true
+        )
+      )
+  )
+);
+
 // Optional utilities
 @import 'bootstrap/scss/utilities/api';
 
-// Overrides
+// ------------------- TYPE SCALE GENERATION -------------------
+
+$type-scales: (
+  minor-second: 1.067,
+  major-second: 1.125,
+  minor-third: 1.2,
+  major-third: 1.25,
+  perfect-fourth: 1.333,
+  augmented-fourth: 1.414,
+  perfect-fifth: 1.5,
+  golden-ratio: 1.618
+);
+
+$heading-type-scale-base: minor-third;
+$display-type-scale-base: minor-third;
+
+@function check-type-scale-value($scale) {
+  @if map-has-key($type-scales, $scale) {
+    @return map-get($type-scales, $scale);
+  } @else if type-of($scale) == number and unitless($scale) {
+    @return $scale;
+  } @else {
+    @error "Sorry, `#{$scale}` is not a unitless number value or a pre-defined key in the $type-scales map.";
+  }
+}
+
+@mixin create-heading-type-scale($scale) {
+  $the-heading-type-scale: check-type-scale-value($scale);
+
+  $font-size-h6: $font-size-base;
+  $font-size-h5: $font-size-h6 * $the-heading-type-scale;
+  $font-size-h4: $font-size-h5 * $the-heading-type-scale;
+  $font-size-h3: $font-size-h4 * $the-heading-type-scale;
+  $font-size-h2: $font-size-h3 * $the-heading-type-scale;
+  $font-size-h1: $font-size-h2 * $the-heading-type-scale;
+  // $font-size-display-base is made global to allow for accessing the
+  // varibale in the next mixin.
+  $font-size-display-base: $font-size-h1 !global;
+
+  h1,
+  .h1 {
+    font-size: $font-size-h1;
+  }
+  h2,
+  .h2 {
+    font-size: $font-size-h2;
+  }
+  h3,
+  .h3 {
+    font-size: $font-size-h3;
+  }
+  h4,
+  .h4 {
+    font-size: $font-size-h4;
+  }
+  h5,
+  .h5 {
+    font-size: $font-size-h5;
+  }
+  h6,
+  .h6 {
+    font-size: $font-size-h6;
+  }
+}
+
+@mixin create-display-type-scale($scale) {
+  $the-display-type-scale: check-type-scale-value($scale);
+
+  $font-size-display-4: $font-size-display-base + $font-size-base;
+  $font-size-display-3: $font-size-display-4 * $the-display-type-scale;
+  $font-size-display-2: $font-size-display-3 * $the-display-type-scale;
+  $font-size-display-1: $font-size-display-2 * $the-display-type-scale;
+
+  .display-4 {
+    font-size: $font-size-display-4;
+  }
+  .display-3 {
+    font-size: $font-size-display-3;
+  }
+  .display-2 {
+    font-size: $font-size-display-2;
+  }
+  .display-1 {
+    font-size: $font-size-display-1;
+  }
+}
+
+@include create-heading-type-scale($heading-type-scale-base);
+@include create-display-type-scale($display-type-scale-base);
+
+// ------------------- TYPE SCALE GENERATION -------------------
+
+// Custom styles
 ::selection {
   color: var(--bs-primary); /* Text color */
   background-color: rgba(var(--bs-primary-rgb), 0.25); /* Background with 25% opacity */
@@ -118,33 +240,39 @@ body {
 
 // typography
 
-/* Heading sizing modular scale */
-h1 {
-  font-size: 2.986rem;
+* {
+  font-variant-ligatures: none;
+  -webkit-font-feature-settings: 'liga' 0, 'clig' 0;
+  font-feature-settings: 'liga' 0, 'clig' 0;
 }
 
-h2 {
-  font-size: 2.488rem;
-}
+/* Heading sizings */
+// h1 {
+//   font-size: 2.986rem;
+// }
 
-h3 {
-  font-size: 2.074rem;
-}
+// h2 {
+//   font-size: 2.488rem;
+// }
 
-h4 {
-  font-size: 1.728rem;
-}
+// h3 {
+//   font-size: 2.074rem;
+// }
 
-h5 {
-  font-size: 1.44rem;
-}
+// h4 {
+//   font-size: 1.728rem;
+// }
 
-h6 {
-  font-size: 1.2rem;
-}
+// h5 {
+//   font-size: 1.44rem;
+// }
+
+// h6 {
+//   font-size: 1.2rem;
+// }
 
 ul {
   padding-left: 1.2rem;
-  margin-bottom: 0;
+  // margin-bottom: 0;
   list-style-type: square;
 }
