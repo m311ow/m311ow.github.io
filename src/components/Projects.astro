@@ -1,15 +1,18 @@
 ---
-import { Image } from 'astro:assets';
-import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets'
+import { getCollection } from 'astro:content'
 
-const allProjects = await getCollection('projects');
+const allProjects = await getCollection('projects')
 ---
 
 <!-- Projects Grid Section -->
 <div class='row justify-content-md-center py-3 py-md-5 py-xl-8'>
   <div class='col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6'>
     <h2 class='mb-4 display-5 text-center'>Projekty</h2>
-    <p class='text-secondary mb-3 text-center'>Naše projekty pokrývajú široké spektrum certifikovaných budov – od administratívnych centier až po logistické parky</p>
+    <p class='text-secondary mb-3 text-center'>
+      Naše projekty pokrývajú široké spektrum certifikovaných budov – od administratívnych centier
+      až po logistické parky
+    </p>
   </div>
 </div>
 
@@ -18,10 +21,20 @@ const allProjects = await getCollection('projects');
   {
     allProjects.map((project: any) => (
       <div class='project-card-wrapper'>
-        <a href={`projects/${project.id}`}>
+        <a href={`/projects/${project.id}`}>
           <figure class='project-card'>
             <div class='image-wrapper'>
-              <Image src={project.data.image_cover ? project.data.image_cover : 'https://placehold.co/400x400'} width='400' height='400' class='figure-img' alt={`Cover image for project ${project.data.title}`} />
+              <Image
+                src={
+                  project.data.image_cover
+                    ? project.data.image_cover
+                    : 'https://placehold.co/400x400'
+                }
+                width='400'
+                height='400'
+                class='figure-img'
+                alt={`Cover image for project ${project.data.title}`}
+              />
             </div>
             <figcaption class='figure-caption bg-dark text-light'>
               <h5 class='mb-0'>{project.data.certificate}</h5>
