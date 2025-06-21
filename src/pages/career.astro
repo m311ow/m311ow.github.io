@@ -1,8 +1,107 @@
 ---
-import Projects from '../components/Projects.astro';
-import SidebarLayout from '../layouts/SidebarLayout.astro';
+import Accordion from '../components/Accordion.astro'
+import ServiceHero from '../components/ServiceHero.astro'
+import coverImg from '../images/team_photo.jpg'
+import SidebarLayout from '../layouts/SidebarLayout.astro'
 ---
 
 <SidebarLayout>
-  <h1>TODO</h1>
+  <ServiceHero
+    title='Kariéra'
+    descriptions={[
+      'Spoločnosť SALVIS je rýchlo rastúca spoločnosť venujúca sa ESG poradenstvu, uhlíkovej neutralite, trvalo udržateľným budovám. Našimi najsilnejšími hodnotami sú sloboda a inovatívnosť. Sme otvorení výzvam a zmene. Práca v SALVIS prináša možnosť pracovať na najväčšej výzve súčasnosti v kontexte veľkých stavebných projektov a s poprednými developerskými spoločnosťami.',
+      '<strong>V prípade záujmu o spoluprácu nás prosím kontaktujte na mailovej adrese kariera@salvis.sk</strong>',
+      '<strong>Budeme radi ak nám o sebe napíšete zopár viet a priložíte štrukturovaný životopis.</strong>'
+    ]}
+    flavorText='V tíme pracujú poprední odborníci v oblasti LCA analýz, simulácií, trvalo udržateľného urbanizmu, LEED a BREEAM poradenstva.'
+    image={{
+      src: coverImg,
+      alt: 'Fotka tímu SALVIS'
+    }}
+  />
+
+  <Accordion
+    title='Junior konzultant BREEAM / LEED'
+    descriptions={[
+      'Miesto práce: Bratislava',
+      'Mzdové podmienky: 1500 – 2000 € / mesačne, v závislosti od skúseností',
+      'Termín nástupu: dohodou'
+    ]}
+    items={[
+      {
+        title: 'Požiadavky',
+        content: `
+        <ul>
+            <li>schopnosť pracovať s nástrojom CAD, znalosť čítania projektovej dokumentácie</li>
+            <li>schopnosť viesť konverzáciu a pracovať s textom v anglickom jazyku</li>
+            <li>vzťah k trvalej udržateľnosti</li>
+            <li>dôslednosť</li>
+            <li>trpezlivosť</li>
+            <li>systematickosť</li>
+        </ul>
+        `
+      },
+      {
+        title: 'Náplň práce',
+        content: `
+        <ul>
+            <li>Príprava projektu za účelom podania žiadosti o certifikáciu BREEAM / LEED</li>
+            <li>Vyhodnocovanie plnenia kritérií udržateľnosti</li>
+            <li>Podpora počas porád a mítingov</li>
+        </ul>
+
+        <p>Vašou úlohou bude spolupracovať s projekčnými kanceláriami a stavebnými dodávateľmi na zvýšení trvalej udržateľnosti budov.
+        </p>
+        <p>Dôležitá je schopnosť čítať výkresovú dokumentáciu a pracovať s nástrojom CAD a excel.</p>
+
+        <p>Súčasťou práce je písanie a porozumenie textu v angličtine. Konverzácia v angličtine bude tiež potrebná.</p>
+
+        <p>Budete pracovať pod vedením skúseného konzultanta.</p>
+        `
+      }
+    ]}
+  />
+
+  <Accordion
+    title='Projektový manažér BREEAM / LEED'
+    descriptions={[
+      'Miesto práce: Bratislava',
+      'Mzdové podmienky: 2500 – 4000 € / mesačne, v závislosti od skúseností',
+      'Termín nástupu: dohodou'
+    ]}
+    items={[
+      {
+        title: 'Požiadavky',
+        content: `
+        <ul>
+            <li><strong>2 ročné praktické skúsenosti s certifikáciou BREEAM / LEED</strong></li>
+            <li>schopnosť viesť konverzáciu a pracovať s textom v anglickom jazyku</li>
+            <li>znalosť čítania projektovej dokumentácie a práca s CAD programami</li>
+            <li>vzťah k trvalej udržateľnosti</li>
+            <li>dôslednosť</li>
+            <li>trpezlivosť</li>
+        </ul>
+        `
+      },
+      {
+        title: 'Náplň práce',
+        content: `
+        <ul>
+            <li>registrácia budov v systéme BREEAM / LEED a obsluha rozhrania BREEAM Projects / LEEDonline</li>
+            <li>spracovanie predbežných hodnotení budov v systéme BREEAM / LEED</li>
+            <li>spracovanie odporúčaní na zvýšenie hodnotenia v systéme BREEAM</li>
+            <li>vedenie pravidelných stretnutí s klientom a jeho dodávateľmi</li>
+            <li>interpretácia požiadaviek BREEAM</li>
+            <li>zber projektovej dokumentácie, spracovanie časových harmonogramov projekcie a výstavby</li>
+            <li>spolupráca s vedúcimi oddelení architektúry, HVAC, výberu dodávateľov a výstavby pri dodávaní jednotlivých balíkov služieb BREEAM</li>
+            <li>manažment subdodávateľov odborných služieb BREEAM</li>
+            <li>finalizácia dokumentácie a odoslanie certifikačnému orgánu BRE</li>
+            <li>komunikácia s certifikačným orgánom a sprostredkovanie vydania certifikátu</li>
+        </ul>
+
+        Súčasťou práce je písanie a porozumenie textu v angličtine. Konverzácia v angličtine bude tiež potrebná.
+        `
+      }
+    ]}
+  />
 </SidebarLayout>

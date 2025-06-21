@@ -1,8 +1,22 @@
 ---
-import Projects from '../components/Projects.astro';
-import SidebarLayout from '../layouts/SidebarLayout.astro';
+import ServiceHero from '../components/ServiceHero.astro'
+import coverImg from '../images/office_staticmap.png'
+import SidebarLayout from '../layouts/SidebarLayout.astro'
 ---
 
 <SidebarLayout>
-  <h1>TODO</h1>
+  <ServiceHero
+    title='Kontakt'
+    descriptions={[
+      'Karadžičova 16, 821 08 Bratislava',
+      '+421 911 969 333',
+      'sura@salvis.sk',
+      '<strong>Pre kontakt s naším tímom môžete použiť aj formulár v pätičke stránky.</strong>'
+    ]}
+    flavorText='Naše sídlo sa nachádza v blízkosti centra Bratislavy, v kancelárskej budove CBC - V.'
+    image={{
+      src: coverImg,
+      alt: 'Mapa zobrazujúca polohu kancelárie SALVIS v Bratislave'
+    }}
+  />
 </SidebarLayout>
