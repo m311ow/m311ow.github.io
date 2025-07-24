@@ -1,0 +1,187 @@
+---
+import Accordion from '../components/Accordion.astro'
+import Benefits from '../components/Benefits.astro'
+import Contact from '../components/Contact.astro'
+import References from '../components/Projects.astro'
+import ServiceHero from '../components/ServiceHero.astro'
+import ServiceProjectsHighlights from '../components/ServiceProjectsHighlights.astro'
+import Testimonials from '../components/Testimonials.astro'
+import refHighlightImg2 from '../images/campus_leaf-1024x675.webp'
+import refHighlightImg3 from '../images/lakeside_park-1024x683.webp'
+import coverImg from '../images/leed_cover-scaled-600x600.jpg'
+import refHighlightImg4 from '../images/nove_apollo-1024x767.webp'
+import refHighlightImg1 from '../images/WESTEND-GATE-1024x683.webp'
+import SidebarLayout from '../layouts/SidebarLayout.astro'
+---
+
+<SidebarLayout>
+  <ServiceHero
+    title='EU Taxonómia'
+    descriptions={[
+      'Taxonómia EÚ zavádza jednotný rámec pre určenie toho, čo je skutočne „udržateľná“ ekonomická aktivita. Pre investorov, banky a veľkých nájomcov je čoraz dôležitejšie vedieť preukázať, že budova spĺňa požiadavky tejto regulácie.',
+      'V SALVIS pomáhame klientom presne s týmto – preložíme komplexné technické požiadavky do konkrétnych krokov a vypracujeme kompletnú dokumentáciu, ktorú môžete použiť pri komunikácii s bankami, investormi alebo pri due diligence. Bez tejto dokumentácie môže byť už čoskoro problém projekt vôbec financovať.',
+      'Služby EÚ taxonómie poskytujeme ako samostatnú službu alebo ako doplnok k certifikáciám BREEAM či LEED.'
+    ]}
+    flavorText='Vlastné tvrdenia o udržateľnosti nestačia. Preukážte to – a získajte dôveru bánk, investorov a nájomcov.'
+    image={{
+      src: coverImg,
+      alt: 'Ilustračný obrázok budovy'
+    }}
+  />
+
+  <Benefits
+    title='Výhody'
+    descriptions={[
+      'Pomôžeme vám naplniť požiadavky EÚ taxonómie a získať výhodu pri financovaní či predaji budovy.'
+    ]}
+    items={[
+      'Zvýšenie atraktivity nehnuteľnosti pre investorov a nájomcov',
+      'Prístup k lacnejšiemu financovaniu (úroky nižšie až o 0,5 %)',
+      'Vyhnutie sa riziku, že projekt nebude financovateľný od roku 2026',
+      'Plná kontrola nad dokumentáciou - auditovateľná výstupná správa'
+    ]}
+  />
+  <Accordion
+    title='Ponúkame'
+    descriptions={[
+      'Službu EU Taxonómie pripravíme ako samostatný výstup alebo v kombinácii s certifikáciou (BREEAM/LEED). Kompletná dokumentácia pokrýva všetkých 6 environmentálnych cieľov.'
+    ]}
+    items={[
+      {
+        title: 'Výber vhodného cieľa a aktivity podľa NACE kódu',
+        content: `
+        <ul>
+            <li>Acquisition and ownership of buildings (Activity 7.7)</li>
+            <li>Construction of new buildings (Activity 7.1)</li>
+            <li>Renovation of existing buildings (Activity 7.2)</li>
+        </ul>
+        `
+      },
+      {
+        title: 'Vypracovanie požadovaných výstupov a preukazných dokumentov',
+        content: `
+        <ul>
+            <li>Indikatívne EHB výpočty a potvrdenie splnenia energetickej triedy A0 s dodatočným 10% zlepšením v oblasti potreby primárnej energie, spracovanie projektového energetického hodnotenia, spracovanie energetického certifikátu budovy</li>
+            <li>Termovízne snímkovanie, BDT (Blower Door Test), kontrola vzduchotesnosti a kontinuity zateplenia</li>
+            <li>Analýza životného cyklu budovy - LCA (life cycle analysis), výpočet a optimalizácia zabudovanej uhlíkovej stopy budov</li>
+            <li>Posúdenie klimatického rizika a zraniteľnosti voči klimatickým zmenám, spracovanie stratégie odolnosti voči klimatickým rizikám s použitím scenárov RCP 8.5 a RCP 4.5 a časovým horizontom 50 rokov.</li>
+            <li>Poradenstvo v oblasti zníženia spotreby pitnej vody v rozsahu Taxonómie EÚ</li>
+            <li>Vypracovanie správy o stave vodných útvarov a ich ochrane, dohľad nad implementáciou ochranných opatrení, dokumentácia dodržania opatrení.</li>
+            <li>Spracovanie plánu spracovania odpadu počas výstavby + priebežná kontrola plnenia</li>
+            <li>Spracovanie stratégie adaptability budovy na iný spôsob využitia, cirkularita, materiálová efektívnosť, adaptabilita, flexibilita, recyklovateľnosť  a rozložiteľnosť / Návod na demontáž a prispôsobenie spracuje generálny projektant s našou podporou.</li>
+            <li>Spracovanie manuálu pre trvalo udržateľné obstarávanie stavebných materiálov + priebežná kontrola implementácie a plnenia</li>
+            <li>Spracovanie plánu ochrany vnútorného ovzdušia + kontrola plnenia na stavbe + Poskytnutie katalógu materiálov s nízkym obsahom VOC + podpora a kontrola pri výbere a aplikácii produktov</li>
+            <li>Zriadenie a dohľad nad trvalo udržateľným staveniskom</li>
+            <li>Služby vhodne kvalifikovaného ekológa</li>
+        </ul>
+        `
+      },
+      {
+        title:
+          'Priebežné reportovanie financujúcej inštitúcii pri postupnom uvoľňovaní finančných prostriedkov',
+        content: `
+        <ul>
+
+        </ul>
+        `
+      },
+      {
+        title:
+          'Zostavenie výstupnej správy - Obsahuje všetky kapitoly podľa štruktúry Taxonómie EÚ, vhodná pre audit treťou stranou',
+        content: `
+        <ul>
+
+        </ul>
+        `
+      },
+      {
+        title:
+          'Zladenie s požiadavkami bánk a financujúcich inštitúcií - Zohľadňujeme praktické požiadavky z reálnych prípadov v SR, PL, DE, CZ a HR',
+        content: `
+        <ul>
+
+        </ul>
+        `
+      }
+    ]}
+  />
+  <ServiceProjectsHighlights
+    descriptions={['Kompletný zoznam projektov je k dispozícii v sekcii nižšie.']}
+    items={[
+      {
+        title: 'Westend Gate',
+        alt: 'Westend Gate',
+        src: refHighlightImg1
+      },
+      {
+        title: 'Campus Leaf',
+        alt: 'Campus Leaf',
+        src: refHighlightImg2
+      },
+      {
+        title: 'Lakeside Park',
+        alt: 'Lakeside Park',
+        src: refHighlightImg3
+      },
+      {
+        title: 'Nové Apollo',
+        alt: 'Nové Apollo',
+        src: refHighlightImg4
+      }
+    ]}
+  />
+  <Testimonials
+    descriptions={[
+      'Na vzťahoch s našimi klientmi si mimoriadne zakladáme. Každý projekt je pre nás partnerstvom postaveným na dôvere, spolupráci a spoločnej vízii.'
+    ]}
+    items={[
+      {
+        name: 'Mirosław Gromek',
+        position: 'Senior ESG Manager, Accolade',
+        content: `
+            „Spoločnosť SALVIS splnila naše prísne požiadavky a bezproblémovo zosúladila Taxonómiu EÚ s BREEAM, čím sa vyhla zbytočnému zdvojovaniu. Komunikácia bola bezchybná a konečná dokumentácia nevyžadovala žiadne úpravy. Bol som rád, že som mohol spolupracovať s jednou z najlepších spoločností v regióne strednej a východnej Európy.“
+        `
+      },
+      {
+        name: 'Ondřej Doupal',
+        position: 'Sustainability Manager - Eastern Europe , VGP',
+        content: `„SALVIS jsme jako BREEAM assessora vybrali na základě dosavadní, krátké a pozitivní zkušenosti pro spoustu našich nadcházejících projektů. Původně dodavatel certifikace malého konstrukčního projektu na Slovensku se tak stal našim hlavním partnerem pro BREEAM a Taxonomii EÚ nejen na Slovensku, ale i v České republice.“`
+      }
+    ]}
+  />
+  <Accordion
+    title='Často kladené otázky'
+    descriptions={['Prehľad odpovedí na časté otázky o našej spoločnosti a ponúkaných službách']}
+    emphasis={false}
+    items={[
+      {
+        title: 'Je splnenie požiadaviek EU Taxonómie povinné?',
+        content: `Nie je. Veľké spoločnosti musia uviesť či vykonávajú činnosti, ktoré sú súčasťou taxonómie. Nemusia však požiadavky splniť. Ale splnenie taxonómie je čoraz častejšie vyžadované pri financovaní alebo prenájme veľkým korporátnym nájomcom.`
+      },
+      {
+        title: 'Môžeme preukázať splnenie EU Taxonómie EÚ bez BREEAM?',
+        content: `Áno. Taxonómia je samostatná regulácia a dá sa pokryť cez samostatný výstup, auditovateľný nezávislou stranou.`
+      },
+      {
+        title: 'Je report od SALVIS akceptovaný bankami?',
+        content: `Áno, naše výstupy boli akceptované viacerými bankami a investormi na Slovensku, v Česku, Poľsku a Chorvátsku.`
+      },
+      {
+        title: 'Kde sa dozviem aké sú požiadavky Taxonómie?',
+        content: `Aktuálne znenie požiadaviek sa vždy nachádza v tzv. kompase Taxonómie EÚ - <a href="https://ec.europa.eu/sustainable-finance-taxonomy/taxonomy-compass/the-compass">https://ec.europa.eu/sustainable-finance-taxonomy/taxonomy-compass/the-compass</a>`
+      },
+      {
+        title:
+          'Aké služby si budem musieť objednať od iných spoločnosti ako SALVIS v prípade, že chcem splniť všetky požiadavky Taxonómie EÚ?',
+        content: `Niektoré projekty vyžadujú spracovanie EIA (Environmental Impact Assessment) alebo spracovanie prieskumu kontaminácie a spracovanie projektu dekontaminácie. V takých prípadoch je potrebné si tieto služby objednať od špecializovaných tretích strán.`
+      },
+      {
+        title:
+          'Pri žiadosti o bankové financovanie realitného projektu som od banky dostal ESG dotazník na vyplnenie. Pomôže mi SALVIS vyplniť ho k spokojnosti banky?',
+        content: `Áno. Poskytneme všetky služby, na ktoré sa dotazník pýta a dotazník vyplníme k spokojnosti banky. Na vyžiadanie tiež poskytneme banke všetky štúdie a výpočty potvrdzujúce splnenie požiadaviek.`
+      }
+    ]}
+  />
+  <Contact />
+  <References />
+</SidebarLayout>
