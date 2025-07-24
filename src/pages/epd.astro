@@ -1,0 +1,189 @@
+---
+import Accordion from '../components/Accordion.astro'
+import Benefits from '../components/Benefits.astro'
+import Contact from '../components/Contact.astro'
+import References from '../components/Projects.astro'
+import ServiceHero from '../components/ServiceHero.astro'
+import coverImg from '../images/leed_cover-scaled-600x600.jpg'
+import SidebarLayout from '../layouts/SidebarLayout.astro'
+---
+
+<SidebarLayout>
+  <ServiceHero
+    title='Vypracovanie EPD'
+    descriptions={[
+      'Ako jediná spoločnosť na Slovensku ponúkame spracovanie EPD typu III vybraného produktu v súlade s STN EN 15804+A2:2019, STN EN ISO 14025.',
+      'EPD bude spracované v rozsahu vyžadovanom certifikačnými systémami LEED v4 a BREEAM International NC 2016.',
+      'Ponúkame tiež overenie EPD certifikátu treťou stranou. To zabezpečí, že sa bude jednať o typ EPD s najvyššou hodnotou.',
+      'Databázy, pre ktoré vieme spracovať EPD certifikát: EPD Square, International EPD system, EPD Hub',
+      'Databázy, pre ktoré vieme overovať EPD: EPD Square, International EPD system, EPD Hub'
+    ]}
+    flavorText='EPD je výsledkom zjednocujúcej metodiky vyhodnocovania a zverejňovania environmentálnych dopadov spojených s výrobou stavebného produktu. Zahŕňa všetky fázy životného cyklu výrobku od ťažby surovín až po likvidáciu.'
+    image={{
+      src: coverImg,
+      alt: 'Ilustračný obrázok budovy'
+    }}
+  />
+
+  <Benefits
+    title='Výhody'
+    descriptions={[
+      'EPD certifikát zvyšuje konkurencieschopnosť výrobcu, keďže dokazuje environmentálnu kvalitu materiálu. Pomáha plniť legislatívne požiadavky a zároveň odhaľuje možnosti optimalizácie výroby z pohľadu spotreby a emisií. Výrobca tak získava dôveryhodnosť, marketingový benefit a výhodu pri ESG reportingu.'
+    ]}
+    items={[
+      'Pridelenie bodov v certifikačných schémach LEED a BREEAM',
+      'Výhoda oproti konkurencii - EPD certifikát má spracovaných len zlomok produktov na trhu',
+      'Získajte prehľad o dopade vášho produktu na životné prostredie',
+      'Evidencia certifikovaných produktov v nadnárodných databázach'
+    ]}
+  />
+  <Accordion
+    title='Ponúkame'
+    descriptions={[
+      'V rámci našich služieb poskytujeme komplexné spracovanie EPD certifikátu vrátane overenia treťou stranou. Naše služby sú zamerané na stavebné materiály a produkty, ktoré sú relevantné aj pre certifikačné schémy LEED a BREEAM.'
+    ]}
+    items={[
+      {
+        title: 'Vypracovanie EPD typu III vybraného produktu',
+        content: `
+        <ul>
+            <li>V súlade s STN EN 15804+A2:2019, STN EN ISO 14025</li>
+            <li>V rozsahu vyžadovanom certifikačnými systémami LEED a BREEAM</li>
+        </ul>
+        `
+      },
+      {
+        title: 'Overenie EPD certifikátu treťou stranou',
+        content: `
+        <ul>
+            <li>Zabezpečuje najvyššiu hodnotu EPD</li>
+            <li>Overenie je dôležité pre získanie dôveryhodnosti a uznania v medzinárodných databázach</li>
+        </ul>
+        `
+      },
+      {
+        title: 'Publikovanie EPD v databázach',
+        content: `
+        <ul>
+            <li>EPD Square</li>
+            <li>International EPD System</li>
+            <li>EPD Hub</li>
+        </ul>
+        `
+      },
+      {
+        title: 'Doplnkové služby pre výrobcov stavebných materiálov',
+        content: `
+        <ul>
+            <li>LCA analýza a vyčíslenie dopadov portfólia produktov vyrábaných organizáciou</li>
+            <li>Posúdenia a optimalizácia výrobkov z hľadiska požiadaviek systémov LEED, BREEAM a WELL</li>
+            <li>Príprava, resp. doplnenie prezentačných materiálov a katalógov s dôrazom na trvalú udržateľnosť a systémy LEED, BREEAM a WELL</li>
+            <li>Školenie obchodných zástupcov v oblasti trvalej udržateľnosti a certifikátov trvalej udržateľnosti</li>
+        </ul>
+        `
+      }
+    ]}
+  />
+  <!-- <ServiceProjectsHighlights
+    descriptions={['Kompletný zoznam projektov je k dispozícii v sekcii nižšie.']}
+    items={[
+      {
+        title: 'Westend Gate',
+        alt: 'Westend Gate',
+        src: refHighlightImg1
+      },
+      {
+        title: 'Campus Leaf',
+        alt: 'Campus Leaf',
+        src: refHighlightImg2
+      },
+      {
+        title: 'Lakeside Park',
+        alt: 'Lakeside Park',
+        src: refHighlightImg3
+      },
+      {
+        title: 'Nové Apollo',
+        alt: 'Nové Apollo',
+        src: refHighlightImg4
+      }
+    ]}
+  /> -->
+  <!-- <Testimonials
+    descriptions={['Na vzťahoch s našimi klientmi si mimoriadne zakladáme. Každý projekt je pre nás partnerstvom postaveným na dôvere, spolupráci a spoločnej vízii.']}
+    items={[
+      {
+        name: 'Ondřej Doupal',
+        position: 'Sustainability Manager — Eastern Europe, VGP',
+        content: `
+            „SALVIS jsme jako BREEAM asesora vybrali na základě dosavadní, krátké a pozitivní zkušenosti pro spoustu našich nadcházejících projektů. Původně dodavatel certifikace malého konstrukčního projektu na Slovensku se tak stal našim hlavním partnerem pro BREEAM nejen na Slovensku, ale i v České republice.<br><br>
+
+            Salvis bere klientský přístup velice vážně a je flexibilní klientským potřebám. Toto nám umožňuje aktualizovat certifikační postupy na základě potřeb z předchozích zkušeností a promítnout je zpět do standardů výstavby.<br><br>
+
+            Na základě dosavadní zkušenosti ze třinácti certifikovaných projektů mohu Salvis jen doporučit.“
+        `
+      },
+      {
+        name: 'Ondrej Barát',
+        position: 'Project manager, VGP',
+        content: `„SALVIS mi vždy rýchlo a presne odpovedá na otázky súvisiace s BREEAM. Vždy nájdu s projekčným tímom cestu ako splniť požiadavky a získať úroveň Excellent. Páči sa mi, že pravidelne navštevujú stavbu, poskytujú nám správu o stave certifikácie a majú celý proces pod kontrolou.“`
+      },
+      {
+        name: 'Tomáš Gürtler',
+        position: 'Project manager, Contera',
+        content: `„SALVIS nám dodáva službu BREEAM takým spôsobom akým si to predstavujeme. Odpovedajú rýchlo, komunikujú s projekčným tímom, chodia na stavbu. Vedia ako dosiahnuť úroveň Very Good s nízkymi nákladmi a plynule. So SALVIS sme 100% spokojní.“`
+      }
+    ]}
+  /> -->
+  <Accordion
+    title='Často kladené otázky'
+    descriptions={['Prehľad odpovedí na časté otázky o našej spoločnosti a ponúkaných službách']}
+    emphasis={false}
+    items={[
+      {
+        title: 'Ako vyzerá proces vypracovania EPD?',
+        content: `
+        <ul>
+            <li>1. Určenie pravidiel produktových kategórií (PCR - product category rules) pre vybraný produkt</li>
+            <li>2. Spracovanie podrobnej schémy výroby</li>
+            <li>3. Určenie jednotkových procesov</li>
+            <li>4. Určenie funkčnej jednotky produktu</li>
+            <li>5. Sledovanie vstupov a výstupov v jednotkových procesoch a získanie dát</li>
+            <li>6. Spracovanie LCA (Life Cycle Assessment)</li>
+            <li>7. Spracovanie výstupov do formátu EPD</li>
+            <li>8. Overenie certifikátu treťou stranou</li>
+            <li>9. Uverejnenie v databáze EPD</li>
+        </ul>
+        `
+      },
+      {
+        title: 'Spĺňajú vypracované EPD certifikáty požiadavky na medzinárodné ISO normy?',
+        content: `Áno, všetky EPD certifikáty sú vypracované v súlade s medzinárodnými normami STN EN 15804+A2:2019 a STN EN ISO 14025. Tým sa zabezpečuje ich platnosť a uznateľnosť aj v zahraničí.`
+      },
+      {
+        title: 'Ponúkate aj overenie EPD certifikátu treťou stranou?',
+        content: `Áno, poskytujeme službu overenia EPD certifikátu treťou stranou. Toto overenie zabezpečuje, že EPD spĺňa najvyššie štandardy kvality a presnosti. Overenie je dôležité pre získanie dôveryhodnosti a uznania v medzinárodných databázach.`
+      },
+      {
+        title: 'S akým databázami spolupracujete pri publikovaní EPD certifikátov?',
+        content: `
+        <ul>
+            <li>EPD Square</li>
+            <li>International EPD System</li>
+            <li>EPD Hub</li>
+        </ul>
+        `
+      },
+      {
+        title: 'S akými typmi matérialov máte skúsenosti?',
+        content: `Úspešne sme vypracovali EPD certifikáty pre rôzne typy produktov, ako napríklad izolačné materiály, oceľ, betón, tehly, rôzna stavebná chémia, farby, laky, podlahy.`
+      },
+      {
+        title: 'Aká je cena za vypracovanie EPD certifikátu?',
+        content: `Cena certifikácie závisí od typu produktu a rozsahu požadovaných služieb. Pre konkrétnu cenovú ponuku nás prosím kontaktujte`
+      }
+    ]}
+  />
+  <Contact />
+  <References />
+</SidebarLayout>
