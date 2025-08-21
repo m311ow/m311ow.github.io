@@ -31,6 +31,22 @@ const currentPath = pathname.slice(1) // remove the first "/"
   </li>
   <li class='nav-item border-bottom'>
     <a
+      href='/leed-om'
+      class={`nav-link ps-0 rounded-0 ${currentPath === 'leed-om' ? 'active' : 'link-dark'}`}
+    >
+      LEED O+M
+    </a>
+  </li>
+  <li class='nav-item border-bottom'>
+    <a
+      href='/derkabonizacia-existujucich-budov'
+      class={`nav-link ps-0 rounded-0 ${currentPath === 'derkabonizacia-existujucich-budov' ? 'active' : 'link-dark'}`}
+    >
+      Dekarbonizácia existujúcich budov
+    </a>
+  </li>
+  <li class='nav-item border-bottom'>
+    <a
       href='/esg-audit-budov'
       class={`nav-link ps-0 rounded-0 ${currentPath === 'esg-audit-budov' ? 'active' : 'link-dark'}`}
     >
