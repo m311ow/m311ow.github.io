@@ -1,30 +1,34 @@
 ---
-import SidebarLayout from '../layouts/SidebarLayout.astro';
-import ServiceHero from '../components/ServiceHero.astro';
-import Benefits from '../components/Benefits.astro';
-import Contact from '../components/Contact.astro';
-import References from '../components/Projects.astro';
-import ServiceProjectsHighlights from '../components/ServiceProjectsHighlights.astro';
-import ServiceProjects from '../components/ServiceProjects.astro';
-import Accordion from '../components/Accordion.astro';
-import Testimonials from '../components/Testimonials.astro';
-import coverImg from '../images/breeam_cover-scaled-600x600.jpg';
-import refHighlightImg1 from '../images/WESTEND-GATE-1024x683.webp';
-import refHighlightImg2 from '../images/campus_leaf-1024x675.webp';
-import refHighlightImg3 from '../images/lakeside_park-1024x683.webp';
-import refHighlightImg4 from '../images/nove_apollo-1024x767.webp';
+import Accordion from '../components/Accordion.astro'
+import Benefits from '../components/Benefits.astro'
+import Contact from '../components/Contact.astro'
+import ServiceHero from '../components/ServiceHero.astro'
+import ServiceProjects from '../components/ServiceProjects.astro'
+import ServiceProjectsHighlights from '../components/ServiceProjectsHighlights.astro'
+import Testimonials from '../components/Testimonials.astro'
+import coverImg from '../images/breeam_cover-scaled-600x600.jpg'
+import refHighlightImg2 from '../images/campus_leaf-1024x675.webp'
+import refHighlightImg3 from '../images/lakeside_park-1024x683.webp'
+import refHighlightImg4 from '../images/nove_apollo-1024x767.webp'
+import refHighlightImg1 from '../images/WESTEND-GATE-1024x683.webp'
+import SidebarLayout from '../layouts/SidebarLayout.astro'
 ---
 
 <SidebarLayout>
   <ServiceHero
     title='Simulácie budov'
     descriptions={[
-      'Poskytujeme široké spektrum profesionálnych simulácií budov, ktoré slúžia na optimalizáciu energetickej efektívnosti, komfortu a udržateľnosti.',
-      'Pre klientov vypracúvame termodynamické simulácie vrátane analýz podľa normy ASHRAE 90.1, CFD simulácie pre tepelný komfort, prúdenie vzduchu, šírenie dymu či koncentráciu škodlivín.',
-      'Ponúkame aj simulácie mikroklímy, denného osvetlenia, EML, ako aj analýzu potenciálu využitia obnoviteľných zdrojov, ako sú fotovoltické a termálne kolektory.',
-      'Využívame špičkové nástroje ako ENVI-MET na hodnotenie urbánneho prostredia a jeho optimalizáciu z hľadiska klímy a kvality života.'
+      'V čase, keď sa na budovy kladú stále vyššie požiadavky na energetickú efektívnosť, komfort a udržateľnosť, presné simulačné modely zohrávajú kľúčovú úlohu pri ich návrhu aj prevádzke.',
+      'Naša práca spája najmodernejšie výpočtové metódy, medzinárodné štandardy a praktické skúsenosti s cieľom priniesť investorom, projektantom a prevádzkovateľom objektov spoľahlivé dáta pre správne rozhodnutia.',
+      `Pomocou špičkových softvérov a metodík dokážeme:
+      <ul>
+        <li>Predvídať správanie budovy v rôznych klimatických a prevádzkových scenároch</li>
+        <li>Optimalizovať návrh technických systémov</li>
+        <li>Znížiť prevádzkové náklady a environmentálnu stopu</li>
+        <li>Zvýšiť komfort užívateľov</li>
+      </ul>`
     ]}
-    flavorText='Dátami podložený obraz o výkone a vplyvoch vašej budovy.'
+    flavorText='Pokročilé simulačné riešenia pre udržateľné a efektívne budovy.'
     image={{
       src: coverImg,
       alt: 'Ilustračný obrázok budovy'
@@ -33,56 +37,68 @@ import refHighlightImg4 from '../images/nove_apollo-1024x767.webp';
 
   <Benefits
     title='Výhody'
-    descriptions={['Simulácie budov umožňujú robiť kvalifikované rozhodnutia ešte pred realizáciou, čím šetria náklady, znižujú riziká a zvyšujú hodnotu investície.']}
-    items={[' Nižšie prevádzkové náklady vďaka presnej energetickej analýze', 'Minimalizácia investičného rizika cez dátami podložené rozhodnutia', 'Podpora ESG stratégie a certifikácií', 'Vyššia hodnota nehnuteľnosti vďaka optimalizovanému výkonu']}
+    descriptions={[
+      'Simulácie budov umožňujú robiť kvalifikované rozhodnutia ešte pred realizáciou, čím šetria náklady, znižujú riziká a zvyšujú hodnotu investície.'
+    ]}
+    items={[
+      'Nižšie prevádzkové náklady vďaka presnej energetickej analýze',
+      'Minimalizácia investičného rizika cez dátami podložené rozhodnutia',
+      'Vyššia hodnota nehnuteľnosti vďaka optimalizovanému výkonu',
+      'Podpora ESG stratégie a certifikácií'
+    ]}
   />
   <Accordion
     title='Ponúkame'
-    descriptions={['Zabezpečujeme energetickú efektivitu, komfort a udržateľnosť prostredníctvom presných simulácií.']}
+    descriptions={[
+      'Optimalizujeme výkon budovy ešte pred jej postavením – znižujeme náklady, zvyšujeme komfort a zaručujeme súlad s medzinárodnými normami a certifikačnými systémami (BREEAM, LEED, ASHRAE).'
+    ]}
     items={[
       {
         title: 'Termodynamické simulácie budov',
         content: `
         <ul>
-            <li>Termodynamická simulácia budovy (stanovenie potrieb tepla a chladu a variantné riešenia HVAC + lighting)</li>
-            <li>Termodynamická simulácia budovy podľa normy ASHRAE 90.1</li>
-            <li>Termodynamická simulácia existujúcej budovy (variantné riešenia HVAC + lighting, stanovenie úspor energií a emisií CO2 pri variantoch)</li>
-            <li>Stanovenie cieľovej úrovne</li>
-            <li>Výpočet CO2 vznikajúceho počas prevádzky</li>
+            <li><strong>Dimenzačné TD simulácie</strong> <br> Výpočty pre optimálny návrh zdrojov tepla a chladu a určenie veľkostí odovzdávacích prvkov (vykurovacie telesá, fancoily, chladené stropy a pod.) na základe reálnych klimatických údajov a prevádzkových scenárov. Minimalizujeme riziko predimenzovania alebo poddimenzovania systému.</li>
+            <li><strong>Detailné HVAC TD simulácie podľa ASHRAE 90.1</strong><br>Komplexné energetické modely podľa medzinárodného štandardu ASHRAE 90.1 – ideálne pre certifikácie a legislatívne posúdenia. Zahŕňajú detailný profil prevádzky, zónovú reguláciu a optimalizáciu spotreby energií v reálnych podmienkach.</li>
+            <li><strong>Digitálne dvojča existujúcej budovy</strong><br>Vytvorenie presnej digitálnej kópie objektu s kompletnými technickými a prevádzkovými parametrami. Digitálne dvojča umožňuje priebežné monitorovanie, prediktívnu údržbu a testovanie modernizačných opatrení bez zásahu do reálnej prevádzky.</li>
         </ul>
         `
       },
       {
-        title: 'CFD (Computational Fluid Dynamics) simulácie',
+        title: 'Simulácie tepelného komfortu',
+        content: `
+            Posudzujeme globálny tepelný komfort vnútorných priestorov podľa ISO 7730, využitím indexov PPD (Predicted Percentage of Dissatisfied) a PMV (Predicted Mean Vote).
+            Tieto výpočty predstavujú štatistiku spokojnosti užívateľov na základe priemernej tepelnej pohody v priestore počas zvoleného časového obdobia.
+            Hodnotíme kombináciu teploty vzduchu, vlhkosti, rýchlosti prúdenia a teploty okolitého sálania, pričom výsledky pomáhajú optimalizovať návrh a prevádzkové parametre HVAC systémov.
+            Aspekty lokálneho tepelného komfortu – napríklad prievan, asymetria sálania alebo teplota podlahy – sú predmetom CFD simulácií.
+        `
+      },
+      {
+        title: 'Simulácie denného svetla a slnečného žiarenia',
         content: `
         <ul>
-            <li>CFD – simulácia a optimalizácia tepelného komfortu (PMV a PDD)</li>
-            <li>CFD – vetrová štúdia</li>
-            <li>CFD – koncentrácia CO v garážach</li>
-            <li>CFD – šírenie dymu</li>
+            <li><strong>Dynamické simulácie denného svetla (sDA, ASE)</strong><br>Posudzujeme prienik denného svetla do interiéru pomocou metód sDA (Spatial Daylight Autonomy) a ASE (Annual Sunlight Exposure). Simulácie pomáhajú optimalizovať veľkosť a umiestnenie presklených plôch, tienenia a svetelných otvorov, aby sa dosiahla ideálna rovnováha medzi prirodzeným osvetlením, energetickou efektivitou a vizuálnym komfortom.</li>
+            <li><strong>Dynamické simulácie výkonu slnečného žiarenia na plášť budovy</strong><br>Analýzy intenzity dopadajúceho slnečného žiarenia na strechy a fasády v časovom priebehu roka. Výstupy slúžia pre návrh fotovoltických systémov, tieniacich prvkov a hodnotenie rizika prehrievania obvodových konštrukcií.</li>
+
         </ul>
         `
       },
       {
-        title: 'Simulácie v programe ENVI-MET',
+        title: 'Simulácie environmentálnych a mikroklimatických podmienok',
         content: `
-        <ul>
-            <li>Simulácia teplôt fasád</li>
-            <li>Simulácia tepelného ostrova</li>
-            <li>Simulácia spotreby vody na účely závlahy vegetácie</li>
-            <li>Simulácia šírenia kontaminantov</li>
-        </ul>
+        Modelujeme teploty fasád, teploty povrchov v okolí budovy a hodnotíme vplyv mestského tepelného ostrova. Simulujeme spotrebu vody na závlahu vegetácie, šírenie kontaminantov a optimalizujeme mikroklímu pre verejné priestory s cieľom zvýšiť tepelný komfort užívateľov.
+        Tieto výstupy sú kľúčové pri návrhu námestí, parkov, zelených striech a iných prvkov mestského prostredia.
         `
       },
       {
-        title: 'Ostatné simulácie',
+        title: 'CFD simulácie (Computational Fluid Dynamics)',
         content: `
+        CFD simulácie poskytujú detailný obraz o lokálnych podmienkach tepelného komfortu a dynamike prúdenia vzduchu v interiéri aj exteriéri. Na rozdiel od globálnych výpočtov (časť 2), ktoré vyjadrujú celkovú štatistiku spokojnosti, CFD sa zameriava na konkrétne miesta a situácie, kde môže vzniknúť diskomfort.
+        Medzi najčastejšie aplikácie patria:
         <ul>
-            <li>Simulácia a optimalizácia denného osvetlenia</li>
-            <li>Simulácia a optimalizácia mikroklímy a tepelného komfortu v urbánnom prostredí</li>
-            <li>Simulácia a optimalizácia hodnoty EML (Equivalent Melanopic Lux)</li>
-            <li>Simulácia a výpočet potenciálu pre umiestnenie fotovoltických a termálnych kolektorov na strechách a fasádach</li>
-            <li>Simulácie átrií</li>
+            <li>Vetrová štúdia – posúdenie rýchlosti a smeru vetra okolo budov a v exteriérových priestoroch</li>
+            <li>Koncentrácia CO v garážach – optimalizácia vetrania a zabezpečenie splnenia hygienických limitov</li>
+            <li>Šírenie dymu – návrh účinného odvodu tepla a splodín pri požiari</li>
+            <li>Lokálny tepelný komfort – hodnotenie prievanu, asymetrie sálania, rozdielov teploty podlahy a eliminácia nepríjemných teplotných gradientov</li>
         </ul>
         `
       }
@@ -114,7 +130,9 @@ import refHighlightImg4 from '../images/nove_apollo-1024x767.webp';
     ]}
   />
   <Testimonials
-    descriptions={['Na vzťahoch s našimi klientmi si mimoriadne zakladáme. Každý projekt je pre nás partnerstvom postaveným na dôvere, spolupráci a spoločnej vízii.']}
+    descriptions={[
+      'Na vzťahoch s našimi klientmi si mimoriadne zakladáme. Každý projekt je pre nás partnerstvom postaveným na dôvere, spolupráci a spoločnej vízii.'
+    ]}
     items={[
       {
         name: 'Ondřej Doupal',
@@ -145,110 +163,16 @@ import refHighlightImg4 from '../images/nove_apollo-1024x767.webp';
     emphasis={false}
     items={[
       {
-        title: 'Aké sú rozdiely medzi BREEAM a LEED?',
-        content: `Detailnejší prehľad rozdielov medzi systémami BREEAM a LEED môžte nájsť na <a href="/rozdiely-medzi-breeam-a-leed"> tejto podstránke.</a>`
+        title: 'Aké sú hlavné výhody simulácií budov?',
+        content: `Simulácie budov umožňujú presne predvídať energetickú spotrebu, tepelný komfort a iné prevádzkové parametre ešte pred realizáciou projektu. Pomáhajú optimalizovať návrh technických systémov, znižovať prevádzkové náklady a zvyšovať komfort užívateľov.`
       },
       {
-        title: 'Aké typy budov môžu získať certifikát BREEAM?',
-        content: `
-        <ul>
-            <li>Novostavba</li>
-            <li>Existujúca budova</li>
-            <li>Interiér (priestory firmy)</li>
-            <li>Mestská štvrť</li>
-            <li>Mesto</li>
-        </ul>
-        `
+        title: 'Ponúkate aj vytvorenie digitálneho dvojčaťa budovy?',
+        content: `Áno, vytvárame presné digitálne dvojčatá existujúcich budov, ktoré umožňujú priebežné monitorovanie a optimalizáciu prevádzky. Tieto modely sú kľúčové pre prediktívnu údržbu a testovanie modernizačných opatrení bez zásahu do reálnej prevádzky.`
       },
       {
-        title: 'Aké druhy BREEAM certifikácie poskytujete?',
-        content: `
-        <ul>
-            <li>BREEAM International NC 2016</li>
-            <li>BREEAM In-Use</li>
-            <li>BREEAM RFO</li>
-            <li>BREEAM Communities</li>
-        </ul>
-        `
-      },
-      {
-        title: 'V rámci akých kategórií sa hodnotí budova?',
-        content: `
-        <ul>
-            <li>Management</li>
-            <li>Zdravie</li>
-            <li>Energia</li>
-            <li>Transport</li>
-            <li>Voda</li>
-            <li>Materiály</li>
-            <li>Odpad</li>
-            <li>Využitie územia a ekológia</li>
-            <li>Znečistenie</li>
-            <li>Inovácia</li>
-        </ul>
-        `
-      },
-      {
-        title: 'V akých úrovniach sú vydávané BREEAM certifikáty?',
-        content: `
-        <ul>
-            <li>Pass (30% – 45%)</li>
-            <li>Good (45% – 55%)</li>
-            <li>Very Good (55% – 70%)</li>
-            <li>Excellent (70% – 85%)</li>
-            <li>Outstanding (85% a viac)</li>
-        </ul>
-        `
-      },
-      {
-        title: 'Aká je cena certifikácie BREEAM?',
-        content: `
-        <ul>
-            <li>Excellent a nižšie úrovne: 0-2% navýšenie celkových stavebných nákladov.</li>
-            <li>Outstanding: 0-10% navýšenie celkových stavebných nákladov.</li>
-        </ul>
-
-        Na výšku celkových nákladov majú vplyv najmä tieto faktory: <br><br>
-
-        <ul>
-            <li>Kedy sa stane certifikácia a udržateľnosť úroveň cieľom. Čím skôr tým nižšie náklady. Ak je skúsený konzultant prítomný od začiatku projektu tak je možné certifikát získať s nízkymi nákladmi (0-2%). Pri neskoršom zapojení je zväčša možné získať len certifikát nízkej úrovne alebo prijať vyššie náklady (0-10%).</li>
-            <li>Aký skúsený je konzultant BREEAM (Čím skúsenejší tým nižšie náklady).</li>
-            <li>Aký skúsení a angažovaní sú ostatní členovia tímu (Architekt, projektanti, GD, investor) (Čím skúsenejší a angažovanejší tým nižšie náklady).</li>
-            <li>Dostupnosť bodov, kt. sú „zadarmo“ a sú determinované polohou (dostupnosť MHD a občianskej vybavenosti, pozemok, kt. bol predtým zastavený VS greenfield, a pod.).</li>
-        </ul>`
-      },
-      {
-        title: 'Prečo investičné fondy preferujú certifikované budovy?',
-        content: `
-        <ul>
-            <li>Portfóliá, kde prevažujú certifikované budovy, dosahujú lepšie dlhodobé výsledky.</li>
-            <li>V certifikovaných budovách uzatvárajú klienti dlhšie nájomné zmluvy a častejšie ich predlžujú.</li>
-            <li>Zelené svedomie („Green conscience“) fondov aj nájomcov.</li>
-            <li>Menej neinformovaného obchodovania – certifikát poskytuje užitočné informácie.</li>
-            <li>Certifikované budovy musia splniť istú úroveň kvality, aby získali certifikát trvalej udržateľnosti.</li>
-        </ul>
-        `
-      },
-      {
-        title: 'Aké úspory nákladov prináša certifikácia BREEAM?',
-        content: `
-        <ul>
-            <li>13% nižšie náklady na údržbu</li>
-            <li>24 – 50% nižšia spotreba energie</li>
-            <li>33 – 39% nižšie emisie CO2</li>
-            <li>40% nižšia spotreba vody</li>
-            <li>70% menej pevného stavebného odpadu vyvezeného na skládky</li>
-            <li>27% vyššia spokojnosť nájomcov</li>
-            <li>Vyššie nájmy (6% vyššie ako v nezelených budovách)</li>
-            <li>Vyššia miera obsadenosti budov – 3.5% vyššia</li>
-            <li>Vyššie predajné ceny – o 16% vyššie ako pri nezelených budovách</li>
-            <li>Nižšie náklady na neobsadenosť budov</li>
-            <li>Nižšie náklady na energie</li>
-            <li>Silnejší dopyt zo strany nájomcov</li>
-            <li>Zdravší a produktívnejší zamestnanci (šetrenie značných nákladov a pozitívny dopad na hospodárenie spoločnosti, keďže platy zamestnancov a prislúchajúce výhody sú väčšinou najvyššou nákladovou položkou spoločností) – podľa štúdie BCO Guide z roku 2009 je v zelených budovách nárast produktivity práce o 25 až 30% a úspory s tým spojené dokonca prevyšujú úspory prevádzkových nákladov</li>
-            <li>Pozitívny obraz spoločnosti – bezplatný marketing a PR</li>
-        </ul>
-      `
+        title: 'Spĺňajú vaše simulácie medzinárodné normy?',
+        content: `Áno, naše simulácie sú v súlade s medzinárodnými normami ako ASHRAE 90.1, ISO 7730 a ďalšími relevantnými štandardmi. Tým zabezpečujeme vysokú kvalitu a presnosť našich výstupov, ktoré sú akceptované pri certifikáciách ako BREEAM, LEED a ďalších.`
       }
     ]}
   />
