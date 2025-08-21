@@ -1,12 +1,11 @@
 ---
-import SidebarLayout from '../layouts/SidebarLayout.astro';
-import ServiceHero from '../components/ServiceHero.astro';
-import Benefits from '../components/Benefits.astro';
-import Contact from '../components/Contact.astro';
-import References from '../components/Projects.astro';
-import ServiceProjects from '../components/ServiceProjects.astro';
-import Accordion from '../components/Accordion.astro';
-import coverImg from '../images/esg_buildings_cover-scaled-600x600.jpg';
+import Accordion from '../components/Accordion.astro'
+import Benefits from '../components/Benefits.astro'
+import Contact from '../components/Contact.astro'
+import References from '../components/Projects.astro'
+import ServiceHero from '../components/ServiceHero.astro'
+import coverImg from '../images/esg_buildings_cover-scaled-600x600.jpg'
+import SidebarLayout from '../layouts/SidebarLayout.astro'
 ---
 
 <SidebarLayout>
@@ -27,7 +26,9 @@ import coverImg from '../images/esg_buildings_cover-scaled-600x600.jpg';
   />
   <Benefits
     title='Výhody'
-    descriptions={['Kvalitná ESG stratégia poukáže na oblasti, v ktorých budova môže zvýšiť svoju efektivitu a znížiť svoje náklady. Efektívnejšie riadenie týchto oblastí môže viesť k výrazným finančným úsporám.']}
+    descriptions={[
+      'Kvalitná ESG stratégia poukáže na oblasti, v ktorých budova môže zvýšiť svoju efektivitu a znížiť svoje náklady. Efektívnejšie riadenie týchto oblastí môže viesť k výrazným finančným úsporám.'
+    ]}
     items={[
       'Zvýši dopyt zo strany investorov a ostatných stakeholderov',
       'Zlepší energetickú účinnosť monitorovaním a overovaním údajov o spotrebách',
@@ -38,7 +39,9 @@ import coverImg from '../images/esg_buildings_cover-scaled-600x600.jpg';
   />
   <Accordion
     title='Ponúkame'
-    descriptions={['Naša služba je prínosná pre klientov v každej fáze prípravy na ESG. ESG audit je zároveň možné použiť k získaniu LEED certifikátu, keďže odhalí stav udržateľnosti a pomôže určiť ďalší postup.']}
+    descriptions={[
+      'Naša služba je prínosná pre klientov v každej fáze prípravy na ESG. ESG audit je zároveň možné použiť k získaniu LEED certifikátu, keďže odhalí stav udržateľnosti a pomôže určiť ďalší postup.'
+    ]}
     items={[
       {
         title: 'Úvod do ESG',
@@ -81,6 +84,6 @@ import coverImg from '../images/esg_buildings_cover-scaled-600x600.jpg';
   />
 
   <Contact />
-  <ServiceProjects />
+  <!-- <ServiceProjects /> -->
   <References />
 </SidebarLayout>
