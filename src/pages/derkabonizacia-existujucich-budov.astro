@@ -1,0 +1,101 @@
+---
+import Accordion from '../components/Accordion.astro'
+import Benefits from '../components/Benefits.astro'
+import Contact from '../components/Contact.astro'
+import References from '../components/Projects.astro'
+import ServiceHero from '../components/ServiceHero.astro'
+import coverImg from '../images/esg_buildings_cover-scaled-600x600.jpg'
+import SidebarLayout from '../layouts/SidebarLayout.astro'
+---
+
+<SidebarLayout>
+  <ServiceHero
+    title='Dekarbonizácia existujúcich budov'
+    descriptions={[
+      'Pomôžeme vám nastaviť jasnú a overiteľnú cestu k dekarbonizácii v súlade s EU Taxonomy, ESG požiadavkami, SBTi a najlepšími svetovými štandardmi.',
+      'Využívame nástroje CRREM, digitálne dvojčatá budov, aj rámce BREEAM In-Use a LEED O+M – od presného zberu dát a kalibrácie modelov až po návrh opatrení, ktoré znižujú emisie a zvyšujú hodnotu vašej nehnuteľnosti',
+      'Výsledkom je nielen zníženie uhlíkovej stopy, ale aj zvýšenie trhovej hodnoty a konkurencieschopnosti budovy v čase, keď dekarbonizácia prestáva byť voľbou a stáva sa povinnosťou.'
+    ]}
+    flavorText='Vaša budova môže byť pripravená na budúcnosť – bez zbytočných emisií a bez straty hodnoty.'
+    image={{
+      src: coverImg,
+      alt: 'Ilustračný obrázok budovy'
+    }}
+  />
+  <Benefits
+    title='Výhody'
+    descriptions={[
+      'Sprísňujúce sa požiadavky EU Taxonomy, tlak zo strany finančných inštitúcií a ESG reporting vytvárajú nový štandard pre vlastníkov a prevádzkovateľov nehnuteľností.',
+      'Dekarbonizácia sa tak stáva nielen environmentálnou, ale aj ekonomickou nevyhnutnosťou.'
+    ]}
+    items={[
+      'Zníženie uhlíkovej stopy',
+      'Zvýšenie trhovej hodnoty',
+      'Zvýšenie konkurencieschopnosti budovy',
+      'Možnosť robiť kvalitnejšie biznis rozhodnutia na základe skutočných dát'
+    ]}
+  />
+  <Accordion
+    title='Ponúkame'
+    descriptions={[
+      'Naše riešenia kombinujú vedecky podložené prístupy (SBTi, CRREM), pokročilé simulačné technológie a digitálne dvojčatá budov, aby sme klientom poskytli presné dáta a jasnú cestu k uhlíkovej neutralite.'
+    ]}
+    items={[
+      {
+        title: 'Hodnotiace schémy ako vstupná brána k dekarbonizácii',
+        content: `
+        Certifikačné systémy ako BREEAM In-Use a LEED O+M poskytujú overený rámec pre zber prevádzkových dát, hodnotenie environmentálneho výkonu a identifikáciu oblastí na zlepšenie.<br>
+        Ich implementácia je často prvým krokom k dekarbonizácii, pretože:
+        <ul>
+              <li>Zabezpečí systematický monitoring spotreby energií, vody a emisií</li>
+              <li>Vytvorí jasnú štruktúru pre plánovanie opatrení</li>
+              <li>Poskytne medzinárodne uznávané overenie environmentálneho výkonu, ktoré posilňuje dôveryhodnosť voči investorom a bankám</li>
+        </ul>`
+      },
+      {
+        title: 'Analýza uhlíkovej trajektórie – CRREM',
+        content: `Využívame CRREM (Carbon Risk Real Estate Monitor) na modelovanie dekarbonizačnej cesty objektu v kontexte globálnych a lokálnych klimatických cieľov. <br>
+        Výsledkom je porovnanie predpokladaných emisií CO₂ s tzv. „uhlíkovou cestou“ kompatibilnou s Parížskou dohodou, vrátane identifikácie stranded assets rizík – budov, ktoré by bez opatrení mohli stratiť svoju trhovú hodnotu. `
+      },
+      {
+        title: 'Digitálne dvojča existujúcej budovy',
+        content: `Budujeme komplexné digitálne modely správania sa budovy vrátane detailných HVAC simulácií.<br>
+        Model kalibrujeme na základe nameraných spotrieb energií a klimatických dát, čím zabezpečíme vysokú presnosť predikcií a návrhov opatrení.<br>
+        Digitálne dvojča umožňuje testovať dekarbonizačné stratégie – od optimalizácie prevádzkových parametrov až po návrh technických modernizácií – bez zásahu do reálnej prevádzky.`
+      },
+      {
+        title: 'Súlad s EU Taxonomy a ESG reportingom',
+        content: `Naše výstupy sú priamo použiteľné pre splnenie požiadaviek EU Taxonomy (Acquisition & Ownership) a pre reporting v rámci ESG rámcov.<br>
+        Zabezpečujeme, aby boli dáta prezentované v súlade s požiadavkami investorov, bánk a regulačných orgánov.<br>
+        Výsledkom je transparentná a overiteľná dokumentácia pripravená pre due diligence, certifikačné procesy aj verejné ESG správy.`
+      },
+      {
+        title: 'SBTi a dlhodobá stratégia',
+        content: `V prípade, že klient sleduje ciele SBTi (Science Based Targets initiative), zabezpečujeme nastavenie a overenie trajektórie emisií tak, aby bola v súlade s limitom oteplenia o 1,5 °C.<br>
+        Naše modely dokážu simulovať vplyv jednotlivých opatrení na dlhodobé plnenie klimatických cieľov a finančnú udržateľnosť objektu.`
+      }
+    ]}
+  />
+  <Accordion
+    title='Často kladené otázky'
+    descriptions={['Prehľad odpovedí na časté otázky o našej spoločnosti a ponúkaných službách']}
+    emphasis={false}
+    items={[
+      {
+        title: 'Čo je to CRREM (Carbon Risk Real Estate Monitor)?',
+        content: `CRREM je nástroj na modelovanie uhlíkovej trajektórie nehnuteľností, ktorý pomáha identifikovať riziká spojené s dekarbonizáciou a stranded assets. Umožňuje porovnať predpokladané emisie CO₂ s cieľmi Parížskej dohody a navrhnúť opatrenia na ich zníženie.`
+      },
+      {
+        title: 'Aký je rozdiel medzi službami LEED O+M a dekarbonizáciou budov?',
+        content: `LEED O+M je certifikačný systém zameraný na optimalizáciu prevádzky a údržby existujúcich budov, zatiaľ čo dekarbonizácia sa sústreďuje na znižovanie emisií CO₂ a dosahovanie uhlíkovej neutrality. Naše služby kombinujú oba prístupy, aby sme zabezpečili komplexné riešenie pre klientov.`
+      },
+      {
+        title: 'Ponúkate aj vytvorenie digitálneho dvojčaťa budovy?',
+        content: `Áno, vytvárame presné digitálne dvojčatá existujúcich budov, ktoré umožňujú priebežné monitorovanie a optimalizáciu prevádzky. Tieto modely sú kľúčové pre prediktívnu údržbu a testovanie modernizačných opatrení bez zásahu do reálnej prevádzky.`
+      }
+    ]}
+  />
+  <Contact />
+  <!-- <ServiceProjects /> -->
+  <References />
+</SidebarLayout>
