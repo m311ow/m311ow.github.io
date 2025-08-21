@@ -1,17 +1,17 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from 'astro:assets'
 
 interface Props {
-  title: string;
-  descriptions: string[];
-  flavorText: string;
+  title: string
+  descriptions: string[]
+  flavorText: string
   image: {
-    src: ImageMetadata;
-    alt: string;
-  };
+    src: ImageMetadata
+    alt: string
+  }
 }
 
-const { title, descriptions, flavorText, image } = Astro.props;
+const { title, descriptions, flavorText, image } = Astro.props
 ---
 
 <div class='row justify-content-md-between'>
@@ -20,7 +20,13 @@ const { title, descriptions, flavorText, image } = Astro.props;
     {descriptions.map((text) => <p class='' set:html={text} />)}
   </div>
   <div class='col-md-6'>
-    <Image src={image.src} alt={image.alt || 'Image'} class='img-fluid flex-grow-1 object-fit-cover w-100' format='webp' sizes='(max-width: 768px) 100vw, 50vw' />
+    <Image
+      src={image.src}
+      alt={image.alt || 'Image'}
+      class='img-fluid flex-grow-1 object-fit-cover w-100'
+      format='webp'
+      sizes='(max-width: 768px) 100vw, 50vw'
+    />
     <p class='text-primary fst-italic'>{flavorText}</p>
   </div>
 </div>
