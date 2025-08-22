@@ -1,13 +1,14 @@
 ---
-const pathname = new URL(Astro.request.url).pathname
-const currentPath = pathname.slice(1) // remove the first "/"
+/* Sidebar.astro — works if used only from .astro pages/layouts (no MDX) */
+const pathname = Astro.url.pathname.replace(/\/+$/, '') || '/' // normalize: '/leed/' -> '/leed'
+const isActive = (slug: string) => pathname === `/${slug}` || pathname.startsWith(`/${slug}/`)
 ---
 
 <ul class='nav flex-column mb-auto sticky-top sidebar' id='sidebar'>
   <li class='nav-item border-bottom'>
     <a
       href='/breeam'
-      class={`nav-link ps-0 rounded-0 ${currentPath === 'breeam' ? 'active' : 'link-dark'}`}
+      class={`nav-link ps-0 rounded-0 ${isActive('breeam') ? 'active' : 'link-dark'}`}
     >
       BREEAM
     </a>
@@ -15,7 +16,7 @@ const currentPath = pathname.slice(1) // remove the first "/"
   <li class='nav-item border-bottom'>
     <a
       href='/breeam-pre-logisticke-haly'
-      class={`nav-link ps-0 rounded-0 ${currentPath === 'breeam-pre-logisticke-haly' ? 'active' : 'link-dark'}`}
+      class={`nav-link ps-0 rounded-0 ${isActive('breeam-pre-logisticke-haly') ? 'active' : 'link-dark'}`}
     >
       BREEAM pre logistické haly</a
     >
@@ -23,7 +24,7 @@ const currentPath = pathname.slice(1) // remove the first "/"
   <li class='nav-item border-bottom'>
     <a
       href='/leed'
-      class={`nav-link ps-0 rounded-0 ${currentPath === 'leed' ? 'active' : 'link-dark'}`}
+      class={`nav-link ps-0 rounded-0 ${isActive('leed') ? 'active' : 'link-dark'}`}
       aria-current='page'
     >
       LEED
@@ -32,7 +33,7 @@ const currentPath = pathname.slice(1) // remove the first "/"
   <li class='nav-item border-bottom'>
     <a
       href='/leed-om'
-      class={`nav-link ps-0 rounded-0 ${currentPath === 'leed-om' ? 'active' : 'link-dark'}`}
+      class={`nav-link ps-0 rounded-0 ${isActive('leed-om') ? 'active' : 'link-dark'}`}
     >
       LEED O+M
     </a>
@@ -40,7 +41,7 @@ const currentPath = pathname.slice(1) // remove the first "/"
   <li class='nav-item border-bottom'>
     <a
       href='/derkabonizacia-existujucich-budov'
-      class={`nav-link ps-0 rounded-0 ${currentPath === 'derkabonizacia-existujucich-budov' ? 'active' : 'link-dark'}`}
+      class={`nav-link ps-0 rounded-0 ${isActive('derkabonizacia-existujucich-budov') ? 'active' : 'link-dark'}`}
     >
       Dekarbonizácia existujúcich budov
     </a>
@@ -48,23 +49,20 @@ const currentPath = pathname.slice(1) // remove the first "/"
   <li class='nav-item border-bottom'>
     <a
       href='/esg-audit-budov'
-      class={`nav-link ps-0 rounded-0 ${currentPath === 'esg-audit-budov' ? 'active' : 'link-dark'}`}
+      class={`nav-link ps-0 rounded-0 ${isActive('esg-audit-budov') ? 'active' : 'link-dark'}`}
     >
       ESG audit budovy
     </a>
   </li>
   <li class='nav-item border-bottom'>
-    <a
-      href='/epd'
-      class={`nav-link ps-0 rounded-0 ${currentPath === 'epd' ? 'active' : 'link-dark'}`}
-    >
+    <a href='/epd' class={`nav-link ps-0 rounded-0 ${isActive('epd') ? 'active' : 'link-dark'}`}>
       EPD
     </a>
   </li>
   <li class='nav-item border-bottom'>
     <a
       href='/eu-taxonomia'
-      class={`nav-link ps-0 rounded-0 ${currentPath === 'eu-taxonomia' ? 'active' : 'link-dark'}`}
+      class={`nav-link ps-0 rounded-0 ${isActive('eu-taxonomia') ? 'active' : 'link-dark'}`}
     >
       EÚ Taxonómia
     </a>
@@ -72,7 +70,7 @@ const currentPath = pathname.slice(1) // remove the first "/"
   <li class='nav-item'>
     <a
       href='/simulacie-budov'
-      class={`nav-link ps-0 rounded-0 ${currentPath === 'simulacie-budov' ? 'active' : 'link-dark'}`}
+      class={`nav-link ps-0 rounded-0 ${isActive('simulacie-budov') ? 'active' : 'link-dark'}`}
     >
       Simulácie budov
     </a>
