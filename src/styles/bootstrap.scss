@@ -20,7 +20,12 @@ $position-values: (
 // TODO: DECIDE WHETHER TO CHANGE THE GREEN COLOR FOR MORE ACCESSIBLE ONE NOW OR WAIT FOR REBRANDING
 // with 3.87:1 contrast ration this green does not meet most WCAG AAA standards (fails at WCAG AA & AAA for normal text, and fails at WCAG AAA and passess at WCAG AA for large text)
 // with 7.15:1 contrast ration this grey meets criteria  WCAG AAA standards even for both normal (14pt / 18.66px) and large (18pt / 24px) text
-$primary: #289448;
+
+// lightest black to be used on white bg is #595959 with 7:1 contrast ratio but I prefer #545454 with 7.57:1 contrast ratio
+// darkest white to be used on black bg is #959595 with 7.01:1 contrast ratio
+// but I think for white on black smaller text, better to use #C3C4C3 with 12:1 contrast ratio or #ADADAD 9.35:1
+
+$primary: #289448; // new: primary: #004e3c ; new secondary: #28B55F ; old: #289448;
 $secondary: #51595d;
 $font-size-base: 1.2rem;
 $line-height-base: 1.5;
