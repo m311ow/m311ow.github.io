@@ -15,7 +15,7 @@ const { title, descriptions, flavorText, image } = Astro.props
 ---
 
 <div class='row justify-content-md-between'>
-  <h1>{title}</h1>
+  <h1 class='text-primary'>{title}</h1>
   <div class='col-md-5 d-flex flex-column'>
     {descriptions.map((text) => <p class='' set:html={text} />)}
   </div>

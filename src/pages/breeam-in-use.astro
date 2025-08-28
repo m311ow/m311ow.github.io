@@ -1,0 +1,172 @@
+---
+import Accordion from '../components/Accordion.astro'
+import Benefits from '../components/Benefits.astro'
+import Contact from '../components/Contact.astro'
+import References from '../components/Projects.astro'
+import ServiceHero from '../components/ServiceHero.astro'
+import ServiceProjectsHighlights from '../components/ServiceProjectsHighlights.astro'
+import Testimonials from '../components/Testimonials.astro'
+import coverImg from '../images/breeam_cover-scaled-600x600.jpg'
+import refHighlightImg2 from '../images/campus_leaf-1024x675.webp'
+import refHighlightImg3 from '../images/lakeside_park-1024x683.webp'
+import refHighlightImg4 from '../images/nove_apollo-1024x767.webp'
+import refHighlightImg1 from '../images/WESTEND-GATE-1024x683.webp'
+import SidebarLayout from '../layouts/SidebarLayout.astro'
+---
+
+<SidebarLayout>
+  <ServiceHero
+    title='BREEAM In-Use'
+    descriptions={[
+      "BREEAM (Building Research Establishment's Environmental Assessment Method) je najstarší systém hodnotenia udržateľných budov na svete, ktorý vznikol v roku 1990 v Spojenom kráľovstve. Certifikačný systém hodnotí budovy vo všetkých fázach ich životného cyklu, od návrhu a výstavby až po prevádzku a obnovu.",
+      'BREEAM In-Use je celosvetovo uznávaná metóda hodnotenia udržateľnosti špeciálne navrhnutá pre existujúce budovy. Poskytuje ucelený rámec na hodnotenie a zlepšenie prevádzkovej udržateľnosti komerčných nehnuteľností.',
+      'BREEAM In-Use hodnotí environmentálnu, sociálnu a ekonomickú výkonnosť budovy podľa rôznych kritérií, čím pomáha správcom a vlastníkom majetku zvýšiť efektívnosť využívania zdrojov, znížiť vplyv na životné prostredie a zlepšiť zdravie a pohodu obyvateľov.',
+      'Zameraním sa na fyzikálne charakteristiky objektu (Part 1: Asset Performance) aj na jeho prevádzkové riadenie (Part 2: Building Management Performance) umožňuje BREEAM In-Use podrobné a komplexné hodnotenie, ktoré poskytuje jasné možnosti zlepšenia výkonnosti v oblasti udržateľnosti.'
+    ]}
+    flavorText='Kľúčový certifikát pre udržateľnú budúcnosť, ktorý chráni planétu a zvyšuje hodnotu vašej budovy na trhu. S SALVIS dosiahnete vysoké hodnotenie bez zbytočných nákladov – premeňte ekologické princípy na jasné výhody pre váš biznis.'
+    image={{
+      src: coverImg,
+      alt: 'Ilustračný obrázok budovy'
+    }}
+  />
+
+  <Benefits
+    title='Výhody'
+    descriptions={[
+      'BREEAM certifikácia predstavuje súhrn najlepšieho know-how v oblasti udržateľnosti budov, ktorý prináša významné environmentálne, ekonomické a sociálne prínosy pre majiteľov, nájomníkov a investorov. Podľa štúdií dosahujú certifikované budovy nižšie náklady, vyššiu produktivitu a lepšiu trhovú pozíciu, čo zabezpečuje dlhodobú hodnotu a prestíž.'
+    ]}
+    items={[
+      'Úspora prevádzkových nákladov — Zlepšenie účinnosti zdrojov (energia, voda, odpad) vedie k výraznému zníženiu prevádzkových nákladov',
+      'Zvýšená hodnota majetku — Certifikácia preukazuje záväzok k udržateľnosti, čo zvyšuje predajnosť, hodnotu majetku a príťažlivosť pre nájomcov',
+      'Súlad s právnymi predpismi — Rámec pomáha podnikom plniť a prekračovať predpisy a normy týkajúce sa udržateľnosti',
+      'Zlepšená pohoda obyvateľov — Zameranie na zdravie a pohodu zabezpečuje produktívnejšie a zdravšie pracovné prostredie',
+      'Dôveryhodnosť a transparentnosť — Certifikácia nezávislou treťou stranou zvyšuje dôveru zainteresovaných strán vo výkonnosť budovy v oblasti udržateľnosti'
+    ]}
+  />
+  <Accordion
+    title='Ponúkame'
+    descriptions={[
+      'V rámci služby BREEAM In-Use poskytujeme komplexnú podporu počas celého certifikačného procesu, vrátane poradenských služieb, prípravy dokumentácie, riadenia projektu a samotného vydania certifikátu. Naším cieľom je zabezpečiť, aby bol proces certifikácie čo najhladší a najefektívnejší, pričom kladieme dôraz na dosiahnutie čo najvyššieho hodnotenia s minimálnymi nákladmi.'
+    ]}
+    items={[
+      {
+        title: 'Počiatočná príprava a plánovanie',
+        content: `
+        <ul>
+          <li>Registrácia projektu a zadanie príslušných údajov do online platformy BREEAM In-Use.</li>
+          <li>Vykonanie posúdenia súčasného stavu budovy na základe nových noriem BREEAM In-Use verzie 6.</li>
+          <li>Výpočet a overenie očakávaného skóre budovy.</li>
+          <li>Identifikácia nízkonákladových, ľahko dosiahnuteľných kreditov.</li>
+          <li>Stanovenie potrebných zlepšení na dosiahnutie požadovaného hodnotenia.</li>
+          <li>Vypracovanie podrobného akčného plánu.</li>
+          <li>Dokončenie a odsúhlasenie akčného plánu s klientom.</li>
+        </ul>
+        `
+      },
+      {
+        title: 'Aktualizácia smerníc, štúdie tretích strán',
+        content: `
+        <ul>
+          <li>Implementácia nových smerníc a aktualizácia súčasných postupov.</li>
+          <li>Služby a štúdie tretích strán</li>
+          <li>Spolupráca na vývoji a realizácii týchto aktualizovaných politík.</li>
+          <li>Zhromažďovanie a príprava požadovanej dokumentácie z rôznych zdrojov a jej následné nahratie do online systému BREEAM In-Use.</li>
+        </ul>
+        `
+      },
+      {
+        title: 'Záverečný audit a certifikácia',
+        content: `
+        <ul>
+          <li>Nezávislý audítor tretej strany preskúma a overí všetku dôkazovú dokumentáciu.</li>
+          <li>Vykoná sa záverečný audit vrátane kontroly na mieste, aby sa potvrdilo, že zlepšenia sú v súlade s poskytnutými dôkazmi.</li>
+          <li>Vypracuje sa správa BRE.</li>
+          <li>Spätná väzba audítora sa predloží prostredníctvom online systému BREEAM In-Use.</li>
+          <li>Spoločnosť SALVIS bude počas certifikačného procesu riadiť komunikáciu so spoločnosťou BRE.</li>
+          <li>Konečná certifikácia pre Part 1 a Part 2 bude doručená klientovi.</li>
+        </ul>
+        `
+      }
+    ]}
+  />
+  <ServiceProjectsHighlights
+    descriptions={['Kompletný zoznam projektov je k dispozícii v sekcii nižšie.']}
+    items={[
+      {
+        title: 'Westend Gate',
+        alt: 'Westend Gate',
+        src: refHighlightImg1
+      },
+      {
+        title: 'Campus Leaf',
+        alt: 'Campus Leaf',
+        src: refHighlightImg2
+      },
+      {
+        title: 'Lakeside Park',
+        alt: 'Lakeside Park',
+        src: refHighlightImg3
+      },
+      {
+        title: 'Nové Apollo',
+        alt: 'Nové Apollo',
+        src: refHighlightImg4
+      }
+    ]}
+  />
+  <Testimonials
+    descriptions={[
+      'Na vzťahoch s našimi klientmi si mimoriadne zakladáme. Každý projekt je pre nás partnerstvom postaveným na dôvere, spolupráci a spoločnej vízii.'
+    ]}
+    items={[
+      {
+        name: 'Ondřej Doupal',
+        position: 'Sustainability Manager, VGP',
+        content: `„SALVIS je náš hlavný partner pre BREEAM na Slovensku a v Česku, s flexibilitou a úsporami nákladov na 13 projektoch.“ `
+      },
+      {
+        name: 'Tomáš Gürtler',
+        position: 'Project manager, Contera',
+        content: `„100 % spokojnosť so SALVIS – dosiahli Very Good s nízkymi nákladmi a hladkou komunikáciou.“`
+      }
+    ]}
+  />
+  <Accordion
+    title='Často kladené otázky'
+    descriptions={['Prehľad odpovedí na časté otázky o našej spoločnosti a ponúkaných službách']}
+    emphasis={false}
+    items={[
+      {
+        title: 'Čo je BREEAM In-Use?',
+        content: `BREEAM In-Use je celosvetovo uznávaná metóda hodnotenia udržateľnosti špeciálne navrhnutá pre existujúce budovy, poskytujúca rámec na zlepšenie ich prevádzkovej udržateľnosti.`
+      },
+      {
+        title: 'Aký je rozdiel medzi BREEAM In-Use a inými BREEAM certifikáciami?',
+        content: `BREEAM In-Use je špeciálne navrhnutý pre existujúce budovy, zatiaľ čo iné BREEAM certifikácie sa zameriavajú na nové výstavby`
+      },
+      {
+        title:
+          'Aký je rozdiel medzi častou 1 (Part 1: Asset Performance) a časťou 2 (Part 2: Building Management Performance) systému BREEAM In-Use? ',
+        content:
+          'BREEAM In-Use je rozdelený do dvoch kľúčových častí, ktoré poskytujú spoločne komplexné hodnotenie. Pre každú z častí je vydaný osobitný certifikát. Budova môže získať len jeden alebo oba z certifikátov. Úroveň certifikácie sa môže v oboch častiach líšiť.'
+      },
+      {
+        title: 'Na čo sa zameriava časť 1 (Part 1: Asset Performance)?',
+        content:
+          'V tejto časti sa hodnotia charakteristiky environmentálnej výkonnosti samotnej budovy. Kľúčové oblasti zahŕňajú parametre fasády budovy, parametre a výkon TZB zariadení, osvetlenia, sanity, umiestnenie stavby a konštrukčné prvky, ktoré ovplyvňujú prevádzkovú udržateľnosť. Poskytuje pohľad na to, ako dobre je budova navrhnutá a vybavená na minimalizáciu vplyvu na životné prostredie.'
+      },
+      {
+        title: 'Na čo sa zameriava časť 2 (Part 2: Building Management Performance)?',
+        content:
+          'Časť 2 sa zameriava na to, ako sa budova prevádzkuje a spravuje na každodennej báze. Zahŕňa hospodárenie s energiou a vodou, opatrenia v oblasti zdravia a kvality vnútorného prostredia a celkovú politiku riadenia. Cieľom je zvýšiť trvalú prevádzkovú efektívnosť a udržateľnosť budovy.'
+      },
+      {
+        title: 'Aké sú hlavné výhody certifikácie BREEAM?',
+        content: `Certifikácia prináša lepšiu energetickú efektívnosť, nižšie prevádzkové náklady, vyššiu kvalitu vnútorného prostredia a environmentálnu zodpovednosť. Zvyšuje prestíž budovy a jej hodnotu na trhu, čo môže byť rozhodujúce pre investorov a užívateľov.
+        `
+      }
+    ]}
+  />
+  <Contact />
+  <References />
+</SidebarLayout>

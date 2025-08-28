@@ -1,20 +1,22 @@
 ---
-import SidebarLayout from '../layouts/SidebarLayout.astro';
-import ServiceHero from '../components/ServiceHero.astro';
-import Benefits from '../components/Benefits.astro';
-import Contact from '../components/Contact.astro';
-import References from '../components/Projects.astro';
-import Accordion from '../components/Accordion.astro';
-import Testimonials from '../components/Testimonials.astro';
-import coverImg from '../images/breeam_logistics_cover-scaled-600x600.png';
+import Accordion from '../components/Accordion.astro'
+import Benefits from '../components/Benefits.astro'
+import Contact from '../components/Contact.astro'
+import References from '../components/Projects.astro'
+import ServiceHero from '../components/ServiceHero.astro'
+import Testimonials from '../components/Testimonials.astro'
+import coverImg from '../images/breeam_logistics_cover-scaled-600x600.png'
+import SidebarLayout from '../layouts/SidebarLayout.astro'
 ---
 
 <SidebarLayout>
   <ServiceHero
     title='BREEAM pre logistické haly'
     descriptions={[
-      'V oblasti logistických hál máme skúsenosti z projektov so spoločnosťami <strong>VGP</strong>, <strong>Panattoni</strong> a <strong>Contera</strong>, pri ktorých sme sa naučili ako dosiahnuť vysoké hodnotenie s minimálnymi nákladmi.',
-      'Takýto výsledok dosiahneme vďaka tomu, že spracujeme všetky štúdie, simulácie a výpočty, za ktoré dosiahneme extra kredity bez navýšenia nákladov na strane klienta.'
+      'SALVIS s.r.o. sa špecializuje na certifikáciu BREEAM pre logistické haly, s bohatými skúsenosťami z projektov s klientmi ako VGP, Panattoni a Contera.',
+      'Zameriavame sa na dosiahnutie vysokých hodnotení, ako Excellent, s minimálnymi dodatočnými nákladmi vďaka pokročilým simuláciám, štúdiám a výpočtom, ktoré prinášajú extra body. Naša služba zahŕňa pravidelné online reporty, osobné stretnutia a návštevy na stavbe pre zber dát a zabezpečenie súladu s normami.',
+      'Spolupracujeme s ekológmi na manažmente lokality a poskytujeme transparentný prístup k dokumentácii počas celého procesu. BREEAM pre logistické haly pomáha splniť požiadavky EU Taxonómie pre bankové financovanie a zvyšuje prestíž a udržateľnosť budov.',
+      'Tento prístup zabezpečuje environmentálnu zodpovednosť, ekonomické úspory a zdravšie pracovné prostredie.'
     ]}
     flavorText='Sme hrdí na výnimočné služby, ktoré poskytujeme našim klientom. Našim cieľom je vždy dosiahnuť čo najvyššie BREEAM hodnotenie, s čo najnižšími nákladmi.'
     image={{
@@ -24,49 +26,103 @@ import coverImg from '../images/breeam_logistics_cover-scaled-600x600.png';
   />
   <Benefits
     title='Výhody'
-    descriptions={['Registráciou budovy v BREEAM získavate prístup k najpokročilejšiemu know-how v oblasti udržateľnosti budov na svete - poskytuje skvelý návod ako postaviť udržateľnú, zdravú a efektívnu budovu. So skúseným konzultantom Vašej budove prinesie skvelú hodnotu a prestíž.']}
-    items={['Zvýši dopyt zo strany investorov a ostatných stakeholderov', 'Zvýši efektivitu procesov súvisiacich so spotrebou energie a materiálov', 'Umožní robiť kvalitnejšie biznis rozhodnutia na základe skutočných dát', 'Zmierni riziko súvisiace s dopadmi klimatickej zmeny']}
+    descriptions={[
+      'BREEAM certifikácia pre logistické haly prináša komplexné výhody v environmentálnej, ekonomickej a sociálnej oblasti, ktoré zvyšujú atraktivitu hál pre investorov a nájomníkov. Systém zabezpečuje dlhodobú udržateľnosť, prestíž a súlad s EU štandardmi, čo minimalizuje náklady a maximalizuje hodnotu.'
+    ]}
+    items={[
+      'Environmentálna zodpovednosť prostredníctvom pokročilého know-how pre udržateľné, zdravé a efektívne haly, vrátane ochrany biodiverzity a znižovania emisií',
+      'Ekonomické úspory bez zvyšovania stavebných nákladov, s možnosťou splnenia EU Taxonómie pre lepšie bankové financovanie',
+      'Zvýšenie prestíže a trhovej hodnoty haly, čo priláka viac nájomníkov a zlepší konkurencieschopnosť',
+      'Zdravšie a efektívnejšie pracovné prostredie pre užívateľov, čo zvyšuje produktivitu a spokojnosť',
+      'Transparentný proces s pravidelnými aktualizáciami, čo minimalizuje riziká a zabezpečuje hladký priebeh projektu'
+    ]}
   />
   <Accordion
     title='Ponúkame'
+    descriptions={[
+      `Ponúkame komplexné poradenstvo a certifikačné služby BREEAM špecificky pre logistické haly, zahŕňajúce celý proces od analýzy po finálne hodnotenie, prispôsobené vašim potrebám bez dodatočných nákladov. Naši experti zabezpečia simulácie, reporty a on-site podporu pre dosiahnutie vysokých úrovní ako Excellent.`
+    ]}
     items={[
       {
-        title: 'Osobný prístup',
+        title: 'Simulácie a štúdie',
         content:
-          'Vážime si našich klientov. Sme dostupní a rýchlo odpovedáme na ich otázky. Klientom poskytujeme reporty na pravidelných online meetingoch a radi sa stretneme aj osobne. Člen nášho tímu navštívi stavbu a pomôže so zberom údajov potrebných pre certifikáciu. Pri dohliadaní na to, aby bol projekt v súlade s BREEAM, zohľadňujeme spätnú väzbu klientov a snažíme sa im vyjsť v ústrety.'
+          'Zahrňuje pokročilé simulácie, výpočty a štúdie pre získanie extra bodov bez navyšovania nákladov.'
       },
       {
-        title: 'Skvelé výsledky',
+        title: 'Pravidelné reporty a stretnutia',
         content:
-          'Vďaka pokročilým simuláciám a odborným službám pomáhame klientom dosahovať vysoké BREEAM hodnotenie, bez navyšovania nákladov na stavbu. Pri logistických halách máme dobré skúsenosti s dosahovaním úrovne BREEAM Excellent. Pri spracovaní hodnotenia a správy stavebného miesta spolupracujeme s ekológom.'
+          'Online reporty o pokroku a osobné stretnutia pre informovanie klienta o stave projektu.'
       },
-      { title: 'Transparentnosť', content: 'Umožňujeme klientom nahliadnuť do projektovej dokumentácie vo všetkých fázach projektu. Radi odovzdáme klientom všetky podklady, ktoré odosielame do BRE na hodnotenie. Pomôžeme klientom uspokojiť požiadavky bánk na EU Taxonómiu.' }
+      {
+        title: 'Návštevy na stavbe',
+        content: 'Zber dát priamo na mieste, vrátane spolupráce s ekológmi pre manažment lokality.'
+      },
+      {
+        title: 'Transparentná dokumentácia',
+        content:
+          'Prístup k všetkým materiálom a dokumentom odoslaným na BRE, s flexibilným prispôsobením podľa spätnej väzby.'
+      },
+      {
+        title: 'Komplexná podpora',
+        content:
+          'Koordinácia s projektovým tímom, aktualizácie na základe predchádzajúcich skúseností a zabezpečenie súladu s EU Taxonómiou.'
+      }
     ]}
   />
 
   <Testimonials
-    descriptions={['Na vzťahoch s našimi klientmi si mimoriadne zakladáme. Každý projekt je pre nás partnerstvom postaveným na dôvere, spolupráci a spoločnej vízii.']}
+    descriptions={[
+      'Na vzťahoch s našimi klientmi si mimoriadne zakladáme. Každý projekt je pre nás partnerstvom postaveným na dôvere, spolupráci a spoločnej vízii.'
+    ]}
     items={[
-      {
-        name: 'Ondřej Doupal',
-        position: 'Sustainability Manager — Eastern Europe, VGP',
-        content: `
-            „SALVIS jsme jako BREEAM asesora vybrali na základě dosavadní, krátké a pozitivní zkušenosti pro spoustu našich nadcházejících projektů. Původně dodavatel certifikace malého konstrukčního projektu na Slovensku se tak stal našim hlavním partnerem pro BREEAM nejen na Slovensku, ale i v České republice.<br><br>
-
-            Salvis bere klientský přístup velice vážně a je flexibilní klientským potřebám. Toto nám umožňuje aktualizovat certifikační postupy na základě potřeb z předchozích zkušeností a promítnout je zpět do standardů výstavby.<br><br>
-
-            Na základě dosavadní zkušenosti ze třinácti certifikovaných projektů mohu Salvis jen doporučit.“
-        `
-      },
       {
         name: 'Ondrej Barát',
         position: 'Project manager, VGP',
-        content: `„SALVIS mi vždy rýchlo a presne odpovedá na otázky súvisiace s BREEAM. Vždy nájdu s projekčným tímom cestu ako splniť požiadavky a získať úroveň Excellent. Páči sa mi, že pravidelne navštevujú stavbu, poskytujú nám správu o stave certifikácie a majú celý proces pod kontrolou.“`
+        content: `
+            „SALVIS je rýchly v reakciách, pravidelne navštevujú stavbu a dosahujú Excellent hodnotenia efektívne.“
+        `
+      },
+      {
+        name: 'Ondřej Doupal',
+        position: 'Sustainability Manager, VGP',
+        content: `„SALVIS je náš hlavný partner pre BREEAM na Slovensku a v Česku, s flexibilitou a úsporami nákladov na 13 projektoch.“ `
       },
       {
         name: 'Tomáš Gürtler',
         position: 'Project manager, Contera',
-        content: `„SALVIS nám dodáva službu BREEAM takým spôsobom akým si to predstavujeme. Odpovedajú rýchlo, komunikujú s projekčným tímom, chodia na stavbu. Vedia ako dosiahnuť úroveň Very Good s nízkymi nákladmi a plynule. So SALVIS sme 100% spokojní.“`
+        content: `„100 % spokojnosť so SALVIS – dosiahli Very Good s nízkymi nákladmi a hladkou komunikáciou.“`
+      }
+    ]}
+  />
+  <Accordion
+    title='Často kladené otázky'
+    descriptions={['Prehľad odpovedí na časté otázky o našej spoločnosti a ponúkaných službách']}
+    emphasis={false}
+    items={[
+      {
+        title: 'Čo je BREEAM pre logistické haly?',
+        content: `Certifikačný systém zameraný na udržateľnosť logistických hál, s vysokými hodnoteniami ako Excellent.`
+      },
+
+      {
+        title: 'Koľko stojí certifikácia?',
+        content: `Minimalizujeme náklady na 0-1 % stavebných výdavkov vďaka simuláciám – kontaktujte nás pre ponuku.`
+      },
+      {
+        title: 'Aká je doba trvania?',
+        content: `Závisí od projektu, ale s pravidelnými reportmi a návštevami je proces efektívny.`
+      },
+      {
+        title: 'Prečo Excellent úroveň?',
+        content: `Dosahujeme ju bez dodatočných nákladov, čo splní EU Taxonómiu a zvyšuje hodnotu.`
+      },
+      {
+        title: 'Ako zabezpečíme transparentnosť?',
+        content: `Klienti majú prístup k všetkým dokumentom a materiálom odoslaným na BRE.`
+      },
+      {
+        title: 'Potrebujem ekológa?',
+        content: `Áno, spolupracujeme s nimi na manažmente lokality pre plnenie kritérií.`
       }
     ]}
   />

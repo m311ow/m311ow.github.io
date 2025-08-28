@@ -12,13 +12,12 @@ import SidebarLayout from '../layouts/SidebarLayout.astro'
   <ServiceHero
     title='ESG audit budovy'
     descriptions={[
-      'Ukážeme Vám, ako prevádzkovať a udržovať budovy v súlade s konceptom ESG tak, aby dosiahli svoj maximálny potenciál. ',
-      'Medzi kľúčové ukazovatele stavu budovy v rámci konceptu ESG patria napríklad spotreba vody a energií, kvalita ovzdušia alebo tvorba odpadu.',
-      'V rámci auditu budovy identifikujeme silné a slabé miesta a nájdeme možnosti na zlepšenie.',
-      'Súčasťou našej služby „ESG audit budov“ je zároveň možnosť ziskáť certifikát LEED O+M.',
-      'Vaše budovy môžu byť zdravšie a so štastnejšími nájomníkmi, zatiaľ čo vy ušetríte na spotrebách energií.'
+      'ESG audit budovy je komplexná služba, ktorá pomáha vlastníkom a prevádzkovateľom identifikovať silné a slabé stránky ich nehnuteľností v kontexte environmentálnych, sociálnych a riadiacich faktorov.',
+      'S podporou SALVIS získate jasný prehľad o aktuálnom stave budovy, vrátane výpočtu uhlíkovej stopy, analýzy spotreby energií a vody, a návrhov na optimalizáciu, čo vedie k zdravšiemu prostrediu pre nájomníkov a nižším nákladom.',
+      'Táto služba zahŕňa aj možnosť získania certifikátu LEED O+M, čo zvyšuje ESG rating a uľahčuje financovanie od bánk. Audit sa zameriava na udržateľnú prevádzku, znižovanie emisií CO₂ a súlad s iniciatívami ako Science Based Targets.',
+      'V porovnaní s inými službami ponúka ESG audit holistický prístup, ktorý integruje viaceré aspekty udržateľnosti pre dlhodobý prospech. SALVIS tak pomáha budovám dosiahnuť uhlíkovú neutralitu a vyššiu trhovú hodnotu.'
     ]}
-    flavorText='ESG rating je formou hodnotenia fungovania budovy vo vzťahu k životnému prostrediu, k jej sociálnym aspektom a k jej riadeniu.'
+    flavorText='Označenie ESG je skratkou pre Environment, Social, Governance. (Prostredie, Spoločnosť, Riadenie). ESG rating je formou hodnotenia fungovania budovy vo vzťahu k životnému prostrediu, k jej sociálnym aspektom a k jej riadeniu.'
     image={{
       src: coverImg,
       alt: 'Ilustračný obrázok budovy'
@@ -27,62 +26,83 @@ import SidebarLayout from '../layouts/SidebarLayout.astro'
   <Benefits
     title='Výhody'
     descriptions={[
-      'Kvalitná ESG stratégia poukáže na oblasti, v ktorých budova môže zvýšiť svoju efektivitu a znížiť svoje náklady. Efektívnejšie riadenie týchto oblastí môže viesť k výrazným finančným úsporám.'
+      'ESG audit prináša výhody v oblasti efektivity, financií a udržateľnosti, ktoré zvyšujú atraktivitu budov pre investorov a nájomníkov. Systém zabezpečuje dlhodobú optimalizáciu a súlad s medzinárodnými štandardmi, vrátane možnosti certifikácie LEED O+M.'
     ]}
     items={[
-      'Zvýši dopyt zo strany investorov a ostatných stakeholderov',
-      'Zlepší energetickú účinnosť monitorovaním a overovaním údajov o spotrebách',
-      'Zvýši efektivitu procesov súvisiacich so spotrebou energie a materiálov',
-      'Umožní robiť kvalitnejšie biznis rozhodnutia na základe skutočných dát',
-      'Zmierni riziko súvisiace s dopadmi klimatickej zmeny'
+      'Zníženie nákladov na energie, vodu, odpady a dopravu vďaka identifikácii a optimalizácii slabých miest',
+      'Zvýšenie ESG ratingu, čo uľahčuje získanie financovania od bánk a inštitúcií',
+      'Zlepšenie kvality vnútorného prostredia, čo vedie k zdravším a spokojnejším nájomníkom a vyššej produktivite',
+      'Dosiahnutie environmentálnych cieľov, ako znižovanie emisií CO₂ a podpora biodiverzity, v súlade s EÚ reguláciami',
+      'Dlhodobá hodnota nehnuteľnosti prostredníctvom stratégie smerujúcej k uhlíkovej neutralite'
     ]}
   />
   <Accordion
     title='Ponúkame'
     descriptions={[
-      'Naša služba je prínosná pre klientov v každej fáze prípravy na ESG. ESG audit je zároveň možné použiť k získaniu LEED certifikátu, keďže odhalí stav udržateľnosti a pomôže určiť ďalší postup.'
+      'Ponúkame komplexný ESG audit budov, ktorý zahŕňa hodnotenie, stratégiu a implementáciu, prispôsobené vašim potrebám bez navyšovania nákladov. Naši experti zabezpečia celý proces od analýzy po opakovaný audit, vrátane podpory pri certifikácii a financovaní.'
     ]}
     items={[
       {
-        title: 'Úvod do ESG',
-        content: `<ul>
-              <li>Výpočet uhlíkovej stopy počas prevádzky</li>
-              <li>Analýza spotrebnej pitnej vody</li>
-              <li>Dopravná analýza</li>
-              <li>Audit VZT</li>
-              <li>Audit tvorby odpadov</li>
-              <li>Meranie kvality vnútorného prostredia</li>
-              <li>Energetický audit</li>
-              <li>Audit plánu prevádzky a údržby budovy</li>
-              <li>ESG audit budovy a zhodnotenie aktuálneho ESG skóre a možnosti získať LEED O+M certifikát</li>
-              <li>Úvodná certifikácia LEED O+M</li>
-            </ul>`
+        title: 'Vyhodnotenie súčasného stavu',
+        content: `Zahrňuje identifikáciu silných a slabých stránok, výpočet uhlíkovej stopy, analýzu spotreby vody, energií, odpadov a dopravy, plus meranie kvality vzduchu.`
       },
       {
         title: 'Spracovanie ESG stratégie',
-        content: `<ul>
-              <li>Výber vhodnej ESG schémy (GRESB, GRI alebo CDP)</li>
-              <li>Formulácia merateľných a realistických záväzkov a cieľov s použitím rámca Science Based Targets initiative (SBTi)</li>
-              <li>Analýza činností organizácie a dopadov, ktoré je potrebne merať</li>
-              <li>Výber vhodného nástroja pre zber relevantných dát</li>
-              <li>Zverejnenie záväzkov vo výročnej správe, na webovej stránke</li>
-              <li>Spracovanie akčného plánu</li>
-            </ul>`
+        content: `Výber vhodnej schémy (GRESB, GRI, CDP), formulácia cieľov podľa SBTi, analýza dopadov a výber nástrojov na zber dát.`
       },
       {
-        title: 'Návrh optimalizácie a jej implementácia',
-        content: `<ul>
-              <li>Oslovenie bánk / financujúcich inštitúcií so žiadosťou o financovanie na základe analýzy opatrení</li>
-              <li>Implementácia opatrení tak, aby boli dosiahnuté ciele z bodu znižovania emisí CO2</li>
-              <li>Opätovný ESG audit po 3 rokoch a recertifikácia LEED O+M</li>
-              <li>Aktualizácia simulácií, analýza a prehodnotenie opatrení</li>
-              <li>Vyhodnotenie plnenia cieľov a záväzkov</li>
-              <li>Dosiahnutie LEED Gold / Platinum certifikovaného a uhlíkovo neutrálneho portfólia</li>
-            </ul>`
+        title: 'Implementácia opatrení',
+        content: `Oslovenie bánk pre financovanie, realizácia plánu na znižovanie emisií, opakovaný audit po 3 rokoch s recertifikáciou LEED O+M.`
+      },
+      {
+        title: 'Poradenstvo a školenia',
+        content: `Vysvetlenie výhod ESG, porovnanie schém, školenia pre tím a aktualizácia analýz pre dlhodobú udržateľnosť.`
+      },
+      {
+        title: 'Certifikácia a reporting',
+        content: `Možnosť získania LEED Gold/Platinum, zverejnenie záväzkov a vyhodnotenie plnenia cieľov.`
       }
     ]}
   />
-
+  <Accordion
+    title='Často kladené otázky'
+    descriptions={['Prehľad odpovedí na časté otázky o našej spoločnosti a ponúkaných službách']}
+    emphasis={false}
+    items={[
+      {
+        title: 'Čo je ESG audit budovy?',
+        content: `Komplexné hodnotenie environmentálnych, sociálnych a riadiacich aspektov prevádzky budovy pre optimalizáciu a udržateľnosť.`
+      },
+      {
+        title: 'Koľko stojí ESG audit?',
+        content: `Náklady závisia od veľkosti budovy a rozsahu – kontaktujte nás pre personalizovanú ponuku.`
+      },
+      {
+        title: 'Aká je doba trvania ESG auditu?',
+        content: `Zvyčajne 3-6 mesiacov, vrátane analýzy a implementácie stratégie.`
+      },
+      {
+        title: 'Aké certifikáty môžem získať na základe ESG auditu?',
+        content: `Možnosť LEED O+M (Gold/Platinum) na základe ESG skóre.`
+      },
+      {
+        title: 'Ako sa líši ESG audit od energetického auditu?',
+        content: `ESG audit zahŕňa širšie aspekty ako sociálne faktory a riadenie, nielen energie.`
+      },
+      {
+        title: 'Potrebujem špeciálne dáta?',
+        content: `Pomôžeme s výberom nástrojov na zber dát, ako spotreba energií alebo emisie.`
+      },
+      {
+        title: 'Je ESG audit vhodný pre existujúce budovy?',
+        content: `Áno, špeciálne pre prevádzkované nehnuteľnosti na zlepšenie efektivity.`
+      },
+      {
+        title: 'Aké sú kľúčové výstupy ESG auditu?',
+        content: `Stratégia, akčný plán, cieľové znižovanie emisií a odporúčania pre financovanie.`
+      }
+    ]}
+  />
   <Contact />
   <!-- <ServiceProjects /> -->
   <References />

@@ -17,9 +17,10 @@ import SidebarLayout from '../layouts/SidebarLayout.astro'
   <ServiceHero
     title='LEED'
     descriptions={[
-      'LEED je certifikačný systém kvality a udržateľnosti dokonale prispôsobený komerčným, najmä kancelárskym budovám. Všetky požiadavky LEED dávajú zmysel. Systém je prehľadný a jasný, so skvelými zákazníckymi službami.',
-      'SALVIS poskytuje certifikáciu LEED, vrátane všetkých simulácií a doplnkových štúdií. Proces certifikácie riadime tak aby bol plynulý, aby bol certifikát získaný načas a v požadovanej úrovni.',
-      'LEED predcertifikát je možné získať už na začiatku tvorby projektovej dokumentácie. Použijete ho pri rokovaní o výhodnom financovaní projektu, pri PR komunikácii s médiami a rokovaniach s potenciálnymi nájomcami.'
+      'LEED je prehľadný a užívateľsky priateľský certifikačný systém udržateľnosti, ktorý oceňujú najmä investori z USA a mimoeurópskych fondov. Poskytuje jasný manuál pre zelené budovy, s nízkou administratívnou záťažou a možnosťou získať predcertifikát už vo fáze štúdie, čo uľahčuje financovanie a rokovania s nájomníkmi.',
+      'SALVIS ako akreditovaný konzultant zabezpečuje celý proces certifikácie, vrátane simulácií a analýz, pre rôzne typy budov – od kancelárskych po rezidenčné.',
+      'Systém hodnotí osem kľúčových oblastí, ako energia, voda, materiály a kvalita vnútorného prostredia, a udeľuje certifikáty v úrovniach Certified až Platinum.',
+      'V porovnaní s BREEAM je LEED viac orientovaný na americký trh, s rýchlejším procesom a lepšou zákazníckou podporou. LEED tak pomáha budovám dosiahnuť trvalú udržateľnosť, chrániť životné prostredie a zvyšovať ich trhovú hodnotu.'
     ]}
     flavorText='V SALVIS sme držiteľmi akreditácií LEED AP BD+C a LEED Green Associate. SALVIS je členom Americkej Rady pre Zelené Budovy (USGBC – U.S. Green Building Council).'
     image={{
@@ -31,78 +32,41 @@ import SidebarLayout from '../layouts/SidebarLayout.astro'
   <Benefits
     title='Výhody'
     descriptions={[
-      'LEED poskytuje skvelý návod ako postaviť udržateľnú, zdravú a efektívnu budovu. So skúseným konzultantom Vašej budove prinesie zvýšenú hodnotu a prestíž.'
+      'LEED certifikácia predstavuje súhrn najlepšieho know-how v oblasti udržateľnosti budov, ktorý prináša významné environmentálne, ekonomické a sociálne prínosy pre majiteľov, nájomníkov a investorov. Podľa štúdií dosahujú certifikované budovy nižšie náklady, vyššiu produktivitu a lepšiu trhovú pozíciu, čo zabezpečuje dlhodobú hodnotu a prestíž.'
     ]}
     items={[
-      'Efektívnejšie hospodárenie s energiou, vodou a zdrojmi vedie k dlhodobým úsporám',
-      'Systém LEED je spojený s nízkou administratívnou záťažou',
-      'Predcertifikát, ktorý je možné získať pred dokončením budovy, je zahrnutý v cene',
-      'Investičné fondy z USA a iných mimoeurópskych krajín preferujú LEED'
+      'Nižšie prevádzkové náklady vrátane 13 % úspor na údržbe, 24–50 % nižšej spotreby energie, 33–39 % redukcie emisií CO₂, 40 % menej spotreby vody a 70 % menej stavebného odpadu',
+      'Zvýšenie trhovej hodnoty budovy o 16 %, vyššie nájmy (o 6 %), 3,5 % vyššia obsadenosť a nižšie náklady na neobsadenosť, čo uľahčuje financovanie a predaj',
+      'Zlepšenie zdravia a produktivity užívateľov s 27 % vyššou spokojnosťou nájomníkov a nárastom produktivity o 25–30 %, čo znižuje fluktuáciu zamestnancov a prináša pozitívny obraz spoločnosti',
+      'Podpora environmentálnej udržateľnosti prostredníctvom ochrany biodiverzity, zníženia odpadu a optimalizácie zdrojov, v súlade s globálnymi trendmi zelených budov',
+      'Dlhodobá ekonomická výhoda vďaka kvalitnejšiemu vnútornému prostrediu, ktoré znižuje chorobnosť a zvyšuje lojalitu nájomníkov, vrátane podpory PR a marketingu'
     ]}
   />
   <Accordion
     title='Ponúkame'
     descriptions={[
-      'Certifikát LEED môže získať novostavba, existujúca budova, interiér (priestory firmy), mestská štvrť alebo celé mesto.',
-      `Poskytujeme nasledovné druhy LEED certifikácie:<br>
-      <ul class="">
-        <li>LEED BD+C (návrh a výstavba)</li>
-        <li><a href='/leed-om'>LEED EB:OM (prevádzka a údržba)</a></li>
-        <li>LEED ID+C (návrh a realizácia interiéru)</li>
-        <li>LEED ND (mestské štvrte)</li>
-      </ul>`
+      'Ponúkame kompletné poradenstvo a certifikačné služby LEED, vrátane všetkých potrebných simulácií a analýz, bez zapojenia ďalších dodávateľov. Naši akreditovaní experti (LEED AP BD+C a Green Associate) zabezpečia plynulý proces od registrácie po finálny certifikát, prispôsobený vašim cieľom.'
     ]}
     items={[
       {
-        title: 'Analýza a stratégia',
-        content: `
-        <ul>
-            <li>Zber informácii o projekte</li>
-            <li>Posúdenie možností certifikácie</li>
-            <li>Posúdenie nákladov a opatrení</li>
-            <li>Stanovenie cieľovej úrovne</li>
-            <li>Vedenie projektu prostredníctvom princípov integratívneho dizajnu </li>
-        </ul>
-        `
+        title: 'Registrácia a procesné riadenie',
+        content: `Zahrňuje registráciu projektu u GBCI, vedenie dokumentácie, koordináciu tímu a komunikáciu s certifikačnou autoritou.`
       },
       {
-        title: 'Registrácia a návrh riešení',
-        content: `
-        <ul>
-            <li>Registrácia projektu v LEED</li>
-            <li>Odborné štúdie</li>
-            <li>Zadanie pre projektový tím</li>
-        </ul>
-        `
+        title: 'Návrhy a simulácie',
+        content: `Optimalizácia v oblastiach ako energia, voda a materiály, vrátane simulácií denného osvetlenia, LCA analýz a výpočtov zrážkovej vody.`
       },
       {
-        title: 'Predcertifikácia',
-        content: `
-        <ul>
-            <li>Odoslanie žiadosti</li>
-            <li>Komunikácia s certifikačnou autoritou</li>
-            <li>Vydanie predcertifikátu</li>
-        </ul>
-        `
+        title: 'Doplnkové štúdie',
+        content: `Prevencia znečistenia svetlom, plány spracovania odpadu, ochrana vnútorného vzduchu a rozšírené uvádzanie do prevádzky.`
       },
       {
-        title: 'Realizácia a monitoring',
-        content: `
-        <ul>
-            <li>Kontrola dodržiavania LEED požiadaviek počas výstavby</li>
-            <li>Kontrola opatrení</li>
-        </ul>
-        `
+        title: 'Rôzne typy certifikácie',
+        content: `Podpora pre LEED BD+C (návrh a výstavba), LEED O+M (prevádzka a údržba), LEED ID+C (interiéry) a LEED ND (mestské štvrte).`
       },
       {
-        title: 'Certifikácia',
-        content: `
-        <ul>
-            <li>Odoslanie žiadosti</li>
-            <li>Komunikácia s certifikačnou autoritou</li>
-            <li>Vydanie certifikátu</li>
-        </ul>
-        `
+        title: 'Zľavy a podpora',
+        content: `Vďaka členstvu v USGBC poskytujeme zľavy na poplatky a školenia pre váš tím na dlhodobú udržateľnosť.`
       }
     ]}
   />
@@ -163,109 +127,36 @@ import SidebarLayout from '../layouts/SidebarLayout.astro'
     emphasis={false}
     items={[
       {
-        title: 'Aké sú rozdiely medzi BREEAM a LEED?',
-        content: `Detailnejší prehľad rozdielov medzi systémami BREEAM a LEED môžte nájsť na <a href="/rozdiely-medzi-breeam-a-leed"> tejto podstránke.</a>`
+        title: 'Čo je LEED?',
+        content: `LEED (Leadership in Energy and Environmental Design) je medzinárodne uznávaný certifikačný systém, ktorý hodnotí kvalitu a udržateľnosť budov, najmä komerčných a kancelárskych. LEED poskytuje jasné a prehľadné kritériá na projektovanie, realizáciu a prevádzku ekologicky efektívnych budov.`
       },
       {
-        title: 'Aké typy budov môžu získať certifikát LEED?',
-        content: `
-        <ul>
-            <li>Novostavba</li>
-            <li>Existujúca budova</li>
-            <li>Interiér (priestory firmy)</li>
-            <li>Mestská štvrť</li>
-            <li>Mesto</li>
-        </ul>
-        `
+        title: 'Aké sú hlavné výhody certifikácie LEED?',
+        content: `LEED prináša zníženie prevádzkových nákladov, zvýšenú energetickú účinnosť, lepšiu kvalitu vnútorného prostredia a podporuje environmentálnu zodpovednosť. Navyše LEED certifikáty sú dobre známe a preferované veľkými investičnými fondmi, najmä v USA.`
       },
       {
-        title: 'Aké druhy LEED certifikácie poskytujete?',
-        content: `
-        <ul>
-            <li>LEED BD+C (návrh a výstavba)</li>
-            <li>LEED EB:OM (prevádzka a údržba)</li>
-            <li>LEED ID+C (návrh a realizácia interiéru)</li>
-            <li>LEED ND (mestské štvrte)</li>
-        </ul>
-        `
+        title: 'Ako prebieha proces certifikácie LEED?',
+        content: `Proces LEED začína analýzou dosiahnuteľnosti úrovní certifikácie, vyčíslením nákladov, stanovením cieľovej úrovne a stratégie, registráciou projektu, vykonaním simulácií, odborných štúdií a posudkov, zadávaním úloh architektom, projektantom a iným stranám, ako aj kontrolou zapracovania požiadaviek do dokumentácie. Následne sa odosiela žiadosť o predcertifikát, komunikuje s certifikačnou autoritou, odovzdáva predcertifikát klientovi, počas výstavby sa spracúvajú plány a manuály udržateľnosti, monitoruje plnenie požiadaviek a zbiera dokumentácia vrátane prekladov. Nakoniec sa odosiela žiadosť o finálny certifikát, komunikuje s autoritou a odovzdáva výsledný certifikát klientovi, s koordináciou konzultanta ako SALVIS.`
       },
       {
-        title: 'V rámci akých kategórií sa hodnotí budova?',
-        content: `
-        LEED hodnotí budovu vo ôsmich oblastiach: <br><br>
-        <ul>
-            <li>Integratívny proces</li>
-            <li>Lokalita a doprava</li>
-            <li>Udržateľné miesto výstavby</li>
-            <li>Využitie vody</li>
-            <li>Energia a atmosféra</li>
-            <li>Materiály a zdroje</li>
-            <li>Kvalita vnútorného prostredia</li>
-            <li>Inovácia</li>
-        </ul>
-        `
+        title: 'Ako dlho trvá proces certifikácie?',
+        content: `Proces certifikácie závisí od stupňa pripravenosti projektu a od fázy začatia certifikácie. Predcertifikát LEED je možné získať už v raných fázach projektovej dokumentácie, čo značne podporuje financovanie a komunikáciu projektu. Celý proces môže trvať od niekoľkých mesiacov až po viac v závislosti od rozsahu projektu.`
       },
       {
-        title: 'V akých úrovniach sú vydávané LEED certifikáty?',
-        content: `
-        Certifikát môže budova získať v 4 úrovniach: <br><br>
-        <ul>
-            <li>LEED Certified (40 – 49 bodov)</li>
-            <li>LEED Silver (50 – 59 bodov)</li>
-            <li>LEED Gold (60 – 79 bodov)</li>
-            <li>LEED Platinum (80 – 110 bodov)</li>
-        </ul>
-        `
+        title: 'Koľko stojí certifikácia LEED?',
+        content: `Náklady na certifikáciu LEED závisia od viacerých faktorov, ako je úroveň certifikácie, čas zapojenia do projektu, skúsenosti konzultanta a tímu, a dostupnosť "zadarmo" bodov z polohy budovy. Pre úroveň Gold alebo nižšiu predstavujú 0-1 % navýšenie celkových stavebných nákladov, zatiaľ čo pre Platinum to môže byť 0-7 %, pričom skoré zapojenie skúseného konzultanta minimalizuje náklady na 0-2 %, ale neskoré môže zvýšiť na 0-10 % alebo viesť k nižšej úrovni certifikátu. Celkové náklady sa nedajú úplne zovšeobecniť, pretože závisia od východiskového štandardu každej budovy, a čím angažovanejší tím, tým nižšie výdavky.`
       },
       {
-        title: 'Aká je cena certifikácie LEED?',
-        content: `
-        <ul>
-            <li>Gold alebo nižšie – 0-1% navýšenie celkových stavebných nákladov.</li>
-            <li>Platinum – 0-7% navýšenie celkových stavebných nákladov.</li>
-        </ul>
-
-        Na výšku celkových nákladov majú vplyv najmä tieto faktory: <br><br>
-
-        <ul>
-            <li>Kedy sa stane certifikácia a udržateľnosť úroveň cieľom. Čím skôr tým nižšie náklady. Ak je skúsený konzultant prítomný od začiatku projektu tak je možné certifikát získať s nízkymi nákladmi (0-1%). Pri neskoršom zapojení je zväčša možné získať len certifikát nízkej úrovne alebo prijať vyššie náklady (0-7%).</li>
-            <li>Aký skúsený je konzultant LEED (Čím skúsenejší tým nižšie náklady).</li>
-            <li>Aký skúsení a angažovaní sú ostatní členovia tímu (Architekt, projektanti, GD, investor) (Čím skúsenejší a angažovanejší tým nižšie náklady).</li>
-            <li>Dostupnosť bodov, kt. sú „zadarmo“ a sú determinované polohou (dostupnosť MHD a občianskej vybavenosti, pozemok, kt. bol predtým zastavený VS greenfield, a pod.).</li>
-        </ul>`
+        title: 'Kto zabezpečuje proces certifikácie?',
+        content: `Proces zabezpečuje tím odborníkov SALVIS so skúsenosťami a akreditáciami LEED AP BD+C a LEED Green Associate. Zabezpečujeme koordináciu, spracovanie všetkých potrebných štúdií a komunikáciu s certifikačnými orgánmi.`
       },
       {
-        title: 'Prečo investičné fondy preferujú certifikované budovy?',
-        content: `
-        <ul>
-            <li>Portfóliá, kde prevažujú certifikované budovy, dosahujú lepšie dlhodobé výsledky.</li>
-            <li>V certifikovaných budovách uzatvárajú klienti dlhšie nájomné zmluvy a častejšie ich predlžujú.</li>
-            <li>Zelené svedomie („Green conscience“) fondov aj nájomcov.</li>
-            <li>Menej neinformovaného obchodovania – certifikát poskytuje užitočné informácie.</li>
-            <li>Certifikované budovy musia splniť istú úroveň kvality, aby získali certifikát trvalej udržateľnosti.</li>
-        </ul>
-        `
+        title: 'Aké úrovne certifikácie LEED existujú?',
+        content: `LEED certifikáty sú dostupné v štyroch základných úrovniach: Certified, Silver, Gold a Platinum. Každá úroveň odráža mieru splnenia kritérií udržateľnosti.`
       },
       {
-        title: 'Aké úspory nákladov prináša certifikácia LEED?',
-        content: `
-        <ul>
-            <li>13% nižšie náklady na údržbu</li>
-            <li>24 – 50% nižšia spotreba energie</li>
-            <li>33 – 39% nižšie emisie CO2</li>
-            <li>40% nižšia spotreba vody</li>
-            <li>70% menej pevného stavebného odpadu vyvezeného na skládky</li>
-            <li>27% vyššia spokojnosť nájomcov</li>
-            <li>Vyššie nájmy (6% vyššie ako v nezelených budovách)</li>
-            <li>Vyššia miera obsadenosti budov – 3.5% vyššia</li>
-            <li>Vyššie predajné ceny – o 16% vyššie ako pri nezelených budovách</li>
-            <li>Nižšie náklady na neobsadenosť budov</li>
-            <li>Nižšie náklady na energie</li>
-            <li>Silnejší dopyt zo strany nájomcov</li>
-            <li>Zdravší a produktívnejší zamestnanci (šetrenie značných nákladov a pozitívny dopad na hospodárenie spoločnosti, keďže platy zamestnancov a prislúchajúce výhody sú väčšinou najvyššou nákladovou položkou spoločností) – podľa štúdie BCO Guide z roku 2009 je v zelených budovách nárast produktivity práce o 25 až 30% a úspory s tým spojené dokonca prevyšujú úspory prevádzkových nákladov</li>
-            <li>Pozitívny obraz spoločnosti – bezplatný marketing a PR</li>
-        </ul>
-      `
+        title: 'Môžem certifikovať existujúcu budovu?',
+        content: `Áno, cez LEED O+M (Operation & Maintance) pre prevádzku a údržbu.`
       }
     ]}
   />
