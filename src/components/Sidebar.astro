@@ -2,80 +2,52 @@
 /* Sidebar.astro — works if used only from .astro pages/layouts (no MDX) */
 const pathname = Astro.url.pathname.replace(/\/+$/, '') || '/' // normalize: '/leed/' -> '/leed'
 const isActive = (slug: string) => pathname === `/${slug}` || pathname.startsWith(`/${slug}/`)
+
+type Item = { href: string; label: string; slug: string }
+
+/** Optional TODO: allow passing a custom link list (i18n, per-section, etc.) */
+const items = [
+  { href: '/breeam', label: 'BREEAM', slug: 'breeam' },
+  {
+    href: '/breeam-pre-logisticke-haly',
+    label: 'BREEAM pre logistické haly',
+    slug: 'breeam-pre-logisticke-haly'
+  },
+  { href: '/breeam-in-use', label: 'BREEAM In-Use', slug: 'breeam-in-use' },
+  { href: '/leed', label: 'LEED', slug: 'leed' },
+  { href: '/leed-om', label: 'LEED O+M', slug: 'leed-om' },
+  {
+    href: '/dekarbonizacia-existujucich-budov',
+    label: 'Dekarbonizácia existujúcich budov',
+    slug: 'dekarbonizacia-existujucich-budov'
+  },
+  { href: '/esg-audit-budov', label: 'ESG audit budovy', slug: 'esg-audit-budov' },
+  { href: '/epd', label: 'EPD', slug: 'epd' },
+  { href: '/eu-taxonomia', label: 'EÚ Taxonómia', slug: 'eu-taxonomia' },
+  { href: '/simulacie-budov', label: 'Simulácie budov', slug: 'simulacie-budov' }
+] as Item[]
 ---
 
-<ul class='nav flex-column mb-auto sticky-top sidebar' id='sidebar'>
-  <li class='nav-item border-bottom'>
-    <a
-      href='/breeam'
-      class={`nav-link ps-0 rounded-0 ${isActive('breeam') ? 'active' : 'link-dark'}`}
-    >
-      BREEAM
-    </a>
-  </li>
-  <li class='nav-item border-bottom'>
-    <a
-      href='/breeam-pre-logisticke-haly'
-      class={`nav-link ps-0 rounded-0 ${isActive('breeam-pre-logisticke-haly') ? 'active' : 'link-dark'}`}
-    >
-      BREEAM pre logistické haly</a
-    >
-  </li>
-  <li class='nav-item border-bottom'>
-    <a
-      href='/leed'
-      class={`nav-link ps-0 rounded-0 ${isActive('leed') ? 'active' : 'link-dark'}`}
-      aria-current='page'
-    >
-      LEED
-    </a>
-  </li>
-  <li class='nav-item border-bottom'>
-    <a
-      href='/leed-om'
-      class={`nav-link ps-0 rounded-0 ${isActive('leed-om') ? 'active' : 'link-dark'}`}
-    >
-      LEED O+M
-    </a>
-  </li>
-  <li class='nav-item border-bottom'>
-    <a
-      href='/derkabonizacia-existujucich-budov'
-      class={`nav-link ps-0 rounded-0 ${isActive('derkabonizacia-existujucich-budov') ? 'active' : 'link-dark'}`}
-    >
-      Dekarbonizácia existujúcich budov
-    </a>
-  </li>
-  <li class='nav-item border-bottom'>
-    <a
-      href='/esg-audit-budov'
-      class={`nav-link ps-0 rounded-0 ${isActive('esg-audit-budov') ? 'active' : 'link-dark'}`}
-    >
-      ESG audit budovy
-    </a>
-  </li>
-  <li class='nav-item border-bottom'>
-    <a href='/epd' class={`nav-link ps-0 rounded-0 ${isActive('epd') ? 'active' : 'link-dark'}`}>
-      EPD
-    </a>
-  </li>
-  <li class='nav-item border-bottom'>
-    <a
-      href='/eu-taxonomia'
-      class={`nav-link ps-0 rounded-0 ${isActive('eu-taxonomia') ? 'active' : 'link-dark'}`}
-    >
-      EÚ Taxonómia
-    </a>
-  </li>
-  <li class='nav-item'>
-    <a
-      href='/simulacie-budov'
-      class={`nav-link ps-0 rounded-0 ${isActive('simulacie-budov') ? 'active' : 'link-dark'}`}
-    >
-      Simulácie budov
-    </a>
-  </li>
-</ul>
+<nav aria-label='Sidebar'>
+  <ul class='nav flex-column mb-auto sticky-top sidebar' id='sidebar'>
+    {
+      items.map((item, i) => {
+        const active = isActive(item.slug)
+        return (
+          <li class={`nav-item border-bottom${i === items.length - 1 ? '' : ''}`}>
+            <a
+              href={item.href}
+              class={`nav-link ps-0 rounded-0 ${active ? 'active' : 'link-dark'}`}
+              aria-current={active ? 'page' : undefined}
+            >
+              {item.label}
+            </a>
+          </li>
+        )
+      })
+    }
+  </ul>
+</nav>
 
 <style>
   #sidebar {
@@ -85,7 +57,6 @@ const isActive = (slug: string) => pathname === `/${slug}` || pathname.startsWit
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
-
   .nav-item {
     transition: background-color 0.25s ease;
   }
