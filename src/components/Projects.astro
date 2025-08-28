@@ -10,7 +10,7 @@ const allProjects = await getCollection('projects')
   <div class='col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6'>
     <h2 class='mb-4 display-5 text-center'>Projekty</h2>
     <p class='text-secondary mb-3 text-center'>
-      Naše projekty pokrývajú široké spektrum certifikovaných budov – od administratívnych centier
+      Naše projekty pokrývajú široké spektrum certifikovaných budov — od administratívnych centier
       až po logistické parky
     </p>
   </div>
@@ -40,7 +40,7 @@ const allProjects = await getCollection('projects')
               <h5 class='mb-0'>{project.data.certificate}</h5>
               <p class='text-light mb-2'>{project.data.title}</p>
               <p class='text-light mb-0'>
-                {project.data.location_city} - {project.data.location_country}
+                {project.data.location_city} – {project.data.location_country}
               </p>
             </figcaption>
           </figure>
@@ -86,7 +86,7 @@ const allProjects = await getCollection('projects')
     margin-bottom: 0;
   }
 
-  /* TODO: CONSIDER MOBILE SCREENS - THE CAPTION WONT BE VISIBLE - THAT IS NOT ACCEPTABLE */
+  /* TODO: CONSIDER MOBILE SCREENS — THE CAPTION WONT BE VISIBLE — THAT IS NOT ACCEPTABLE */
   .figure-caption {
     padding: 1rem;
     /* background-color: #000;
