@@ -14,7 +14,7 @@ image_2: ./images/ab-obchodna/image_2.webp
 web: 'https://www.reinoo.com/projekty/nordcity-obchodna'
 ---
 
-**Modern Office Building in the Heart of Žilina**
+### Modern Office Building in the Heart of Žilina
 
 This modern office building brings together top accessibility, smart design, and sustainable solutions. Located just steps from public transport and cycling routes, it encourages green commuting — supported by a spacious bike hub on the ground floor.
 

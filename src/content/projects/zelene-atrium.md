@@ -15,7 +15,7 @@ image_1: ./images/zelene-atrium/image_1.webp
 image_2: ./images/zelene-atrium/image_2.webp
 ---
 
-**LEED Platinum Passive House — A Residential Benchmark for Europe**
+### LEED Platinum Passive House — A Residential Benchmark for Europe
 
 This project is a **pioneering residential development**, setting a new standard for sustainable architecture in Slovakia and Central Europe. It is **one of the very few residential buildings in Europe certified with both LEED Platinum and Passivhaus**, proving that green design can deliver comfort, efficiency, and affordability.
 

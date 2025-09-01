@@ -15,7 +15,7 @@ image_1: ./images/bct2/image_1.webp
 image_2: ./images/bct2/image_2.webp
 ---
 
-**Business Centrum Tesla 2 — Modern Green Offices in Košice**
+### Business Centrum Tesla 2 — Modern Green Offices in Košice
 
 Business Centrum Tesla 2 is the second phase of the successful BCT office project, located on Moldavská Street in southern Košice. Thanks to its position on one of the city's main traffic routes, the building offers excellent accessibility by both car and public transport.
 

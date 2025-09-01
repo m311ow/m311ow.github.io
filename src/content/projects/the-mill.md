@@ -14,7 +14,7 @@ image_certificate_1: ./images/the-mill/image_certificate_1.webp
 web: 'https://immocap.sk/projekty/the-mill/'
 ---
 
-**The MILL — Prestigious Offices in Bratislava's City Business District**
+### The MILL — Prestigious Offices in Bratislava's City Business District
 
 The MILL is a landmark office development in Bratislava's emerging City Business District. The building combines high-quality office spaces with modern amenities, including a two-storey entrance lobby, a children's center with its own playground, and retail and service units on the first floor. Employees and visitors benefit from four underground levels with parking, storage, and technical facilities.
 

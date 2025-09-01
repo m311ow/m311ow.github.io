@@ -13,7 +13,7 @@ image_cover: ./images/vilharia/image_cover.webp
 web: 'https://www.corwin.sk/en/our-project/vilharia'
 ---
 
-**Vilharia — The Greenest Office Building in Slovenia**
+### Vilharia — The Greenest Office Building in Slovenia
 
 Vilharia aspires to be a landmark in the heart of Ljubljana, where modern innovation meets timeless natural principles. The project transforms an underused concrete-covered site into a sustainable, people-focused business hub. Inspired by Nordic architectural traditions, Vilharia combines warmth, elegance, and environmental responsibility. With its **LEED Platinum precertification**, it is set to become the **greenest office building in Slovenia**.
 

@@ -14,7 +14,7 @@ image_1: ./images/euroterrace/image_1.webp
 web: 'https://euroterrace.sk/'
 ---
 
-**Euroterrace — Modern Sustainable Living in Žilina**
+### Euroterrace — Modern Sustainable Living in Žilina
 
 **Euroterrace** is a newly envisioned, multifunctional residential complex in Žilina, pre-certified as **LEED Gold** — a testament to its commitment to sustainability, quality, and environmental responsibility.
 

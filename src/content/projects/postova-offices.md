@@ -16,7 +16,7 @@ image_2: ./images/postova-offices/image_2.webp
 web: 'https://www.reinoo.com/en/projects/nordcity-postova'
 ---
 
-**Major Reconstruction — First LEED v4 Certified Building in Slovakia**
+### Major Reconstruction — First LEED v4 Certified Building in Slovakia
 
 Originally built between 1974–1978 as the telecommunications headquarters of the Žilina region, the former post office building no longer met modern requirements. Instead of demolition, the decision was made to preserve the steel structure and part of the basement, while all other elements were carefully dismantled and 95.7 % of construction waste recycled. The result is a major reconstruction that transformed the site into a pioneering green building.
 

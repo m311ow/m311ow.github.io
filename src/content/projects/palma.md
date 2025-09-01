@@ -13,7 +13,7 @@ image_cover: ./images/palma/image_cover.webp
 web: 'https://www.corwin.sk/nas-projekt/palma'
 ---
 
-**PALMA — From Industrial Brownfield to Bratislava's Greenest District**
+### PALMA — From Industrial Brownfield to Bratislava's Greenest District
 
 PALMA is a large-scale transformation of a former industrial site in the northeast of Bratislava, with a **LEED Platinum precertification**. The area was once home to the **Palma factory**, a significant part of Slovakia's food industry focused on the production of vegetable oils and fats. Over time, production ceased, the site was abandoned, and the grounds fell into decay. Today, the vision is to turn this neglected brownfield into the **first local center of Bratislava and the city's greenest district**.
 

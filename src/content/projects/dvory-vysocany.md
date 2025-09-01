@@ -12,7 +12,7 @@ category:
 image_cover: ./images/dvory-vysocany/image_cover.webp
 ---
 
-**Dvory Vysočany — LEED Gold Office Development in Prague**
+### Dvory Vysočany — LEED Gold Office Development in Prague
 
 Dvory Vysočany is a new **core & shell office building** in Prague designed to achieve **LEED Gold certification**. The project is part of a wider urban regeneration, surrounded by residential buildings and connected to a shared underground garage.
 

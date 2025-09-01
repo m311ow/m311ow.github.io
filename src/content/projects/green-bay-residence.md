@@ -15,7 +15,7 @@ image_1: ./images/green-bay-residence/image_1.webp
 image_2: ./images/green-bay-residence/image_2.webp
 ---
 
-**Residential Project Trenčín — Green Living by the River**
+### Residential Project Trenčín — Green Living by the River
 
 The project consists of two four-storey buildings (Houses B and C) and one five-storey building (House A). The ground floor combines retail, covered parking, and bicycle storage, while additional exterior parking is provided at the front. Six EV charging stations are installed, with more planned for the premium apartments in House A. Each building has its own bike storage room, supplemented by outdoor racks for retail visitors.
 

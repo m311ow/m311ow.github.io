@@ -15,7 +15,7 @@ image_1: ./images/panorama-business-iii/image_1.webp
 image_2: ./images/panorama-business-iii/image_2.webp
 ---
 
-**New Office Building near Tower 115 — Modern and Sustainable**
+### New Office Building near Tower 115 — Modern and Sustainable
 
 The new 14-storey office building rises on a site formerly occupied by a parking lot and low-quality technical structures, adjacent to **Tower 115** and in direct connection to the **Panorama City** residential complex. Its design includes a **four-floor parking podium with retail spaces**, completing the surrounding city block.
 

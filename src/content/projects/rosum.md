@@ -16,7 +16,7 @@ image_2: ./images/rosum/image_2.webp
 web: 'https://www.rosum.sk/o-projekte/'
 ---
 
-**AB Ružinov ROSUM — Green Landmark in Bratislava**
+### AB Ružinov ROSUM — Green Landmark in Bratislava
 
 AB Ružinov ROSUM is a mixed-use building with a strong focus on office spaces, located at the busy intersection of Bajkalská and Ružinovská Streets in Bratislava. The project was designed with sustainability in mind from the very beginning. e-Dome actively contributed to the green concept for LEED certification.
 

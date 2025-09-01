@@ -15,7 +15,7 @@ image_1: ./images/einpark/image_1.webp
 image_2: ./images/einpark/image_2.webp
 ---
 
-**Einpark Offices — Sustainable Gateway to Bratislava**
+### Einpark Offices — Sustainable Gateway to Bratislava
 
 Einpark Offices was developed on the site of a former industrial area, transforming it into a modern, sustainable workplace in one of Bratislava's most attractive locations. Just a short walk from the city center, Janko Kráľ Park, the Danube River, and Aupark shopping center, the site offers excellent connectivity by public transport and easy access to all parts of the city.
 

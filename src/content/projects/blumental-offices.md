@@ -16,7 +16,7 @@ image_2: ./images/blumental-offices/image_2.webp
 image_3: ./images/blumental-offices/image_3.webp
 ---
 
-**Blumental Office — Sustainable Landmark in Bratislava**
+### Blumental Office — Sustainable Landmark in Bratislava
 
 **Budova získala ocenenie CIJ Leading Green Building Development & Developer.**
 

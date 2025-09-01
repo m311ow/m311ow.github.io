@@ -15,7 +15,7 @@ image_2: ./images/bastion-office-center/image_2.webp
 web: 'https://bastion-kosice.sk/en/galeria/'
 ---
 
-**BASTION OFFICE CENTER — Modern Comfort in Historic Košice**
+### BASTION OFFICE CENTER — Modern Comfort in Historic Košice
 
 BASTION OFFICE CENTER stands at the edge of Košice's historic core, designed in harmony with heritage regulations while offering state-of-the-art office spaces. The building provides excellent accessibility thanks to nearby public transport, bike paths, and a full range of services. Three underground levels house parking, EV charging stations, and bicycle storage.
 
