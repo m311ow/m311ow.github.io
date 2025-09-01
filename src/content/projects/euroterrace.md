@@ -1,6 +1,6 @@
 ---
 title: Euroterrace
-certificate: Precertifikácia LEED Gold
+certificate: Predcertifikácia LEED Gold
 client: EUROTERRACE s.r.o.
 location_city: Žilina
 location_country: Slovakia
