@@ -1,21 +1,36 @@
 ---
+const pathname = Astro.url.pathname.replace(/\/+$/, '') || '/'
 
+const isPath = (href: string) => {
+  const clean = href.replace(/\/+$/, '')
+  return pathname === clean || pathname.startsWith(`${clean}/`)
+}
+
+const serviceHrefs = [
+  '/breeam',
+  '/breeam-pre-logisticke-haly',
+  '/breeam-in-use',
+  '/leed',
+  '/leed-om',
+  '/dekarbonizacia-existujucich-budov',
+  '/epd',
+  '/taxonomia-eu',
+  '/simulacie-budov'
+]
+
+const serviceActive = serviceHrefs.some(isPath)
 ---
 
-<nav class='navbar navbar-expand-lg bg-white fixed-top'>
-  <div class='container-fluid'>
-    <!-- Logo -->
-    <a class='navbar-brand fw-bold' href='/'
-      >SALVIS
-      <!-- <img
+<!-- <img
         src='/logo_web_test.svg'
         alt='Site Logo'
         height='30'
         class='d-inline-block align-text-top'
       /> -->
-    </a>
+<nav class='navbar navbar-expand-lg bg-white fixed-top'>
+  <div class='container-fluid'>
+    <a class='navbar-brand fw-bold' href='/'>SALVIS</a>
 
-    <!-- Hamburger for mobile -->
     <button
       class='navbar-toggler border-0 rounded-0'
       type='button'
@@ -28,12 +43,11 @@
       <span class='navbar-toggler-icon'></span>
     </button>
 
-    <!-- Navbar items aligned right -->
     <div class='collapse navbar-collapse justify-content-end' id='navbarSupportedContent'>
       <ul class='navbar-nav ms-auto mb-2 mb-lg-0'>
         <li class='nav-item dropdown'>
           <a
-            class='nav-link dropdown-toggle'
+            class={`nav-link dropdown-toggle ${serviceActive ? 'active' : 'link-dark'}`}
             href='#'
             role='button'
             data-bs-toggle='dropdown'
@@ -41,36 +55,76 @@
           >
             Služby
           </a>
-          <ul class='dropdown-menu rounded-0'>
-            <li><a class='dropdown-item' href='/breeam'>BREEAM</a></li>
-            <li>
-              <a class='dropdown-item' href='/breeam-pre-logisticke-haly'
-                >BREEAM pre logistické haly</a
+          <ul class='dropdown-menu rounded-0 shadow'>
+            <li class='border-bottom'>
+              <a
+                class={`dropdown-item ${isPath('/breeam') ? 'active' : 'link-dark'}`}
+                href='/breeam'>BREEAM</a
               >
             </li>
-            <li><a class='dropdown-item' href='/breeam-in-use'>BREEAM In-Use</a></li>
-            <li><a class='dropdown-item' href='/leed'>LEED</a></li>
-            <li><a class='dropdown-item' href='/leed-om'>LEED O+M</a></li>
-
-            <!-- <li><hr class='dropdown-divider' /></li> -->
-            <li>
-              <a class='dropdown-item' href='/dekarbonizacia-existujucich-budov'
-                >Dekarbonizácia existujúcich budov</a
+            <li class='border-bottom'>
+              <a
+                class={`dropdown-item ${isPath('/breeam-pre-logisticke-haly') ? 'active' : 'link-dark'}`}
+                href='/breeam-pre-logisticke-haly'>BREEAM pre logistické haly</a
               >
             </li>
-            <li><a class='dropdown-item' href='/epd'>EPD</a></li>
-            <li><a class='dropdown-item' href='/taxonomia-eu'>Taxonómia EÚ</a></li>
-            <li><a class='dropdown-item' href='/simulacie-budov'>Simulácie budov</a></li>
+            <li class='border-bottom'>
+              <a
+                class={`dropdown-item ${isPath('/breeam-in-use') ? 'active' : 'link-dark'}`}
+                href='/breeam-in-use'>BREEAM In-Use</a
+              >
+            </li>
+            <li class='border-bottom'>
+              <a class={`dropdown-item ${isPath('/leed') ? 'active' : 'link-dark'}`} href='/leed'
+                >LEED</a
+              >
+            </li>
+            <li class='border-bottom'>
+              <a
+                class={`dropdown-item ${isPath('/leed-om') ? 'active' : 'link-dark'}`}
+                href='/leed-om'>LEED O+M</a
+              >
+            </li>
+            <li class='border-bottom'>
+              <a
+                class={`dropdown-item ${isPath('/dekarbonizacia-existujucich-budov') ? 'active' : 'link-dark'}`}
+                href='/dekarbonizacia-existujucich-budov'>Dekarbonizácia existujúcich budov</a
+              >
+            </li>
+            <li class='border-bottom'>
+              <a class={`dropdown-item ${isPath('/epd') ? 'active' : 'link-dark'}`} href='/epd'
+                >EPD</a
+              >
+            </li>
+            <li class='border-bottom'>
+              <a
+                class={`dropdown-item ${isPath('/taxonomia-eu') ? 'active' : 'link-dark'}`}
+                href='/taxonomia-eu'>Taxonómia EÚ</a
+              >
+            </li>
+            <li>
+              <a
+                class={`dropdown-item ${isPath('/simulacie-budov') ? 'active' : 'link-dark'}`}
+                href='/simulacie-budov'>Simulácie budov</a
+              >
+            </li>
           </ul>
         </li>
+
         <li class='nav-item'>
-          <a class='nav-link' href='/projects'>Projekty</a>
+          <a class={`nav-link ${isPath('/projects') ? 'active' : 'link-dark'}`} href='/projects'
+            >Projekty</a
+          >
         </li>
         <li class='nav-item'>
-          <a class='nav-link' href='/career'>Kariéra</a>
+          <a class={`nav-link ${isPath('/career') ? 'active' : 'link-dark'}`} href='/career'
+            >Kariéra</a
+          >
         </li>
         <li class='nav-item'>
-          <a class='nav-link' href='/contact'>Kontakt</a>
+          <a class={`nav-link ${isPath('/contact') ? 'active' : 'link-dark'}`} href='/contact'
+            >Kontakt</a
+          >
         </li>
       </ul>
     </div>
@@ -78,10 +132,9 @@
 </nav>
 
 <style>
-  /* TODO: MAKE THE UNCOLLAPSED MENU MORE SEPARATED FROM MAIN CONTENT */
-  /* TODO: ADD ANIMATION TO HOVER EFFECT ON 'SLUZBY'LIST ITEMS */
-  /* TODO: ADD DIVIDERS BETWEEN THE DROPDOWN ITEMS TO MAKE IT LOOK SAME LIKE  LIST GROUP */
-  /* TODO: OPTIONALLY TRY TO FIX EMPTY SPACE AT THE START AND BOTTOM OF THE LIST VISIBLE WHEN HOVERING  */
+  .navbar {
+    --bs-navbar-active-color: var(--bs-link-color);
+  }
 
   .navbar-brand {
     padding-left: 2px;
@@ -101,5 +154,25 @@
 
   .dropdown-menu[data-bs-popper] {
     left: -15px;
+    padding-block: 0;
+  }
+
+  .dropdown-menu .dropdown-item.active {
+    background: transparent;
+    color: var(--bs-link-color);
+  }
+
+  .navbar .dropdown-menu > li:first-child > .dropdown-item {
+    padding-top: 8px;
+  }
+  .navbar .dropdown-menu > li:last-child > .dropdown-item {
+    padding-bottom: 8px;
+  }
+
+  .dropdown-item {
+    transition: background-color 0.25s ease;
+  }
+  .dropdown-item:hover {
+    background-color: var(--bs-light);
   }
 </style>
