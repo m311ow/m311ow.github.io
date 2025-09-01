@@ -1,0 +1,68 @@
+---
+import type { ImageMetadata } from 'astro'
+import { Image } from 'astro:assets'
+import { getCollection, type CollectionEntry } from 'astro:content'
+
+interface Item {
+  src: ImageMetadata
+  alt: string
+  title: string
+  link: string
+}
+interface Props {
+  title?: string
+  descriptions?: string[]
+  ids: string[]
+  size?: number // optional, for generated image size (e.g., 600)
+}
+
+const { title = 'Ukážka projektov', descriptions, ids, size = 600 } = Astro.props
+
+const all = await getCollection('projects')
+const byId = new Map(all.map((e) => [e.id, e as CollectionEntry<'projects'>]))
+const items: Item[] = ids
+  .map((id) => {
+    const p = byId.get(id)
+    if (!p) return null
+    return {
+      src: p.data.image_cover,
+      alt: p.data.title ?? id,
+      title: p.data.title ?? id,
+      link: `/projects/${id}`
+    }
+  })
+  .filter(Boolean) as Item[]
+---
+
+<div class='row justify-content-md-between py-3 py-md-5 py-xl-8'>
+  <h2>{title}</h2>
+
+  <div class='col-lg-5 text-secondary'>
+    {descriptions && descriptions.map((text) => <p set:html={text} />)}
+  </div>
+
+  <div class='col-lg-6'>
+    <div class='row g-1'>
+      {
+        items.map((item) => (
+          <div class='col-6'>
+            <a href={item.link} class='d-block' aria-label={item.title}>
+              {/* square wrapper */}
+              <div class='ratio ratio-1x1 overflow-hidden rounded-0'>
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  width={size}
+                  height={size}
+                  class='w-100 h-100 object-fit-cover d-block'
+                  loading='lazy'
+                  decoding='async'
+                />
+              </div>
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>
