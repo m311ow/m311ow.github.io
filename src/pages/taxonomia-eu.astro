@@ -3,14 +3,10 @@ import Accordion from '../components/Accordion.astro'
 import Benefits from '../components/Benefits.astro'
 import Contact from '../components/Contact.astro'
 import References from '../components/Projects.astro'
+import ProjectShowcaseById from '../components/ProjectShowcaseById.astro'
 import ServiceHero from '../components/ServiceHero.astro'
-import ServiceProjectsHighlights from '../components/ServiceProjectsHighlights.astro'
 import Testimonials from '../components/Testimonials.astro'
-import refHighlightImg1 from '../images/WESTEND-GATE-1024x683.webp'
-import refHighlightImg2 from '../images/campus_leaf-1024x675.webp'
 import coverImg from '../images/cover_eu-taxonomy-samobor.jpeg'
-import refHighlightImg3 from '../images/lakeside_park-1024x683.webp'
-import refHighlightImg4 from '../images/nove_apollo-1024x767.webp'
 import SidebarLayout from '../layouts/SidebarLayout.astro'
 ---
 
@@ -103,29 +99,16 @@ import SidebarLayout from '../layouts/SidebarLayout.astro'
       }
     ]}
   />
-  <ServiceProjectsHighlights
-    descriptions={['Kompletný zoznam projektov je k dispozícii v sekcii nižšie.']}
-    items={[
-      {
-        title: 'Westend Gate',
-        alt: 'Westend Gate',
-        src: refHighlightImg1
-      },
-      {
-        title: 'Campus Leaf',
-        alt: 'Campus Leaf',
-        src: refHighlightImg2
-      },
-      {
-        title: 'Lakeside Park',
-        alt: 'Lakeside Park',
-        src: refHighlightImg3
-      },
-      {
-        title: 'Nové Apollo',
-        alt: 'Nové Apollo',
-        src: refHighlightImg4
-      }
+  <ProjectShowcaseById
+    title='Vybrané projekty'
+    descriptions={[
+      'Pozrite si niektoré z našich úspešných projektov, a presvedčte sa o kvalite našich služieb. Kompletný zoznam projektov je k dispozícii v sekcii nižšie.'
+    ]}
+    ids={[
+      'panattoni-park-bratislava-north-ii-hall-2',
+      'vgp-zvolen-hala-c',
+      'vgp-ceske-budejovice-hala-d',
+      'vgp-olomouc-3-hala-m'
     ]}
   />
   <Testimonials

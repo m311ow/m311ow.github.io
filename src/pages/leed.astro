@@ -3,13 +3,9 @@ import Accordion from '../components/Accordion.astro'
 import Benefits from '../components/Benefits.astro'
 import Contact from '../components/Contact.astro'
 import References from '../components/Projects.astro'
+import ProjectShowcaseById from '../components/ProjectShowcaseById.astro'
 import ServiceHero from '../components/ServiceHero.astro'
-import ServiceProjectsHighlights from '../components/ServiceProjectsHighlights.astro'
-import refHighlightImg2 from '../images/campus_leaf-1024x675.webp'
-import refHighlightImg3 from '../images/lakeside_park-1024x683.webp'
 import coverImg from '../images/leed_cover-scaled-600x600.jpg'
-import refHighlightImg4 from '../images/nove_apollo-1024x767.webp'
-import refHighlightImg1 from '../images/WESTEND-GATE-1024x683.webp'
 import SidebarLayout from '../layouts/SidebarLayout.astro'
 ---
 
@@ -20,9 +16,9 @@ import SidebarLayout from '../layouts/SidebarLayout.astro'
       'LEED je prehľadný a užívateľsky priateľský certifikačný systém udržateľnosti, ktorý oceňujú najmä investori z USA a mimoeurópskych fondov. Poskytuje jasný manuál pre zelené budovy, s nízkou administratívnou záťažou a možnosťou získať predcertifikát už vo fáze štúdie, čo uľahčuje financovanie a rokovania s nájomníkmi.',
       'SALVIS ako akreditovaný konzultant zabezpečuje celý proces certifikácie, vrátane simulácií a analýz, pre rôzne typy budov — od kancelárskych po rezidenčné.',
       'Systém hodnotí osem kľúčových oblastí, ako energia, voda, materiály a kvalita vnútorného prostredia, a udeľuje certifikáty v úrovniach Certified až Platinum.',
-      'V porovnaní s BREEAM je LEED viac orientovaný na americký trh, s rýchlejším procesom a lepšou zákazníckou podporou. LEED tak pomáha budovám dosiahnuť trvalú udržateľnosť, chrániť životné prostredie a zvyšovať ich trhovú hodnotu.'
+      'V porovnaní s BREEAM je LEED viac orientovaný na globálny trh, s rýchlejším procesom a lepšou zákazníckou podporou. LEED tak pomáha budovám dosiahnuť trvalú udržateľnosť, chrániť životné prostredie a zvyšovať ich trhovú hodnotu.'
     ]}
-    flavorText='V SALVIS sme držiteľmi akreditácií LEED AP BD+C a LEED Green Associate. SALVIS je členom Americkej Rady pre Zelené Budovy (USGBC — U.S. Green Building Council).'
+    flavorText='LEED - globálna značka kvality a udržateľnosti'
     image={{
       src: coverImg,
       alt: 'Ilustračný obrázok budovy'
@@ -70,30 +66,12 @@ import SidebarLayout from '../layouts/SidebarLayout.astro'
       }
     ]}
   />
-  <ServiceProjectsHighlights
-    descriptions={['Kompletný zoznam projektov je k dispozícii v sekcii nižšie.']}
-    items={[
-      {
-        title: 'Westend Gate',
-        alt: 'Westend Gate',
-        src: refHighlightImg1
-      },
-      {
-        title: 'Campus Leaf',
-        alt: 'Campus Leaf',
-        src: refHighlightImg2
-      },
-      {
-        title: 'Lakeside Park',
-        alt: 'Lakeside Park',
-        src: refHighlightImg3
-      },
-      {
-        title: 'Nové Apollo',
-        alt: 'Nové Apollo',
-        src: refHighlightImg4
-      }
+  <ProjectShowcaseById
+    title='Vybrané projekty'
+    descriptions={[
+      'Pozrite si niektoré z našich úspešných projektov, a presvedčte sa o kvalite našich služieb. Kompletný zoznam projektov je k dispozícii v sekcii nižšie.'
     ]}
+    ids={['ab-obchodna', 'einpark', 'vilharia', 'panorama-business-iii']}
   />
   <!-- <Testimonials
     descriptions={['Na vzťahoch s našimi klientmi si mimoriadne zakladáme. Každý projekt je pre nás partnerstvom postaveným na dôvere, spolupráci a spoločnej vízii.']}
