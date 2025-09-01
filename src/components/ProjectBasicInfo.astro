@@ -6,7 +6,7 @@ interface Props {
 const { items } = Astro.props
 ---
 
-<div class='justify-content-md-between pb-3 pb-md-5 pb-xl-8'>
+<div class='justify-content-md-between pb-3 pb-md-4'>
   <ul class='list-group list-group-flush'>
     {items.map((item) => <li class='list-group-item py-1' set:html={item} />)}
   </ul>
