@@ -1,37 +1,40 @@
 ---
-/* Sidebar.astro — works if used only from .astro pages/layouts (no MDX) */
-const pathname = Astro.url.pathname.replace(/\/+$/, '') || '/' // normalize: '/leed/' -> '/leed'
-const isActive = (slug: string) => pathname === `/${slug}` || pathname.startsWith(`/${slug}/`)
+const normalize = (p: string) =>
+  (p || '/')
+    .replace(/\/+$/, '')
+    .replace(/\/{2,}/g, '/')
+    .replace(/^$/, '/')
 
-type Item = { href: string; label: string; slug: string }
+const pathname = normalize(Astro.url.pathname) // e.g. "/services/breeam"
 
-/** Optional TODO: allow passing a custom link list (i18n, per-section, etc.) */
-const items = [
-  { href: '/breeam', label: 'BREEAM', slug: 'breeam' },
+const isActiveHref = (href: string) => {
+  const target = normalize(href)
+  return pathname === target || pathname.startsWith(`${target}/`)
+}
+
+type Item = { href: string; label: string }
+
+const items: Item[] = [
+  { href: '/services/breeam', label: 'BREEAM' },
+  { href: '/services/breeam-pre-logisticke-haly', label: 'BREEAM pre logistické haly' },
+  { href: '/services/breeam-in-use', label: 'BREEAM In-Use' },
+  { href: '/services/leed', label: 'LEED' },
+  { href: '/services/leed-om', label: 'LEED O+M' },
   {
-    href: '/breeam-pre-logisticke-haly',
-    label: 'BREEAM pre logistické haly',
-    slug: 'breeam-pre-logisticke-haly'
+    href: '/services/dekarbonizacia-existujucich-budov',
+    label: 'Dekarbonizácia existujúcich budov'
   },
-  { href: '/breeam-in-use', label: 'BREEAM In-Use', slug: 'breeam-in-use' },
-  { href: '/leed', label: 'LEED', slug: 'leed' },
-  { href: '/leed-om', label: 'LEED O+M', slug: 'leed-om' },
-  {
-    href: '/dekarbonizacia-existujucich-budov',
-    label: 'Dekarbonizácia existujúcich budov',
-    slug: 'dekarbonizacia-existujucich-budov'
-  },
-  { href: '/epd', label: 'EPD', slug: 'epd' },
-  { href: '/taxonomia-eu', label: 'Taxonómia EÚ', slug: 'taxonomia-eu' },
-  { href: '/simulacie-budov', label: 'Simulácie budov', slug: 'simulacie-budov' }
-] as Item[]
+  { href: '/services/epd', label: 'EPD' },
+  { href: '/services/taxonomia-eu', label: 'Taxonómia EÚ' },
+  { href: '/services/simulacie-budov', label: 'Simulácie budov' }
+]
 ---
 
 <nav aria-label='Sidebar'>
   <ul class='nav flex-column mb-auto sticky-top sidebar' id='sidebar'>
     {
       items.map((item, i) => {
-        const active = isActive(item.slug)
+        const active = isActiveHref(item.href)
         return (
           <li class={`nav-item border-bottom${i === items.length - 1 ? '' : ''}`}>
             <a

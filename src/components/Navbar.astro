@@ -58,54 +58,57 @@ const serviceActive = serviceHrefs.some(isPath)
           <ul class='dropdown-menu rounded-0 shadow'>
             <li class='border-bottom'>
               <a
-                class={`dropdown-item ${isPath('/breeam') ? 'active' : 'link-dark'}`}
-                href='/breeam'>BREEAM</a
+                class={`dropdown-item ${isPath('/services/breeam') ? 'active' : 'link-dark'}`}
+                href='/services/breeam'>BREEAM</a
               >
             </li>
             <li class='border-bottom'>
               <a
-                class={`dropdown-item ${isPath('/breeam-pre-logisticke-haly') ? 'active' : 'link-dark'}`}
-                href='/breeam-pre-logisticke-haly'>BREEAM pre logistické haly</a
+                class={`dropdown-item ${isPath('/services/breeam-pre-logisticke-haly') ? 'active' : 'link-dark'}`}
+                href='/services/breeam-pre-logisticke-haly'>BREEAM pre logistické haly</a
               >
             </li>
             <li class='border-bottom'>
               <a
-                class={`dropdown-item ${isPath('/breeam-in-use') ? 'active' : 'link-dark'}`}
-                href='/breeam-in-use'>BREEAM In-Use</a
-              >
-            </li>
-            <li class='border-bottom'>
-              <a class={`dropdown-item ${isPath('/leed') ? 'active' : 'link-dark'}`} href='/leed'
-                >LEED</a
+                class={`dropdown-item ${isPath('/services/breeam-in-use') ? 'active' : 'link-dark'}`}
+                href='/services/breeam-in-use'>BREEAM In-Use</a
               >
             </li>
             <li class='border-bottom'>
               <a
-                class={`dropdown-item ${isPath('/leed-om') ? 'active' : 'link-dark'}`}
-                href='/leed-om'>LEED O+M</a
+                class={`dropdown-item ${isPath('/services/leed') ? 'active' : 'link-dark'}`}
+                href='/services/leed'>LEED</a
               >
             </li>
             <li class='border-bottom'>
               <a
-                class={`dropdown-item ${isPath('/dekarbonizacia-existujucich-budov') ? 'active' : 'link-dark'}`}
-                href='/dekarbonizacia-existujucich-budov'>Dekarbonizácia existujúcich budov</a
-              >
-            </li>
-            <li class='border-bottom'>
-              <a class={`dropdown-item ${isPath('/epd') ? 'active' : 'link-dark'}`} href='/epd'
-                >EPD</a
+                class={`dropdown-item ${isPath('/services/leed-om') ? 'active' : 'link-dark'}`}
+                href='/services/leed-om'>LEED O+M</a
               >
             </li>
             <li class='border-bottom'>
               <a
-                class={`dropdown-item ${isPath('/taxonomia-eu') ? 'active' : 'link-dark'}`}
-                href='/taxonomia-eu'>Taxonómia EÚ</a
+                class={`dropdown-item ${isPath('/services/dekarbonizacia-existujucich-budov') ? 'active' : 'link-dark'}`}
+                href='/services/dekarbonizacia-existujucich-budov'
+                >Dekarbonizácia existujúcich budov</a
+              >
+            </li>
+            <li class='border-bottom'>
+              <a
+                class={`dropdown-item ${isPath('/services/epd') ? 'active' : 'link-dark'}`}
+                href='/services/epd'>EPD</a
+              >
+            </li>
+            <li class='border-bottom'>
+              <a
+                class={`dropdown-item ${isPath('/services/taxonomia-eu') ? 'active' : 'link-dark'}`}
+                href='/services/taxonomia-eu'>Taxonómia EÚ</a
               >
             </li>
             <li>
               <a
-                class={`dropdown-item ${isPath('/simulacie-budov') ? 'active' : 'link-dark'}`}
-                href='/simulacie-budov'>Simulácie budov</a
+                class={`dropdown-item ${isPath('/services/simulacie-budov') ? 'active' : 'link-dark'}`}
+                href='/services/simulacie-budov'>Simulácie budov</a
               >
             </li>
           </ul>
