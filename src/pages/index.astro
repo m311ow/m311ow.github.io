@@ -1,13 +1,43 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Hero from '../components/Hero.astro';
-import Services from '../components/Services.astro';
-import References from '../components/Projects.astro';
-import BentoGrid from '../components/BentoGrid.astro';
+import { getCollection } from 'astro:content'
+import BentoGrid from '../components/BentoGrid.astro'
+import Hero from '../components/Hero.astro'
+import References from '../components/Projects.astro'
+import BaseLayout from '../layouts/BaseLayout.astro'
+
+const projectsWithCert = await getCollection('projects', ({ data }) => !!data.certificate)
+const projectCount = projectsWithCert.length
+
+const titleHtml = `Poradenstvo a certifikácia <br /> v oblasti BREEAM, LEED, Taxonómie&nbsp;EÚ, ESG a uhlíkovej&nbsp;neutrality`
+const subtitleHtml = `Viac ako ${projectCount} vydaných certifikátov <br /> BREEAM a LEED na Slovensku, v Česku a Slovinsku`
+
+const heroLinks = [
+  { href: '/projects', label: 'Projekty' },
+  { href: '/contact', label: 'Kontakt' }
+]
+
+const accreditationsTitle = 'Akreditácie'
+const accreditations = [
+  'LEED AP BD+C',
+  'LEED Green Associate',
+  'BREEAM International Assessor',
+  'BREEAM AP',
+  'BREEAM In Use Assessor',
+  'WELL AP',
+  'DGNB Certified Consultant',
+  'Fitwel Ambassador',
+  'Certified Passive House Designer & Consultant',
+  'Autorizovaný stavebný inžinier — stavebná fyzika'
+]
 ---
 
 <BaseLayout>
-  <Hero />
+  <Hero
+    titleHtml={titleHtml}
+    subtitleHtml={subtitleHtml}
+    accreditationsTitle={accreditationsTitle}
+    accreditations={accreditations}
+  />
   <BentoGrid />
   <!-- <Services /> -->
   <References />
