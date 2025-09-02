@@ -1,5 +1,5 @@
 ---
-interface Link {
+interface HeroLink {
   href: string
   label: string
 }
@@ -7,7 +7,7 @@ interface Link {
 interface Props {
   titleHtml: string
   subtitleHtml: string
-  links?: Link[] // e.g. [{ href: "/projects", label: "Projekty" }]
+  heroLinks?: HeroLink[] // e.g. [{ href: "/projects", label: "Projekty" }]
   accreditationsTitle?: string // "Akreditácie"
   accreditations?: string[] // e.g. ["LEED AP BD+C", ...]
 }
@@ -15,7 +15,7 @@ interface Props {
 const {
   titleHtml,
   subtitleHtml,
-  links = [],
+  heroLinks = [],
   accreditationsTitle,
   accreditations = []
 } = Astro.props
@@ -27,9 +27,9 @@ const {
     <h3 class='text-primary fw-light' set:html={subtitleHtml} />
 
     {
-      links.length > 0 && (
+      heroLinks.length > 0 && (
         <ul class='list-group list-group-flush w-50 w-lg-25'>
-          {links.map((link) => (
+          {heroLinks.map((link) => (
             <li class='list-group-item p-0 border-primary'>
               <a
                 href={link.href}
