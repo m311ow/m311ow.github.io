@@ -1,10 +1,10 @@
 ---
 interface Props {
-  title?: string;
-  descriptions?: string[];
+  title?: string
+  descriptions?: string[]
 }
 
-const { title = 'Projekty', descriptions } = Astro.props;
+const { title, descriptions } = Astro.props
 ---
 
 <div class='row justify-content-md-between py-3 py-md-5 py-xl-8'>
@@ -18,8 +18,12 @@ const { title = 'Projekty', descriptions } = Astro.props;
     {
       Array.from({ length: 20 }).map((_, i) => (
         <figure class='figure'>
-          <img src='https://placehold.co/800x800' class='figure-img img-fluid' alt={`Image ${i + 1}`} />
-          <figcaption class='figure-caption'>A caption for project {i + 1}</figcaption>
+          <img
+            src='https://placehold.co/800x800'
+            class='figure-img img-fluid'
+            alt={`Image ${i + 1}`}
+          />
+          <figcaption class='figure-caption'>A caption for image {i + 1}</figcaption>
         </figure>
       ))
     }
