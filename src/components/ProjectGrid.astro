@@ -42,6 +42,7 @@ const { projects, variant = 'all', title } = Astro.props
                   src={project.data.image_cover ?? 'https://placehold.co/1200x1200'}
                   width='1200'
                   height='1200'
+                  layout='responsive'
                   class='figure-img'
                   alt={`Cover image for project ${project.data.title}`}
                 />
