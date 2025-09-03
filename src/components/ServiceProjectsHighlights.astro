@@ -1,16 +1,16 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from 'astro:assets'
 
 interface Props {
-  title?: string;
-  descriptions?: string[];
-  items: { src: ImageMetadata; alt: string; title: string; link?: string }[];
+  title?: string
+  descriptions?: string[]
+  items: { src: ImageMetadata; alt: string; title: string; link?: string }[]
 }
 
-const { title = 'Ukážka projektov', descriptions, items } = Astro.props;
+const { title = 'Ukážka projektov', descriptions, items } = Astro.props
 ---
 
-<div class='row justify-content-md-between py-3 py-md-5 py-xl-8'>
+<div class='row justify-content-md-between py-3 py-md-5'>
   <h2>{title}</h2>
   <div class='col-lg-5 text-secondary'>
     {descriptions && descriptions.map((text) => <p class='' set:html={text} />)}
