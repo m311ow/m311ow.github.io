@@ -42,7 +42,7 @@ const epds = defineCollection({
     z.object({
       YearRegistered: z.string(),
       Company: z.string(),
-      Country: z.string().optional(),
+      Country: z.string(),
       Product: z.string(),
       ProductType: z.string(),
       Database: z.string(),
