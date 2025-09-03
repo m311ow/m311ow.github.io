@@ -22,7 +22,6 @@ const projects = defineCollection({
     })
 })
 
-// simple slugify helper
 const slugify = (str: string) =>
   str
     .toLowerCase()
@@ -51,6 +50,4 @@ const epds = defineCollection({
     })
 })
 
-// Expose your defined collection to Astro
-// with the `collections` export
 export const collections = { projects, epds }
