@@ -1,4 +1,4 @@
-import { glob } from 'astro/loaders'
+import { file, glob } from 'astro/loaders'
 import { defineCollection, z } from 'astro:content'
 // TODO: EVENTUALLY REMOVE OPTIONAL() AND LEAVE IT ONLY WHERE IT MAKES SENSE
 const projects = defineCollection({
@@ -22,6 +22,35 @@ const projects = defineCollection({
     })
 })
 
+// simple slugify helper
+const slugify = (str: string) =>
+  str
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)+/g, '')
+
+const epds = defineCollection({
+  loader: file('src/content/epds/epds.json', {
+    parser: (text) => {
+      const raw = JSON.parse(text) as any[]
+      return raw.map((item) => ({
+        ...item,
+        id: slugify(item.Product)
+      }))
+    }
+  }),
+  schema: () =>
+    z.object({
+      YearRegistered: z.string(),
+      Company: z.string(),
+      Country: z.string().optional(),
+      Product: z.string(),
+      ProductType: z.string(),
+      Database: z.string(),
+      Link: z.union([z.string().url(), z.literal(''), z.undefined()])
+    })
+})
+
 // Expose your defined collection to Astro
 // with the `collections` export
-export const collections = { projects }
+export const collections = { projects, epds }

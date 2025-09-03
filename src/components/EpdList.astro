@@ -1,0 +1,136 @@
+---
+import type { CollectionEntry } from 'astro:content'
+
+type EpdEntry = CollectionEntry<'epds'>
+interface Props {
+  title: string
+  titleClass?: string
+  descriptions?: string[]
+  items: EpdEntry[]
+}
+
+const { title = 'References', titleClass, descriptions, items } = Astro.props
+---
+
+<div class='row justify-content-md-between py-3 py-md-5'>
+  <h2 class={titleClass}>{title}</h2>
+
+  <!-- <div class='col-md-5'>
+    {descriptions && descriptions.map((text) => <p class='' set:html={text} />)}
+  </div> -->
+  <div class='col-md-12'>
+    <ul class='list-group list-group-flush' data-aos='fade-up' data-aos-duration='1500'>
+      {
+        items.map((item) => (
+          <li class='list-group-item py-1 text-primary' data-aos='fade-up' data-aos-duration='1500'>
+            <div class='reference-card'>
+              <div class='field'>
+                <div class='label text-gray-500'>Year</div>
+                <div class='value text-black'>{item.data.YearRegistered}</div>
+              </div>
+
+              <div class='field'>
+                <div class='label text-gray-500'>Company</div>
+                <div class='value text-black'>{item.data.Company}</div>
+              </div>
+
+              <div class='field'>
+                <div class='label text-gray-500'>Product</div>
+                <div class='value text-black'>{item.data.Product}</div>
+              </div>
+
+              <div class='field'>
+                <div class='label text-gray-500'>Database</div>
+                <div class='value text-black'>{item.data.Database}</div>
+              </div>
+
+              <div class='field'>
+                <div class='label text-gray-500'>Country</div>
+                <div class='value text-black'>{item.data.Country}</div>
+              </div>
+
+              <div class='field'>
+                <div class='label text-gray-500'>Link</div>
+                <a href={item.data.Link} target='_blank' class='value link'>
+                  View EPD
+                </a>
+              </div>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>
+
+<style>
+  /* .list-group-flush:first-child {
+    border-top: 1px solid var(--bs-border-color);
+  }
+
+  .list-group-flush:last-child {
+    border-bottom: 1px solid var(--bs-border-color);
+  } */
+  .list-group .list-group-item:first-child {
+    padding-top: 0 !important;
+  }
+
+  .list-group .list-group-item:last-child {
+    padding-bottom: 0 !important;
+  }
+
+  .reference-card {
+    background: #ffffff;
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+
+  .field {
+    flex: 1;
+    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+
+  .value {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .link {
+    color: var(--base-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  @media (max-width: 991px) {
+    .reference-card {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .field {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .label {
+      min-width: 100px;
+    }
+
+    .value {
+      text-align: right;
+    }
+  }
+</style>
