@@ -281,3 +281,9 @@ ul {
   // margin-bottom: 0;
   list-style-type: square;
 }
+
+@media (max-width: 575.98px) {
+  .display-1 {
+    font-size: 4.5rem; /* shrink from 5rem default */
+  }
+}
