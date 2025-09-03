@@ -104,6 +104,5 @@ import SidebarLayout from '../layouts/SidebarLayout.astro'
     ]}
   />
   <Contact />
-  <!-- <ServiceProjects /> -->
-  <References />
+  <Projects title='Projekty' />
 </SidebarLayout>
