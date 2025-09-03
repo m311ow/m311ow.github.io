@@ -2,12 +2,25 @@
 import Accordion from '../../components/Accordion.astro'
 import Benefits from '../../components/Benefits.astro'
 import Contact from '../../components/Contact.astro'
+import ProjectGrid from '../../components/ProjectGrid.astro'
 import Projects from '../../components/Projects.astro'
-import ProjectShowcaseById from '../../components/ProjectShowcaseById.astro'
 import ServiceHero from '../../components/ServiceHero.astro'
 import Testimonials from '../../components/Testimonials.astro'
 import coverImg from '../../images/breeam_logistics_cover-scaled-600x600.png'
 import SidebarLayout from '../../layouts/SidebarLayout.astro'
+
+import { getCollection } from 'astro:content'
+
+const allProjects = await getCollection('projects')
+const highlightIds = [
+  'atrios-si-logatec',
+  'vgp-bratislava-building-f2',
+  'panattoni-park-bratislava-north-ii-hall-2',
+  'contera-maly-saris'
+]
+const highlightProjects = allProjects
+  .filter((p) => highlightIds.includes(p.id))
+  .sort((a, b) => highlightIds.indexOf(a.id) - highlightIds.indexOf(b.id))
 ---
 
 <SidebarLayout>
@@ -71,7 +84,8 @@ import SidebarLayout from '../../layouts/SidebarLayout.astro'
     ]}
   />
 
-  <ProjectShowcaseById
+  <ProjectGrid projects={highlightProjects} variant='highlights' />
+  <!-- <ProjectShowcaseById
     title='Vybrané projekty'
     descriptions={[
       'Pozrite si niektoré z našich úspešných projektov, a presvedčte sa o kvalite našich služieb. Kompletný zoznam projektov je k dispozícii v sekcii nižšie.'
@@ -82,7 +96,7 @@ import SidebarLayout from '../../layouts/SidebarLayout.astro'
       'panattoni-park-bratislava-north-ii-hall-2',
       'contera-maly-saris'
     ]}
-  />
+  /> -->
 
   <Testimonials
     descriptions={[

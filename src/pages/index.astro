@@ -1,9 +1,11 @@
 ---
 import { getCollection } from 'astro:content'
 import Hero from '../components/Hero.astro'
+import ProjectGrid from '../components/ProjectGrid.astro'
 import ServicesBigCards from '../components/ServicesBigCards.astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
-import Projects from '../components/Projects.astro'
+
+const allProjects = await getCollection('projects')
 
 const projectsWithCert = await getCollection('projects', ({ data }) => !!data.certificate)
 const projectCount = projectsWithCert.length
@@ -90,5 +92,6 @@ const services = [
   <ServicesBigCards heading='Služby' services={services} cols={3} />
   <!-- <BentoGrid /> -->
   <!-- <Services /> -->
-  <Projects title='Projekty' />
+  <!-- <Projects title='Projekty' /> -->
+  <ProjectGrid projects={allProjects} variant='all' title='Projekty' />
 </BaseLayout>

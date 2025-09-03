@@ -1,13 +1,25 @@
 ---
+import { getCollection } from 'astro:content'
 import Accordion from '../../components/Accordion.astro'
 import Benefits from '../../components/Benefits.astro'
 import Contact from '../../components/Contact.astro'
 import Projects from '../../components/Projects.astro'
-import ProjectShowcaseById from '../../components/ProjectShowcaseById.astro'
 import ServiceHero from '../../components/ServiceHero.astro'
 import Testimonials from '../../components/Testimonials.astro'
 import coverImg from '../../images/cover_eu-taxonomy-samobor.jpeg'
 import SidebarLayout from '../../layouts/SidebarLayout.astro'
+import ProjectGrid from '../../components/ProjectGrid.astro'
+
+const allProjects = await getCollection('projects')
+const highlightIds = [
+  'kaufland-zahorska-bystrica',
+  'klingerka',
+  'westend-gate',
+  'vgp-zvolen-hala-c'
+]
+const highlightProjects = allProjects
+  .filter((p) => highlightIds.includes(p.id))
+  .sort((a, b) => highlightIds.indexOf(a.id) - highlightIds.indexOf(b.id))
 ---
 
 <SidebarLayout>
@@ -99,7 +111,10 @@ import SidebarLayout from '../../layouts/SidebarLayout.astro'
       }
     ]}
   />
-  <ProjectShowcaseById
+
+  <ProjectGrid projects={highlightProjects} variant='highlights' />
+
+  <!-- <ProjectShowcaseById
     title='Vybrané projekty'
     descriptions={[
       'Pozrite si niektoré z našich úspešných projektov, a presvedčte sa o kvalite našich služieb. Kompletný zoznam projektov je k dispozícii v sekcii nižšie.'
@@ -110,7 +125,8 @@ import SidebarLayout from '../../layouts/SidebarLayout.astro'
       'vgp-ceske-budejovice-hala-d',
       'vgp-olomouc-3-hala-m'
     ]}
-  />
+  /> -->
+
   <Testimonials
     descriptions={[
       'Na vzťahoch s našimi klientmi si mimoriadne zakladáme. Každý projekt je pre nás partnerstvom postaveným na dôvere, spolupráci a spoločnej vízii.'

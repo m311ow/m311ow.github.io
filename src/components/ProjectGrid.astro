@@ -1,0 +1,138 @@
+---
+import { Image } from 'astro:assets'
+
+export interface Props {
+  projects: any[]
+  variant?: 'all' | 'highlights'
+  title?: string
+}
+
+const { projects, variant = 'all', title } = Astro.props
+---
+
+<section class='project-grid-section'>
+  {
+    title && variant === 'all' && (
+      <header class='row mb-1'>
+        <div class='col-12 col-lg-8'>
+          <h2 class='text-gray-300 display-1 fw-bold lh-1 mb-0'>{title}</h2>
+        </div>
+      </header>
+    )
+  }
+
+  {
+    title && variant === 'highlights' && (
+      <header class='row mb-1'>
+        <div class='col-12 col-lg-8'>
+          <h2 class='text-gray-300 display-1 lh-1 mb-0'>{title}</h2>
+        </div>
+      </header>
+    )
+  }
+
+  <div class={`project-grid project-grid--${variant}`}>
+    {
+      projects.map((project: any) => (
+        <div class='project-card-wrapper'>
+          <a href={`/projects/${project.id}`} class='link-dark'>
+            <figure class='project-card'>
+              <div class='image-wrapper'>
+                <Image
+                  src={project.data.image_cover ?? 'https://placehold.co/1200x1200'}
+                  width='1200'
+                  height='1200'
+                  class='figure-img'
+                  alt={`Cover image for project ${project.data.title}`}
+                />
+              </div>
+              <figcaption class='text-primary mb-0'>
+                {project.data.certificate && (
+                  <p class='mb-0 border-bottom text-uppercase'>{project.data.certificate}</p>
+                )}
+                <p class='mb-0 border-bottom text-uppercase'>{project.data.title}</p>
+                <p class='mb-0 border-bottom text-uppercase'>
+                  {project.data.location_city} – {project.data.location_country}
+                </p>
+                <p class='mb-0 text-uppercase'>{project.data.client}</p>
+              </figcaption>
+            </figure>
+          </a>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<script is:inline>
+  const root = document.currentScript?.closest('.project-grid-section')
+  if (root) {
+    const paras = root.querySelectorAll('figcaption p')
+    function adjustBorders() {
+      paras.forEach((p) => {
+        p.style.paddingBottom = ''
+        const lh = parseFloat(getComputedStyle(p).lineHeight)
+        if (p.offsetHeight > lh * 1.5) p.style.paddingBottom = '1px'
+      })
+    }
+    const onReady = () => adjustBorders()
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', onReady, { once: true })
+    } else {
+      onReady()
+    }
+    let t
+    window.addEventListener('resize', () => {
+      clearTimeout(t)
+      t = setTimeout(adjustBorders, 150)
+    })
+  }
+</script>
+
+<style>
+  .project-grid {
+    display: grid;
+    gap: 0.25rem;
+  }
+  .project-grid--all {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  .project-grid--highlights {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-card-wrapper {
+    width: 100%;
+  }
+
+  .project-card {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    transition: transform 0.2s ease;
+  }
+
+  .image-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .figure-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  figcaption {
+    font-size: 14px;
+  }
+</style>
