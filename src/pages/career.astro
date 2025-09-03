@@ -1,7 +1,7 @@
 ---
 import Accordion from '../components/Accordion.astro'
 import ServiceHero from '../components/ServiceHero.astro'
-import coverImg from '../images/team_photo.jpg'
+import coverImg from '../images/salvis_team.webp'
 import SidebarLayout from '../layouts/SidebarLayout.astro'
 ---
 
@@ -16,12 +16,14 @@ import SidebarLayout from '../layouts/SidebarLayout.astro'
     flavorText='V tíme pracujú poprední odborníci v oblasti LCA analýz, simulácií, trvalo udržateľného urbanizmu, LEED a BREEAM poradenstva.'
     image={{
       src: coverImg,
-      alt: 'Fotka tímu SALVIS'
+      alt: 'Fotka tímu SALVIS',
+      square: false
     }}
   />
 
   <Accordion
     title='Junior konzultant BREEAM / LEED'
+    titleClass='fw-bold'
     descriptions={[
       'Miesto práce: Bratislava',
       'Mzdové podmienky: 1500 – 2000 € / mesačne, v závislosti od skúseností',
@@ -64,6 +66,7 @@ import SidebarLayout from '../layouts/SidebarLayout.astro'
 
   <Accordion
     title='Projektový manažér BREEAM / LEED'
+    titleClass='fw-bold'
     descriptions={[
       'Miesto práce: Bratislava',
       'Mzdové podmienky: 2500 – 4000 € / mesačne, v závislosti od skúseností',

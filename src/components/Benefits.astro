@@ -16,8 +16,17 @@ const { title = 'Výhody', titleClass, descriptions, items } = Astro.props
     {descriptions && descriptions.map((text) => <p class='' set:html={text} />)}
   </div>
   <div class='col-md-6 ps-md-0'>
-    <ul class='list-group list-group-flush'>
-      {items.map((item) => <li class='list-group-item py-1 text-primary' set:html={item} />)}
+    <ul class='list-group list-group-flush' data-aos='fade-up' data-aos-duration='1500'>
+      {
+        items.map((item) => (
+          <li
+            class='list-group-item py-1 text-primary'
+            set:html={item}
+            data-aos='fade-up'
+            data-aos-duration='1500'
+          />
+        ))
+      }
     </ul>
   </div>
 </div>

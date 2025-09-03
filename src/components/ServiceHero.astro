@@ -8,29 +8,40 @@ interface Props {
   image: {
     src: ImageMetadata
     alt: string
+    square?: boolean
   }
 }
 
-const { title, descriptions, flavorText, image } = Astro.props
+const {
+  title,
+  descriptions,
+  flavorText,
+  image: { src, alt = 'Title image for the service', square = true }
+} = Astro.props
 ---
 
 <div class='row justify-content-md-between'>
-  <h1 class='text-primary'>{title}</h1>
+  <h1 class='text-primary fw-bold'>{title}</h1>
   <div class='col-md-5 d-flex flex-column'>
     {descriptions.map((text) => <p class='' set:html={text} />)}
   </div>
   <div class='col-md-6 ps-md-0'>
-    <div class='ratio ratio-1x1'>
-      <Image
-        src={image.src}
-        alt={image.alt || 'Title image for the service'}
-        layout='responsive'
-        width={1200}
-        height={1200}
-        class='img-fluid flex-grow-1 object-fit-cover w-100'
-        format='webp'
-      />
-    </div>
+    {
+      square ? (
+        <div class='ratio ratio-1x1'>
+          <Image
+            src={src}
+            alt={alt}
+            layout='responsive'
+            width={1200}
+            height={1200}
+            class='w-100 h-100 object-fit-cover'
+          />
+        </div>
+      ) : (
+        <img src={src.src} alt={alt} class='img-fluid w-100 object-fit-cover' />
+      )
+    }
     <p class='text-primary fst-italic'>{flavorText}</p>
   </div>
 </div>
