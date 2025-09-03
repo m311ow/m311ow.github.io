@@ -3,6 +3,12 @@ import { Image } from 'astro:assets'
 import { getCollection } from 'astro:content'
 
 const allProjects = await getCollection('projects')
+
+interface Props {
+  title: string
+}
+
+const { title } = Astro.props
 ---
 
 <!-- Projects Grid Section --><!-- <div class='row justify-content-md-center py-3 py-md-5 py-xl-8'>
@@ -16,7 +22,7 @@ const allProjects = await getCollection('projects')
 </div> -->
 <header class='row mb-1'>
   <div class='col-12 col-lg-8'>
-    <h2 class='text-gray-300 display-1 fw-bold lh-1 mb-0'>Projekty</h2>
+    <h2 class='text-gray-300 display-1 fw-bold lh-1 mb-0'>{title}</h2>
   </div>
 </header>
 
