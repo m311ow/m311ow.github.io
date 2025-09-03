@@ -5,8 +5,7 @@ import { getCollection } from 'astro:content'
 const allProjects = await getCollection('projects')
 ---
 
-<!-- Projects Grid Section -->
-<div class='row justify-content-md-center py-3 py-md-5 py-xl-8'>
+<!-- Projects Grid Section --><!-- <div class='row justify-content-md-center py-3 py-md-5 py-xl-8'>
   <div class='col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6'>
     <h2 class='mb-4 display-5 text-center'>Projekty</h2>
     <p class='text-secondary mb-3 text-center'>
@@ -14,7 +13,12 @@ const allProjects = await getCollection('projects')
       až po logistické parky
     </p>
   </div>
-</div>
+</div> -->
+<header class='row mb-1'>
+  <div class='col-12 col-lg-8'>
+    <h2 class='text-gray-300 display-1 fw-bold lh-1 mb-0'>Projekty</h2>
+  </div>
+</header>
 
 <!-- Responsive CSS Grid for Projects -->
 <div class='project-grid'>

@@ -55,6 +55,9 @@ import Footer from '../components/Footer.astro'
       rel='stylesheet'
     />
 
+    <!-- AOS CSS -->
+    <link href='https://unpkg.com/aos@2.3.1/dist/aos.css' rel='stylesheet' />
+
     <meta name='viewport' content='width=device-width, initial-scale=1' />
     <meta name='generator' content={Astro.generator} />
     <title>SALVIS</title>
@@ -87,6 +90,11 @@ import Footer from '../components/Footer.astro'
       // import 'bootstrap/js/dist/tab';
       // import 'bootstrap/js/dist/toast';
       // import 'bootstrap/js/dist/tooltip';
+    </script>
+    <!-- AOS JS -->
+    <script src='https://unpkg.com/aos@2.3.1/dist/aos.js' is:inline></script>
+    <script is:inline>
+      AOS.init({})
     </script>
   </body>
 </html>

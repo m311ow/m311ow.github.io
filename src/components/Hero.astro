@@ -21,7 +21,7 @@ const {
 } = Astro.props
 ---
 
-<div class='row'>
+<div class='row border-bottom border-top pt-1'>
   <div class='col-md-6 d-flex flex-column'>
     <h1 class='fw-bold display-5' set:html={titleHtml} />
     <h3 class='text-primary fw-light' set:html={subtitleHtml} />
@@ -62,7 +62,7 @@ const {
     {accreditationsTitle && <h3 class='text-end fw-light'>{accreditationsTitle}</h3>}
     {
       accreditations.length > 0 && (
-        <ul class='list-unstyled fst-italic text-secondary pb-1'>
+        <ul class='list-unstyled fst-italic text-secondary pb-1 mb-0'>
           {accreditations.map((item) => (
             <li class='fw-light'>{item}</li>
           ))}
