@@ -1,21 +1,37 @@
-<!-- TODO: CONSIDER ADJUSTING THE DESIGN A LITTLE BIT, IT LOOKS WEIRD, BUT I DONT KNOW WHY YET, MAYBE THE ADDRESS IS TOO ISOLATED, OR THE FORM LOOKS TOO BAD WITH THE WHITE INPUTS AND BLACK BUTTON -->
 <footer class='bg-light py-4 py-md-5 mt-5'>
-  <div class='container'>
+  <div class='container-fluid'>
     <div class='row justify-content-between'>
       <div class='col-md-3'>
         <h4 class=''>Kontaktujte nás</h4>
         <form action='#' class='form contact-form d-flex flex-column gap-1'>
           <div class='input-group'>
-            <input type='text' class='form-control form-control-sm rounded-0 fw-light' placeholder='Meno' />
+            <input
+              type='text'
+              class='form-control form-control-sm rounded-0 fw-light'
+              placeholder='Meno'
+            />
           </div>
           <div class='input-group'>
-            <input type='text' class='form-control form-control-sm rounded-0 fw-light' placeholder='Email' />
+            <input
+              type='text'
+              class='form-control form-control-sm rounded-0 fw-light'
+              placeholder='Email'
+            />
           </div>
           <div class='input-group'>
-            <input type='text' class='form-control form-control-sm rounded-0 fw-light' placeholder='Predmet' />
+            <input
+              type='text'
+              class='form-control form-control-sm rounded-0 fw-light'
+              placeholder='Predmet'
+            />
           </div>
           <div class='input-group'>
-            <textarea name='' id='' rows='3' class='form-control form-control-sm rounded-0 fw-light' placeholder='Správa'></textarea>
+            <textarea
+              name=''
+              id=''
+              rows='3'
+              class='form-control form-control-sm rounded-0 fw-light'
+              placeholder='Správa'></textarea>
           </div>
           <div class='input-group'>
             <button type='submit' class='btn btn-dark submit px-3 rounded-0'>Odoslať</button>
@@ -23,24 +39,7 @@
         </form>
       </div>
 
-      <!-- <div class='col-md-2 offset-md-1 d-flex flex-column justify-content-end' '>
-        <ul class='nav d-flex flex-column'>
-          <a href='#' class='nav-link py-1 px-0 d-block border-bottom link-dark'>Domov</a>
-          <a href='#' class='nav-link py-1 px-0 d-block border-bottom link-dark'>Projekty</a>
-          <a href='#' class='nav-link py-1 px-0 d-block border-bottom link-dark'>Kariéra</a>
-          <a href='#' class='nav-link py-1 px-0 d-block border-bottom link-dark'>Kontakt</a>
-        </ul>
-      </div> -->
-      <!-- <div class='col-md-2 offset-md-5 d-flex flex-column justify-content-end text-end'>
-        <ul class='nav d-flex flex-column'>
-          <a href='#' class='nav-link py-1 px-0 d-block border-bottom link-dark'>Cookies</a>
-          <a href='#' class='nav-link py-1 px-0 d-block border-bottom link-dark'>Obchodné podmienky</a>
-          <a href='#' class='nav-link py-1 px-0 d-block border-bottom link-dark'>Ochrana osobných údajov</a>
-        </ul>
-      </div> -->
-
       <div class='col-md-2 d-flex flex-column justify-content-end text-end'>
-        <!-- <h4 class='footer-heading'>Adresa</h4> -->
         <ul class='d-flex flex-column list-unstyled mb-0 fw-light text-secondary fst-italic small'>
           <li>SALVIS, s.r.o.</li>
           <li>Karadžičova 16</li>
@@ -55,16 +54,19 @@
     <div class='row mt-md-5 fw-light d-flex d-row justify-content-between border-bottom'>
       <div class='col-md-6'>
         <ul class='nav d-flex flex-row small'>
-          <a href='#' class='nav-link py-1 ps-0 pe-1 d-block link-secondary'>Cookies</a>
-          <a href='#' class='nav-link py-1 px-1 d-block link-secondary'>Obchodné podmienky</a>
-          <a href='#' class='nav-link py-1 px-1 d-block link-secondary'>Ochrana osobných údajov</a>
+          <!-- <a href='#' class='nav-link py-1 ps-0 pe-1 d-block link-secondary'>Cookies</a> -->
+          <a href='/obchodne-podmienky' class='nav-link py-md-1 py-1 ps-0 d-block link-secondary'
+            >Obchodné podmienky</a
+          >
+          <a
+            href='/ochrana-osobnych-udajov'
+            class='nav-link py-md-1 py-1 ps-0 d-block link-secondary'>Ochrana osobných údajov</a
+          >
         </ul>
       </div>
       <div class='col-md-6 text-end'>
         <p class='copyright pt-1 small text-secondary'>
-          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
           {new Date().getFullYear()} | SALVIS
-          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
         </p>
       </div>
     </div>
