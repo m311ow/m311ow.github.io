@@ -19,7 +19,7 @@ const { title, descriptions, flavorText, image } = Astro.props
   <div class='col-md-5 d-flex flex-column'>
     {descriptions.map((text) => <p class='' set:html={text} />)}
   </div>
-  <div class='col-md-6'>
+  <div class='col-md-6 ps-md-0'>
     <Image
       src={image.src}
       alt={image.alt || 'Image'}

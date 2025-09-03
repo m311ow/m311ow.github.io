@@ -1,22 +1,23 @@
 ---
 interface Props {
   title: string
+  titleClass?: string
   descriptions?: string[]
   items: string[]
 }
 
-const { title = 'Výhody', descriptions, items } = Astro.props
+const { title = 'Výhody', titleClass, descriptions, items } = Astro.props
 ---
 
 <div class='row justify-content-md-between py-3 py-md-5 py-xl-8'>
-  <h2>{title}</h2>
+  <h2 class={titleClass}>{title}</h2>
 
-  <div class='col-lg-5 text-secondary'>
+  <div class='col-md-5'>
     {descriptions && descriptions.map((text) => <p class='' set:html={text} />)}
   </div>
-  <div class='col-lg-6'>
+  <div class='col-md-6 ps-md-0'>
     <ul class='list-group list-group-flush'>
-      {items.map((item) => <li class='list-group-item py-1' set:html={item} />)}
+      {items.map((item) => <li class='list-group-item py-1 text-primary' set:html={item} />)}
     </ul>
   </div>
 </div>

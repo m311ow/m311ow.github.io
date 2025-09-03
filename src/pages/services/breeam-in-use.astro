@@ -2,11 +2,14 @@
 import Accordion from '../../components/Accordion.astro'
 import Benefits from '../../components/Benefits.astro'
 import Contact from '../../components/Contact.astro'
-import Projects from '../../components/Projects.astro'
+import ProjectGrid from '../../components/ProjectGrid.astro'
 import ServiceHero from '../../components/ServiceHero.astro'
 import Testimonials from '../../components/Testimonials.astro'
 import coverImg from '../../images/breeam_cover-scaled-600x600.jpg'
 import SidebarLayout from '../../layouts/SidebarLayout.astro'
+
+import { getCollection } from 'astro:content'
+const allProjects = await getCollection('projects')
 ---
 
 <SidebarLayout>
@@ -27,6 +30,7 @@ import SidebarLayout from '../../layouts/SidebarLayout.astro'
 
   <Benefits
     title='Výhody'
+    titleClass='display-1 fw-bold'
     descriptions={[
       'BREEAM certifikácia predstavuje súhrn najlepšieho know-how v oblasti udržateľnosti budov, ktorý prináša významné environmentálne, ekonomické a sociálne prínosy pre majiteľov, nájomníkov a investorov. Podľa štúdií dosahujú certifikované budovy nižšie náklady, vyššiu produktivitu a lepšiu trhovú pozíciu, čo zabezpečuje dlhodobú hodnotu a prestíž.'
     ]}
@@ -40,6 +44,7 @@ import SidebarLayout from '../../layouts/SidebarLayout.astro'
   />
   <Accordion
     title='Ponúkame'
+    titleClass='display-1 fw-bold'
     descriptions={[
       'V rámci služby BREEAM In-Use poskytujeme komplexnú podporu počas celého certifikačného procesu, vrátane poradenských služieb, prípravy dokumentácie, riadenia projektu a samotného vydania certifikátu. Naším cieľom je zabezpečiť, aby bol proces certifikácie čo najhladší a najefektívnejší, pričom kladieme dôraz na dosiahnutie čo najvyššieho hodnotenia s minimálnymi nákladmi.'
     ]}
@@ -105,6 +110,7 @@ import SidebarLayout from '../../layouts/SidebarLayout.astro'
 
   <Accordion
     title='Často kladené otázky'
+    titleClass='fw-bold'
     descriptions={['Prehľad odpovedí na časté otázky o našej spoločnosti a ponúkaných službách']}
     emphasis={false}
     items={[
@@ -140,5 +146,5 @@ import SidebarLayout from '../../layouts/SidebarLayout.astro'
     ]}
   />
   <Contact />
-  <Projects title='Projekty' />
+  <ProjectGrid projects={allProjects} variant='all' title='Projekty' />
 </SidebarLayout>

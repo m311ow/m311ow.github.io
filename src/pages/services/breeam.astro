@@ -3,7 +3,6 @@ import Accordion from '../../components/Accordion.astro'
 import Benefits from '../../components/Benefits.astro'
 import Contact from '../../components/Contact.astro'
 import ProjectGrid from '../../components/ProjectGrid.astro'
-import Projects from '../../components/Projects.astro'
 import ServiceHero from '../../components/ServiceHero.astro'
 import Testimonials from '../../components/Testimonials.astro'
 import coverImg from '../../images/breeam_cover-scaled-600x600.jpg'
@@ -40,6 +39,7 @@ const highlightProjects = allProjects
 
   <Benefits
     title='Výhody'
+    titleClass='display-1 fw-bold'
     descriptions={[
       'BREEAM certifikácia predstavuje súhrn najlepšieho know-how v oblasti udržateľnosti budov, ktorý prináša významné environmentálne, ekonomické a sociálne prínosy pre majiteľov, nájomníkov a investorov. Podľa štúdií dosahujú certifikované budovy nižšie náklady, vyššiu produktivitu a lepšiu trhovú pozíciu, čo zabezpečuje dlhodobú hodnotu a prestíž.'
     ]}
@@ -53,6 +53,7 @@ const highlightProjects = allProjects
   />
   <Accordion
     title='Ponúkame'
+    titleClass='display-1 fw-bold'
     descriptions={[
       'Ponúkame komplexné poradenstvo a certifikačné služby BREEAM, ktoré zahŕňajú celý proces od registrácie až po finálne hodnotenie, prispôsobené vašim potrebám. Naši experti zabezpečia, aby vaša budova dosiahla vysoké skóre bez navyšovania nákladov, vrátane pokročilých simulácií a administratívnej podpory.'
     ]}
@@ -122,6 +123,7 @@ const highlightProjects = allProjects
   />
   <Accordion
     title='Často kladené otázky'
+    titleClass='fw-bold'
     descriptions={['Prehľad odpovedí na časté otázky o našej spoločnosti a ponúkaných službách']}
     emphasis={false}
     items={[
@@ -171,5 +173,5 @@ const highlightProjects = allProjects
     ]}
   />
   <Contact />
-  <Projects title='Projekty' />
+  <ProjectGrid projects={allProjects} variant='all' title='Projekty' />
 </SidebarLayout>

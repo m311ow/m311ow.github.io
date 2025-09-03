@@ -3,7 +3,6 @@ import Accordion from '../../components/Accordion.astro'
 import Benefits from '../../components/Benefits.astro'
 import Contact from '../../components/Contact.astro'
 import ProjectGrid from '../../components/ProjectGrid.astro'
-import Projects from '../../components/Projects.astro'
 import ServiceHero from '../../components/ServiceHero.astro'
 import Testimonials from '../../components/Testimonials.astro'
 import coverImg from '../../images/breeam_logistics_cover-scaled-600x600.png'
@@ -40,6 +39,7 @@ const highlightProjects = allProjects
   />
   <Benefits
     title='Výhody'
+    titleClass='display-1 fw-bold'
     descriptions={[
       'BREEAM certifikácia pre logistické haly prináša komplexné výhody v environmentálnej, ekonomickej a sociálnej oblasti, ktoré zvyšujú atraktivitu hál pre investorov a nájomníkov. Systém zabezpečuje dlhodobú udržateľnosť, prestíž a súlad s EU štandardmi, čo minimalizuje náklady a maximalizuje hodnotu.'
     ]}
@@ -53,6 +53,7 @@ const highlightProjects = allProjects
   />
   <Accordion
     title='Ponúkame'
+    titleClass='display-1 fw-bold'
     descriptions={[
       `Ponúkame komplexné poradenstvo a certifikačné služby BREEAM špecificky pre logistické haly, zahŕňajúce celý proces od analýzy po finálne hodnotenie, prispôsobené vašim potrebám bez dodatočných nákladov. Naši experti zabezpečia simulácie, reporty a on-site podporu pre dosiahnutie vysokých úrovní ako Excellent.`
     ]}
@@ -124,6 +125,7 @@ const highlightProjects = allProjects
   />
   <Accordion
     title='Často kladené otázky'
+    titleClass='fw-bold'
     descriptions={['Prehľad odpovedí na časté otázky o našej spoločnosti a ponúkaných službách']}
     emphasis={false}
     items={[
@@ -155,5 +157,5 @@ const highlightProjects = allProjects
     ]}
   />
   <Contact />
-  <Projects title='Projekty' />
+  <ProjectGrid projects={allProjects} variant='all' title='Projekty' />
 </SidebarLayout>

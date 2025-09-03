@@ -2,11 +2,14 @@
 import Accordion from '../../components/Accordion.astro'
 import Benefits from '../../components/Benefits.astro'
 import Contact from '../../components/Contact.astro'
-import Projects from '../../components/Projects.astro'
+import ProjectGrid from '../../components/ProjectGrid.astro'
 import ServiceHero from '../../components/ServiceHero.astro'
 import Testimonials from '../../components/Testimonials.astro'
 import coverImg from '../../images/trees_600x600.jpg'
 import SidebarLayout from '../../layouts/SidebarLayout.astro'
+
+import { getCollection } from 'astro:content'
+const allProjects = await getCollection('projects')
 ---
 
 <SidebarLayout>
@@ -28,6 +31,7 @@ import SidebarLayout from '../../layouts/SidebarLayout.astro'
 
   <Benefits
     title='Výhody'
+    titleClass='display-1 fw-bold'
     descriptions={[
       'EPD prináša výhody v oblasti udržateľnosti, marketingu a certifikácie, ktoré zvyšujú atraktivitu produktov pre klientov a investorov. Vyhlásenie zabezpečuje súlad s medzinárodnými štandardmi a poskytuje konkurenčnú výhodu, keďže len malá časť produktov na trhu ho má.'
     ]}
@@ -41,6 +45,7 @@ import SidebarLayout from '../../layouts/SidebarLayout.astro'
   />
   <Accordion
     title='Ponúkame'
+    titleClass='display-1 fw-bold'
     descriptions={[
       'Ponúkame kompletné spracovanie EPD pre výrobcov stavebných materiálov, vrátane LCA analýzy, overenia a publikácie, prispôsobené vašim produktom bez zbytočných nákladov. Naši experti zabezpečia celý proces od určenia pravidiel až po zaradenie do databáz, s dôrazom na súlad s normami a certifikačnými systémami.'
     ]}
@@ -67,31 +72,6 @@ import SidebarLayout from '../../layouts/SidebarLayout.astro'
       }
     ]}
   />
-  <!-- <ServiceProjectsHighlights
-    descriptions={['Kompletný zoznam projektov je k dispozícii v sekcii nižšie.']}
-    items={[
-      {
-        title: 'Westend Gate',
-        alt: 'Westend Gate',
-        src: refHighlightImg1
-      },
-      {
-        title: 'Campus Leaf',
-        alt: 'Campus Leaf',
-        src: refHighlightImg2
-      },
-      {
-        title: 'Lakeside Park',
-        alt: 'Lakeside Park',
-        src: refHighlightImg3
-      },
-      {
-        title: 'Nové Apollo',
-        alt: 'Nové Apollo',
-        src: refHighlightImg4
-      }
-    ]}
-  /> -->
   <Testimonials
     descriptions={[
       'Na vzťahoch s našimi klientmi si mimoriadne zakladáme. Každý projekt je pre nás partnerstvom postaveným na dôvere, spolupráci a spoločnej vízii.'
@@ -118,6 +98,7 @@ import SidebarLayout from '../../layouts/SidebarLayout.astro'
   />
   <Accordion
     title='Často kladené otázky'
+    titleClass='fw-bold'
     descriptions={['Prehľad odpovedí na časté otázky o našej spoločnosti a ponúkaných službách']}
     emphasis={false}
     items={[
@@ -156,5 +137,5 @@ import SidebarLayout from '../../layouts/SidebarLayout.astro'
     ]}
   />
   <Contact />
-  <Projects title='Projekty' />
+  <ProjectGrid projects={allProjects} variant='all' title='Projekty' />
 </SidebarLayout>

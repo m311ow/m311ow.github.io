@@ -2,15 +2,13 @@
 import Accordion from '../../components/Accordion.astro'
 import Benefits from '../../components/Benefits.astro'
 import Contact from '../../components/Contact.astro'
-import Projects from '../../components/Projects.astro'
+import ProjectGrid from '../../components/ProjectGrid.astro'
 import ServiceHero from '../../components/ServiceHero.astro'
-import ServiceProjectsHighlights from '../../components/ServiceProjectsHighlights.astro'
 import coverImg from '../../images/breeam_cover-scaled-600x600.jpg'
-import refHighlightImg2 from '../../images/campus_leaf-1024x675.webp'
-import refHighlightImg3 from '../../images/lakeside_park-1024x683.webp'
-import refHighlightImg4 from '../../images/nove_apollo-1024x767.webp'
-import refHighlightImg1 from '../../images/WESTEND-GATE-1024x683.webp'
 import SidebarLayout from '../../layouts/SidebarLayout.astro'
+
+import { getCollection } from 'astro:content'
+const allProjects = await getCollection('projects')
 ---
 
 <SidebarLayout>
@@ -36,6 +34,7 @@ import SidebarLayout from '../../layouts/SidebarLayout.astro'
 
   <Benefits
     title='Výhody'
+    titleClass='display-1 fw-bold'
     descriptions={[
       'Simulácie budov umožňujú robiť kvalifikované rozhodnutia ešte pred realizáciou, čím šetria náklady, znižujú riziká a zvyšujú hodnotu investície.'
     ]}
@@ -48,6 +47,7 @@ import SidebarLayout from '../../layouts/SidebarLayout.astro'
   />
   <Accordion
     title='Ponúkame'
+    titleClass='display-1 fw-bold'
     descriptions={[
       'Optimalizujeme výkon budovy ešte pred jej postavením — znižujeme náklady, zvyšujeme komfort a zaručujeme súlad s medzinárodnými normami a certifikačnými systémami (BREEAM, LEED, ASHRAE).'
     ]}
@@ -104,33 +104,9 @@ import SidebarLayout from '../../layouts/SidebarLayout.astro'
       }
     ]}
   />
-  <ServiceProjectsHighlights
-    descriptions={['Kompletný zoznam projektov je k dispozícii v sekcii nižšie.']}
-    items={[
-      {
-        title: 'Westend Gate',
-        alt: 'Westend Gate',
-        src: refHighlightImg1
-      },
-      {
-        title: 'Campus Leaf',
-        alt: 'Campus Leaf',
-        src: refHighlightImg2
-      },
-      {
-        title: 'Lakeside Park',
-        alt: 'Lakeside Park',
-        src: refHighlightImg3
-      },
-      {
-        title: 'Nové Apollo',
-        alt: 'Nové Apollo',
-        src: refHighlightImg4
-      }
-    ]}
-  />
   <Accordion
     title='Často kladené otázky'
+    titleClass='fw-bold'
     descriptions={['Prehľad odpovedí na časté otázky o našej spoločnosti a ponúkaných službách']}
     emphasis={false}
     items={[
@@ -149,5 +125,5 @@ import SidebarLayout from '../../layouts/SidebarLayout.astro'
     ]}
   />
   <Contact />
-  <Projects title='Projekty' />
+  <ProjectGrid projects={allProjects} variant='all' title='Projekty' />
 </SidebarLayout>

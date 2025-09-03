@@ -251,6 +251,40 @@ body {
   font-feature-settings: 'liga' 0, 'clig' 0;
 }
 
+.text-gray-300 {
+  color: var(--bs-gray-300);
+}
+
+.text-gray-400 {
+  color: var(--bs-gray-400);
+}
+
+.text-gray-500 {
+  color: var(--bs-gray-500);
+}
+
+.text-gray-600 {
+  color: var(--bs-gray-600);
+}
+
+.text-gray-700 {
+  color: var(--bs-gray-700);
+}
+
+.text-gray-800 {
+  color: var(--bs-gray-800);
+}
+
+.text-gray-900 {
+  color: var(--bs-gray-900);
+}
+
+@media (max-width: 575.98px) {
+  .display-1 {
+    font-size: 4.5rem; /* shrink from 5rem default */
+  }
+}
+
 /* Heading sizings */
 // h1 {
 //   font-size: 2.986rem;
@@ -280,10 +314,4 @@ ul {
   padding-left: 1.2rem;
   // margin-bottom: 0;
   list-style-type: square;
-}
-
-@media (max-width: 575.98px) {
-  .display-1 {
-    font-size: 4.5rem; /* shrink from 5rem default */
-  }
 }
