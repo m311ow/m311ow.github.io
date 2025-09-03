@@ -34,19 +34,19 @@ const epds = defineCollection({
       const raw = JSON.parse(text) as any[]
       return raw.map((item) => ({
         ...item,
-        id: slugify(item.Product)
+        id: slugify(item.product)
       }))
     }
   }),
   schema: () =>
     z.object({
-      YearRegistered: z.string(),
-      Company: z.string(),
-      Country: z.string(),
-      Product: z.string(),
-      ProductType: z.string(),
-      Database: z.string(),
-      Link: z.union([z.string().url(), z.literal(''), z.undefined()])
+      year_registered: z.string(),
+      company: z.string(),
+      country: z.string(),
+      product: z.string(),
+      product_type: z.string(),
+      database: z.string(),
+      link: z.union([z.string().url(), z.literal(''), z.undefined()])
     })
 })
 

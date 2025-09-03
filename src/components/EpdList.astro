@@ -5,11 +5,10 @@ type EpdEntry = CollectionEntry<'epds'>
 interface Props {
   title: string
   titleClass?: string
-  descriptions?: string[]
   items: EpdEntry[]
 }
 
-const { title = 'References', titleClass, descriptions, items } = Astro.props
+const { title = 'References', titleClass, items } = Astro.props
 ---
 
 <div class='row justify-content-md-between py-3 py-md-5'>
@@ -17,43 +16,49 @@ const { title = 'References', titleClass, descriptions, items } = Astro.props
   <div class='col-md-12'>
     <ul class='list-group list-group-flush' data-aos='fade-up' data-aos-duration='1500'>
       {
-        items.map((item) => (
-          <li class='list-group-item py-1 text-primary' data-aos='fade-up' data-aos-duration='1500'>
-            <div class='reference-card'>
-              <div class='field'>
-                <div class='label text-gray-500'>Year</div>
-                <div class='value text-black'>{item.data.YearRegistered}</div>
-              </div>
+        items.map(
+          ({ id, data: { product, company, database, country, year_registered, link } }) => (
+            <li
+              class='list-group-item py-1 text-primary'
+              data-aos='fade-up'
+              data-aos-duration='1500'
+            >
+              <div class='reference-card'>
+                <div class='field'>
+                  <div class='label text-gray-500'>Year</div>
+                  <div class='value text-black'>{year_registered}</div>
+                </div>
 
-              <div class='field'>
-                <div class='label text-gray-500'>Company</div>
-                <div class='value text-black'>{item.data.Company}</div>
-              </div>
+                <div class='field'>
+                  <div class='label text-gray-500'>Company</div>
+                  <div class='value text-black'>{company}</div>
+                </div>
 
-              <div class='field'>
-                <div class='label text-gray-500'>Product</div>
-                <div class='value text-black'>{item.data.Product}</div>
-              </div>
+                <div class='field'>
+                  <div class='label text-gray-500'>Product</div>
+                  <div class='value text-black'>{product}</div>
+                </div>
 
-              <div class='field'>
-                <div class='label text-gray-500'>Database</div>
-                <div class='value text-black'>{item.data.Database}</div>
-              </div>
+                <div class='field'>
+                  <div class='label text-gray-500'>Database</div>
+                  <div class='value text-black'>{database}</div>
+                </div>
 
-              <div class='field'>
-                <div class='label text-gray-500'>Country</div>
-                <div class='value text-black'>{item.data.Country}</div>
-              </div>
+                <div class='field'>
+                  <div class='label text-gray-500'>country</div>
+                  <div class='value text-black'>{country}</div>
+                </div>
 
-              <div class='field'>
-                <div class='label text-gray-500'>Link</div>
-                <a href={item.data.Link} target='_blank' class='value link'>
-                  View EPD
-                </a>
+                <div class='field'>
+                  <div class='label text-gray-500'>Link</div>
+                  <a href={link} target='_blank' class='value link'>
+                    View EPD
+                  </a>
+                </div>
               </div>
-            </div>
-          </li>
-        ))
+            </li>
+          )
+        )
       }
     </ul>
   </div>
