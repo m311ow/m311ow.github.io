@@ -1,0 +1,245 @@
+---
+import ServiceHero from '../components/ServiceHero.astro'
+import coverImg from '../images/leed_om_cover.webp'
+import SidebarLayout from '../layouts/SidebarLayout.astro'
+---
+
+<SidebarLayout>
+  <ServiceHero
+    title='Rozdiely medzi BREEAM a LEED'
+    descriptions={[
+      'Oba systémy majú svoje výhody, sú zrelé, dobre etablované a uznávané. Ak klient nemá preferenciu a požiada nás, aby sme ho viedli, tak ho v prípade administratívnych budov, ktoré nie sú navrhnuté pre konkrétneho klienta, vedieme smerom k LEED. Pri rezidenčných a priemyselných budovách, ako aj pri budovách, ktoré investor stavia pre vopred známeho užívateľa, skôr k BREEAM.',
+      'LEED je výborne prispôsobený práve administratívnym budovám, pri ktorých nie je známy nájomca (Core and Shell). Pre tento segment je lepšou voľbou. Je prispôsobený našim normám. Úroveň LEED Platinum je dosiahnuteľnejšie za zmysluplnejších podmienok ako BREEAM Outstanding. LEED je spojený s menším nárokom na čas investora. Je jednoznačný a priamočiary. Záleží mu na výsledku a nie na procese. Poskytuje lepšiu úroveň zákazníckej podpory.',
+      'BREEAM má výhodu v tom, že svoje požiadavky výborne prispôsobí priemyselným a rezidenčným projektom. Poskytuje viac nástrojov na návrh a výstavby budovy v prípade, že sú potreby a spôsob užívania budovy vopred známe. Venuje sa veciam veľmi detailne. Je dobré s certifikáciou začať skoro, ideálne vo fáze architektonickej štúdie.'
+    ]}
+    flavorText=''
+    image={{
+      src: coverImg,
+      alt: 'Mapa zobrazujúca polohu kancelárie SALVIS v Bratislave'
+    }}
+  />
+  <div class='row justify-content-md-between py-3 py-md-5'>
+    <h2 class='fw-bold'>BREEAM</h2>
+    <div class='col-md-5'>
+      <ul>
+        <li>
+          Jedná sa o najkomplexnejšiu zbierku know-how v oblasti udržateľných budov. Tvorcovia
+          myslia na všetko. Ak niekto stavia budovu pre vlastné použitie a plánuje ju dlhodobo
+          užívať, alebo chce vplyv budovy na ŽP posúdiť zo všetkých hľadísk tak má BREEAM prevahu.
+        </li>
+        <li>Spôsob akým sa dokladuje splnenie požiadaviek je dôsledný a prísny.</li>
+        <li>
+          Predcertifikát je v cene základných poplatkov. Najčastejšie je ho však možné získať až na
+          základe realizačného projektu, respektíve počas výstavby. Nie skôr. Proces trvá aj
+          niekoľko mesiacov.
+        </li>
+        <li>
+          Najvyššiu úroveň OUTSTANDING dosiahne veľmi nízke percento budov. Na jej dosiahnutie môže
+          byť nevyhnutné uplatniť opatrenia, ktoré nedávajú ekonomický zmysel alebo ich vplyv na
+          udržateľnosť je minimálny. Bez nich by však projekt nezískal potrebný počet percent. Ak
+          však budova úroveň OUTSTANDING získa tak získa výnimočnú prestíž.
+        </li>
+      </ul>
+    </div>
+    <div class='col-md-6 ps-md-0'>
+      <ul>
+        <li>
+          Ak sa certifikácia stane cieľom neskôr tak to v prípade BREEAM môže znamenať stratu
+          niektorých kreditov, ktoré sú podmienené tým, že sa musí začať skoro, respektíve v
+          predpísanom štádiu projektu.
+        </li>
+        <li>
+          BREEAM prispôsobí svoje kritériá krajine, v ktorej sa budova nachádza. V krajinách kde je
+          nedostatok pitnej vody sa napríklad zvýši váha kategórie “Water“.
+        </li>
+        <li>
+          Kde BREEAM pokladá za potrebné chrániť a zveľaďovať miestne biotopy zvýši váhu kategórie
+          “Land Use and Ecology“, a pod. Z hľadiska udržateľnosti sa jedná o rozumný krok.
+        </li>
+        <li>
+          V rámci európskych krajín nie sú rozdiely v hodnoteniach príliš výrazne. Avšak spolu s
+          prispôsobením sa miestnym normám, najmä tým, ktoré sa zaoberajú energetickou
+          hospodárnosťou budov, vzniká efekt, pri ktorom rovnaká alebo podobná budova postavená v
+          rôznych krajinách môže získať rôzne hodnotenia.
+        </li>
+        <li>Certifikačný systém je veľmi rozsiahly a komplexný.</li>
+        <li>
+          Poplatky tretej strane, ktorá vydáva certifikát, BRE, sú nižšie. Menej sa odvíjajú od
+          veľkosti budov. BREEAM môže byť lacnejší pri budovách veľkého rozsahu.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class='row justify-content-md-between py-3 py-md-5'>
+    <h2 class='fw-bold'>LEED</h2>
+
+    <div class='col-md-5'>
+      <ul>
+        <li>
+          Investičné fondy z USA poznajú a preferujú LEED. Potvrdili nám to aj významné developerské
+          spoločnosti na Slovensku, ktoré s americkými investičnými fondmi rokovali o podmienkach
+          predaja certifikovanej nehnuteľnosti.
+        </li>
+        <li>
+          LEED kladie presne rovnaké požiadavky na budovy bez ohľadu na ich geografickú polohu.
+          Budovy s rovnakou dosiahnutou úrovňou sú tak medzi sebou porovnateľné. To je pre
+          investičné fondy výhodné. Majú tak istotu, že Gold alebo Platinum budova u nás musela
+          splniť presne rovnaké požiadavky ako budova v USA, Číne alebo kdekoľvek inde vo svete.
+        </li>
+        <li>
+          LEED definuje svoje požiadavky veľmi jasno, priamočiaro a zrozumiteľne. Pri každej
+          certifikácii sa vyžadujú rovnaké podklady. Proces je plynulý.
+        </li>
+        <li>
+          V systéme LEED je možné získať predcertifikát veľmi skoro. Už počas architektonickej
+          štúdie. Proces trvá približne 10 týždňov. Skoro získaný predcertifikát je možné použiť pri
+          rokovaní s bankou o financovaní, pri komunikácii s médiami a potenciálnymi nájomcami.
+          Predcertifikát robí lepší dojem ako vyjadrenie o cielení a pravdepodobnom získaní danej
+          úrovne.
+        </li>
+      </ul>
+    </div>
+
+    <div class='col-md-6 ps-md-0'>
+      <ul>
+        <li>Ak sa certifikácia stane cieľom neskôr tak to v prípade LEED nie je veľká prekážka.</li>
+        <li>
+          Úroveň Gold je pri novopostavených office budovách v hlavnom meste vyžadovaná. Výzvou je
+          úroveň Platinum. Túto úroveň dokáže dosiahnuť 10-15% kancelárskych budov v našom regióne,
+          ktoré cielia zisk certifikátu LEED. V prípade, že budova paralelne usiluje o zisk
+          certifikácie WELL sa náklady na Platinum znižujú. Kľúčová je však poloha projektu v
+          oblasti s vysokou hustotou obytnej zástavby, občianskej vybavenosti a dostupnosti MHD. Bez
+          splnenia týchto podmienok sa dosiahnutie Platinum stáva náročným. Budovy, ktoré sú
+          postavené na zelenej lúke sa tiež dostávajú do ťažkej pozície.
+        </li>
+        <li>
+          LEED má menej kategórií, menej požiadaviek. Takmer úplne v ňom absentujú požiadavky
+          týkajúce sa staveniska.
+        </li>
+        <li>
+          Systém sa presadzuje takmer výhradne na poli kancelárskych budov. Týmto projektom je ušitý
+          na mieru.
+        </li>
+        <li>
+          USGBC a GBCI, organizácie, ktoré vyvíjajú systém a vydávajú certifikát sú výrazne
+          orientované na služby zákazníkom a užívateľskú priateľskosť. Sú ústretoví. Dokonca získali
+          v USA ocenenie za customer service.
+        </li>
+        <li>
+          Certifikačné poplatky LEED uhrádzané tretej strane, USGBC, sa výrazne odvíjajú od veľkosti
+          budovy. Pri veľmi veľkých budovách môže byť LEED nákladnejší.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class='row justify-content-md-between py-3 py-md-5'>
+    <h2 class='fw-bold'>Spoločné požiadavky oboch systémov</h2>
+    <div class='col-md-5'>
+      <ul>
+        <li>vedenie projektu v zmysle princípov integratívneho dizajnu</li>
+        <li>
+          dôraz na výber stavebného pozemku mimo chránených a citlivých oblastí, v husto zastavaných
+          častiach mesta s občianskou vybavenosťou
+        </li>
+        <li>dostupnosť MHD</li>
+        <li>podpora cyklistiky a alternatívnych spôsobov dopravy (elektromobilita)</li>
+        <li>zníženie množstva parkovacích miest</li>
+        <li>prevencia sedimentácie a erózie</li>
+        <li>zachovanie pôvodnej vegetácie, ochrana ekologicky hodnotných prvkov</li>
+        <li>maximalizácia otvorených priestorov a zelene</li>
+        <li>zadržanie a vsiaknutie dažďovej vody</li>
+        <li>prevencia vzniku svetleného smogu</li>
+        <li>poskytnutie návodu pre nájomcov v oblasti udržateľného užívania budovy</li>
+        <li>minimalizácia vody na závlahu vegetácie</li>
+        <li>minimalizácia spotreby pitnej vody</li>
+        <li>meranie spotrieb pitnej vody</li>
+      </ul>
+    </div>
+
+    <div class='col-md-6 ps-md-0'>
+      <ul>
+        <li>rozšírené uvedenie budovy do prevádzky</li>
+        <li>energetická efektivita</li>
+        <li>
+          meranie spotrieb v jednotlivých miestach spotrieb a meranie spotrieb v prenajímateľných
+          celkoch
+        </li>
+        <li>použitie obnoviteľných zdrojov energií</li>
+        <li>zber a uskladnenie recyklovateľných materiálov</li>
+        <li>minimalizácia stavebného odpadu</li>
+        <li>LCA (life cycle assessment)</li>
+        <li>EPD (environmental product declarations)</li>
+        <li>dávky čerstvého vzduchu</li>
+        <li>ochrana pred cigaretovým dymom</li>
+        <li>ochrana rozvodov VZT</li>
+        <li>zabezpečenie nízkeho obsahu VOC v priestoroch</li>
+        <li>denné osvetlenie</li>
+        <li>výhľady</li>
+        <li>tepelný komfort</li>
+        <li>akustika</li>
+        <li>dopad ťažby súrovín a výroby stavebných materiálov na ŽP</li>
+        <li>vplyv chladív na ŽP</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class='row justify-content-md-between py-3 py-md-5'>
+    <h2 class='fw-bold'>Požiadavky výhradne systému BREEAM</h2>
+    <div class='col-md-5'>
+      <ul>
+        <li>detailný stavebný management</li>
+        <li>LCC (life cycle cost) analýza</li>
+        <li>
+          detailné požiadavky na zariadenie a správu staveniska (lekárničky, čistota, niekoľko
+          desiatok požiadaviek)
+        </li>
+        <li>EMS (environmental management system)</li>
+        <li>meranie spotreby energie a vody na stavenisku</li>
+        <li>dotazníky spokojnosti po uvedení do prevádzky</li>
+        <li>zónovanie osvetlenia</li>
+        <li>parametre vonkajšieho osvetlenie</li>
+        <li>prirodzené vetranie</li>
+        <li>parametre chodníkov, ciest, priechodov pre chodcov, cyklotrás, atď.</li>
+        <li>prírodné hrozby</li>
+      </ul>
+    </div>
+    <div class='col-md-6 ps-md-0'>
+      <ul>
+        <li>prevencia legionely</li>
+        <li>parametre výťahov</li>
+        <li>detekcia úniku pitnej vody</li>
+        <li>prostriedky na ochranu citlivých častí budovy</li>
+        <li>legálne vyťažené drevo</li>
+        <li>
+          stavebné materiály pochádzajúce z tovární, ktoré majú certifikát EMS (environmental
+          management system)
+        </li>
+        <li>efektívne využitie surovín a minimalizácia použitia panenských surovín</li>
+        <li>prispôsobenie klimatickým zmenám</li>
+        <li>adaptabilita budovy na iný druh využitia</li>
+        <li>dlhodobá podpora ekológie</li>
+        <li>emisie NOx</li>
+      </ul>
+    </div>
+  </div>
+  <div class='row justify-content-md-between py-3 py-md-5'>
+    <div class='col-md-5'>
+      <h2 class='fw-bold'>Požiadavky výhradne systému LEED</h2>
+
+      <ul>
+        <li>umiestnenie parkovania do podzemia</li>
+        <li>obmedzenie efektu tepelného ostrova</li>
+        <li>systém riadenej spotreby</li>
+        <li>miesta ťažby surovín a výroby stavebných materiálov</li>
+        <li>detailné zloženie stavebných materiálov</li>
+        <li>Návrh chladiacich veží spôsobom aby bola minimalizovaná ich spotreba pitnej vody</li>
+        <li>
+          Obmedzenie fajčenia. V budove sa nesmie fajčiť. V okolí budovy sa nesmie fajčiť vo
+          vzdialenosti 8 metrov od otváravých častí fasády a nasávania vzduchotechniky.
+        </li>
+      </ul>
+    </div>
+  </div>
+</SidebarLayout>
