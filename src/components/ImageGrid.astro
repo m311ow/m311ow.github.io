@@ -1,0 +1,115 @@
+---
+import { Image as AstroImage } from 'astro:assets'
+
+export interface ImageItem {
+  src: string
+  alt?: string
+  href?: string
+  caption?: string | string[]
+}
+
+export interface Props {
+  images: ImageItem[]
+  title?: string // optional header (same style as your 'all' header)
+}
+
+const { images, title } = Astro.props
+---
+
+<section class='image-grid-section'>
+  {
+    title && (
+      <header class='row mb-1'>
+        <div class='col-12 col-lg-8'>
+          <h2 class='text-gray-300 display-1 fw-bold lh-1 mb-0'>{title}</h2>
+        </div>
+      </header>
+    )
+  }
+
+  <div class='image-grid'>
+    {
+      images.map((img) => {
+        const captionLines = Array.isArray(img.caption)
+          ? img.caption
+          : img.caption
+            ? [img.caption]
+            : []
+        const Figure = (
+          <figure class='image-card'>
+            <div class='image-wrapper'>
+              <AstroImage
+                src={img.src}
+                alt={img.alt ?? ''}
+                width='1200'
+                height='1200'
+                class='figure-img'
+              />
+            </div>
+            {captionLines.length > 0 && (
+              <figcaption class='text-primary mb-0'>
+                {captionLines.map((line) => (
+                  <p class='mb-0 border-bottom text-uppercase'>{line}</p>
+                ))}
+              </figcaption>
+            )}
+          </figure>
+        )
+
+        return (
+          <div class='image-card-wrapper'>
+            {img.href ? (
+              <a href={img.href} class='link-dark'>
+                {Figure}
+              </a>
+            ) : (
+              Figure
+            )}
+          </div>
+        )
+      })
+    }
+  </div>
+</section>
+
+<style>
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 0.25rem; /* matches your g-1 look */
+  }
+
+  .image-card-wrapper {
+    width: 100%;
+  }
+
+  .image-card {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  .image-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .figure-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  figcaption {
+    font-size: 14px;
+  }
+</style>
