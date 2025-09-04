@@ -7,8 +7,12 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 
 const allProjects = await getCollection('projects')
 
-const projectsWithCert = await getCollection('projects', ({ data }) => !!data.certificate)
-const projectCount = projectsWithCert.length
+const projectsWithLEEDorBREEAMCert = await getCollection('projects', ({ data }) => {
+  const cert = data.certificate?.toUpperCase() ?? ''
+  return cert.includes('LEED') || cert.includes('BREEAM')
+})
+
+const projectCount = projectsWithLEEDorBREEAMCert.length
 
 const titleHtml = `Poradenstvo a certifikácia <br /> v oblasti BREEAM, LEED, Taxonómie&nbsp;EÚ, ESG a uhlíkovej&nbsp;neutrality`
 const subtitleHtml = `Viac ako ${projectCount} vydaných certifikátov <br /> BREEAM a LEED na Slovensku, v Česku a Slovinsku`
