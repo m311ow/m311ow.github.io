@@ -1,5 +1,15 @@
 import { file, glob } from 'astro/loaders'
 import { defineCollection, z } from 'astro:content'
+
+const slugify = (str: string) =>
+  str
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)+/g, '')
+
+const Categories = z.enum(['breeam', 'leed', 'leed o+m', 'taxonomy-eu'])
+type Category = z.infer<typeof Categories> // "breeam" | "leed" | "leed-om" | "taxonomy-eu"
+
 // TODO: EVENTUALLY REMOVE OPTIONAL() AND LEAVE IT ONLY WHERE IT MAKES SENSE
 const projects = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/projects' }),
@@ -10,7 +20,7 @@ const projects = defineCollection({
       floor_area: z.string().optional(),
       location_city: z.string().optional(),
       location_country: z.string().optional(),
-      category: z.array(z.string()).optional(),
+      category: z.array(Categories).optional(),
       client: z.string().optional(),
       image_cover: image(),
       image_certificate_1: image().optional(),
@@ -21,12 +31,6 @@ const projects = defineCollection({
       tags: z.array(z.string()).optional()
     })
 })
-
-const slugify = (str: string) =>
-  str
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/(^-|-$)+/g, '')
 
 const epds = defineCollection({
   loader: file('src/content/epds/epds.json', {
