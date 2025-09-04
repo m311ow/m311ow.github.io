@@ -34,7 +34,7 @@ const { projects, variant = 'all', title } = Astro.props
   <div class={`project-grid project-grid--${variant}`}>
     {
       projects.map((project: any) => (
-        <div class='project-card-wrapper'>
+        <div class='project-card-wrapper' data-aos='fade-up' data-aos-duration='1500'>
           <a href={`/projects/${project.id}`} class='link-dark'>
             <figure class='project-card'>
               <div class='image-wrapper'>
