@@ -9,6 +9,11 @@ interface Props {
 }
 
 const { title = 'References', titleClass, items } = Astro.props
+
+// sort by numeric year, newest first
+const sortedItems = [...items].sort(
+  (a, b) => Number(b.data.year_registered) - Number(a.data.year_registered)
+)
 ---
 
 <div class='row justify-content-md-between py-3 py-md-5'>
@@ -16,7 +21,7 @@ const { title = 'References', titleClass, items } = Astro.props
   <div class='col-md-12'>
     <ul class='list-group list-group-flush' data-aos='fade-up' data-aos-duration='1500'>
       {
-        items.map(
+        sortedItems.map(
           ({ id, data: { product, company, database, country, year_registered, link } }) => (
             <li
               class='list-group-item py-1 text-primary'
