@@ -1,0 +1,112 @@
+---
+import Accordion from '../components/Accordion.astro'
+import Benefits from '../components/Benefits.astro'
+import Contact from '../components/Contact.astro'
+import References from '../components/Projects.astro'
+import ServiceHero from '../components/ServiceHero.astro'
+import coverImg from '../images/esg_buildings_cover-scaled-600x600.jpg'
+import SidebarLayout from '../layouts/SidebarLayout.astro'
+
+import { getCollection } from 'astro:content'
+const allProjects = await getCollection('projects')
+---
+
+<SidebarLayout>
+  <ServiceHero
+    title='ESG audit budovy'
+    descriptions={[
+      'ESG audit budovy je komplexná služba, ktorá pomáha vlastníkom a prevádzkovateľom identifikovať silné a slabé stránky ich nehnuteľností v kontexte environmentálnych, sociálnych a riadiacich faktorov.',
+      'S podporou SALVIS získate jasný prehľad o aktuálnom stave budovy, vrátane výpočtu uhlíkovej stopy, analýzy spotreby energií a vody, a návrhov na optimalizáciu, čo vedie k zdravšiemu prostrediu pre nájomníkov a nižším nákladom.',
+      'Táto služba zahŕňa aj možnosť získania certifikátu LEED O+M, čo zvyšuje ESG rating a uľahčuje financovanie od bánk. Audit sa zameriava na udržateľnú prevádzku, znižovanie emisií CO₂ a súlad s iniciatívami ako Science Based Targets.',
+      'V porovnaní s inými službami ponúka ESG audit holistický prístup, ktorý integruje viaceré aspekty udržateľnosti pre dlhodobý prospech. SALVIS tak pomáha budovám dosiahnuť uhlíkovú neutralitu a vyššiu trhovú hodnotu.'
+    ]}
+    flavorText='Označenie ESG je skratkou pre Environment, Social, Governance. (Prostredie, Spoločnosť, Riadenie). ESG rating je formou hodnotenia fungovania budovy vo vzťahu k životnému prostrediu, k jej sociálnym aspektom a k jej riadeniu.'
+    image={{
+      src: coverImg,
+      alt: 'Ilustračný obrázok budovy'
+    }}
+  />
+  <Benefits
+    title='Výhody'
+    descriptions={[
+      'ESG audit prináša výhody v oblasti efektivity, financií a udržateľnosti, ktoré zvyšujú atraktivitu budov pre investorov a nájomníkov. Systém zabezpečuje dlhodobú optimalizáciu a súlad s medzinárodnými štandardmi, vrátane možnosti certifikácie LEED O+M.'
+    ]}
+    items={[
+      'Zníženie nákladov na energie, vodu, odpady a dopravu vďaka identifikácii a optimalizácii slabých miest',
+      'Zvýšenie ESG ratingu, čo uľahčuje získanie financovania od bánk a inštitúcií',
+      'Zlepšenie kvality vnútorného prostredia, čo vedie k zdravším a spokojnejším nájomníkom a vyššej produktivite',
+      'Dosiahnutie environmentálnych cieľov, ako znižovanie emisií CO₂ a podpora biodiverzity, v súlade s EÚ reguláciami',
+      'Dlhodobá hodnota nehnuteľnosti prostredníctvom stratégie smerujúcej k uhlíkovej neutralite'
+    ]}
+  />
+  <Accordion
+    title='Ponúkame'
+    descriptions={[
+      'Ponúkame komplexný ESG audit budov, ktorý zahŕňa hodnotenie, stratégiu a implementáciu, prispôsobené vašim potrebám bez navyšovania nákladov. Naši experti zabezpečia celý proces od analýzy po opakovaný audit, vrátane podpory pri certifikácii a financovaní.'
+    ]}
+    items={[
+      {
+        title: 'Vyhodnotenie súčasného stavu',
+        content: `Zahrňuje identifikáciu silných a slabých stránok, výpočet uhlíkovej stopy, analýzu spotreby vody, energií, odpadov a dopravy, plus meranie kvality vzduchu.`
+      },
+      {
+        title: 'Spracovanie ESG stratégie',
+        content: `Výber vhodnej schémy (GRESB, GRI, CDP), formulácia cieľov podľa SBTi, analýza dopadov a výber nástrojov na zber dát.`
+      },
+      {
+        title: 'Implementácia opatrení',
+        content: `Oslovenie bánk pre financovanie, realizácia plánu na znižovanie emisií, opakovaný audit po 3 rokoch s recertifikáciou LEED O+M.`
+      },
+      {
+        title: 'Poradenstvo a školenia',
+        content: `Vysvetlenie výhod ESG, porovnanie schém, školenia pre tím a aktualizácia analýz pre dlhodobú udržateľnosť.`
+      },
+      {
+        title: 'Certifikácia a reporting',
+        content: `Možnosť získania LEED Gold/Platinum, zverejnenie záväzkov a vyhodnotenie plnenia cieľov.`
+      }
+    ]}
+  />
+  <Accordion
+    title='Často kladené otázky'
+    titleClass='fw-bold'
+    descriptions={['Prehľad odpovedí na časté otázky o našej spoločnosti a ponúkaných službách']}
+    emphasis={true}
+    items={[
+      {
+        title: 'Čo je ESG audit budovy?',
+        content: `Komplexné hodnotenie environmentálnych, sociálnych a riadiacich aspektov prevádzky budovy pre optimalizáciu a udržateľnosť.`
+      },
+      {
+        title: 'Koľko stojí ESG audit?',
+        content: `Náklady závisia od veľkosti budovy a rozsahu — kontaktujte nás pre personalizovanú ponuku.`
+      },
+      {
+        title: 'Aká je doba trvania ESG auditu?',
+        content: `Zvyčajne 3-6 mesiacov, vrátane analýzy a implementácie stratégie.`
+      },
+      {
+        title: 'Aké certifikáty môžem získať na základe ESG auditu?',
+        content: `Možnosť LEED O+M (Gold/Platinum) na základe ESG skóre.`
+      },
+      {
+        title: 'Ako sa líši ESG audit od energetického auditu?',
+        content: `ESG audit zahŕňa širšie aspekty ako sociálne faktory a riadenie, nielen energie.`
+      },
+      {
+        title: 'Potrebujem špeciálne dáta?',
+        content: `Pomôžeme s výberom nástrojov na zber dát, ako spotreba energií alebo emisie.`
+      },
+      {
+        title: 'Je ESG audit vhodný pre existujúce budovy?',
+        content: `Áno, špeciálne pre prevádzkované nehnuteľnosti na zlepšenie efektivity.`
+      },
+      {
+        title: 'Aké sú kľúčové výstupy ESG auditu?',
+        content: `Stratégia, akčný plán, cieľové znižovanie emisií a odporúčania pre financovanie.`
+      }
+    ]}
+  />
+  <Contact />
+  <ProjectGrid projects={allProjects} variant='all' title='Projekty' />
+</SidebarLayout>
