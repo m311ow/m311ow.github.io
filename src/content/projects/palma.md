@@ -1,6 +1,6 @@
 ---
 title: PALMA
-certificate: Predcertifikácia LEED Platinum
+certificate: 'Predcertifikácia LEED BD+C: CS v4 Platinum'
 client: CORWIN group
 location_city: Bratislava
 location_country: Slovakia

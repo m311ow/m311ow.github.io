@@ -1,6 +1,6 @@
 ---
 title: Panorama Business III
-certificate: LEED Gold
+certificate: 'LEED CS v2009 Gold'
 client: J&T REAL ESTATE
 location_city: Bratislava
 location_country: Slovakia

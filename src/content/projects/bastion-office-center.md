@@ -1,6 +1,6 @@
 ---
 title: Bastion Office Center
-certificate: LEED Gold
+certificate: 'LEED BD+C: CS v4 Gold'
 client: M&M INVEST
 location_city: Košice
 location_country: Slovakia

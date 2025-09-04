@@ -1,6 +1,6 @@
 ---
 title: Dvory Vysočany
-certificate: Predcertifikácia LEED Gold
+certificate: 'Predcertifikácia LEED BD+C: CS v4 Gold'
 client: CORWIN group
 location_city: Praha
 location_country: Czechia

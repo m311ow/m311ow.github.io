@@ -1,6 +1,6 @@
 ---
 title: Business Centrum Tesla 2
-certificate: LEED Gold
+certificate: 'LEED CS v2009 Gold'
 client: Penta Real Estate
 location_city: Košice
 location_country: Slovakia

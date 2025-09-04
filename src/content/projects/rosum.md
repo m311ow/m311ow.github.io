@@ -1,6 +1,6 @@
 ---
 title: ROSUM
-certificate: LEED Gold
+certificate: 'LEED CS v2009 Gold'
 client: Penta Real Estate
 location_city: Bratislava
 location_country: Slovakia

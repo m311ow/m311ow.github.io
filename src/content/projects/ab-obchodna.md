@@ -1,6 +1,6 @@
 ---
 title: AB Obchodná
-certificate: LEED Platinum
+certificate: 'LEED BD+C: CS v4 Platinum'
 client: Reinoo
 location_city: Žilina
 location_country: Slovakia

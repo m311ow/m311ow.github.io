@@ -1,6 +1,6 @@
 ---
 title: Einpark Offices
-certificate: LEED Platinum
+certificate: 'LEED CS v2009 Platinum'
 client: Corwin Capital
 location_city: Bratislava
 location_country: Slovakia

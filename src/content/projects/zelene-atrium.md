@@ -1,6 +1,6 @@
 ---
 title: Zelené Átrium
-certificate: LEED Platinum
+certificate: 'LEED NC v2009 Platinum'
 client: ISOVER
 location_city: Trnava
 location_country: Slovakia

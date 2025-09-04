@@ -1,6 +1,6 @@
 ---
 title: Blumental offices
-certificate: LEED Gold
+certificate: 'LEED CS v2009 Gold'
 client: Corwin Capital
 location_city: Bratislava
 location_country: Slovakia

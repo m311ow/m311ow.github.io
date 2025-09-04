@@ -1,6 +1,6 @@
 ---
 title: POSTOVA Offices
-certificate: LEED Gold V4
+certificate: 'LEED BD+C: CS v4 Gold'
 client: 'Reinoo, a.s.'
 location_city: Žilina
 location_country: Slovakia

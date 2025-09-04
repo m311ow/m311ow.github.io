@@ -1,6 +1,6 @@
 ---
 title: THE MILL
-certificate: LEED Gold
+certificate: 'LEED BD+C: CS v4 Gold'
 client: IMMOCAP
 location_city: Bratislava
 location_country: Slovakia

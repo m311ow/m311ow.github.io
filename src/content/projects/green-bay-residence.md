@@ -1,6 +1,6 @@
 ---
 title: Green Bay Residence
-certificate: LEED Silver
+certificate: 'LEED NC v2009 Silver'
 client: TAW
 location_city: Trenčín
 location_country: Slovakia
