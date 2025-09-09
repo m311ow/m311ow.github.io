@@ -1,7 +1,7 @@
 ---
 title: VILHARIA
 certificate: 'Predcertifikácia LEED BD+C: CS v4 Platinum'
-client: CORWIN group
+client: Corwin
 location_city: Bratislava
 location_country: Slovakia
 year_of_certification: ''

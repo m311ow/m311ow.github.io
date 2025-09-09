@@ -1,7 +1,7 @@
 ---
 title: Einpark Offices
 certificate: 'LEED CS v2009 Platinum'
-client: Corwin Capital
+client: Corwin
 location_city: Bratislava
 location_country: Slovakia
 year_of_certification: ''
