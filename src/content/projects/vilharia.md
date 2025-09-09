@@ -2,8 +2,8 @@
 title: VILHARIA
 certificate: 'Predcertifikácia LEED BD+C: CS v4 Platinum'
 client: Corwin
-location_city: Bratislava
-location_country: Slovakia
+location_city: Ljubljana
+location_country: Slovenia
 year_of_certification: ''
 building_type: Office
 floor_area: 38 953 m²
