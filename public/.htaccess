@@ -1,0 +1,10 @@
+# Canonicalize everything to https://salvis.eu in a single step
+RewriteEngine On
+
+# If not HTTPS OR host is www, send to https://salvis.eu/<path>
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.salvis\.eu$ [NC]
+RewriteRule ^ https://salvis.eu%{REQUEST_URI} [L,R=301]
+
+# Custom 404
+ErrorDocument 404 /404.html
