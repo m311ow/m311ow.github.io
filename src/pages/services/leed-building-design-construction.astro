@@ -5,6 +5,7 @@ import Benefits from '../../components/Benefits.astro'
 import Contact from '../../components/Contact.astro'
 import ProjectGrid from '../../components/ProjectGrid.astro'
 import ServiceHero from '../../components/ServiceHero.astro'
+import Testimonials from '../../components/Testimonials.astro'
 import coverImg from '../../images/leed_cover.webp'
 import SidebarLayout from '../../layouts/SidebarLayout.astro'
 
@@ -76,6 +77,19 @@ const highlightProjects = allProjects
   />
 
   <ProjectGrid projects={highlightProjects} variant='highlights' />
+
+  <Testimonials
+    descriptions={[
+      'Na vzťahoch s našimi klientmi si mimoriadne zakladáme. Každý projekt je pre nás partnerstvom postaveným na dôvere, spolupráci a spoločnej vízii.'
+    ]}
+    items={[
+      {
+        name: 'Roman Petro',
+        position: 'Projektový riaditeľ, Reinoo',
+        content: `„SALVIS zdieľa naše hodnoty férovosti a inovatívnosti. Spoločne sme poctivo a náročne vytvorili prvú LEED v4 certifikovanú budovu na Slovensku (POŠTOVÁ Offices) a prvú LEED v4 Platinum certifikovanú budovu na Slovensku (Obchodná). SALVIS ide pri poradenstve do hĺbky. Ich simulácie a analýzy sú spracované na mieru a obsahujú relevantné odporúčania so skutočným vplyvom na udržateľnosť, kvalitu a hodnotu budovy. Oceňujem ich prispôsobivosť, dôkladnosť a schopnosť zvládať výzvy.“`
+      }
+    ]}
+  />
 
   <Accordion
     title='Často kladené otázky'
