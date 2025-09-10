@@ -15,15 +15,15 @@ image_certificate_1: ./images/westend-gate/image_certificate_1.webp
 image_1: ./images/westend-gate/image_1.webp
 ---
 
-SALVIS poskytol na projekte kompletné certifikačné služby BREEAM
-vrátane všetkých odborných služieb a simulácií.
+SALVIS provided complete BREEAM certification services for the project, including all expert services and simulations.
 
-**Vybrané udržateľné opatrenia:**
+**41% Potable water consumption reduction**
 
-- Výborné denné osvetlenia a výhľady
+**40% Energy savings**
 
-- Nízky dopad použitých materiálov na životné prostredie z hľadiska ich životného cyklu (LCA – life cycle assessment)
+**Selected sustainability measures:**
 
-- Viac ako 90% stavebného odpadu znovupoužitého / recyklovaného
-
-- Dynamická počítačová simulácia podľa normy ASHRAE 90.1
+- Excellent daylighting and views
+- Low environmental impact of materials used in terms of their life cycle (LCA–life cycle assessment)
+- More than 90% of construction waste reused/recycled
+- Dynamic computer simulation according to ASHRAE 90.1

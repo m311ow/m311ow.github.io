@@ -15,13 +15,14 @@ image_certificate_1: ./images/ecopoint2/image_certificate_1.webp
 image_1: ./images/ecopoint2/image_1.webp
 ---
 
-SALVIS poskytol na projekte kompletné certifikačné služby BREEAM
-vrátane všetkých odborných služieb a simulácií.
+SALVIS provided complete BREEAM certification services for the project, including all expert services and simulations.
 
-**Vybrané udržateľné opatrenia:**
+**64% Potable water consumption reduction**
 
-- Nabíjacie stanice na elektromobily
+**78% Energy savings**
 
-- Tepelné čerpadlá a aktívne betónové jadro
+**Selected sustainability measures:**
 
-- Jedna z najudržateľnejších kancelárskych budov na Slovensku
+- Charging stations for electric cars
+- Heat pumps and active concrete core
+- One of the most sustainable office buildings in Slovakia

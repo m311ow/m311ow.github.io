@@ -15,14 +15,14 @@ image_certificate_1: ./images/klingerka/image_certificate_1.webp
 image_1: ./images/klingerka/image_1.webp
 ---
 
-SALVIS poskytol na projekte kompletné certifikačné služby BREEAM
-vrátane všetkých odborných služieb a simulácií.
+SALVIS provided complete BREEAM certification services for the project, including all expert services and simulations.
 
-**Vybrané udržateľné opatrenia:**
+**50% Potable water consumption reduction**
 
-- LCA analýzou sme analyzovali množstvo zabudovaného uhlíka v stavebných
-  materiáloch
+**60% Energy savings**
 
-- Trvalo udržateľné sadovnícke úpravy s podporou miestnej ekológie
+**Selected sustainability measures:**
 
-- Úspora pitnej vody použitím úspornej sanity
+- We used LCA analysis to analyze the amount of embodied carbon in building materials
+- Sustainable landscaping with support for local ecology
+- Drinking water savings through the use of water-saving fixtures
