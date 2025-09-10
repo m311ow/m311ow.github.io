@@ -98,45 +98,47 @@ const allEpds = await getCollection('epds')
     ]}
   />
   <Accordion
-    title='Často kladené otázky'
+    title='FAQ'
     titleClass='fw-bold'
-    descriptions={['Prehľad odpovedí na časté otázky o našej spoločnosti a ponúkaných službách']}
+    descriptions={[
+      'An overview of answers to frequently asked questions about our company and the services we offer.'
+    ]}
     emphasis={true}
     items={[
       {
-        title: 'Čo je EPD?',
-        content: `Vyhlásenie hodnotiace environmentálne dopady stavebných produktov počas celého životného cyklu, v súlade s normami EN 15804 a ISO 14025.`
+        title: 'What is an EPD?',
+        content: `Declaration of assessment of environmental impacts of construction products during the entire life cycle, in accordance with EN 15804 and ISO 14025 standards.`
       },
       {
-        title: 'Koľko stojí spracovnie EPD?',
-        content: `Náklady závisia od produktu a rozsahu — kontaktujte nás pre cenovú ponuku, minimalizujeme ich vďaka expertíze.`
+        title: 'How much does EPD processing cost?',
+        content: `The cost depends on the product and scope — contact us for a quote, we minimise costs thanks to our expertise.`
       },
       {
-        title: 'Aká je doba trvania procesu?',
-        content: `Od určenia PCR po publikáciu trvá 3-6 mesiacov, v závislosti od dátovej dostupnosti`
+        title: 'How long does the process take?',
+        content: `From the selection of PCR (Product Category Rules) to publication, the process takes 3-6 months, depending on data availability.`
       },
       {
-        title: 'Pre aké produkty je EPD vhodné?',
-        content: `Pre stavebné materiály ako izolácie, oceľ, betón, tehly, chemikálie, farby a podlahy.`
+        title: 'For which products is an EPD suitable?',
+        content: `For building materials such as insulation, steel, concrete, bricks, chemicals, paints and flooring.`
       },
       {
-        title: 'Ako sa EPD líši od LCA?',
-        content: `EPD je formátovaný výstup LCA, overený treťou stranou a publikovaný v databázach.`
+        title: 'How does EPD differ from LCA?',
+        content: `An EPD is a formatted LCA output, verified by a third party and published in databases.`
       },
       {
-        title: 'Potrebujem špeciálne dáta?',
-        content: `Áno, vstupy/výstupy z výroby — pomôžeme so zberom a analýzou.`
+        title: 'Do I need special data?',
+        content: `Yes, production inputs/outputs — we can help with collection and analysis.`
       },
       {
-        title: 'Môžem EPD použiť v LEED/BREEAM?',
-        content: `Áno, pridáva body v týchto systémoch pre udržateľné materiály.`
+        title: 'Can I use EPD in LEED/BREEAM?',
+        content: `Yes, it adds points in these systems for sustainable materials.`
       },
       {
-        title: 'Aké databázy sú používané na publikáciu EPD? ',
-        content: `International EPD System, EPD Square, EPD Norge alebo ďalší programová operátori vlastnia  databázy kde su EPD po spracovaní a overení uverejnené.`
+        title: 'What databases are used for EPD publication?',
+        content: `International EPD System, EPD Square, EPD Norge and other programme operators own databases where EPDs are published after processing and verification.`
       }
     ]}
   />
   <Contact />
-  <EpdList title='Projekty' titleClass='display-1 fw-bold' items={allEpds} />
+  <EpdList title='Projects' titleClass='display-1 fw-bold' items={allEpds} />
 </SidebarLayout>

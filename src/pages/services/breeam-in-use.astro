@@ -109,42 +109,44 @@ const allProjects = await getCollection('projects')
   />
 
   <Accordion
-    title='Často kladené otázky'
+    title='FAQ'
     titleClass='fw-bold'
-    descriptions={['Prehľad odpovedí na časté otázky o našej spoločnosti a ponúkaných službách']}
+    descriptions={[
+      'An overview of answers to frequently asked questions about our company and the services we offer.'
+    ]}
     emphasis={true}
     items={[
       {
-        title: 'Čo je BREEAM In-Use?',
-        content: `BREEAM In-Use je celosvetovo uznávaná metóda hodnotenia udržateľnosti špeciálne navrhnutá pre existujúce budovy, poskytujúca rámec na zlepšenie ich prevádzkovej udržateľnosti.`
+        title: 'What is BREEAM In-Use?',
+        content: `BREEAM In-Use is a globally recognised sustainability assessment method specifically designed for existing buildings, providing a framework for improving their operational sustainability.`
       },
       {
-        title: 'Aký je rozdiel medzi BREEAM In-Use a inými BREEAM certifikáciami?',
-        content: `BREEAM In-Use je špeciálne navrhnutý pre existujúce budovy, zatiaľ čo iné BREEAM certifikácie sa zameriavajú na nové výstavby`
+        title: 'What is the difference between BREEAM In-Use and other BREEAM certifications?',
+        content: `BREEAM In-Use is specifically designed for existing buildings, while other BREEAM certifications focus on new construction.`
       },
       {
         title:
-          'Aký je rozdiel medzi častou 1 (Part 1: Asset Performance) a časťou 2 (Part 2: Building Management Performance) systému BREEAM In-Use? ',
+          'What is the difference between Part 1 (Asset Performance) and Part 2 (Building Management Performance) of the BREEAM In-Use system?',
         content:
-          'BREEAM In-Use je rozdelený do dvoch kľúčových častí, ktoré poskytujú spoločne komplexné hodnotenie. Pre každú z častí je vydaný osobitný certifikát. Budova môže získať len jeden alebo oba z certifikátov. Úroveň certifikácie sa môže v oboch častiach líšiť.'
+          'BREEAM In-Use is divided into two key parts, which together provide a comprehensive assessment. A separate certificate is issued for each part. A building can obtain only one or both certificates. The level of certification may differ in both parts.'
       },
       {
-        title: 'Na čo sa zameriava časť 1 (Part 1: Asset Performance)?',
+        title: 'What is the focus of Part 1 (Part 1: Asset Performance)?',
         content:
-          'V tejto časti sa hodnotia charakteristiky environmentálnej výkonnosti samotnej budovy. Kľúčové oblasti zahŕňajú parametre fasády budovy, parametre a výkon TZB zariadení, osvetlenia, sanity, umiestnenie stavby a konštrukčné prvky, ktoré ovplyvňujú prevádzkovú udržateľnosť. Poskytuje pohľad na to, ako dobre je budova navrhnutá a vybavená na minimalizáciu vplyvu na životné prostredie.'
+          'In this part, the environmental performance characteristics of the building itself are evaluated. Key areas include building facade parameters, TZB equipment parameters and performance, lighting, sanitation, building location and structural elements that affect operational sustainability. It provides insight into how well a building is designed and equipped to minimize environmental impact.'
       },
       {
-        title: 'Na čo sa zameriava časť 2 (Part 2: Building Management Performance)?',
+        title: 'What is the focus of Part 2 (Part 2: Building Management Performance)?',
         content:
-          'Časť 2 sa zameriava na to, ako sa budova prevádzkuje a spravuje na každodennej báze. Zahŕňa hospodárenie s energiou a vodou, opatrenia v oblasti zdravia a kvality vnútorného prostredia a celkovú politiku riadenia. Cieľom je zvýšiť trvalú prevádzkovú efektívnosť a udržateľnosť budovy.'
+          'Part 2 focuses on how the building is operated and managed on a day-to-day basis. It covers energy and water management, health and indoor environment measures, and overall management policy. The aim is to increase the long-term operational efficiency and sustainability of the building.'
       },
       {
-        title: 'Aké sú hlavné výhody certifikácie BREEAM?',
-        content: `Certifikácia prináša lepšiu energetickú efektívnosť, nižšie prevádzkové náklady, vyššiu kvalitu vnútorného prostredia a environmentálnu zodpovednosť. Zvyšuje prestíž budovy a jej hodnotu na trhu, čo môže byť rozhodujúce pre investorov a užívateľov.
-        `
+        title: 'What are the main benefits of BREEAM certification?',
+        content:
+          'Certification brings better energy efficiency, lower operating costs, higher indoor environmental quality and environmental responsibility. It increases the prestige of the building and its market value, which can be decisive for investors and users.'
       }
     ]}
   />
   <Contact />
-  <ProjectGrid projects={allProjects} variant='all' title='Projekty' />
+  <ProjectGrid projects={allProjects} variant='all' title='Projects' />
 </SidebarLayout>

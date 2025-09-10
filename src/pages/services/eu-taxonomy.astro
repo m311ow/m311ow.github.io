@@ -135,39 +135,41 @@ const highlightProjects = allProjects
     ]}
   />
   <Accordion
-    title='Často kladené otázky'
+    title='FAQ'
     titleClass='fw-bold'
-    descriptions={['Prehľad odpovedí na časté otázky o našej spoločnosti a ponúkaných službách']}
+    descriptions={[
+      'An overview of answers to frequently asked questions about our company and the services we offer.'
+    ]}
     emphasis={true}
     items={[
       {
-        title: 'Je splnenie požiadaviek EU Taxonómie povinné?',
-        content: `Nie je. Veľké spoločnosti musia uviesť či vykonávajú činnosti, ktoré sú súčasťou taxonómie. Nemusia však požiadavky splniť. Ale splnenie taxonómie je čoraz častejšie vyžadované pri financovaní alebo prenájme veľkým korporátnym nájomcom.`
+        title: 'Is compliance with EU Taxonomy requirements mandatory?',
+        content: `No, it is not. Large companies must indicate whether they carry out activities that are part of the EU taxonomy. However, they do not have to comply with the requirements. But compliance with the EU taxonomy is increasingly required for financing or leasing to large corporate tenants.`
       },
       {
-        title: 'Môžeme preukázať splnenie EU Taxonómie EÚ bez BREEAM?',
-        content: `Áno. Taxonómia je samostatná regulácia a dá sa pokryť cez samostatný výstup, auditovateľný nezávislou stranou.`
+        title: 'Can we demonstrate compliance with the EU Taxonomy without BREEAM?',
+        content: `Yes. EU Taxonomy is a separate regulation and can be covered by a separate output, auditable by an independent party.`
       },
       {
-        title: 'Je report od SALVIS akceptovaný bankami?',
-        content: `Áno, naše výstupy boli akceptované viacerými bankami a investormi na Slovensku, v Česku, Poľsku a Chorvátsku.`
+        title: 'Is the SALVIS report accepted by banks?',
+        content: `Yes, our outputs have been accepted by several banks and investors in Slovakia, the Czech Republic, Poland and Croatia.`
       },
       {
-        title: 'Kde sa dozviem aké sú požiadavky Taxonómie?',
-        content: `Aktuálne znenie požiadaviek sa vždy nachádza v tzv. kompase Taxonómie EÚ — <a href="https://ec.europa.eu/sustainable-finance-taxonomy/taxonomy-compass/the-compass">https://ec.europa.eu/sustainable-finance-taxonomy/taxonomy-compass/the-compass</a>`
-      },
-      {
-        title:
-          'Aké služby si budem musieť objednať od iných spoločnosti ako SALVIS v prípade, že chcem splniť všetky požiadavky Taxonómie EÚ?',
-        content: `Niektoré projekty vyžadujú spracovanie EIA (Environmental Impact Assessment) alebo spracovanie prieskumu kontaminácie a spracovanie projektu dekontaminácie. V takých prípadoch je potrebné si tieto služby objednať od špecializovaných tretích strán.`
+        title: 'Where can I find out what the EU Taxonomy requirements are?',
+        content: `The current wording of the requirements can always be found in the so-called EU Taxonomy Compass — <a href="https://ec.europa.eu/sustainable-finance-taxonomy/taxonomy-compass/the-compass">https://ec.europa.eu/sustainable-finance-taxonomy/taxonomy-compass/the-compass</a>.`
       },
       {
         title:
-          'Pri žiadosti o bankové financovanie realitného projektu som od banky dostal ESG dotazník na vyplnenie. Pomôže mi SALVIS vyplniť ho k spokojnosti banky?',
-        content: `Áno. Poskytneme všetky služby, na ktoré sa dotazník pýta a dotazník vyplníme k spokojnosti banky. Na vyžiadanie tiež poskytneme banke všetky štúdie a výpočty potvrdzujúce splnenie požiadaviek.`
+          'What services will I need to order from companies other than SALVIS if I want to meet all the requirements of the EU Taxonomy?',
+        content: `Some projects require an Environmental Impact Assessment (EIA) or a contamination survey and decontamination project. In such cases, these services must be ordered from specialised third parties.`
+      },
+      {
+        title:
+          'When applying for bank financing of a real estate project, I received an ESG questionnaire from the bank to fill out. Will SALVIS help me fill it out to the satisfaction of the bank?',
+        content: `Yes. We will provide all the services requested in the questionnaire and complete the questionnaire to the bank's satisfaction. Upon request, we will also provide the bank with all studies and calculations confirming compliance with the requirements.`
       }
     ]}
   />
   <Contact />
-  <ProjectGrid projects={allProjects} variant='all' title='Projekty' />
+  <ProjectGrid projects={allProjects} variant='all' title='Projects' />
 </SidebarLayout>

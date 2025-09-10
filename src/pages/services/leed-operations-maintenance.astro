@@ -102,50 +102,43 @@ const highlightProjects = allProjects
   />
   <ProjectGrid projects={highlightProjects} variant='highlights' />
 
-  <!-- <ProjectShowcaseById
-    title='Vybrané projekty'
-    descriptions={[
-      'Pozrite si niektoré z našich úspešných projektov, a presvedčte sa o kvalite našich služieb. Kompletný zoznam projektov je k dispozícii v sekcii nižšie.'
-    ]}
-    ids={['ac-diplomat-29-29a', 'digital-park-01', 'lakeside-park-01', 'digital-park-02']}
-  /> -->
-
   <Accordion
-    title='Často kladené otázky'
-    descriptions={['Prehľad odpovedí na časté otázky o našej spoločnosti a ponúkaných službách']}
+    title='FAQ'
+    descriptions={[
+      'An overview of answers to frequently asked questions about our company and the services we offer.'
+    ]}
     emphasis={true}
     items={[
       {
-        title: 'Ako sa LEED O+M líši od LEED BD+C?',
-        content: `LEED O+M sa zameriava na existujúce budovy a ich prevádzku, zatiaľ čo LEED BD+C je určený pre nové budovy a ich výstavbu. O+M sa sústreďuje na optimalizáciu prevádzky, údržbu a zlepšenie environmentálneho výkonu už postavených nehnuteľností.`
+        title: 'How does LEED O+M differ from LEED BD+C?',
+        content: `LEED O+M focuses on existing buildings and their operation, while LEED BD+C is designed for new buildings and their construction. O+M focuses on optimising the operation, maintenance and improvement of the environmental performance of existing properties.`
       },
       {
-        title: 'Ako súvisí LEED O+M s ESG?',
+        title: 'How does LEED O+M relate to ESG?',
         content: `
-        LEED O+M poskytuje štruktúrovaný rámec pre zber a správu dát potrebných na ESG reporting. Pomáha budovám dosiahnuť ciele v oblasti environmentálnej udržateľnosti, sociálnej zodpovednosti a transparentnosti, čo je kľúčové pre investorov a nájomcov. <br>
-        LEED O+M priamo podporuje reporting ESG tým, že:
+        LEED O+M provides a structured framework for collecting and managing the data needed for ESG reporting. It helps buildings achieve environmental sustainability, social responsibility and transparency goals, which are key for investors and tenants.<br>
+        LEED O+M directly supports ESG reporting by:
         <ul>
-            <li>poskytuje merateľné a overiteľné ukazovatele environmentálneho výkonu</li>
-            <li>zabezpečuje transparentnosť dát pre investorov a banky</li>
-            <li>umožňuje porovnateľnosť s inými projektmi na medzinárodnej úrovni</li>
-
+            <li>providing measurable and verifiable indicators of environmental performance</li>
+            <li>ensuring data transparency for investors and banks</li>
+            <li>enabling comparability with other projects at the international level</li>
         </ul>
         `
       },
       {
-        title: 'Akú podporu poskytujete pri certifikácii LEED O+M?',
+        title: 'What support do you provide for LEED O+M certification?',
         content: `
-        Naša podpora pri certifikácii LEED O+M zahŕňa:
+        Our support for LEED O+M certification includes:
         <ul>
-        <li>Kompletné projektové riadenie procesu certifikácie — od úvodnej analýzy až po získanie certifikátu.</li>
-        <li>Energetické modelovanie a simulácie — vrátane digitálneho dvojčaťa budovy pre optimalizáciu prevádzky.</li>
-        <li>Prepojenie s dekarbonizačnými cieľmi — využitie dát z LEED O+M pre CRREM analýzu, SBTi a strategické plánovanie.</li>
-        <li>Trvalá podpora — pomoc pri udržiavaní alebo zlepšovaní úrovne certifikácie v priebehu rokov.</li>
+        <li>Complete project management of the certification process — from initial analysis to obtaining the certificate.</li>
+        <li>Energy modeling and simulations — including a digital twin of the building to optimise operations.</li>
+        <li>Linking to decarbonisation goals — using data from LEED O+M for CRREM analysis, SBTi and strategic planning.</li>
+        <li>Ongoing support — assistance in maintaining or improving certification levels over the years.</li>
         </ul>
         `
       }
     ]}
   />
   <Contact />
-  <ProjectGrid projects={allProjects} variant='all' title='Projekty' />
+  <ProjectGrid projects={allProjects} variant='all' title='Projects' />
 </SidebarLayout>

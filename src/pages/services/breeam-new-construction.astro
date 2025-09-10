@@ -85,14 +85,6 @@ const highlightProjects = allProjects
 
   <ProjectGrid projects={highlightProjects} variant='highlights' />
 
-  <!-- <ProjectShowcaseById
-    title='Vybrané projekty'
-    descriptions={[
-      'Pozrite si niektoré z našich úspešných projektov, a presvedčte sa o kvalite našich služieb. Kompletný zoznam projektov je k dispozícii v sekcii nižšie.'
-    ]}
-    ids={['kaufland-zahorska-bystrica', 'klingerka', 'vgp-olomouc-4-hala-e', 'westend-gate']}
-  /> -->
-
   <Testimonials
     descriptions={[
       'Na vzťahoch s našimi klientmi si mimoriadne zakladáme. Každý projekt je pre nás partnerstvom postaveným na dôvere, spolupráci a spoločnej vízii.'
@@ -122,59 +114,67 @@ const highlightProjects = allProjects
     ]}
   />
   <Accordion
-    title='Často kladené otázky'
+    title='FAQ'
     titleClass='fw-bold'
-    descriptions={['Prehľad odpovedí na časté otázky o našej spoločnosti a ponúkaných službách']}
+    descriptions={[
+      'An overview of answers to frequently asked questions about our company and the services we offer.'
+    ]}
     emphasis={true}
     items={[
       {
-        title: 'Čo je BREEAM?',
-        content: `BREEAM (Building Research Establishment Environmental Assessment Method) je medzinárodne uznávaný certifikačný systém hodnotenia trvalo udržateľných budov. Stanovuje kritériá pre environmentálnu, sociálnu a ekonomickú udržateľnosť budov a umožňuje verifikovať, že projekt je skutočne „zelený“`
+        title: 'What is BREEAM?',
+        content:
+          'BREEAM (Building Research Establishment Environmental Assessment Method) is an internationally recognised certification system for assessing sustainable buildings. It sets criteria for the environmental, social and economic sustainability of buildings and allows verification that a project is truly "green".'
       },
 
       {
-        title: 'Aké sú hlavné výhody certifikácie BREEAM?',
-        content: `Certifikácia prináša lepšiu energetickú efektívnosť, nižšie prevádzkové náklady, vyššiu kvalitu vnútorného prostredia a environmentálnu zodpovednosť. Zvyšuje prestíž budovy a jej hodnotu na trhu, čo môže byť rozhodujúce pre investorov a užívateľov.
-        `
+        title: 'What are the main benefits of BREEAM certification?',
+        content:
+          'Certification brings better energy efficiency, lower operating costs, higher indoor environmental quality and environmental responsibility. It increases the prestige of the building and its market value, which can be decisive for investors and users.'
       },
       {
-        title: 'Ako prebieha proces certifikácie BREEAM?',
-        content: `Proces BREEAM začína analýzou dosiahnuteľnosti úrovní certifikácie, vyčíslením nákladov, stanovením cieľov, registráciou projektu a vykonaním simulácií, štúdií a posudkov, vrátane zadávania úloh projektovému tímu a kontroly dokumentácie. Následne sa odosiela žiadosť o predcertifikát, komunikuje s autoritou a počas výstavby sa spracúvajú manuály, monitoruje plnenie požiadaviek a zbiera dokumentácia vrátane prekladov. Nakoniec sa vydáva finálny certifikát, s celkovou koordináciou konzultanta ako SALVIS, pričom tip je začať čo najskôr pre minimalizáciu nákladov a maximalizáciu úrovne.`
+        title: 'How does the BREEAM certification process work?',
+        content:
+          'The BREEAM process begins with an analysis of achievable certification levels, cost calculations, goal setting, project registration, and the conducting of simulations, studies, and assessments, including assigning tasks to the project team and checking documentation. Subsequently, a pre-certificate application is submitted, communication with the authority takes place, and during construction, manuals are processed, compliance with requirements is monitored, and documentation, including translations, is collected. Finally, the final certificate is issued, with overall coordination by a consultant such as SALVIS.The advice is to start as soon as possible to minimize costs and maximize the level.'
       },
       {
-        title: 'Aký je rozdiel medzi BREEAM a LEED?',
-        content: `Oba systémy majú svoje výhody, sú zrelé, dobre etablované a uznávané. Ak klient nemá preferenciu a požiada nás, aby sme ho viedli, tak ho v prípade administratívnych budov, ktoré nie sú navrhnuté pre konkrétneho klienta, vedieme smerom k LEED. Pri rezidenčných a priemyselných budovách, ako aj pri budovách, ktoré investor stavia pre vopred známeho užívateľa, skôr k BREEAM. Viac informácií nájdete na našej stránke <a href="/breeam-vs-leed">Rozdiely medzi BREEAM a LEED</a>.`
+        title: 'What is the difference between BREEAM and LEED?',
+        content:
+          'Both systems have their advantages, are mature, well-established and recognised. If the client has no preference and asks us to guide them, we steer them towards LEED in the case of office buildings that are not designed for a specific client. For residential and industrial buildings, as well as buildings that the investor is constructing for a known user, we tend to recommend BREEAM. For more information, visit our website <a href="/breeam-vs-leed">Differences between BREEAM and LEED</a>.'
       },
       {
-        title: 'Ako dlho trvá proces certifikácie?',
-        content: `Dĺžka procesu závisí od fázy, v ktorej sa certifikácia začína. Najefektívnejšie je zapojiť nás už v počiatočných štádiách projektu. Celý proces môže trvať niekoľko mesiacov, od analýzy možností cez vypracovanie stratégií až po finálny audit a vydanie certifikátu.`
+        title: 'How long does the certification process take?',
+        content:
+          'The length of the process depends on the stage at which certification begins. It is most effective to involve us in the early stages of the project. The entire process can take several months, from analysing options and developing strategies to the final audit and issuance of the certificate.'
       },
       {
-        title: 'Kedy je vhodné začať s certifikáciou?',
-        content: `Čím skôr začnete s plánovaním certifikácie, tým lepšie. Včasné zapojenie umožňuje zariadiť potrebné opatrenia s minimálnymi dodatočnými nákladmi a dosiahnuť vyššiu úroveň certifikátu.`
+        title: 'When is it appropriate to start certification?',
+        content:
+          'The sooner you start planning for certification, the better. Early involvement allows you to take the necessary measures with minimal additional costs and achieve a higher level of certification.'
       },
       {
-        title: 'Koľko stojí certifikácia BREEAM?',
-        content: `Náklady na certifikáciu BREEAM závisia od viacerých faktorov, ako je úroveň certifikácie, čas zapojenia do projektu, skúsenosti konzultanta a tímu, a dostupnosť "zadarmo" bodov z polohy budovy. Pre úroveň Excellent alebo nižšiu predstavujú 0-1 % navýšenie celkových stavebných nákladov, zatiaľ čo pre Outstanding to môže byť 0-10 %, pričom skoré zapojenie skúseného konzultanta minimalizuje náklady na 0-2 %, ale neskoré môže zvýšiť na 0-10 % alebo viesť k nižšej úrovni certifikátu. Celkové náklady sa nedajú úplne zovšeobecniť, pretože závisia od východiskového štandardu každej budovy, a čím angažovanejší tím, tým nižšie výdavky.`
+        title: 'How much does BREEAM certification cost?',
+        content: `The cost of BREEAM certification depends on several factors, such as the level of certification, the time involved in the project, the experience of the consultant and team, and the availability of "no cost" points from the building's location. For the Excellent level or lower, they represent a 0-1% increase in total construction costs, while for Outstanding it can be 0-10%, with early involvement of an experienced consultant minimizing costs to 0-2%, but late involvement can increase them to 0-10% or lead to a lower level of certification. The total costs cannot be fully generalized, as they depend on the baseline standard of each building, and the more committed the team, the lower the expenses.`
       },
       {
-        title: 'Kto zabezpečuje proces certifikácie?',
-        content: `Proces vedie skúsený tím odborníkov s akreditáciami BREEAM International Assessor, BREEAM AP a ďalšími. SALVIS zastrešuje celý priebeh, od plánovania cez realizáciu až po komunikáciu s certifikačnými orgánmi.`
+        title: 'Who is responsible for the certification process?',
+        content:
+          'The process is led by an experienced team of experts with BREEAM International Assessor, BREEAM AP and other accreditations. SALVIS oversees the entire process, from planning and implementation to communication with certification bodies.'
       },
       {
-        title: 'Aké úrovne certifikátov existujú?',
-        content: `BREEAM certifikáty majú päť základných úrovní: Pass, Good, Very Good, Excellent a Outstanding. Každá z nich reprezentuje rôznu úroveň splnenia kritérií udržateľnosti.`
+        title: 'What certification levels are there?',
+        content: `BREEAM certificates have five basic levels: Pass, Good, Very Good, Excellent and Outstanding. Each represents a different level of compliance with sustainability criteria.`
       },
       {
-        title: 'Pre aké typy budov je BREEAM vhodný?',
-        content: `Pre všetky — kancelárske, rezidenčné, priemyselné aj obchodné`
+        title: 'What types of buildings is BREEAM suitable for?',
+        content: `For all — office, residential, industrial and commercial.`
       },
       {
-        title: 'Môžem certifikovať existujúcu budovu?',
-        content: `Áno, BREEAM sa dá aplikovať aj na prevádzkované budovy prostredníctvom BREEAM In-Use.`
+        title: 'Can I certify an existing building?',
+        content: `Yes, BREEAM can also be applied to existing buildings through BREEAM In-Use.`
       }
     ]}
   />
   <Contact />
-  <ProjectGrid projects={allProjects} variant='all' title='Projekty' />
+  <ProjectGrid projects={allProjects} variant='all' title='Projects' />
 </SidebarLayout>

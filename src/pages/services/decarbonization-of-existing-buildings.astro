@@ -84,25 +84,27 @@ const allProjects = await getCollection('projects')
     ]}
   />
   <Accordion
-    title='Často kladené otázky'
+    title='FAQ'
     titleClass='fw-bold'
-    descriptions={['Prehľad odpovedí na časté otázky o našej spoločnosti a ponúkaných službách']}
+    descriptions={[
+      'An overview of answers to frequently asked questions about our company and the services we offer.'
+    ]}
     emphasis={true}
     items={[
       {
-        title: 'Čo je to CRREM (Carbon Risk Real Estate Monitor)?',
-        content: `CRREM je nástroj na modelovanie uhlíkovej trajektórie nehnuteľností, ktorý pomáha identifikovať riziká spojené s dekarbonizáciou a stranded assets. Umožňuje porovnať predpokladané emisie CO₂ s cieľmi Parížskej dohody a navrhnúť opatrenia na ich zníženie.`
+        title: 'What is CRREM (Carbon Risk Real Estate Monitor)?',
+        content: `CRREM is a tool for modelling the carbon intesity pathway of real estate, which helps identify risks associated with decarbonisation and stranded assets. It allows you to compare projected CO₂ emissions with the Paris Agreement targets and propose measures to reduce them.`
       },
       {
-        title: 'Aký je rozdiel medzi službami LEED O+M a dekarbonizáciou budov?',
-        content: `LEED O+M je certifikačný systém zameraný na optimalizáciu prevádzky a údržby existujúcich budov, zatiaľ čo dekarbonizácia sa sústreďuje na znižovanie emisií CO₂ a dosahovanie uhlíkovej neutrality. Naše služby kombinujú oba prístupy, aby sme zabezpečili komplexné riešenie pre klientov.`
+        title: 'What is the difference between LEED O+M services and building decarbonisation?',
+        content: `LEED O+M is a certification system focused on optimising the operation and maintenance of existing buildings, while decarbonisation focuses on reducing CO₂ emissions and achieving carbon neutrality. Our services combine both approaches to provide a comprehensive solution for our clients.`
       },
       {
-        title: 'Ponúkate aj vytvorenie digitálneho dvojčaťa budovy?',
-        content: `Áno, vytvárame presné digitálne dvojčatá existujúcich budov, ktoré umožňujú priebežné monitorovanie a optimalizáciu prevádzky. Tieto modely sú kľúčové pre prediktívnu údržbu a testovanie modernizačných opatrení bez zásahu do reálnej prevádzky.`
+        title: 'Do you also offer the creation of a digital twin of a building?',
+        content: `Yes, we create accurate digital twins of existing buildings, which enable continuous monitoring and optimisation of operations. These models are key to predictive maintenance and testing of modernisation measures without interfering with actual operations.`
       }
     ]}
   />
   <Contact />
-  <ProjectGrid projects={allProjects} variant='all' title='Projekty' />
+  <ProjectGrid projects={allProjects} variant='all' title='Projects' />
 </SidebarLayout>

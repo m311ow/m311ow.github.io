@@ -129,38 +129,40 @@ const highlightProjects = allProjects
   />
 
   <Accordion
-    title='Často kladené otázky'
+    title='FAQ'
     titleClass='fw-bold'
-    descriptions={['Prehľad odpovedí na časté otázky o našej spoločnosti a ponúkaných službách']}
+    descriptions={[
+      'An overview of answers to frequently asked questions about our company and the services we offer.'
+    ]}
     emphasis={true}
     items={[
       {
-        title: 'Čo je BREEAM pre logistické haly?',
-        content: `Certifikačný systém zameraný na udržateľnosť logistických hál, s vysokými hodnoteniami ako Excellent.`
+        title: 'What is BREEAM for logistics warehouses?',
+        content: `A certification system focused on the sustainability of logistics warehouses, with high ratings such as Excellent.`
       },
 
       {
-        title: 'Koľko stojí certifikácia?',
-        content: `Minimalizujeme náklady na 0–1 % stavebných výdavkov vďaka simuláciám — kontaktujte nás pre ponuku.`
+        title: 'How much does certification cost?',
+        content: `We minimise costs to 0-1% of construction expenses through simulations — contact us for a quote.`
       },
       {
-        title: 'Aká je doba trvania?',
-        content: `Závisí od projektu, ale s pravidelnými reportmi a návštevami je proces efektívny.`
+        title: 'How long does the certification process take?',
+        content: `It depends on the project, but with regular reports and visits, the process is efficient.`
       },
       {
-        title: 'Prečo Excellent úroveň?',
-        content: `Dosahujeme ju bez dodatočných nákladov, čo splní EU Taxonómiu a zvyšuje hodnotu.`
+        title: 'Why the Excellent level?',
+        content: `We achieve it at no additional cost, which complies with the EU Taxonomy and increases value.`
       },
       {
-        title: 'Ako zabezpečíme transparentnosť?',
-        content: `Klienti majú prístup k všetkým dokumentom a materiálom odoslaným na BRE.`
+        title: 'How do we ensure transparency?',
+        content: `Clients have access to all documents and materials submitted to BRE.`
       },
       {
-        title: 'Potrebujem ekológa?',
-        content: `Áno, spolupracujeme s nimi na manažmente lokality pre plnenie kritérií.`
+        title: 'Do I need an ecologist?',
+        content: `Yes, we work with them on the management of the site to meet the certification criteria.`
       }
     ]}
   />
   <Contact />
-  <ProjectGrid projects={allProjects} variant='all' title='Projekty' />
+  <ProjectGrid projects={allProjects} variant='all' title='Projects' />
 </SidebarLayout>

@@ -105,25 +105,27 @@ const allProjects = await getCollection('projects')
     ]}
   />
   <Accordion
-    title='Často kladené otázky'
+    title='FAQ'
     titleClass='fw-bold'
-    descriptions={['Prehľad odpovedí na časté otázky o našej spoločnosti a ponúkaných službách']}
+    descriptions={[
+      'An overview of answers to frequently asked questions about our company and the services we offer.'
+    ]}
     emphasis={true}
     items={[
       {
-        title: 'Aké sú hlavné výhody simulácií budov?',
-        content: `Simulácie budov umožňujú presne predvídať energetickú spotrebu, tepelný komfort a iné prevádzkové parametre ešte pred realizáciou projektu. Pomáhajú optimalizovať návrh technických systémov, znižovať prevádzkové náklady a zvyšovať komfort užívateľov.`
+        title: 'What are the main advantages of building simulations?',
+        content: `Building simulations allow you to accurately predict energy consumption, thermal comfort and other operating parameters even before the project is completed. They help to optimise the design of technical systems, reduce operating costs and increase user comfort.`
       },
       {
-        title: 'Ponúkate aj vytvorenie digitálneho dvojčaťa budovy?',
-        content: `Áno, vytvárame presné digitálne dvojčatá existujúcich budov, ktoré umožňujú priebežné monitorovanie a optimalizáciu prevádzky. Tieto modely sú kľúčové pre prediktívnu údržbu a testovanie modernizačných opatrení bez zásahu do reálnej prevádzky.`
+        title: 'Do you also offer the creation of a digital twin of a building?',
+        content: `Yes, we create accurate digital twins of existing buildings, which enable continuous monitoring and optimization of operations. These models are key to predictive maintenance and testing of modernisation measures without interfering with actual operations.`
       },
       {
-        title: 'Spĺňajú vaše simulácie medzinárodné normy?',
-        content: `Áno, naše simulácie sú v súlade s medzinárodnými normami ako ASHRAE 90.1, ISO 7730 a ďalšími relevantnými štandardmi. Tým zabezpečujeme vysokú kvalitu a presnosť našich výstupov, ktoré sú akceptované pri certifikáciách ako BREEAM, LEED a ďalších.`
+        title: 'Do your simulations comply with international standards?',
+        content: `Yes, our simulations comply with international standards such as ASHRAE 90.1, ISO 7730 and other relevant standards. This ensures the high quality and accuracy of our outputs, which are accepted for certifications such as BREEAM, LEED and others.`
       }
     ]}
   />
   <Contact />
-  <ProjectGrid projects={allProjects} variant='all' title='Projekty' />
+  <ProjectGrid projects={allProjects} variant='all' title='Projects' />
 </SidebarLayout>
