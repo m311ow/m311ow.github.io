@@ -31,17 +31,17 @@ const allEpds = await getCollection('epds')
   />
 
   <Benefits
-    title='Výhody'
+    title='Benefits'
     titleClass='display-1 fw-bold'
     descriptions={[
-      'EPD prináša výhody v oblasti udržateľnosti, marketingu a certifikácie, ktoré zvyšujú atraktivitu produktov pre klientov a investorov. Vyhlásenie zabezpečuje súlad s medzinárodnými štandardmi a poskytuje konkurenčnú výhodu, keďže len malá časť produktov na trhu ho má.'
+      'EPD brings benefits in terms of sustainability, marketing and certification, which increase the attractiveness of products for clients and investors. The declaration ensures compliance with international standards and provides a competitive advantage, as only a small proportion of products on the market have it.'
     ]}
     items={[
-      'Pridelenie bodov v certifikačných systémoch LEED a BREEAM, čo uľahčuje získanie prestížnych hodnotení pre budovy',
-      'Konkurenčná výhoda vďaka rarite EPD, čo zvyšuje viditeľnosť a predajnosť produktov',
-      'Prehľad o environmentálnom dopade produktu, umožňujúci optimalizáciu a znižovanie negatívnych vplyvov',
-      'Zaradenie do medzinárodných databáz, čo zvyšuje globálnu dostupnosť a dôveryhodnosť produktov',
-      'Optimalizácia produktov podľa požiadaviek LEED, BREEAM a WELL, vrátane školení pre obchodný tím'
+      'Points awarded in the LEED and BREEAM certification systems, making it easier to obtain prestigious ratings for buildings',
+      'Competitive advantage due to EPD rarity, which increases product visibility and marketability',
+      'Overview of the environmental impact of the product, enabling optimisation and reduction of negative impacts',
+      'Inclusion in international databases, increasing the global availability and credibility of products',
+      'Product optimization according to LEED, BREEAM and WELL requirements, including training for the sales team'
     ]}
   />
   <Accordion
@@ -138,5 +138,5 @@ const allEpds = await getCollection('epds')
     ]}
   />
   <Contact />
-  <EpdList title='Projekty' titleClass='display-1 fw-bold' descriptions={[]} items={allEpds} />
+  <EpdList title='Projekty' titleClass='display-1 fw-bold' items={allEpds} />
 </SidebarLayout>
