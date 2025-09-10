@@ -1,6 +1,6 @@
 ---
 title: Euroterrace
-certificate: 'Predcertifikácia LEED BD+C: NC v4 Gold'
+certificate: 'Precertification LEED BD+C: NC v4 Gold'
 client: EUROTERRACE s.r.o.
 location_city: Žilina
 location_country: Slovakia

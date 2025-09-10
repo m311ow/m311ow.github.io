@@ -1,6 +1,6 @@
 ---
 title: VILHARIA
-certificate: 'Predcertifikácia LEED BD+C: CS v4 Platinum'
+certificate: 'Precertification LEED BD+C: CS v4 Platinum'
 client: Corwin
 location_city: Ljubljana
 location_country: Slovenia
