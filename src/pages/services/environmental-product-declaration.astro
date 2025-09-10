@@ -9,7 +9,6 @@ import coverImg from '../../images/epd_cover.webp'
 import SidebarLayout from '../../layouts/SidebarLayout.astro'
 
 import { getCollection } from 'astro:content'
-const allProjects = await getCollection('projects')
 const allEpds = await getCollection('epds')
 ---
 
@@ -17,16 +16,16 @@ const allEpds = await getCollection('epds')
   <ServiceHero
     title='EPD'
     descriptions={[
-      'EPD (Environmental Product Declaration) je vyhlásenie, ktoré predstavuje jednotnú metodiku na hodnotenie a zverejňovanie environmentálnych dopadov stavebných produktov, pokrývajúce celý životný cyklus od ťažby surovín po likvidáciu.',
-      'SALVIS je jediná firma na Slovensku, ktorá ponúka spracovanie EPD typu III v súlade s normami STN EN 15804+A2:2019 a STN EN ISO 14025, vrátane overenia treťou stranou pre maximálnu hodnotu.',
-      'Táto deklarácia spĺňa požiadavky systémov ako LEED v4 a BREEAM International NC v6 / v7, čo umožňuje získať body v týchto certifikáciách.',
-      'Služba zahŕňa LCA analýzu (Life Cycle Assessment) a optimalizáciu produktov pre udržateľnosť. EPD poskytuje výrobcom prehľad o environmentálnom vplyve ich produktov a zvyšuje ich konkurencieschopnosť na trhu.',
-      'Vďaka zaradeniu do medzinárodných databáz, ako International EPD System (ENVIRONDEC), EPD Square alebo EPD Norge získavajú produkty globálnu viditeľnosť.'
+      'EPD (Environmental Product Declaration) is a declaration that represents a unified methodology for assessing and publishing the environmental impacts of construction products, covering the entire life cycle from raw material extraction to disposal.',
+      'SALVIS is the only company in Slovakia that offers Type III EPD processing in accordance with STN EN 15804+A2:2019 and STN EN ISO 14025 standards, including third-party verification for maximum value.',
+      'This declaration meets the requirements of systems such as LEED v4 and BREEAM International NC v6 / v7, which allows points to be earned in these certifications.',
+      'The service includes LCA analysis (Life Cycle Assessment) and product optimisation for sustainability. EPD provides manufacturers with an overview of the environmental impact of their products and increases their competitiveness in the market.',
+      'Thanks to inclusion in international databases such as the International EPD System (ENVIRONDEC), EPD Square or EPD Norge, products gain global visibility.'
     ]}
-    flavorText='EPD je výsledkom zjednocujúcej metodiky vyhodnocovania a zverejňovania environmentálnych dopadov spojených s výrobou stavebného produktu. Zahŕňa všetky fázy životného cyklu výrobku od ťažby surovín až po likvidáciu.'
+    flavorText='EPD is the result of a unified methodology for assessing and publishing the environmental impacts associated with the manufacture of a construction product. It covers all stages of the product life cycle, from raw material extraction to disposal.'
     image={{
       src: coverImg,
-      alt: 'Ilustračný obrázok —stromy v lese'
+      alt: 'Illustrative image — trees'
     }}
   />
 
