@@ -46,59 +46,52 @@ const allProjects = await getCollection('projects')
     ]}
   />
   <Accordion
-    title='Ponúkame'
+    title='Offer'
     titleClass='display-1 fw-bold'
     descriptions={[
-      'Optimalizujeme výkon budovy ešte pred jej postavením — znižujeme náklady, zvyšujeme komfort a zaručujeme súlad s medzinárodnými normami a certifikačnými systémami (BREEAM, LEED, ASHRAE).'
+      'We optimise building performance even before construction — reducing costs, increasing comfort and ensuring compliance with international standards and certification systems (BREEAM, LEED, ASHRAE).'
     ]}
     items={[
       {
-        title: 'Termodynamické simulácie budov',
+        title: 'Thermodynamic simulations of buildings',
         content: `
         <ul>
-            <li><strong>Dimenzačné TD simulácie</strong> <br> Výpočty pre optimálny návrh zdrojov tepla a chladu a určenie veľkostí odovzdávacích prvkov (vykurovacie telesá, fancoily, chladené stropy a pod.) na základe reálnych klimatických údajov a prevádzkových scenárov. Minimalizujeme riziko predimenzovania alebo poddimenzovania systému.</li>
-            <li><strong>Detailné HVAC TD simulácie podľa ASHRAE 90.1</strong><br>Komplexné energetické modely podľa medzinárodného štandardu ASHRAE 90.1 — ideálne pre certifikácie a legislatívne posúdenia. Zahŕňajú detailný profil prevádzky, zónovú reguláciu a optimalizáciu spotreby energií v reálnych podmienkach.</li>
-            <li><strong>Digitálne dvojča existujúcej budovy</strong><br>Vytvorenie presnej digitálnej kópie objektu s kompletnými technickými a prevádzkovými parametrami. Digitálne dvojča umožňuje priebežné monitorovanie, prediktívnu údržbu a testovanie modernizačných opatrení bez zásahu do reálnej prevádzky.</li>
+            <li><strong>Energy modeling for system sizing</strong> <br> Calculations for the optimal design of heating and cooling sources and determination of the sizes of transfer elements (radiators, fan coils, chilled ceilings, etc.) based on real climate data and operating scenarios. We minimise the risk of over- or under-dimensioning the system.</li>
+            <li><strong>Detailed HVAC energy modeling according to ASHRAE 90.1</strong><br>Comprehensive energy models according to the international standard ASHRAE 90.1 — ideal for certification and legislative assessments. They include a detailed operating profile, zone control and energy consumption optimisation under real conditions.</li>
+            <li><strong>Digital twin of an existing building</strong><br>Creation of an accurate digital copy of a building with complete technical and operational parameters. The digital twin enables continuous monitoring, predictive maintenance and testing of modernisation measures without interfering with real-world operations.</li>
         </ul>
         `
       },
       {
-        title: 'Simulácie tepelného komfortu',
-        content: `
-            Posudzujeme globálny tepelný komfort vnútorných priestorov podľa ISO 7730, využitím indexov PPD (Predicted Percentage of Dissatisfied) a PMV (Predicted Mean Vote).
-            Tieto výpočty predstavujú štatistiku spokojnosti užívateľov na základe priemernej tepelnej pohody v priestore počas zvoleného časového obdobia.
-            Hodnotíme kombináciu teploty vzduchu, vlhkosti, rýchlosti prúdenia a teploty okolitého sálania, pričom výsledky pomáhajú optimalizovať návrh a prevádzkové parametre HVAC systémov.
-            Aspekty lokálneho tepelného komfortu — napríklad prievan, asymetria sálania alebo teplota podlahy — sú predmetom CFD simulácií.
-        `
+        title: 'Thermal comfort simulations',
+        content: `We assess the global thermal comfort of indoor spaces according to ISO 7730, using PPD (Predicted Percentage of Dissatisfied) and PMV (Predicted Mean Vote) indices.
+        These calculations represent user satisfaction statistics based on the average thermal comfort in the space during a selected time period.
+        We evaluate a combination of air temperature, humidity, air speed, and ambient radiation temperature, with the results helping to optimize the design and operating parameters of HVAC systems.
+        Aspects of local thermal comfort—such as drafts, radiation asymmetry, or floor temperature—are the subject of CFD simulations.`
       },
       {
-        title: 'Simulácie denného svetla a slnečného žiarenia',
+        title: 'Daylight and solar radiation simulations',
         content: `
         <ul>
-            <li><strong>Dynamické simulácie denného svetla (sDA, ASE)</strong><br>Posudzujeme prienik denného svetla do interiéru pomocou metód sDA (Spatial Daylight Autonomy) a ASE (Annual Sunlight Exposure). Simulácie pomáhajú optimalizovať veľkosť a umiestnenie presklených plôch, tienenia a svetelných otvorov, aby sa dosiahla ideálna rovnováha medzi prirodzeným osvetlením, energetickou efektivitou a vizuálnym komfortom.</li>
-            <li><strong>Dynamické simulácie výkonu slnečného žiarenia na plášť budovy</strong><br>Analýzy intenzity dopadajúceho slnečného žiarenia na strechy a fasády v časovom priebehu roka. Výstupy slúžia pre návrh fotovoltických systémov, tieniacich prvkov a hodnotenie rizika prehrievania obvodových konštrukcií.</li>
-
+            <li><strong>Dynamic daylight simulations (sDA, ASE)</strong><br>We assess daylight penetration into the interior using sDA (Spatial Daylight Autonomy) and ASE (Annual Sunlight Exposure) methods. Simulations help optimise the size and placement of glazed areas, shading and light openings to achieve the ideal balance between natural lighting, energy efficiency and visual comfort.</li>
+            <li><strong>Dynamic simulations of solar radiation on the building envelope</strong><br>Analyses of the intensity of solar radiation on roofs and facades over the course of the year. The outputs are used to design photovoltaic systems, shading elements and to assess the risk of overheating of the building envelope.</li>
         </ul>
         `
       },
       {
-        title: 'Simulácie environmentálnych a mikroklimatických podmienok',
-        content: `
-        Modelujeme teploty fasád, teploty povrchov v okolí budovy a hodnotíme vplyv mestského tepelného ostrova. Simulujeme spotrebu vody na závlahu vegetácie, šírenie kontaminantov a optimalizujeme mikroklímu pre verejné priestory s cieľom zvýšiť tepelný komfort užívateľov.
-        Tieto výstupy sú kľúčové pri návrhu námestí, parkov, zelených striech a iných prvkov mestského prostredia.
-        `
+        title: 'Simulations of environmental and microclimatic conditions',
+        content: `We model façade temperatures, surface temperatures around the building, and evaluate the impact of the urban heat island effect. We simulate water consumption for vegetation irrigation, contaminant dispersion, and optimise the microclimate for public spaces to increase the thermal comfort of users.
+        These outputs are key in the design of squares, parks, green roofs and other elements of the urban environment.`
       },
       {
-        title: 'CFD simulácie (Computational Fluid Dynamics)',
+        title: 'CFD simulations (Computational Fluid Dynamics)',
         content: `
-        CFD simulácie poskytujú detailný obraz o lokálnych podmienkach tepelného komfortu a dynamike prúdenia vzduchu v interiéri aj exteriéri. Na rozdiel od globálnych výpočtov (časť 2), ktoré vyjadrujú celkovú štatistiku spokojnosti, CFD sa zameriava na konkrétne miesta a situácie, kde môže vzniknúť diskomfort.
-        Medzi najčastejšie aplikácie patria:
         <ul>
-            <li>Vetrová štúdia — posúdenie rýchlosti a smeru vetra okolo budov a v exteriérových priestoroch</li>
-            <li>Simulácie dvojitých transparentných fasád</li>
-            <li>Koncentrácia CO v garážach — optimalizácia vetrania a zabezpečenie splnenia hygienických limitov</li>
-            <li>Šírenie dymu — návrh účinného odvodu tepla a splodín pri požiari</li>
-            <li>Lokálny tepelný komfort — hodnotenie prievanu, asymetrie sálania, rozdielov teploty podlahy a eliminácia nepríjemných teplotných gradientov</li>
+            <li>Wind study — assessment of wind speed and direction around buildings and in outdoor areas</li>
+            <li>Simulations of double skin facades</li>
+            <li>CO concentration in garages — optimisation of ventilation and ensuring compliance with health limits</li>
+            <li>Smoke propagation — design of effective heat and fume extraction in case of fire</li>
+            <li>Local thermal comfort — assessment of draughts, radiation asymmetry, floor temperature differences and elimination of unpleasant temperature gradients</li>
         </ul>
         `
       }
