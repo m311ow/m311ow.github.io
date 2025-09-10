@@ -14,15 +14,15 @@ const projectsWithLEEDorBREEAMCert = await getCollection('projects', ({ data }) 
 
 const projectCount = projectsWithLEEDorBREEAMCert.length
 
-const titleHtml = `Poradenstvo a certifikácia <br /> v oblasti BREEAM, LEED, Taxonómie&nbsp;EÚ, ESG a uhlíkovej&nbsp;neutrality`
-const subtitleHtml = `Viac ako ${projectCount} vydaných certifikátov <br /> BREEAM a LEED na Slovensku, v Česku a Slovinsku`
+const titleHtml = `Consultancy and certification <br/> in the field of BREEAM, LEED, EU&nbsp;Taxonomy, ESG and carbon&nbsp;neutrality`
+const subtitleHtml = `More than ${projectCount}  BREEAM and LEED certifications <br/> delivered across Slovakia, Czechia and Slovenia`
 
 const heroLinks = [
-  { href: '/projects', label: 'Projekty' },
-  { href: '/contact', label: 'Kontakt' }
+  { href: '/projects', label: 'Projects' },
+  { href: '/contact', label: 'Contact' }
 ]
 
-const accreditationsTitle = 'Akreditácie'
+const accreditationsTitle = 'Accreditations'
 const accreditations = [
   'LEED AP BD+C',
   'LEED Green Associate',
@@ -33,53 +33,53 @@ const accreditations = [
   'DGNB International Consultant',
   'Fitwel Ambassador',
   'Certified Passive House Designer & Consultant',
-  'Autorizovaný stavebný inžinier — stavebná fyzika'
+  'Authorized Civil Engineer — Building Physics'
 ]
 
 const services = [
   {
     title: 'BREEAM NC',
-    desc: 'BREEAM je najstarší a najrozšírenejší certifikačný systém na svete, ktorý poskytuje prístup k pokročilému know-how v oblasti udržateľnosti budov.',
+    desc: 'BREEAM is the oldest and most widely used certification system in the world, providing access to advanced know-how in the field of building sustainability.',
     href: '/services/breeam-new-construction'
   },
   {
-    title: 'BREEAM pre logistické haly',
-    desc: 'SALVIS sa špecializuje na certifikáciu BREEAM pre logistické haly, s bohatými skúsenosťami z projektov s klientmi ako VGP, Panattoni a Contera.',
+    title: 'BREEAM for logistics warehouses',
+    desc: 'SALVIS specializes in BREEAM certification for logistics warehouses, with extensive experience from projects with clients such as VGP, Panattoni, and Contera.',
     href: '/services/breeam-for-logistics-warehouses'
   },
   {
     title: 'BREEAM In-Use',
-    desc: 'BREEAM In-Use poskytuje ucelený rámec na hodnotenie a zlepšenie prevádzkovej udržateľnosti komerčných nehnuteľností.',
+    desc: 'BREEAM In-Use provides a comprehensive framework for assessing and improving the operational sustainability of commercial real estate.',
     href: '/breeam-in-use'
   },
   {
     title: 'LEED BD+C',
-    desc: 'Medzinárodne oceňovaný certifikát udržateľnosti. Zvyšuje hodnotu nehnuteľností pri predaji a uľahčuje komunikáciu s investormi.',
+    desc: 'Internationally recognized sustainability certificate. Increases property value when selling and facilitates communication with investors.',
     href: '/services/leed-building-design-construction'
   },
   {
     title: 'LEED O+M',
-    desc: 'Cieľom LEED O+M je systematicky zlepšovať environmentálny, energetický a prevádzkový výkon budov a zároveň znižovať ich prevádzkové náklady a uhlíkovú stopu.',
+    desc: 'The goal of LEED O+M is to systematically improve the environmental, energy, and operational performance of buildings while reducing their operating costs and carbon footprint',
     href: '/services/leed-operations-maintenance'
   },
   {
-    title: 'Taxonómia EÚ',
-    desc: 'Taxonómia EÚ zavádza jednotný rámec pre určenie toho, čo je skutočne „udržateľná“ ekonomická aktivita.',
+    title: 'EU Taxonomy',
+    desc: 'The EU taxonomy introduces a common framework for determining what constitutes a truly "sustainable" economic activity.',
     href: '/services/eu-taxonomy'
   },
   {
-    title: 'Dekarbonizácia eixstujúcich budov',
-    desc: 'Pomôžeme vám nastaviť jasnú a overiteľnú cestu k dekarbonizácii v súlade s Taxonómiou EÚ, ESG požiadavkami, SBTi a najlepšími svetovými štandardmi.',
+    title: 'Decarbonization of existing buildings',
+    desc: 'We will help you set a clear and verifiable path to decarbonization in line with EU Taxonomy, ESG requirements, SBTi, and global best practices.',
     href: '/services/decarbonization-of-existing-buildings'
   },
   {
-    title: 'Simulácie budov',
-    desc: 'Simulácie budov umožňujú robiť kvalifikované rozhodnutia ešte pred realizáciou, čím šetria náklady, znižujú riziká a zvyšujú hodnotu investície.',
+    title: 'Building simulations',
+    desc: 'Building simulations enable informed decisions to be made before construction begins, saving costs, reducing risks, and increasing the value of the investment.',
     href: '/services/building-performance-simulation'
   },
   {
-    title: 'EPD Deklarácie',
-    desc: 'EPD (Environmental Product Declaration) je vyhlásenie, ktoré predstavuje jednotnú metodiku na hodnotenie a zverejňovanie environmentálnych dopadov stavebných produktov.',
+    title: 'EPD',
+    desc: 'EPD (Environmental Product Declaration) is a declaration that represents a uniform methodology for assessing and publishing the environmental impact of construction products.',
     href: '/services/environmental-product-declaration'
   }
 ]
@@ -93,9 +93,6 @@ const services = [
     accreditationsTitle={accreditationsTitle}
     accreditations={accreditations}
   />
-  <ServicesBigCards heading='Služby' services={services} cols={3} />
-  <!-- <BentoGrid /> -->
-  <!-- <Services /> -->
-  <!-- <Projects title='Projekty' /> -->
-  <ProjectGrid projects={allProjects} variant='all' title='Projekty' />
+  <ServicesBigCards heading='Services' services={services} cols={3} />
+  <ProjectGrid projects={allProjects} variant='all' title='Projects' />
 </BaseLayout>
