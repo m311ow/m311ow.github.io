@@ -1,0 +1,202 @@
+---
+/** Moving logos marquee (measured, seamless, uniform gaps) */
+interface Logo {
+  src: string // "/logos/acme.svg" in /public
+  alt?: string // "Acme"
+  scale?: number // 0.8–1 recommended; >1 is clamped to 1
+}
+
+const {
+  logos = [] as Logo[],
+  title,
+  heightPx = 56, // lane height
+  speed = '45s', // loop duration (bigger = slower)
+  gapRem = 12, // space between logos and at the seam
+  gray = true,
+  className = ''
+} = Astro.props as {
+  logos: Logo[]
+  title?: string
+  heightPx?: number
+  speed?: string
+  gapRem?: number
+  gray?: boolean
+  className?: string
+}
+---
+
+<section class={`py-4 ${className}`}>
+  <div class='container'>
+    {
+      title && (
+        <div class='row mb-3'>
+          <div class='col'>
+            <h2 class='h6 text-secondary text-center m-0'>{title}</h2>
+          </div>
+        </div>
+      )
+    }
+
+    <div class='marquee' style={`--h:${heightPx}px; --gap:${gapRem}rem; --speed:${speed};`}>
+      <div class='belt'>
+        <!-- Segment A (measured) -->
+        <div class='segment'>
+          {
+            logos.map(({ src, alt, scale }) => (
+              <div class={`item${gray ? ' gray' : ''}`} style={`--s:${Math.min(scale ?? 1, 1)};`}>
+                <img src={src} alt={alt ?? ''} loading='eager' decoding='async' />
+              </div>
+            ))
+          }
+        </div>
+        <!-- Segment B (duplicate, not measured) -->
+        <div class='segment' aria-hidden='true'>
+          {
+            logos.map(({ src, alt, scale }) => (
+              <div class={`item${gray ? ' gray' : ''}`} style={`--s:${Math.min(scale ?? 1, 1)};`}>
+                <img src={src} alt='' loading='lazy' decoding='async' />
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <!-- Inline browser JS (no TS casts), inside .marquee -->
+      <script is:inline>
+        ;(function () {
+          var root = document.currentScript && document.currentScript.closest('.marquee')
+          if (!root) return
+          var belt = root.querySelector('.belt')
+          var segA = root.querySelector('.segment') // first segment only
+
+          function measure() {
+            if (!segA) return
+            // scrollWidth includes padding-right seam; round to avoid subpixel drift
+            var segWidth = Math.ceil(segA.scrollWidth || segA.getBoundingClientRect().width)
+            root.style.setProperty('--seg', segWidth + 'px')
+          }
+
+          function start() {
+            measure()
+            root.classList.add('is-ready') // enables CSS animation
+          }
+
+          // Wait for FIRST segment images only (dup may stay lazy/offscreen)
+          var imgs = segA.querySelectorAll('img')
+          var pending = imgs.length
+          if (pending === 0) start()
+          imgs.forEach(function (img) {
+            if (img.complete) {
+              pending--
+              if (pending === 0) start()
+            } else {
+              img.addEventListener(
+                'load',
+                function () {
+                  pending--
+                  if (pending === 0) start()
+                },
+                { once: true }
+              )
+              img.addEventListener(
+                'error',
+                function () {
+                  pending--
+                  if (pending === 0) start()
+                },
+                { once: true }
+              )
+            }
+          })
+
+          // Re-measure on resize (container or viewport)
+          var ro = new ResizeObserver(function () {
+            measure()
+          })
+          ro.observe(root)
+        })()
+      </script>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Viewport: fixed height, no scrollbars */
+  .marquee {
+    overflow: hidden;
+    width: 100%;
+    height: var(--h);
+  }
+
+  /* Belt: animate only after measuring (--seg) */
+  .belt {
+    display: flex;
+    align-items: center;
+    width: max-content; /* shrink-wrap to content width */
+    will-change: transform;
+    animation: none;
+  }
+  .marquee.is-ready .belt {
+    animation: scroll var(--speed) linear infinite;
+  }
+
+  /* Two segments back-to-back; add explicit seam gap after the first segment */
+  .segment {
+    display: flex;
+    align-items: center;
+  }
+  .segment:first-child {
+    padding-right: var(--gap);
+  } /* seam gap */
+
+  /* Uniform item spacing via margin (robust at seam) */
+  .item {
+    flex: 0 0 auto;
+    height: var(--h); /* lane height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* clip misbehaving SVGs */
+    margin-right: var(--gap);
+  }
+  .item:last-child {
+    margin-right: 0;
+  }
+
+  /* Layout-based scaling: logo height = lane * scale (≤ 1) so gaps stay even */
+  .item img {
+    display: block;
+    height: clamp(0px, calc(var(--h) * var(--s, 1)), var(--h));
+    width: auto;
+    max-height: var(--h);
+    object-fit: contain;
+  }
+
+  /* Optional gray treatment for black logos */
+  .item.gray img {
+    filter: invert(46%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(90%) contrast(85%);
+    opacity: 0.35;
+  }
+  .item.gray img:hover,
+  .item.gray img:focus {
+    filter: invert(46%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(90%);
+    opacity: 1;
+  }
+
+  /* Reduced motion accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    .marquee .belt {
+      animation: none !important;
+    }
+  }
+
+  /* Animate exactly one measured segment width (incl. seam gap) */
+  @keyframes scroll {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(calc(-1 * var(--seg, 0px)), 0, 0);
+    }
+  }
+</style>

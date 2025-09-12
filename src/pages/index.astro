@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content'
 import Hero from '../components/Hero.astro'
+import LogosStrip from '../components/LogosStrip.astro'
 import ProjectGrid from '../components/ProjectGrid.astro'
 import ServicesBigCards from '../components/ServicesBigCards.astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
@@ -83,6 +84,17 @@ const services = [
     href: '/services/environmental-product-declaration'
   }
 ]
+
+const logos = [
+  { src: '/logos/contera_logo.svg', alt: 'Contera', scale: 0.5 },
+  { src: '/logos/corwin_logo.svg', alt: 'Corwin', scale: 0.5 },
+  { src: '/logos/lucron_logo.svg', alt: 'Lucron' },
+  { src: '/logos/panattoni_logo.svg', alt: 'Panattoni', scale: 0.8 },
+  { src: '/logos/penta_logo.svg', alt: 'Penta', scale: 0.8 },
+  { src: '/logos/reinoo_logo.svg', alt: 'Reinoo', scale: 0.8 },
+  { src: '/logos/saint_gobain.svg', alt: 'Saint Gobain' },
+  { src: '/logos/vgp_logo.svg', alt: 'VGP' }
+]
 ---
 
 <BaseLayout>
@@ -93,6 +105,9 @@ const services = [
     accreditationsTitle={accreditationsTitle}
     accreditations={accreditations}
   />
+
   <ServicesBigCards heading='Services' services={services} cols={3} />
+  <LogosStrip logos={logos} heightPx={46} />
+
   <ProjectGrid projects={allProjects} variant='all' title='Projects' />
 </BaseLayout>
