@@ -15,7 +15,7 @@ const serviceHrefs = [
   '/decarbonisation-of-existing-buildings',
   '/environmental-product-declaration',
   '/eu-taxonomy',
-  '/building-performance-simulation'
+  '/building-simulations'
 ]
 
 const serviceActive = serviceHrefs.some(isPath)
@@ -102,8 +102,8 @@ const serviceActive = serviceHrefs.some(isPath)
             </li>
             <li class='border-bottom'>
               <a
-                class={`dropdown-item ${isPath('/services/building-performance-simulation') ? 'active' : 'link-dark'}`}
-                href='/services/building-performance-simulation'>Building simulations</a
+                class={`dropdown-item ${isPath('/services/building-simulations') ? 'active' : 'link-dark'}`}
+                href='/services/building-simulations'>Building simulations</a
               >
             </li>
             <li>
