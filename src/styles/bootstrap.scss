@@ -127,6 +127,28 @@ $utilities: map-merge(
   )
 );
 
+// Extend utilities
+$utilities: map-merge(
+  $utilities,
+  (
+    'text-gray': (
+      property: color,
+      class: text-gray,
+      values: (
+        100: $gray-100,
+        200: $gray-200,
+        300: $gray-300,
+        400: $gray-400,
+        500: $gray-500,
+        600: $gray-600,
+        700: $gray-700,
+        800: $gray-800,
+        900: $gray-900
+      )
+    )
+  )
+);
+
 // Optional utilities
 @import 'bootstrap/scss/utilities/api';
 
@@ -256,34 +278,6 @@ ul {
   font-variant-ligatures: none;
   -webkit-font-feature-settings: 'liga' 0, 'clig' 0;
   font-feature-settings: 'liga' 0, 'clig' 0;
-}
-
-.text-gray-300 {
-  color: var(--bs-gray-300);
-}
-
-.text-gray-400 {
-  color: var(--bs-gray-400);
-}
-
-.text-gray-500 {
-  color: var(--bs-gray-500);
-}
-
-.text-gray-600 {
-  color: var(--bs-gray-600);
-}
-
-.text-gray-700 {
-  color: var(--bs-gray-700);
-}
-
-.text-gray-800 {
-  color: var(--bs-gray-800);
-}
-
-.text-gray-900 {
-  color: var(--bs-gray-900);
 }
 
 @media (max-width: 767.98px) {
