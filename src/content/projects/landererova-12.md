@@ -1,5 +1,5 @@
 ---
-title: Panorama Business III
+title: Landererova 12
 certificate: 'LEED CS v2009 Gold'
 client: J&T REAL ESTATE
 location_city: Bratislava
