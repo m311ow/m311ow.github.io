@@ -1,0 +1,124 @@
+---
+interface Props {
+  title: string
+  titleClass?: string
+  descriptions?: string[]
+  type: 'simulations' // add more types later if needed
+  sort?: boolean // sort A-Z by filename
+}
+
+const { title = 'Gallery', titleClass, descriptions, type, sort } = Astro.props
+
+const collections = {
+  simulations: {
+    files: import.meta.glob('/src/images/simulations/*.{jpg,jpeg,png,webp,avif}', {
+      eager: true,
+      as: 'url'
+    }),
+    alt: 'Image from building simulation'
+  }
+} as const
+
+const picked = collections[type] ?? { files: {}, alt: 'Image' }
+
+const cmp = new Intl.Collator(undefined, { numeric: true, sensitivity: 'base' }).compare
+
+const items = (sort ? [...Object.values(picked.files)].sort(cmp) : Object.values(picked.files)).map(
+  (src) => ({ src, alt: picked.alt })
+)
+---
+
+<div class='row justify-content-md-between py-3 py-md-5'>
+  <h2 class={titleClass}>{title}</h2>
+
+  <div class='col-md-5'>
+    {descriptions && descriptions.map((text) => <p class='' set:html={text} />)}
+  </div>
+  <div class='col-md-6 ps-md-0'>
+    <div id='carouselGallery' class='carousel slide'>
+      <div class='carousel-inner'>
+        {
+          items.map(({ src, alt }, i) => (
+            <div class={`carousel-item ${i === 0 ? 'active' : ''}`}>
+              <img src={src} alt={alt} class='d-block w-100' loading='lazy' decoding='async' />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+    <div class='d-flex justify-content-between gap-2'>
+      <button class='arrow-btn' data-bs-target='#carouselGallery' data-bs-slide='prev'>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          viewBox='0 0 48 24'
+          width='48'
+          height='24'
+          aria-hidden='true'
+        >
+          <path
+            d='M46 12H2M7 6L2 12l5 6'
+            fill='none'
+            stroke='currentColor'
+            stroke-width='1'
+            stroke-linecap='butt'
+            stroke-linejoin='miter'></path>
+        </svg>
+      </button>
+      <button class='arrow-btn' data-bs-target='#carouselGallery' data-bs-slide='next'>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          viewBox='0 0 48 24'
+          width='48'
+          height='24'
+          aria-hidden='true'
+        >
+          <path
+            d='M2 12H46M41 6l5 6-5 6'
+            fill='none'
+            stroke='currentColor'
+            stroke-width='1'
+            stroke-linecap='butt'
+            stroke-linejoin='miter'></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .carousel {
+    padding-top: 8px;
+  }
+
+  .prev,
+  .next {
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  .arrow-btn {
+    all: unset;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    color: #000;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 2rem;
+    line-height: 1;
+    min-width: 44px;
+    min-height: 44px;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+
+  .arrow-btn:focus {
+    outline: none;
+  }
+  .arrow-btn:focus-visible {
+    outline: 2px solid #000;
+    outline-offset: 2px;
+  }
+</style>

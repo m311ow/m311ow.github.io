@@ -2,6 +2,7 @@
 import Accordion from '../../components/Accordion.astro'
 import Benefits from '../../components/Benefits.astro'
 import Contact from '../../components/Contact.astro'
+import GalleryCarousel from '../../components/GalleryCarousel.astro'
 import ProjectGrid from '../../components/ProjectGrid.astro'
 import ServiceHero from '../../components/ServiceHero.astro'
 import coverImg from '../../images/simulacie_cover.webp'
@@ -96,6 +97,14 @@ const allProjects = await getCollection('projects')
         </ul>`
       }
     ]}
+  />
+  <GalleryCarousel
+    title='Gallery'
+    titleClass='fw-bold'
+    descriptions={[
+      'This gallery presents images from projects we have worked on. The visuals are generated through building simulations.'
+    ]}
+    type='simulations'
   />
   <Accordion
     title='FAQ'
