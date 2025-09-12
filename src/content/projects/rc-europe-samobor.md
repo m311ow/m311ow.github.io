@@ -1,6 +1,6 @@
 ---
 title: RC EUROPE Samobor
-certificate: Taxonómia EÚ
+certificate: EU Taxonomy
 client: RC EUROPE
 location_city: Samobor
 location_country: Croatia

@@ -1,6 +1,6 @@
 ---
 title: Matilda
-certificate: Taxonómia EÚ
+certificate: EU Taxonomy
 client: YIT
 location_city: Bratislava
 location_country: Slovakia
