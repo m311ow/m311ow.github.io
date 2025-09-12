@@ -8,7 +8,11 @@ const { items } = Astro.props
 
 <div class='text-uppercase justify-content-md-between pb-3 pb-md-4'>
   <ul class='list-group list-group-flush'>
-    {items.map((item) => <li class='text-primary list-group-item py-1' set:html={item} />)}
+    {
+      items.map((item) => (
+        <li class='text-primary font-monospace list-group-item py-1' set:html={item} />
+      ))
+    }
   </ul>
 </div>
 

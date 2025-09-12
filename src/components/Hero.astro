@@ -59,12 +59,12 @@ const {
   </div>
 
   <div class='col-md-6 text-end d-flex flex-column justify-content-between'>
-    {accreditationsTitle && <h3 class='text-end fw-light'>{accreditationsTitle}</h3>}
+    {accreditationsTitle && <h3 class='text-end fw-light pt-1'>{accreditationsTitle}</h3>}
     {
       accreditations.length > 0 && (
-        <ul class='list-unstyled fst-italic text-secondary pb-1 mb-0'>
+        <ul class='list-unstyled pb-1 mb-0'>
           {accreditations.map((item) => (
-            <li class='fw-light'>{item}</li>
+            <li class='fw-lighter font-monospace small'>{item}</li>
           ))}
         </ul>
       )

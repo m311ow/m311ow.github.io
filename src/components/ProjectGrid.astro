@@ -49,13 +49,15 @@ const { projects, variant = 'all', title } = Astro.props
               </div>
               <figcaption class='text-primary mb-0'>
                 {project.data.certificate && (
-                  <p class='mb-0 border-bottom text-uppercase'>{project.data.certificate}</p>
+                  <p class='mb-0 border-bottom text-uppercase font-monospace'>
+                    {project.data.certificate}
+                  </p>
                 )}
-                <p class='mb-0 border-bottom text-uppercase'>{project.data.title}</p>
-                <p class='mb-0 border-bottom text-uppercase'>
+                <p class='mb-0 border-bottom text-uppercase font-monospace'>{project.data.title}</p>
+                <p class='mb-0 border-bottom text-uppercase font-monospace'>
                   {project.data.location_city} – {project.data.location_country}
                 </p>
-                <p class='mb-0 text-uppercase'>{project.data.client}</p>
+                <p class='mb-0 text-uppercase font-monospace'>{project.data.client}</p>
               </figcaption>
             </figure>
           </a>
@@ -66,28 +68,26 @@ const { projects, variant = 'all', title } = Astro.props
 </section>
 
 <script is:inline>
-  const root = document.currentScript?.closest('.project-grid-section')
-  if (root) {
-    const paras = root.querySelectorAll('figcaption p')
-    function adjustBorders() {
-      paras.forEach((p) => {
-        p.style.paddingBottom = ''
-        const lh = parseFloat(getComputedStyle(p).lineHeight)
-        if (p.offsetHeight > lh * 1.5) p.style.paddingBottom = '1px'
-      })
-    }
-    const onReady = () => adjustBorders()
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', onReady, { once: true })
-    } else {
-      onReady()
-    }
-    let t
-    window.addEventListener('resize', () => {
-      clearTimeout(t)
-      t = setTimeout(adjustBorders, 150)
+  const captions = document.querySelectorAll('.project-card figcaption p')
+  function adjustBorders() {
+    captions.forEach((p) => {
+      p.style.paddingBottom = ''
+      const lh = parseFloat(getComputedStyle(p).lineHeight)
+      if (p.offsetHeight > lh * 1.5) p.style.paddingBottom = '1px'
+      console.log(p.offsetHeight, lh)
     })
   }
+  const onReady = () => adjustBorders()
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', onReady, { once: true })
+  } else {
+    onReady()
+  }
+  let t
+  window.addEventListener('resize', () => {
+    clearTimeout(t)
+    t = setTimeout(adjustBorders, 150)
+  })
 </script>
 
 <style>

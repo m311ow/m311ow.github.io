@@ -41,15 +41,6 @@ const {
       <Content />
     </div>
     <div class='col-md-6'>
-      <!-- <Image
-        src={image_cover ? image_cover : 'https://placehold.co/400x400'}
-        alt={'Image'}
-        width={1200}
-        height={1200}
-        class='img-fluid flex-grow-1 object-fit-cover w-100'
-        format='webp'
-        sizes='(max-width: 768px) 100vw, 50vw'
-      /> -->
       <Image
         src={image_cover}
         alt={`Cover photo for project ${title}`}
@@ -59,7 +50,6 @@ const {
         class='img-fluid flex-grow-1 object-fit-cover w-100 pb-1'
         format='webp'
       />
-      <!-- <p class='text-primary fst-italic'>{certificate}</p> -->
       {
         image_1 && (
           <Image

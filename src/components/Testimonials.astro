@@ -19,13 +19,13 @@ const { title = 'Povedali o nás', descriptions, items } = Astro.props
     {
       items.map((item) => (
         <div
-          class='card rounded-0 p-2 bg-light border-0 text-primary'
+          class='card rounded-0 p-lg-1 bg-light border-0 text-primary'
           data-aos='fade-up'
           data-aos-duration='1500'
         >
           <div class='card-body'>
             <h5 class='card-title'>{item.name}</h5>
-            <h6 class='card-subtitle mb-2 fw-lighter'>{item.position}</h6>
+            <h6 class='card-subtitle mb-2 fw-light small'>{item.position}</h6>
             <hr />
             <p class='card-text ' set:html={item.content} />
           </div>
