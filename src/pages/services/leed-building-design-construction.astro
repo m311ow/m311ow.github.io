@@ -10,7 +10,7 @@ import coverImg from '../../images/leed_cover.webp'
 import SidebarLayout from '../../layouts/SidebarLayout.astro'
 
 const allProjects = await getCollection('projects')
-const highlightIds = ['ab-obchodna', 'einpark', 'vilharia', 'panorama-business-iii']
+const highlightIds = ['ab-obchodna', 'einpark', 'vilharia', 'landererova-12']
 const highlightProjects = allProjects
   .filter((p) => highlightIds.includes(p.id))
   .sort((a, b) => highlightIds.indexOf(a.id) - highlightIds.indexOf(b.id))
