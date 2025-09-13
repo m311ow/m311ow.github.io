@@ -28,6 +28,6 @@ A significant portion of the site is dedicated to green areas with native and ad
 - Protection of indoor air quality during construction and use of ultra-low VOC materials
 - Large landscaped areas enhancing ecological and recreational value
 
-Salvis provided complete LEED certification services, including technical studies and environmental simulations.
+SALVIS provided complete LEED certification services, including technical studies and environmental simulations.
 
 This project demonstrates how sustainable residential design can successfully combine modern living, ecological responsibility, and community well-being in Trenčín.
