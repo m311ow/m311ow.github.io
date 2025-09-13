@@ -85,17 +85,17 @@ const services = [
   }
 ]
 
-const logos = [
-  { src: '/logos/contera_logo.svg', alt: 'Contera', scale: 0.5 },
-  { src: '/logos/corwin_logo.svg', alt: 'Corwin', scale: 0.5 },
-  { src: '/logos/JTRE.svg', alt: 'Corwin', scale: 0.5 },
-  { src: '/logos/lucron_logo.svg', alt: 'Lucron' },
-  { src: '/logos/panattoni_logo.svg', alt: 'Panattoni', scale: 0.8 },
-  { src: '/logos/penta_logo.svg', alt: 'Penta', scale: 0.8 },
-  { src: '/logos/reinoo_logo.svg', alt: 'Reinoo', scale: 0.8 },
-  { src: '/logos/saint_gobain.svg', alt: 'Saint Gobain' },
-  { src: '/logos/vgp_logo.svg', alt: 'VGP' }
-]
+// const logos = [
+//   { src: '/logos/clients/contera_logo.svg', alt: 'Contera', scale: 0.5 },
+//   { src: '/logos/clients/corwin_logo.svg', alt: 'Corwin', scale: 0.5 },
+//   { src: '/logos/clients/JTRE.svg', alt: 'Corwin', scale: 0.5 },
+//   { src: '/logos/clients/lucron_logo.svg', alt: 'Lucron' },
+//   { src: '/logos/clients/panattoni_logo.svg', alt: 'Panattoni', scale: 0.8 },
+//   { src: '/logos/clients/penta_logo.svg', alt: 'Penta', scale: 0.8 },
+//   { src: '/logos/clients/reinoo_logo.svg', alt: 'Reinoo', scale: 0.8 },
+//   { src: '/logos/clients/saint_gobain.svg', alt: 'Saint Gobain' },
+//   { src: '/logos/clients/vgp_logo.svg', alt: 'VGP' }
+// ]
 ---
 
 <BaseLayout>
@@ -108,7 +108,7 @@ const logos = [
   />
 
   <ServicesBigCards heading='Services' services={services} cols={3} />
-  <LogosStrip logos={logos} heightPx={46} />
+  <LogosStrip heightPx={46} />
 
   <ProjectGrid projects={allProjects} variant='all' title='Projects' />
 </BaseLayout>

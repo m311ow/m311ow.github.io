@@ -1,21 +1,18 @@
 ---
-/** Moving logos marquee (measured, seamless, uniform gaps) */
 interface Logo {
-  src: string // "/logos/acme.svg" in /public
-  alt?: string // "Acme"
+  src: string
+  alt?: string
   scale?: number // 0.8–1 recommended; >1 is clamped to 1
 }
 
 const {
-  logos = [] as Logo[],
   title,
-  heightPx = 56, // lane height
-  speed = '45s', // loop duration (bigger = slower)
-  gapRem = 8, // space between logos and at the seam
+  heightPx = 56,
+  speed = '45s',
+  gapRem = 8,
   gray = true,
   className = ''
 } = Astro.props as {
-  logos: Logo[]
   title?: string
   heightPx?: number
   speed?: string
@@ -23,6 +20,18 @@ const {
   gray?: boolean
   className?: string
 }
+
+const logos: Logo[] = [
+  { src: '/logos/clients/contera_logo.svg', alt: 'Contera', scale: 0.5 },
+  { src: '/logos/clients/corwin_logo.svg', alt: 'Corwin', scale: 0.5 },
+  { src: '/logos/clients/JTRE.svg', alt: 'Corwin', scale: 0.5 },
+  { src: '/logos/clients/lucron_logo.svg', alt: 'Lucron' },
+  { src: '/logos/clients/panattoni_logo.svg', alt: 'Panattoni', scale: 0.8 },
+  { src: '/logos/clients/penta_logo.svg', alt: 'Penta', scale: 0.8 },
+  { src: '/logos/clients/reinoo_logo.svg', alt: 'Reinoo', scale: 0.8 },
+  { src: '/logos/clients/saint_gobain.svg', alt: 'Saint Gobain' },
+  { src: '/logos/clients/vgp_logo.svg', alt: 'VGP' }
+]
 ---
 
 <section class={`py-4 ${className}`}>
@@ -121,7 +130,6 @@ const {
 </section>
 
 <style>
-  /* Viewport: fixed height, no scrollbars */
   .marquee {
     overflow: hidden;
     width: 100%;
@@ -132,7 +140,7 @@ const {
   .belt {
     display: flex;
     align-items: center;
-    width: max-content; /* shrink-wrap to content width */
+    width: max-content;
     will-change: transform;
     animation: none;
   }
@@ -147,23 +155,21 @@ const {
   }
   .segment:first-child {
     padding-right: var(--gap);
-  } /* seam gap */
+  }
 
-  /* Uniform item spacing via margin (robust at seam) */
   .item {
     flex: 0 0 auto;
-    height: var(--h); /* lane height */
+    height: var(--h);
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* clip misbehaving SVGs */
+    overflow: hidden;
     margin-right: var(--gap);
   }
   .item:last-child {
     margin-right: 0;
   }
 
-  /* Layout-based scaling: logo height = lane * scale (≤ 1) so gaps stay even */
   .item img {
     display: block;
     height: clamp(0px, calc(var(--h) * var(--s, 1)), var(--h));
@@ -172,25 +178,17 @@ const {
     object-fit: contain;
   }
 
-  /* Optional gray treatment for black logos */
   .item.gray img {
     filter: invert(46%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(90%) contrast(85%);
     opacity: 0.35;
   }
-  /* .item.gray img:hover,
-  .item.gray img:focus {
-    filter: invert(46%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(90%);
-    opacity: 1;
-  } */
 
-  /* Reduced motion accessibility */
   @media (prefers-reduced-motion: reduce) {
     .marquee .belt {
       animation: none !important;
     }
   }
 
-  /* Animate exactly one measured segment width (incl. seam gap) */
   @keyframes scroll {
     from {
       transform: translate3d(0, 0, 0);
