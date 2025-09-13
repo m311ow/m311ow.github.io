@@ -10,12 +10,7 @@ import coverImg from '../../images/cover_eu-taxonomy-samobor.jpeg'
 import SidebarLayout from '../../layouts/SidebarLayout.astro'
 
 const allProjects = await getCollection('projects')
-const highlightIds = [
-  'kaufland-zahorska-bystrica',
-  'klingerka',
-  'westend-gate',
-  'vgp-zvolen-hala-c'
-]
+const highlightIds = ['matilda', 'rc-europe-samobor']
 const highlightProjects = allProjects
   .filter((p) => highlightIds.includes(p.id))
   .sort((a, b) => highlightIds.indexOf(a.id) - highlightIds.indexOf(b.id))
