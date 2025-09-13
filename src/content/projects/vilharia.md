@@ -12,6 +12,7 @@ category:
 image_cover: ./images/vilharia/image_cover.webp
 image_1: ./images/vilharia/image_1.webp
 image_2: ./images/vilharia/image_2.webp
+image_certificate: ./images/vilharia/image_certificate.webp
 
 web: 'https://www.corwin.sk/en/our-project/vilharia'
 ---
