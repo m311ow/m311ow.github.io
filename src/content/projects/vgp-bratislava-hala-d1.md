@@ -11,6 +11,4 @@ category:
 image_cover: ./images/vgp-bratislava-hala-d1/image_cover.webp
 image_certificate_1: ./images/vgp-bratislava-hala-d1/image_certificate_1.webp
 image_1: ./images/vgp-bratislava-hala-d1/image_1.webp
-image_2: ./images/vgp-bratislava-hala-d1/image_2.webp
 ---
-

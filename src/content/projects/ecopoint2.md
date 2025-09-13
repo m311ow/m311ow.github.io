@@ -13,6 +13,7 @@ savings_energy: 78%
 image_cover: ./images/ecopoint2/image_cover.webp
 image_certificate_1: ./images/ecopoint2/image_certificate_1.webp
 image_1: ./images/ecopoint2/image_1.webp
+image_2: ./images/ecopoint2/image_2.webp
 ---
 
 SALVIS provided complete BREEAM certification services for the project, including all expert services and simulations.
