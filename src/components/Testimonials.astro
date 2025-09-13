@@ -2,7 +2,13 @@
 interface Props {
   title?: string
   descriptions?: string[]
-  items: { name: string; position: string; content: string }[]
+  items: {
+    name: string
+    position?: string
+    company: string
+    company_url: string
+    content: string
+  }[]
 }
 
 const { title = 'Testimonials', descriptions, items } = Astro.props
@@ -25,7 +31,54 @@ const { title = 'Testimonials', descriptions, items } = Astro.props
         >
           <div class='card-body'>
             <h5 class='card-title'>{item.name}</h5>
-            <h6 class='card-subtitle mb-2 fw-light small'>{item.position}</h6>
+            <h6 class='card-subtitle mb-2 fw-light small'>
+              {item.position && <span>{item.position}, </span>}
+              {item.company_url ? (
+                <a
+                  href={item.company_url}
+                  target='_blank'
+                  rel='noopener'
+                  class='ext-link'
+                  aria-label={`${item.company} — will open in a new tab`}
+                >
+                  {item.company}
+                  <svg
+                    class='ext-icon'
+                    xmlns='http://www.w3.org/2000/svg'
+                    viewBox='0 0 24 24'
+                    width='0.73em'
+                    height='0.73em'
+                    aria-hidden='true'
+                    focusable='false'
+                  >
+                    <path
+                      d='M14 3h7v7'
+                      fill='none'
+                      stroke='currentColor'
+                      stroke-width='2'
+                      stroke-linecap='round'
+                    />
+                    <path
+                      d='M10 14L21 3'
+                      fill='none'
+                      stroke='currentColor'
+                      stroke-width='2'
+                      stroke-linecap='round'
+                    />
+                    <path
+                      d='M21 14v6a1 1 0 0 1-1 1h-14a1 1 0 0 1-1-1v-14a1 1 0 0 1 1-1h6'
+                      fill='none'
+                      stroke='currentColor'
+                      stroke-width='2'
+                      stroke-linecap='round'
+                    />
+                  </svg>
+                  <span class='visually-hidden'>(opens in new tab)</span>
+                </a>
+              ) : (
+                item.company
+              )}
+            </h6>
             <hr />
             <p class='card-text ' set:html={item.content} />
           </div>
