@@ -1,3 +1,10 @@
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/inter-tight';
+@import '@fontsource-variable/jetbrains-mono';
+
+// Required functions import
+@import 'bootstrap/scss/functions';
+
 // Optional variable overrides
 $enable-negative-margins: true;
 
@@ -29,27 +36,11 @@ $primary: #289448; // new: primary: #004e3c ; new secondary: #28B55F ; old: #289
 $secondary: #51595d;
 $font-size-base: 1.2rem;
 $line-height-base: 1.5;
-// $font-size-base: 1.2rem;
-// $line-height-base: 1.5;
 
-// $font-family-sans-serif: 'Arial', system-ui, sans-serif;
-// $font-family-sans-serif: 'Verdana', system-ui, sans-serif;
-// $font-family-sans-serif: 'Calibri', system-ui, sans-serif;
-
-// $font-family-sans-serif: 'IBM Plex Sans', system-ui, sans-serif;
-// $font-family-sans-serif: 'Onest', system-ui, sans-serif;
-// $font-family-sans-serif: 'Source Sans 3', system-ui, sans-serif;
-
-// $font-family-sans-serif: 'Sofia Sans', system-ui, sans-serif;
-// $font-family-sans-serif: 'Nunito Sans', system-ui, sans-serif;
-
-$font-family-sans-serif: 'Inter', system-ui, sans-serif;
+$font-family-sans-serif: 'Inter Variable', system-ui, sans-serif;
 $font-family-monospace: 'JetBrains Mono', monospace;
-// $font-family-sans-serif: 'JetBrains Mono', system-ui, sans-serif;
-
-// $font-family-sans-serif: 'Atkinson Hyperlegible Next', system-ui, sans-serif;
-
 $font-family-base: $font-family-sans-serif;
+$headings-font-family: 'Inter Tight Variable', 'Inter Variable', system-ui, sans-serif;
 
 $spacer: $line-height-base * 1rem;
 $spacers: (
@@ -60,9 +51,6 @@ $spacers: (
   4: $spacer * 1.5,
   5: $spacer * 3
 );
-
-// Required functions import
-@import 'bootstrap/scss/functions';
 
 // Required imports
 @import 'bootstrap/scss/variables';
@@ -117,8 +105,7 @@ $utilities: map-merge(
   $utilities,
   (
     // Make an existing utility responsive
-    'width':
-      map-merge(
+    'width': map-merge(
         map-get($utilities, 'width'),
         (
           responsive: true
@@ -242,6 +229,14 @@ $display-type-scale-base: minor-third;
 @include create-heading-type-scale($heading-type-scale-base);
 @include create-display-type-scale($display-type-scale-base);
 
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+  font-family: $headings-font-family;
+  // optional:
+  // font-weight: 700;
+}
 // ------------------- TYPE SCALE GENERATION -------------------
 
 // Custom styles
@@ -276,8 +271,12 @@ ul {
 
 * {
   font-variant-ligatures: none;
-  -webkit-font-feature-settings: 'liga' 0, 'clig' 0;
-  font-feature-settings: 'liga' 0, 'clig' 0;
+  -webkit-font-feature-settings:
+    'liga' 0,
+    'clig' 0;
+  font-feature-settings:
+    'liga' 0,
+    'clig' 0;
 }
 
 @media (max-width: 767.98px) {
