@@ -10,6 +10,4 @@ category:
   - breeam
 image_cover: ./images/kamence/image_cover.webp
 image_1: ./images/kamence/image_1.webp
-image_2: ./images/kamence/image_2.webp
 ---
-
