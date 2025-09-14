@@ -67,7 +67,7 @@ const { projects, variant = 'all', title } = Astro.props
   </div>
 </section>
 
-<script is:inline>
+<script is:inline type='module'>
   const captions = document.querySelectorAll('.project-card figcaption p')
   function adjustBorders() {
     captions.forEach((p) => {
