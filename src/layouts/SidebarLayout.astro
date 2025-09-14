@@ -3,66 +3,30 @@ import '../styles/bootstrap.scss'
 import Navbar from '../components/Navbar.astro'
 import Sidebar from '../components/Sidebar.astro'
 import Footer from '../components/Footer.astro'
+import BaseHead from './BaseHead.astro'
+
+interface Props {
+  type?: 'general'
+  title: string
+  description: string
+  heroImage?: ImageMetadata
+  noindex?: boolean // you need to opt-in to no indexing, as it hides the page from search engines
+}
+
+// TODO: set noindex default value to false when ready
+const { type = 'general', title, description, heroImage, noindex = true } = Astro.props as Props
 ---
 
 <!doctype html>
 <html lang='en' data-bs-theme='light' class=''>
   <head>
-    <!-- TODO: EXTRACT REPEATED PARTS TO SEPARATE COMOPONENT -->
-
-    <meta charset='utf-8' />
-    <!-- TODO: remove this once the page is ready -->
-    <meta name='robots' content='noindex' />
-    <link
-      rel='icon'
-      href='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🌿</text></svg>'
+    <BaseHead
+      type={type}
+      title={title}
+      description={description}
+      image={heroImage ? heroImage : undefined}
+      noindex={noindex}
     />
-
-    <link rel='preconnect' href='https://fonts.googleapis.com' />
-    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
-
-    <link
-      href='https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap'
-      rel='stylesheet'
-    />
-
-    <link
-      href='https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap'
-      rel='stylesheet'
-    />
-
-    <link
-      href='https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap'
-      rel='stylesheet'
-    />
-
-    <link
-      href='https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap'
-      rel='stylesheet'
-    />
-
-    <link
-      href='https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap'
-      rel='stylesheet'
-    />
-
-    <link
-      href='https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'
-      rel='stylesheet'
-    />
-
-    <link
-      href='https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap'
-      rel='stylesheet'
-    />
-
-    <!-- AOS CSS -->
-    <link href='https://unpkg.com/aos@2.3.1/dist/aos.css' rel='stylesheet' />
-
-    <meta name='viewport' content='width=device-width, initial-scale=1' />
-    <meta name='generator' content={Astro.generator} />
-    <title>SALVIS</title>
-    <meta name='description' content='Official webpage of comapny SALVIS' />
   </head>
   <body>
     <Navbar />

@@ -1,0 +1,42 @@
+---
+import { ClientRouter } from 'astro:transitions'
+
+// component imports
+import Seo from '../components/Seo.astro'
+
+// data
+import siteData from '../config/siteData.json'
+
+export interface Props {
+  type?: 'general' | undefined
+  title: string
+  description: string
+  image?: ImageMetadata
+  noindex?: boolean
+}
+
+const { type = 'general', title, description, image, noindex = false } = Astro.props as Props
+---
+
+<meta charset='utf-8' />
+<meta name='viewport' content='width=device-width, initial-scale=1' />
+<!-- Favicons. Generated from https://realfavicongenerator.net/ -->
+<link rel='icon' type='image/png' href='/favicons/favicon-96x96.png' sizes='96x96' />
+<link rel='icon' type='image/svg+xml' href='/favicons/favicon.svg' />
+<link rel='shortcut icon' href='/favicons/favicon.ico' />
+<link rel='apple-touch-icon' sizes='180x180' href='/favicons/apple-touch-icon.png' />
+<meta name='apple-mobile-web-app-title' content='SALVIS' />
+<link rel='manifest' href='/favicons/site.webmanifest' />
+<!-- other -->
+<meta name='generator' content={Astro.generator} />
+<link rel='sitemap' href='/sitemap-index.xml' />
+
+<!-- AOS CSS -->
+<link href='https://unpkg.com/aos@2.3.1/dist/aos.css' rel='stylesheet' />
+<!-- Botpoison -->
+<script is:inline src='https://unpkg.com/@botpoison/browser' async></script>
+
+<Seo type={type} title={title} description={description} image={image} noindex={noindex} />
+
+<!-- no fallback as I saw issues with firefox fallback -->
+{siteData.useViewTransitions && <ClientRouter fallback='none' />}
