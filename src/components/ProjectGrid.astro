@@ -74,7 +74,6 @@ const { projects, variant = 'all', title } = Astro.props
       p.style.paddingBottom = ''
       const lh = parseFloat(getComputedStyle(p).lineHeight)
       if (p.offsetHeight > lh * 1.5) p.style.paddingBottom = '1px'
-      console.log(p.offsetHeight, lh)
     })
   }
   const onReady = () => adjustBorders()
