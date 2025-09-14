@@ -12,7 +12,10 @@ import { getCollection } from 'astro:content'
 const allEpds = await getCollection('epds')
 ---
 
-<SidebarLayout>
+<SidebarLayout
+  title='EPD | SALVIS — Environmental Product Declaration Services'
+  description="Learn about SALVIS's Environmental Product Declaration (EPD) services for construction products. Discover how EPDs can enhance sustainability, marketability, and certification for your products."
+>
   <ServiceHero
     title='EPD'
     descriptions={[

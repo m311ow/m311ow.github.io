@@ -6,6 +6,9 @@ import { getCollection } from 'astro:content'
 const allProjects = await getCollection('projects')
 ---
 
-<BaseLayout>
+<BaseLayout
+  title='Projects | SALVIS — BREEAM & LEED Certified Buildings'
+  description='Explore our portfolio of projects certified under BREEAM and LEED. SALVIS has successfully delivered over 39 sustainable building certifications across Slovakia, Czechia and Slovenia.'
+>
   <ProjectGrid projects={allProjects} variant='all' title='Projects' />
 </BaseLayout>

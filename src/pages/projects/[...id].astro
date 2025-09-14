@@ -30,7 +30,10 @@ const {
 } = Astro.props.project.data
 ---
 
-<BaseLayout>
+<BaseLayout
+  title={`${title} | SALVIS — BREEAM & LEED Certified Buildings`}
+  description={`Detailed information about the project ${title}, certified under ${certificate}. Located in ${location_city}, ${location_country}. Client: ${client}.`}
+>
   <div class='row justify-content-md-between'>
     <h1 class='text-primary fw-bold'>{title}</h1>
 
@@ -44,22 +47,20 @@ const {
       <Image
         src={image_cover}
         alt={`Cover photo for project ${title}`}
-        layout='responsive'
+        layout='constrained'
         width={1200}
         height={1200}
         class='img-fluid flex-grow-1 object-fit-cover w-100 pb-1'
-        format='webp'
       />
       {
         image_1 && (
           <Image
             src={image_1}
             alt={`Photo of project ${title}`}
-            layout='responsive'
+            layout='constrained'
             width={1200}
             height={1200}
             class='img-fluid flex-grow-1 object-fit-cover w-100 pb-1'
-            format='webp'
           />
         )
       }
@@ -68,11 +69,10 @@ const {
           <Image
             src={image_2}
             alt={`Photo of project ${title}`}
-            layout='responsive'
+            layout='constrained'
             width={1200}
             height={1200}
             class='img-fluid flex-grow-1 object-fit-cover w-100 pb-1'
-            format='webp'
           />
         )
       }

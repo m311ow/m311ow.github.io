@@ -12,7 +12,10 @@ import { getCollection } from 'astro:content'
 const allProjects = await getCollection('projects')
 ---
 
-<SidebarLayout>
+<SidebarLayout
+  title='BREEAM In-Use | SALVIS — BREEAM In-Use Certification & Consulting'
+  description='Discover how SALVIS can help you achieve BREEAM In-Use certification for your existing buildings. Learn about the benefits, services, and process of BREEAM In-Use with our expert consultancy.'
+>
   <ServiceHero
     title='BREEAM In-Use'
     descriptions={[

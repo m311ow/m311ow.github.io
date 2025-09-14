@@ -12,7 +12,10 @@ import { getCollection } from 'astro:content'
 const allProjects = await getCollection('projects')
 ---
 
-<SidebarLayout>
+<SidebarLayout
+  title='Building simulations | SALVIS — Advanced Energy Modeling & Simulation Services'
+  description="Discover how SALVIS's building simulation services can optimize energy efficiency, reduce costs, and enhance comfort in your buildings. Learn about our advanced modeling techniques and their benefits."
+>
   <ServiceHero
     title='Building simulations'
     descriptions={[

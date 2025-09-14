@@ -11,7 +11,10 @@ import { getCollection } from 'astro:content'
 const allProjects = await getCollection('projects')
 ---
 
-<SidebarLayout>
+<SidebarLayout
+  title='Decarbonisation of existing buildings | SALVIS — Building Decarbonisation Services'
+  description='Learn how SALVIS can help you decarbonise your existing buildings in line with EU Taxonomy, ESG requirements, and global best standards. Discover our services, benefits, and approach to building decarbonisation.'
+>
   <ServiceHero
     title='Decarbonisation of existing buildings'
     descriptions={[
