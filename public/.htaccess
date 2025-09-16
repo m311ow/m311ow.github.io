@@ -1,10 +1,33 @@
-# Canonicalize everything to https://salvis.eu in a single step
+# ==========================================
+# Astro static site — salvis.eu (Apache 2.4)
+# ==========================================
+
+# 1) Canonicalize to https://salvis.eu in one step
 RewriteEngine On
-
-# If not HTTPS OR host is www, send to https://salvis.eu/<path>
 RewriteCond %{HTTPS} !=on [OR]
-RewriteCond %{HTTP_HOST} ^www\.salvis\.eu$ [NC]
-RewriteRule ^ https://salvis.eu%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTP_HOST} !=salvis.eu [NC]
+RewriteRule ^ https://salvis.eu%{REQUEST_URI} [R=301,L,NE]
 
-# Custom 404
+# 2) Trailing slash
+# Apache's default (mod_dir: DirectorySlash On) already does:
+#   /page  ->  /page/
+# when an index file exists. No extra rule needed.
+
+# 3) Custom 404
 ErrorDocument 404 /404.html
+
+# 4) Optional hardening (safe to keep)
+Options -Indexes
+<FilesMatch "^\.ht">
+  Require all denied
+</FilesMatch>
+
+# --- OPTIONAL: single-hop slash+canonical ---
+# This collapses "http://www.salvis.eu/page" straight to
+# "https://salvis.eu/page/" in one hop. Otherwise, let Apache handle slashes.
+#
+RewriteCond %{REQUEST_URI} !^/$
+RewriteCond %{REQUEST_URI} !/$
+RewriteCond %{REQUEST_URI} !\.[A-Za-z0-9]{2,}$    # skip assets
+RewriteCond %{REQUEST_FILENAME} !-f                # don't touch real files
+RewriteRule ^ https://salvis.eu%{REQUEST_URI}/ [R=301,L,NE]
