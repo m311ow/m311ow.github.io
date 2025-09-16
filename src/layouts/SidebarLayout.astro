@@ -10,11 +10,10 @@ interface Props {
   title: string
   description: string
   heroImage?: ImageMetadata
-  noindex?: boolean // you need to opt-in to no indexing, as it hides the page from search engines
+  noindex?: boolean // you need to opt-in to no indexing
 }
 
-// TODO: set noindex default value to false when ready
-const { type = 'general', title, description, heroImage, noindex = true } = Astro.props as Props
+const { type = 'general', title, description, heroImage, noindex = false } = Astro.props as Props
 ---
 
 <!doctype html>
