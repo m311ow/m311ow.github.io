@@ -48,7 +48,6 @@ const logos: Logo[] = [
 
     <div class='marquee' style={`--h:${heightPx}px; --gap:${gapRem}rem; --speed:${speed};`}>
       <div class='belt'>
-        <!-- Segment A (measured) -->
         <div class='segment'>
           {
             logos.map(({ src, alt, scale }) => (
@@ -58,7 +57,6 @@ const logos: Logo[] = [
             ))
           }
         </div>
-        <!-- Segment B (duplicate, not measured) -->
         <div class='segment' aria-hidden='true'>
           {
             logos.map(({ src, alt, scale }) => (
@@ -70,27 +68,24 @@ const logos: Logo[] = [
         </div>
       </div>
 
-      <!-- Inline browser JS (no TS casts), inside .marquee -->
       <script is:inline>
         ;(function () {
           var root = document.currentScript && document.currentScript.closest('.marquee')
           if (!root) return
           var belt = root.querySelector('.belt')
-          var segA = root.querySelector('.segment') // first segment only
+          var segA = root.querySelector('.segment')
 
           function measure() {
             if (!segA) return
-            // scrollWidth includes padding-right seam; round to avoid subpixel drift
             var segWidth = Math.ceil(segA.scrollWidth || segA.getBoundingClientRect().width)
             root.style.setProperty('--seg', segWidth + 'px')
           }
 
           function start() {
             measure()
-            root.classList.add('is-ready') // enables CSS animation
+            root.classList.add('is-ready')
           }
 
-          // Wait for FIRST segment images only (dup may stay lazy/offscreen)
           var imgs = segA.querySelectorAll('img')
           var pending = imgs.length
           if (pending === 0) start()
@@ -118,7 +113,6 @@ const logos: Logo[] = [
             }
           })
 
-          // Re-measure on resize (container or viewport)
           var ro = new ResizeObserver(function () {
             measure()
           })
@@ -136,7 +130,6 @@ const logos: Logo[] = [
     height: var(--h);
   }
 
-  /* Belt: animate only after measuring (--seg) */
   .belt {
     display: flex;
     align-items: center;
@@ -148,7 +141,6 @@ const logos: Logo[] = [
     animation: scroll var(--speed) linear infinite;
   }
 
-  /* Two segments back-to-back; add explicit seam gap after the first segment */
   .segment {
     display: flex;
     align-items: center;

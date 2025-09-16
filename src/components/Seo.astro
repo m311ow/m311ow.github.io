@@ -21,7 +21,6 @@ const { title = 'general', description, image, noindex = false } = Astro.props a
 let optimizedImage
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site)
 
-// if this is a blog page we do things differently
 if (image) {
   optimizedImage = await getImage({
     src: image,
@@ -39,7 +38,6 @@ function trimEndSlash(str: string) {
   }
 }
 
-// put together the image URL
 const imageUrl =
   trimEndSlash(Astro.site?.toString() || '') + (optimizedImage?.src || siteData.defaultImage.src)
 ---

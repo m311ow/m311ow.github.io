@@ -54,7 +54,6 @@
               >Send</button
             >
           </div>
-          <!-- Inline feedback area -->
           <div id='contact-feedback' class='mt-2 d-none small text-secondary'></div>
         </form>
       </div>
@@ -104,41 +103,34 @@
     const submitBtn = form.querySelector('.contact-submit-button')
     const feedback = document.getElementById('contact-feedback')
 
-    // Build “same page” redirect URL with a flag and a hash
     const url = new URL(window.location.href)
-    url.hash = 'contact-form' // jump back to form
     const successUrl = new URL(url)
     successUrl.searchParams.set('contact', 'ok')
     const errorUrl = new URL(url)
     errorUrl.searchParams.set('contact', 'err')
 
-    // Fill hidden redirect fields for Formspark
     document.getElementById('contact-redirect').value = successUrl.toString()
     const errField = document.getElementById('contact-error')
-    if (errField) errField.value = errorUrl.toString() // used if Formspark honors _error
+    if (errField) errField.value = errorUrl.toString()
 
-    // Button loading state (works even with full redirect)
     form.addEventListener('submit', () => {
       submitBtn.disabled = true
       submitBtn.textContent = 'Sending...'
     })
 
-    // After redirect back, show inline message based on query
     const qp = new URLSearchParams(window.location.search)
-    const state = qp.get('contact') // 'ok' | 'err' | null
+    const state = qp.get('contact')
     if (state && feedback) {
       if (state === 'ok') {
         feedback.className = 'alert alert-success mt-2'
         feedback.textContent =
           'Thank you for reaching out. Your message has been successfully sent and a member of our team will contact you shortly.'
-        // (Optional) fire analytics
         window.dataLayer?.push({ event: 'contact_submit_success' })
       } else if (state === 'err') {
         feedback.className = 'alert alert-danger mt-2'
         feedback.textContent = 'Something went wrong. Please try again.'
         window.dataLayer?.push({ event: 'contact_submit_error' })
       }
-      // Clean the URL so refresh doesn’t re-show the message
       const clean = new URL(window.location.href)
       clean.searchParams.delete('contact')
       history.replaceState({}, '', clean.toString())

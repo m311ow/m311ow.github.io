@@ -1,18 +1,17 @@
 ---
-const normalize = (p: string) =>
-  (p || '/')
-    .replace(/\/+$/, '')
-    .replace(/\/{2,}/g, '/')
-    .replace(/^$/, '/')
-
-const pathname = normalize(Astro.url.pathname) // e.g. "/services/breeam"
-
-const isActiveHref = (href: string) => {
-  const target = normalize(href)
-  return pathname === target || pathname.startsWith(`${target}/`)
-}
-
 type Item = { href: string; label: string }
+
+// current path, e.g. "/services/breeam-new-construction/"
+const pathname = Astro.url.pathname
+
+// always compare *pathnames* (works with relative or absolute hrefs)
+const toPath = (href: string) => new URL(href, Astro.url).pathname
+
+// active if exact match or descendant (since hrefs end with "/")
+const isActiveHref = (href: string) => {
+  const target = toPath(href) // e.g. "/services/breeam-new-construction/"
+  return pathname === target || pathname.startsWith(target)
+}
 
 const items: Item[] = [
   { href: '/services/breeam-new-construction/', label: 'BREEAM NC' },
