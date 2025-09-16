@@ -1,11 +1,11 @@
 ---
+import Hero from '@components/Hero.astro'
+import LogosStrip from '@components/LogosStrip.astro'
+import ProjectGrid from '@components/ProjectGrid.astro'
+import ServicesBigCards from '@components/ServicesBigCards.astro'
+import siteData from '@config/siteData.json'
+import BaseLayout from '@layouts/BaseLayout.astro'
 import { getCollection } from 'astro:content'
-import Hero from '../components/Hero.astro'
-import LogosStrip from '../components/LogosStrip.astro'
-import ProjectGrid from '../components/ProjectGrid.astro'
-import ServicesBigCards from '../components/ServicesBigCards.astro'
-import siteData from '../config/siteData.json'
-import BaseLayout from '../layouts/BaseLayout.astro'
 
 const allProjects = await getCollection('projects')
 

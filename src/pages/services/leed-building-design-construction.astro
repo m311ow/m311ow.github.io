@@ -1,13 +1,13 @@
 ---
+import Accordion from '@components/Accordion.astro'
+import Benefits from '@components/Benefits.astro'
+import Contact from '@components/Contact.astro'
+import ProjectGrid from '@components/ProjectGrid.astro'
+import ServiceHero from '@components/ServiceHero.astro'
+import Testimonials from '@components/Testimonials.astro'
+import coverImg from '@images/leed_cover.webp'
+import SidebarLayout from '@layouts/SidebarLayout.astro'
 import { getCollection } from 'astro:content'
-import Accordion from '../../components/Accordion.astro'
-import Benefits from '../../components/Benefits.astro'
-import Contact from '../../components/Contact.astro'
-import ProjectGrid from '../../components/ProjectGrid.astro'
-import ServiceHero from '../../components/ServiceHero.astro'
-import Testimonials from '../../components/Testimonials.astro'
-import coverImg from '../../images/leed_cover.webp'
-import SidebarLayout from '../../layouts/SidebarLayout.astro'
 
 const allProjects = await getCollection('projects')
 const highlightIds = ['ab-obchodna', 'einpark', 'vilharia', 'landererova-12']

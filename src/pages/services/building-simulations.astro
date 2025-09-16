@@ -1,12 +1,12 @@
 ---
-import Accordion from '../../components/Accordion.astro'
-import Benefits from '../../components/Benefits.astro'
-import Contact from '../../components/Contact.astro'
-import GalleryCarousel from '../../components/GalleryCarousel.astro'
-import ProjectGrid from '../../components/ProjectGrid.astro'
-import ServiceHero from '../../components/ServiceHero.astro'
-import coverImg from '../../images/simulacie_cover.webp'
-import SidebarLayout from '../../layouts/SidebarLayout.astro'
+import Accordion from '@components/Accordion.astro'
+import Benefits from '@components/Benefits.astro'
+import Contact from '@components/Contact.astro'
+import GalleryCarousel from '@components/GalleryCarousel.astro'
+import ProjectGrid from '@components/ProjectGrid.astro'
+import ServiceHero from '@components/ServiceHero.astro'
+import coverImg from '@images/simulacie_cover.webp'
+import SidebarLayout from '@layouts/SidebarLayout.astro'
 
 import { getCollection } from 'astro:content'
 const allProjects = await getCollection('projects')
