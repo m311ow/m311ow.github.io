@@ -35,14 +35,14 @@ const { projects, variant = 'all', title } = Astro.props
     {
       projects.map((project: any) => (
         <div class='project-card-wrapper' data-aos='fade-up' data-aos-duration='1500'>
-          <a href={`/projects/${project.id}`} class='link-dark'>
+          <a href={`/projects/${project.id}/`} class='link-dark'>
             <figure class='project-card'>
               <div class='image-wrapper'>
                 <Image
                   src={project.data.image_cover ?? 'https://placehold.co/1200x1200'}
                   width='1200'
                   height='1200'
-                  layout='responsive'
+                  layout='constrained'
                   class='figure-img'
                   alt={`Cover image for project ${project.data.title}`}
                 />
