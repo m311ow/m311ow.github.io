@@ -1,14 +1,49 @@
 # ==========================================
 # Astro static site — salvis.eu (Apache 2.4)
-# Minimal, safe baseline
+# Purpose: single canonical origin (https + non-www),
+#          clean trailing-slash URLs for real pages,
+#          custom 404, light hardening.
 # ==========================================
 
 RewriteEngine On
 
-# Canonicalize to https://salvis.eu (https + non-www)
+# --- Trailing slash normalizer (single hop) ----------------------
+# Add "/" only for "page-like" URLs that actually exist as directories
+# in the Astro build (…/index.html). This avoids 301→404 on non-existent paths.
+# Examples:
+#   http://www.salvis.eu/services/breeam    -> https://salvis.eu/services/breeam/
+#   https://salvis.eu/does-not-exist        -> 404 (no intermediate redirect)
+RewriteCond %{REQUEST_URI} !^/$
+RewriteCond %{REQUEST_URI} !/$
+RewriteCond %{REQUEST_URI} !\.[A-Za-z0-9]{2,}$
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ https://salvis.eu%{REQUEST_URI}/ [R=301,L,NE]
+
+# --- Canonical host/scheme --------------------------------------
+# Collapse any non-canonical host (e.g., www) and http -> https
+# to the single origin: https://salvis.eu
 RewriteCond %{HTTPS} !=on [OR]
 RewriteCond %{HTTP_HOST} !^salvis\.eu$ [NC]
 RewriteRule ^ https://salvis.eu%{REQUEST_URI} [R=301,L,NE]
 
-# Custom 404 (make sure /404.html exists in your docroot)
+# --- Custom 404 --------------------------------------------------
+# Ensure /404.html exists in your docroot (Astro: src/pages/404.astro)
 ErrorDocument 404 /404.html
+
+# --- Hardening ---------------------------------------------------
+# Deny access to hidden .ht* files (config/credentials)
+<FilesMatch "^\.ht">
+  Require all denied
+</FilesMatch>
+
+# Prevent directory listing (remove if your host disallows Options in .htaccess)
+Options -Indexes
+
+# ==========================================
+# Notes / Maintenance
+# - Keep internal links using trailing slashes to avoid redirects.
+# - When Slovak (/sk/) launches, create real directories (…/index.html),
+#   then this normalizer will handle /sk -> /sk/ cleanly.
+# - If you ever switch to "no trailing slash", remove the first block and
+#   replace with a /path/ -> /path rule plus extensionless serving.
+# ==========================================
