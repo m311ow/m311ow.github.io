@@ -7,6 +7,9 @@
 
 RewriteEngine On
 
+# --- Sitemap convenience redirect ---
+Redirect 301 /sitemap.xml https://salvis.eu/sitemap-index.xml
+
 # --- Trailing slash normalizer (single hop) ----------------------
 # Add "/" only for "page-like" URLs that actually exist as directories
 # in the Astro build (…/index.html). This avoids 301→404 on non-existent paths.
