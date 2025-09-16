@@ -11,22 +11,12 @@ interface Props {
 const { title } = Astro.props
 ---
 
-<!-- Projects Grid Section --><!-- <div class='row justify-content-md-center py-3 py-md-5 '>
-  <div class='col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6'>
-    <h2 class='mb-4 display-5 text-center'>Projekty</h2>
-    <p class='text-secondary mb-3 text-center'>
-      Naše projekty pokrývajú široké spektrum certifikovaných budov — od administratívnych centier
-      až po logistické parky
-    </p>
-  </div>
-</div> -->
 <header class='row mb-1'>
   <div class='col-12 col-lg-8'>
     <h2 class='text-gray-300 display-1 fw-bold lh-1 mb-0'>{title}</h2>
   </div>
 </header>
 
-<!-- Responsive CSS Grid for Projects -->
 <div class='project-grid'>
   {
     allProjects.map((project: any) => (
@@ -62,13 +52,12 @@ const { title } = Astro.props
 </div>
 
 <script is:inline>
-  // align borders of figcaption paragraphs if they wrap to multiple lines
   document.addEventListener('DOMContentLoaded', () => {
     const paras = document.querySelectorAll('figcaption p')
 
     function adjustBorders() {
       paras.forEach((p) => {
-        p.style.paddingBottom = '' // reset first
+        p.style.paddingBottom = ''
         const lh = parseFloat(getComputedStyle(p).lineHeight)
         if (p.offsetHeight > lh * 1.5) {
           p.style.paddingBottom = '1px'
