@@ -1,0 +1,69 @@
+---
+import SidebarLayout from '@layouts/SidebarLayout.astro'
+---
+
+<SidebarLayout
+  title='Analytics opt-out | SALVIS'
+  description='Click the button below to toggle your exclusion in analytics for this site'
+>
+  <div>
+    <h1>Plausible Exclude</h1>
+    <p>Click the button below to toggle your exclusion in analytics for this site.</p>
+
+    <p>
+      You currently
+      <span id='plausible_not'><strong>are not</strong></span>
+      <span id='plausible_yes' style='display:none'><strong>are</strong></span>
+      excluding your visits.
+    </p>
+
+    <a
+      class='btn btn-dark rounded-0'
+      id='plausible_button'
+      href='#'
+      role='button'
+      aria-pressed='false'>Exclude my visits</a
+    >
+  </div>
+
+  <script is:inline>
+    ;(function () {
+      // Cache elements once and guard against nulls
+      const notEl = document.getElementById('plausible_not')
+      const yesEl = document.getElementById('plausible_yes')
+      const btnEl = document.getElementById('plausible_button')
+      if (!notEl || !yesEl || !btnEl) return
+
+      const getState = () => localStorage.getItem('plausible_ignore') === 'true'
+      const setState = (isExcluded) => {
+        if (isExcluded) localStorage.setItem('plausible_ignore', 'true')
+        else localStorage.removeItem('plausible_ignore')
+      }
+
+      const applyState = (isExcluded) => {
+        if (isExcluded) {
+          notEl.style.display = 'none'
+          yesEl.style.display = 'inline'
+          btnEl.textContent = 'Stop excluding my visits'
+          btnEl.setAttribute('aria-pressed', 'true')
+        } else {
+          yesEl.style.display = 'none'
+          notEl.style.display = 'inline'
+          btnEl.textContent = 'Exclude my visits'
+          btnEl.setAttribute('aria-pressed', 'false')
+        }
+      }
+
+      // Initialize UI from current state
+      applyState(getState())
+
+      // Toggle on click
+      btnEl.addEventListener('click', (e) => {
+        e.preventDefault()
+        const next = !getState()
+        setState(next)
+        applyState(next)
+      })
+    })()
+  </script>
+</SidebarLayout>
