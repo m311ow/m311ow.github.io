@@ -104,6 +104,7 @@
     const feedback = document.getElementById('contact-feedback')
 
     const url = new URL(window.location.href)
+    url.hash = 'contact-form'
     const successUrl = new URL(url)
     successUrl.searchParams.set('contact', 'ok')
     const errorUrl = new URL(url)
